@@ -1,3 +1,5 @@
+@import '@fontsource/poppins';
+
 .headerContainer{
     display:flex;
     height: 100vh;
@@ -26,6 +28,9 @@
 .headerContent h1{
     font-size: 60px;
     font-weight: 600;
+    /* font-family: 'Poppins', sans-serif; */
+    @apply text-white
+    font-[Poppins]
 }
 
 .TextWrap{
@@ -35,6 +40,8 @@
 
 .TextWrap p{
     font-size: 18px;
+    @apply text-white
+
 }
 
 .HeaderContentInput{
@@ -46,9 +53,7 @@
     flex: 3;
     width: 100%;
     min-height:50px;
-    /*font-family: var(--font-family);
-    background: var(--color-footer);
-    border: 2px solid var(--color-footer);*/
+    /* font-family: var(--font-family); */
     font-size: 20px;
     line-height: 27px;
     color:#fff;
@@ -70,7 +75,7 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 27px;
-    color:#fff;
+    color:#fff; 
     outline: none;
     padding: 0 1rem;
 
