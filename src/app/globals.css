@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,6 +20,7 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +28,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.container {
+  margin : 0 auto;
+  @apply max-w-full
+  bg-black
+   min-h-screen 
+   pt-2
+   flex
+   flex-col
+   justify-between
+  
 }
