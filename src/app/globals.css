@@ -30,14 +30,3 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.container {
-  margin : 0 auto;
-  @apply max-w-full
-  bg-black
-   min-h-screen 
-   pt-2
-   flex
-   flex-col
-   justify-between
-  
-}
