@@ -4,7 +4,8 @@
     md:items-center
     sm:px-12
     px-4
-    bg-[#ffffff19]
+    /* bg-[#ffffff19] */
+    bg-gray-800
     py-7
 }
 
@@ -56,6 +57,7 @@
     hover:text-teal-400 
     duration-300
     text-sm
+    font-[Poppins]
     cursor-pointer 
     leading-6
 }
