@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
+import Link from 'next/link'
 import { services } from "./data";
 
 const Services = () => {
@@ -52,7 +53,7 @@ const Services = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white">
       <div className="w-full text-2xl sm:text-2xl lg:text-4xl font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700  ">
           <span className="text-blue-600">Explore!</span> Our Services
@@ -84,6 +85,16 @@ const Services = () => {
           </div>
         ))}
       </Carousel>
+      <div className=" text-center pt-2">
+        <p>
+          <Link
+            href="#"
+            className="text-sm font-semibold  hover:text-blue-500 text-gray-800"
+          >
+            View all Services
+          </Link>
+        </p>
+      </div>      
     </div>
   );
 };

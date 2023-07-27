@@ -18,7 +18,7 @@ const Header = () => {
             className='IMG'
         />
         <div className={styles.headerContent}>
-          <h1> Making your dream home a reality</h1>
+          <h1><span className='marker:'> Making</span> your dream home a reality</h1>
           <div className={styles.TextWrap}>
               <p 
                 onClick={()=>setCategory('Buy')}
