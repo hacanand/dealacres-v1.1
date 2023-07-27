@@ -105,7 +105,7 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1400px) {
     .services2Container {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
