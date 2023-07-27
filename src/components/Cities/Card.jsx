@@ -8,15 +8,15 @@ const Card = ({ title, content}) => {
     alt=""
     height={96}
     style={{
-      objectFit: 'cover', // cover, contain, none
+      objectFit: 'cover'
     }}
     width={192}
   />
-  <div class="flex flex-col justify-start mt-2 md:mt-0 md:ml-4">
-    <h5 class="ml-4 mt-2 mb-2 text-lg font-semibold text-neutral-800 dark:text-neutral-50">
+  <div className="flex flex-col justify-start mt-2 md:mt-0 md:ml-4">
+    <h5 className="ml-4 mt-2 mb-2 text-lg font-semibold text-neutral-800 dark:text-neutral-50">
       {title}
     </h5>
-    <p class="mb-4 ml-4 pr-2 text-sm text-neutral-600 dark:text-neutral-200">
+    <p className="mb-4 ml-4 pr-2 text-sm text-neutral-600 dark:text-neutral-200">
       {content}
     </p>
   </div>
