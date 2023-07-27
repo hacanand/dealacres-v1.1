@@ -83,30 +83,30 @@ export const agents = [
 
 
   export const COMPANY = [
-    { name: "About Us", link: "#" },
-    { name: "Contact Us", link: "#" },
-    { name: "Terms & Conditions", link: "#" },
-    { name: "Privacy & Policy", link: "#" },
-    { name: "Site Map", link: "#" },
-    { name: "Blog", link: "#" },
+    { name: "> About Us", link: "#" },
+    { name: "> Contact Us", link: "#" },
+    { name: "> Terms & Conditions", link: "#" },
+    { name: "> Privacy & Policy", link: "#" },
+    { name: "> Site Map", link: "#" },
+    { name: "> Blog", link: "#" },
   ];
   export const DEALACRES = [
-    { name: "Post Your Property", link: "#" },
-    { name: "Builder in Delhi NCR", link: "#" },
-    { name: "Our Services", link: "#" },
-    { name: "Calculator", link: "#" },
+    { name: "> Post Your Property", link: "#" },
+    { name: "> Builder in Delhi NCR", link: "#" },
+    { name: "> Our Services", link: "#" },
+    { name: "> Calculator", link: "#" },
   ];
   export const RESOURCES = [
-    { name: "Testimonial", link: "#" },
-    { name: "Buyers Guide", link: "#" },
-    { name: "Seller Guide", link: "#" },
-    { name: "Locality Overview", link: "#" },
+    { name: "> Testimonial", link: "#" },
+    { name: "> Buyers Guide", link: "#" },
+    { name: "> Seller Guide", link: "#" },
+    { name: "> Locality Overview", link: "#" },
   ];
   export const EXPLORECITIES = [
-    { name: "New Delhi", link: "#" },
-    { name: "Gurgaon", link: "#" },
-    { name: "Faridabad", link: "#" },
-    { name: "Noida", link: "#" },
-    { name: "Chandigarh", link: "#" },
+    { name: "> New Delhi", link: "#" },
+    { name: "> Gurgaon", link: "#" },
+    { name: "> Faridabad", link: "#" },
+    { name: "> Noida", link: "#" },
+    { name: "> Chandigarh", link: "#" },
   ];
   

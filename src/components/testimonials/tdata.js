@@ -41,8 +41,8 @@ export const testimonialData = [
     },
     {
       id: 6,
-      name: 'Nirbhay',
-      designation: 'Frontend Developer',
+      name: 'Carry',
+      designation: 'GOD Developer',
       avatar:'/pp.jpg',
       testimonial:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
