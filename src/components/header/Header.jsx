@@ -33,7 +33,8 @@ const Header = () => {
               <p 
                 onClick={()=>setCategory('Rent')}
                 className={category==='Rent'?styles.selected:''}>
-                  Rent</p>
+                  Rent
+              </p>
 
               <p 
                 onClick={()=>setCategory('Mortgage')}
