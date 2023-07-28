@@ -30,27 +30,46 @@ const Cities = () => {
     dots: true,
     infinite: true,
     speed: 500,
+    centerPadding: "60px",
     slidesToShow: 3,
+    className: "center",
     slidesToScroll: 3,
+    arrows:false,
     rows: 2,
 
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          rows: 1,
-        },
+          infinite: true,
+          dots: true
+        }
       },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows:1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
     ],
   };
 
   return (
-    <div className="cities-carousel bg-white mb-6">
-      <Slider {...settings} className="card-grid" >
+    <div className="bg-white mt-32 ml-10 mb-5 ">
+      <Slider {...settings} className="" >
         {citiesData.map((city, index) => (
-          <Link href='#' key={index} className="mb-12"><Card  title={city.title} content={city.content} /></Link>
+          <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>
         ))}
       </Slider>
     </div>

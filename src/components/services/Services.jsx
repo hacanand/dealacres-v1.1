@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "./Card";
-import Link from 'next/link'
+import Link from "next/link";
 import { services } from "./data";
 
 const Services = () => {
@@ -38,17 +38,17 @@ const Services = () => {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 5,
-      slidesToSlide: 3, 
+      slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
       items: 3,
-      slidesToSlide: 3, 
+      slidesToSlide: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
-      slidesToSlide: 2, 
+      slidesToSlide: 1,
     },
   };
 
@@ -80,12 +80,12 @@ const Services = () => {
         itemClass="carousel-item-padding-30-px"
       >
         {services.map((src) => (
-          <div key={src.name}>
+          <div key={src.name} className="mx-1 sm:mx-2">
             <Card imgsrc={src.link} service={src.name} />
           </div>
         ))}
       </Carousel>
-      <div className=" text-center pt-2">
+      <div className="text-center pt-2">
         <p>
           <Link
             href="#"
@@ -94,7 +94,7 @@ const Services = () => {
             View all Services
           </Link>
         </p>
-      </div>      
+      </div>
     </div>
   );
 };
