@@ -7,6 +7,7 @@ import Header from "../components/header/Header";
 import Services from "@/components/services/Services";
 import Postercard from "@/components/postercard/Postercard";
 import Toparticles from "@/components/toparticles/Toparticles";
+import Articlesmanual from "@/components/articlesmanual/Articlesmanual";
 import Staticcardleft from "@/components/staticcard/Staticcardleft";
 import Staticcardright from "@/components/staticcard/Staticcardright";
 import Services2 from "@/components/services2/Services2";
@@ -19,6 +20,7 @@ export default function Home() {
     <div>
       <Header />
       <Services />
+      <Explore />
       <Postercard
         title="Find Better Places to Live Work and Wonder..."
         src={src1}
@@ -28,6 +30,9 @@ export default function Home() {
         sidecontent3="Explore from apartments, land, builders, floor, villas and more"
         buttontext="Find a Home"
       />
+      <Toparticles />
+      <Cities />
+      <Options />
       <Postercard
         title="Sell or Rent your property faster with DealAcres"
         src={src2}
@@ -38,6 +43,7 @@ export default function Home() {
         sidecontent3="Sell or rent your residential/commercial property"
         buttontext="Post your property FREE"
       />
+      <Articlesmanual/>
       <Postercard
         src={src3}
         alt="src3"
@@ -46,14 +52,9 @@ export default function Home() {
         sidecontent3="Explore from Apartments, builder homes, villas and more"
         buttontext="Find a home for RENT"
       />
+      <Services2 />
       <Staticcardleft />
       <Staticcardright />
-      <Services2 />
-
-      <Toparticles />
-      <Options />
-      <Cities />
-      <Explore />
       <Testimonial />
     </div>
   );

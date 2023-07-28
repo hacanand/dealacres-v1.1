@@ -15,7 +15,7 @@ const Card = ({ imgsrc, service }) => {
         height={160}
       />
     </div>
-    <div className="mt-2 block w-250">
+    <div className="mt-2 block max-w-[250px] items-center">
       <p className="px-2 py-3 text-center font-semibold font-[Poppins] text-gray-500 hover:text-black">{service}</p>
     </div>
     </Link>

@@ -105,7 +105,19 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px){
+  .blockSection{
+    width: 220px;
+    height: 100%;
+  }
+
+  .sideSubContent{
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
     .services2Container {
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
