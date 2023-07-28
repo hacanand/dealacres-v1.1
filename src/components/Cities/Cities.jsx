@@ -67,7 +67,8 @@ const Cities = () => {
   };
 
   return (
-    <div className="bg-white mt-32 ml-10 mb-5 ">
+    <div className="bg-white ml-10 mb-5 ">
+        <div className="mb-4 "><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>
       <Slider {...settings} className="" >
         {citiesData.map((city, index) => (
           <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>

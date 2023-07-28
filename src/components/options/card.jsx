@@ -10,12 +10,12 @@ const Card = ({ imgsrc, service }) => {
       <Image
         src={imgsrc}
         alt="Card Image"
-        className="w-250 h-160 object-cover rounded-xl transition-transform duration-300 transform hover:scale-105"
+        className="object-cover rounded-xl transition-transform duration-300 transform hover:scale-105"
         width={250}
         height={160}
       />
     </div>
-    <div className="mt-2 block w-250">
+    <div className="mt-2 block max-w-[250px]">
       <p className="px-2 py-3 text-center font-semibold font-[Poppins] text-gray-500 hover:text-black">{service}</p>
     </div>
     </Link>

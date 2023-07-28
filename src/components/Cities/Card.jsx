@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Card = ({ title, content }) => {
   return (
-    <div className="bg-white border h-28 sm:h-24 w-72 mb-3 sm:w-64 md:w-80 mx-2 rounded-xl shadow-sm flex ">
+    <div className="bg-white border h-28 sm:h-24 w-72 mb-3 sm:w-64 md:w-80 mx-2 rounded-xl shadow-black shadow-md flex ">
       <div className="flex-shrink-0 h-28 sm:h-24 w-1/3 rounded-tl-xl rounded-bl-xl overflow-hidden">
         <Image
           className="w-full h-full object-cover"
