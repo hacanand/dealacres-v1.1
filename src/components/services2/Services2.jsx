@@ -25,7 +25,7 @@ const Services2 = () => {
             </div>
             <h6>Get assistance in selling faster</h6>
             <p>Dedicated Relationship manager to help you sell your property faster</p>
-            <h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                 <a href='#explore'>Explore now ➜</a>
             </h4>
         </div>

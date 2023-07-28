@@ -8,7 +8,7 @@
     right: 0;
     left: 0;
     background: transparent;
-    z-index: 20;
+    z-index: 1000;
     position: fixed;
 }
 
@@ -25,6 +25,15 @@
 
 .navbar-links__logo{
     margin-right: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar-links__logo h3{
+    color: #0061DF;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 

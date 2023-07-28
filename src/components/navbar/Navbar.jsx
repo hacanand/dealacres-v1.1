@@ -46,6 +46,7 @@ const Navbar = () => {
             width={60}
             className='IMG'
             />
+            <h3 className='font-[Poppins] mix-blend-lighten'>Deal Acres</h3>
         </div>
         <div className='navbar-links__container'>
           <Menu/>
