@@ -34,8 +34,9 @@
     bottom: 0;
     padding: 1px;
     display: flex;
+    border-radius: 8px;
     align-items: center;
-    @apply bg-blue-100
+    @apply bg-blue-100 
   }
   
   .card-image {
