@@ -23,7 +23,7 @@ const Footer = () => {
       >
         <Link href='#' className=''>DealAcres © 2023 . All rights reserved.</Link>
         <span>Terms · Privacy Policy</span>
-        {/* <Socialicons Icons={Icons} /> */}
+        <Socialicons/>
       </div>
     </footer>
   )

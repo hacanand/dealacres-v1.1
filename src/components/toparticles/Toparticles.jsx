@@ -1,5 +1,6 @@
 'use client'
 import React,{useState} from 'react'
+import Link from 'next/link'
 import styles from './toparticles.module.css'
 import Image from 'next/image'
 import {data} from './data'
@@ -52,7 +53,7 @@ const Toparticles = () => {
                 </div>
             ))}
         </div>
-        <a href='#articles'>Know more about reality news, guides and articles</a>
+        <Link href='#articles'>Know more about reality news, guides and articles</Link>
     </div>
   )
 }

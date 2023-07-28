@@ -1,6 +1,6 @@
 "use client"
 
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import "./navbar.css"
 import {RiMenu3Line,RiCloseLine} from 'react-icons/ri'
 import Image from 'next/image'
@@ -9,6 +9,7 @@ import Image from 'next/image'
 const Navbar = () => {
 
   const [toggleMenu,setToggleMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const Menu = ()=>(
     <>
       <p><a href='##buyer'>Buyer</a></p>
@@ -19,8 +20,23 @@ const Navbar = () => {
     </>
   )
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='navbar'>
+    <div className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className='navbar-links'>
         <div className='navbar-links__logo'>
           <Image 

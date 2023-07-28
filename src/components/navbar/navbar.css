@@ -12,6 +12,10 @@
     position: fixed;
 }
 
+.navbar.scrolled {
+    background-color: rgb(17,24,39); 
+  }
+
 .navbar-links{
     flex: 1;
     display: flex;

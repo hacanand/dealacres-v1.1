@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './services2.module.css'
 import Image from 'next/image'
 import exp from '../../../public/caricatures/explore.webp'
@@ -83,7 +84,7 @@ const Services2 = () => {
                     <h3>Accountant</h3>
                 </div>
             </div>
-            <a href='#allservices'> View all services </a>
+            <Link href='#allservices'> View all services </Link>
         </div>
     </div>
   )

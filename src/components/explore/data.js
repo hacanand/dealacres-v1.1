@@ -16,7 +16,7 @@ export const cardData = [
       id: 3,
       title: "Check article",
       description: "This is the description for Card3.",
-      imageUrl: "/home.loan.jpg",
+      imageUrl: "/CP.jpg",
     },
     {
       id: 4,
@@ -28,7 +28,7 @@ export const cardData = [
       id: 5,
       title: "Property valuer",
       description: "This is the description for Card5.",
-      imageUrl: "/vastu.jpg",
+      imageUrl: "/CP.jpg",
     },
     {
       id: 6,
