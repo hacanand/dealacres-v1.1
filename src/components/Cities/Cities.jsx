@@ -26,7 +26,7 @@ const Cities = () => {
     { title: "City 15", content: "This is the content of City 15" },
   ];
 
-  const settings = {
+   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -36,6 +36,7 @@ const Cities = () => {
     slidesToScroll: 3,
     arrows:false,
     rows: 2,
+    arrows: false,
 
     responsive: [
       {

@@ -21,15 +21,4 @@
 
 
 
-.container {
-  margin : 0 auto;
-  @apply max-w-full
-   bg-white
-   min-h-screen 
-   pt-2
-   flex
-   flex-col
-   justify-between
-  
-}
 

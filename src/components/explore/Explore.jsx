@@ -48,6 +48,30 @@ const Explore = () => {
           </>
         ))}
       </div>
+      <div className="cards-container-responsive">
+        {cardData.map((card) => (
+          <>
+            <div
+              key={card.id}
+              className='card'
+              style={{
+                flex:  "0 0 200px",
+                minWidth:"350px",
+                height:  "200px",
+                width:  "700px",
+                margin: "2px",
+              }}
+            >
+              <div className="card-content">
+              <div
+                  className="card-image"
+                  style={{ backgroundImage: `url(${card.imageUrl})` }}
+                />
+              </div>
+            </div>
+          </>
+        ))}
+      </div>
     </div>
   );
 };
