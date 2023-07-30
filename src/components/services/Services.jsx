@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./Card";
+import Card from './Card'
 import Link from "next/link";
 import { services } from "./data";
 
@@ -37,7 +37,7 @@ const Services = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 6,
       slidesToSlide: 3,
     },
     tablet: {
@@ -54,7 +54,7 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      <div className="w-full text-2xl sm:text-2xl lg:text-4xl font-semibold font-[Poppins] flex justify-center">
+      <div className="w-full my-6 text-2xl sm:text-2xl lg:text-4xl font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700  ">
           <span className="text-blue-600">Explore!</span> Our Services
         </h2>
@@ -77,10 +77,10 @@ const Services = () => {
         deviceType={deviceType}
         focusOnSelect={true}
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-30-px"
+        itemClass="carousel-item-padding-10-px"
       >
         {services.map((src) => (
-          <div key={src.name} className="mx-1 sm:mx-2">
+          <div key={src.name} className="mx-1 max-w-[160px] sm:mx-2">
             <Card imgsrc={src.link} service={src.name} />
           </div>
         ))}

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./card";
+import Card from "./Card";
 import { options } from "./data";
 const Options = () => {
     const [deviceType, setDeviceType] = useState("");
@@ -35,23 +35,23 @@ const Options = () => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 5,
       slidesToSlide: 0, 
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
       items: 3,
-      slidesToSlide: 3, 
+      slidesToSlide: 2, 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
-      slidesToSlide: 2, 
+      slidesToSlide: 1, 
     },
   };
   return (
-    <div className="bg-white">
-      <div className="w-full text-lg sm:text-xl lg:text-2xl font-semibold font-[Poppins] flex justify-center">
+    <div className=" bg-yellow-50 bg-opacity-90 rounded-full mb-4 ">
+      <div className="w-full text-lg sm:text-xl lg:text-2xl mb-12 font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700 px-6 sm:px-4">
         GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
         </h2>
@@ -63,20 +63,21 @@ const Options = () => {
         showDots={false}
         responsive={responsive}
         infinite={true}
-        autoPlay={false}
+        autoPlay={true}
         autoPlaySpeed={10000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile" , 'desktop']}
+        removeArrowOnDeviceType={["tablet", "mobile" ]}
         deviceType={deviceType}
         focusOnSelect={true}
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-30-px"
+        itemClass="px-0 mt-2"
+        className="gap-2 sm:gap-0 sm:pl-2"
       >
         {options.map((src) => (
-          <div key={src.name}>
+          <div key={src.name} className="gap-0">
             <Card imgsrc={src.link} service={src.name} />
           </div>
         ))}
