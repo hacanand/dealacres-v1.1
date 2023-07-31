@@ -3,8 +3,8 @@
 .postercardContainer{
     display: flex;
     flex-direction: column;
-    margin: 0 6rem 3rem 6rem;
-    row-gap: 1.5rem;
+    margin: 6rem;
+    row-gap: 2rem;
     align-items: center;
     justify-content: center;
 }
@@ -14,7 +14,7 @@
     max-width: 900px;
     text-align: center;
     line-height: 1.4;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;   
 }
 
@@ -22,12 +22,12 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    column-gap: 4rem;
+    column-gap: 3rem;
 }
 
 .imgContainer{
-    width: 450px;
-    height: 400px
+    width: 600px;
+    height: 650px
 }
 
 .img{
@@ -43,15 +43,15 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
 
 .sideContent p{
-    font-size: 20px;
+    font-size: 22.667px;
 }
 
 .sideContent h3{
-    font-size: 35px;
+    font-size: 46.6669px;
 }
 
 .sideContent h4{
@@ -72,13 +72,13 @@
 .btn1{
     padding: 0.5rem 1rem;
     color: #fff;
-    min-height: 60px;
+    min-height: 80px;
     @apply 
     bg-gradient-to-r from-teal-400 to-blue-700
     hover:from-teal-600 hover:to-indigo-500
     font-[Poppins];
     font-weight: 500;
-    font-size: 20px;
+    font-size: 29.334px;
     line-height: 25px;
     border-radius: 20px;
     cursor: pointer;
