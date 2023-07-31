@@ -11,6 +11,7 @@
     background: transparent;
     z-index: 1000;
     position: fixed;
+
 }
 .IMG{
     @apply mix-blend-color-burn
@@ -19,6 +20,12 @@
 .navbar.scrolled {
     background-color: #0061DF; 
     opacity: 90%;
+    max-height: 30px;
+  }
+  .navbar.scrolled .navbar-links{
+    @apply hover:text-blue-950;
+    border-bottom: none;
+    padding: 8px 0px;
   }
 
 .navbar-links{
@@ -27,6 +34,8 @@
     justify-content: flex-start;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.212); 
+    padding: 10px 0px;
 }
 
 .navbar-links__logo{
@@ -46,22 +55,24 @@
 .navbar-links__container{
     display: flex;
     flex-direction: row;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.212); 
+    padding: 20px 0px; */
 }
 
 .navbar-sign{
     display: flex;
+    justify-content: space-between;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 
 .navbar-links__container p,
 .navbar-sign p,
 .navbar-menu_container p{
-    @apply font-[Poppins] text-gray-300 hover:text-blue-500;
-    /* color:#fff; */
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
+    @apply font-[Poppins] hover:text-yellow-500  text-gray-100 font-bold hover:underline underline-offset-[10px] ;
+    transition: width 0.3s ease;
+    font-size: 15px;
     text-transform: capitalize;
     margin: 0 1rem;
     cursor: pointer;
@@ -72,13 +83,13 @@
     padding: 0.5rem 1rem;
     color: #fff;
     @apply 
-    bg-gradient-to-r from-teal-400 to-blue-700
-    hover:from-teal-600 hover:to-indigo-500
+    bg-gradient-to-r from-blue-600 to-indigo-500
+    hover:from-blue-700 hover:to-indigo-600 rounded-3xl
     font-[Poppins];
     font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 5px;
+    font-size: 15px;
+    /* line-height: 25px; */
+    /* border-radius: 5px; */
     cursor: pointer;
     outline: none;
     border: 0;
@@ -103,7 +114,7 @@
     text-align: end;
     padding: 2rem;
     position: absolute;
-    top: 40px;
+    top: 20px;
     right: 0;
     margin-top: 1rem;
     min-width: 210px;
@@ -131,7 +142,7 @@
 
 @media screen and (max-width:700px) {
     .navbar{
-        padding: 2rem 4rem;
+        padding: 2rem 2rem;
     }    
 }
 

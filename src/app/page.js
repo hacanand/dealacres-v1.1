@@ -14,6 +14,7 @@ import Services2 from "@/components/services2/Services2";
 import src1 from "../../public/postercardimg1.jpg";
 import src2 from "../../public/postercardimg2.jpg";
 import src3 from "../../public/postercardimg3.jpg";
+import WhyChooseUs from "@/components/chooseus/WhyChooseUs";
 export default function Home() {
   return (
     <div>
@@ -56,6 +57,7 @@ export default function Home() {
         <Staticcardleft />
         <Staticcardright />
       </div>
+      <WhyChooseUs/>
       <Testimonial />
     </div>
   );
