@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import Link from 'next/link'
 import styles from './toparticles.module.css'
 import Image from 'next/image'
+import {GoLinkExternal} from 'react-icons/go'
 import {data} from './data'
 
 const Toparticles = () => {
@@ -37,7 +38,7 @@ const Toparticles = () => {
         </div>
         <div className={styles.line}></div>
         <div className={styles.content}>
-            {data[category].map((dt)=>(
+            {data[category].map((dt,index)=>(
                 <div key={dt.id} className={styles.contentBlock}>
                     <div className={styles.imgContainer}>
                         <Image
@@ -46,14 +47,14 @@ const Toparticles = () => {
                             className={styles.img}
                         />
                     </div>
-                    <div className={styles.texts}>
+                    <div className={`${styles.texts} ${index < 3 ? styles.withLine : ''}`}>
                         <h6>{dt.title}</h6>
                         <p>{dt.date}</p>
                     </div>
                 </div>
             ))}
         </div>
-        <Link href='#articles'>Know more about reality news, guides and articles</Link>
+        <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link>
     </div>
   )
 }

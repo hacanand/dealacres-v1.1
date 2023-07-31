@@ -4,8 +4,8 @@
   display: grid;
   font-family: 'Poppins', sans-serif; 
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 2rem;
-  margin: 6rem;
+  grid-gap: 1rem;
+  margin: 4rem 0 4rem 0;
 }
 
 .explore{
@@ -63,9 +63,7 @@
     flex-wrap: wrap;
     flex-direction:column ;
     justify-content: center;
-    row-gap: 2rem;
     align-items: center;
-    padding: 2rem;
     height: 100%;
 }
 

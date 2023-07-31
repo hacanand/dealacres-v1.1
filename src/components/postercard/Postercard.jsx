@@ -8,9 +8,7 @@ const Postercard = (props) => {
     const [showInputField,setShowInputField] = useState(false)
 
     return (
-      <div className={styles.postercardContainer}>
-          <div className={styles.title}>{props.title}</div>
-          <div className={styles.content}>
+          <div className={styles.postercardContainer}>
               <div className={styles.imgContainer}>
                   <Image
                       src = {props.src}
@@ -19,9 +17,10 @@ const Postercard = (props) => {
                   />
               </div>
               <div className={styles.sideContent}>
+                  <div className={styles.title}>{props.title}</div>
                   <p>{props.sidecontent1}</p>
                   <h3>{props.sidecontent2}</h3>
-                  <h4>{props.sidecontent4}<span>{props.s2spantext}</span></h4>
+                  <span><h4>{props.sidecontent4}<span>{props.s2spantext}</span></h4></span>
                   <h6>{props.sidecontent3}</h6>
                   {showInputField && (
                     <div className={styles.inputField}>
@@ -34,7 +33,6 @@ const Postercard = (props) => {
                   )}
               </div>
           </div>
-      </div>
     )
 }
 

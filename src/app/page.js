@@ -30,7 +30,9 @@ export default function Home() {
           sidecontent3="Explore from apartments, land, builders, floor, villas and more"
           buttontext="Find a Home"
         />
-        <Toparticles />
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <Toparticles />
+        </div>
         <Cities />
         <Options />
         <Postercard
@@ -43,7 +45,9 @@ export default function Home() {
           sidecontent3="Sell or rent your residential/commercial property"
           buttontext="Post your property FREE"
         />
-        <Articlesmanual />
+        <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <Articlesmanual/>
+        </div>
         <Postercard
           src={src3}
           alt="src3"

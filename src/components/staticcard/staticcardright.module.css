@@ -3,14 +3,13 @@
 .staticCardContainer{
     display: flex;
     justify-content: center;
-    margin: 6rem 6rem 12rem 6rem;
+    margin: 6rem 0 6rem 0;
     column-gap: 3rem;
-    padding-left: 3rem;
 }
 
 .imgContainer{
-    width: 600px;
-    height: 650px
+    width: 500px;
+    height: 550px
 }
 
 .img{
@@ -27,8 +26,8 @@
 }
 
 .sidecontent h3{
-    margin-top: 3rem;
-    font-size: 60px;
+    margin-top: 0.75rem;
+    font-size: 50px;
 }
 
 .sidecontent p{
@@ -38,8 +37,8 @@
 }
 
 .sidecontent h6{
-    margin-top: 5rem;
-    font-size: 32px;
+    margin-top: 3rem;
+    font-size: 25px;
 }
 
 .sidecontent button{
@@ -63,13 +62,12 @@
 .decorativeBackground{
     background: #FFEBEB;
     position: absolute;
-    right: 28rem; 
-    transform: translateY(-80%); 
+    transform: translate3d(-5%,-60%,0);
     z-index: -1;
-    width: 950px; 
-    height: 400px; 
+    width: 850px; 
+    height: 330px; 
     border-radius: 50px; 
-    opacity: 0.8; 
+    opacity: 0.5; 
   }
 
   @media screen and (max-width:1400px){
@@ -101,6 +99,7 @@
 
     .img{
         outline: none;
+        border-radius: 75px;
     }
 
     .sidecontent{
@@ -121,7 +120,7 @@
 
   @media screen and (max-width:900px){
     .staticCardContainer{
-        flex-direction:  column-reverse;
+        flex-direction: column;
         padding-left: 1rem;
         margin: 2rem 2rem 8rem 2rem;
     }
@@ -129,11 +128,9 @@
     .imgContainer{
         width: 500px;
     }
-
   }
 
-
-  @media screen and (max-width:590px){
+@media screen and (max-width:590px){
     .staticCardContainer{
         margin: 1rem 1rem 8rem 1rem;
         padding: 0;
