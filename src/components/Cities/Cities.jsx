@@ -11,7 +11,7 @@ const Cities = () => {
   
   const citiesData = [
     { title: "Mumbai", content: "This is the content of City 1" },
-    { title: "pune", content: "This is the content of City 2" },
+    { title: "Pune", content: "This is the content of City 2" },
     { title: "gurgram", content: "This is the content of City 3" },
     { title: "HISAR", content: "This is the content of City 4" },
     { title: "LUCKNOW", content: "This is the content of City 5" },
@@ -29,14 +29,15 @@ const Cities = () => {
    const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 200,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 4,
     className: "center",
-    slidesToScroll: 3,
-    arrows:false,
+    slidesToScroll: 4,
+    arrows:true,
+    autoplay:true,
     rows: 2,
-    arrows: false,
+    // arrows: false,
 
     responsive: [
       {
@@ -53,7 +54,8 @@ const Cities = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          rows:1
+          rows:1,
+          arrows:false
         }
       },
       {
@@ -61,14 +63,15 @@ const Cities = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows:false
         }
       }
     ],
   };
 
   return (
-    <div className="bg-white ml-10 mb-5 ">
-        <div className="mb-4 "><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>
+    <div className="bg-white rounded-2xl ml-12 mr-12 sm:mr-0 sm:ml-0  mb-5 justify-center ">
+        <div className="my-4 py-4 mt"><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>
       <Slider {...settings} className="" >
         {citiesData.map((city, index) => (
           <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>

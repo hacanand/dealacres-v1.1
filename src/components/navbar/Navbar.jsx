@@ -42,13 +42,13 @@ const Navbar = () => {
           <Image 
             alt='Logo'
             src='/logo deal acres.png'
-            height={60}
-            width={60}
+            height={20}
+            width={40}
             className='IMG'
             />
-            <h3 className='font-[Poppins] mix-blend-lighten'>Deal Acres</h3>
+            <h3 className='font-[Poppins] text-white'>Deal Acres</h3>
         </div>
-        <div className='navbar-links__container'>
+        <div className='navbar-links__container text-sm'>
           <Menu/>
         </div>
       </div>

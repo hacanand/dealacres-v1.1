@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./explore.css";
-import {cardData} from './data'
-
+import { cardData } from "./data";
 
 const Explore = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -13,26 +12,34 @@ const Explore = () => {
 
   return (
     <div className="cards-wrapper">
-        <div><h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6"> Explore! <span className="text-blue-500">Insights and tools</span></h2></div>
+      <div>
+        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
+          {" "}
+          Explore! <span className="text-blue-500">Insights and tools</span>
+        </h2>
+      </div>
       <div className="cards-container">
         {cardData.map((card) => (
           <>
-            {/* <div><h2 className="text-sm ">{card.title}</h2></div> */}
             <div
               key={card.id}
               className={`card ${activeCard === card.id ? "active" : ""}`}
               style={{
-                flex: activeCard === card.id ? "0 0 100%" : "0 0 200px",
-                minWidth: activeCard === card.id ? "100%" : "200px",
-                height:activeCard === card.id ? "100%" : "200px",
-                width:activeCard === card.id ? "100%" : "700px",
-                margin:activeCard === card.id ? "0px" : "2px",
+                flex: activeCard === card.id ? "0 0 160px" : "0 0 160px",
+                minWidth: activeCard === card.id ? "100%" : "160px",
+                height: activeCard === card.id ? "100%" : "230px",
+                width: activeCard === card.id ? "100%" : "160px",
+                margin: activeCard === card.id ? "0px" : "0px",
               }}
               onMouseEnter={() => handleCardHover(card.id)}
               onMouseLeave={() => setActiveCard(null)}
             >
-              <div className="card-content">
-                {/* <div className="title"><h2 className="text-sm text-center transform -rotate-90">{card.title}</h2></div> */}
+              <div
+                className="card-content"
+                style={{
+                  backgroundImage: `linear-gradient(to right, ${card.color}, white)`,
+                }}
+              >
                 <div
                   className="card-image"
                   style={{ backgroundImage: `url(${card.imageUrl})` }}
@@ -53,17 +60,17 @@ const Explore = () => {
           <>
             <div
               key={card.id}
-              className='card'
+              className="card"
               style={{
-                flex:  "0 0 200px",
-                minWidth:"350px",
-                height:  "200px",
-                width:  "700px",
-                margin: "2px",
+                flex: "0 0 160px",
+                minWidth: "160px",
+                height: "230px",
+                width: "160px",
+                margin:"0px",
               }}
             >
               <div className="card-content">
-              <div
+                <div
                   className="card-image"
                   style={{ backgroundImage: `url(${card.imageUrl})` }}
                 />

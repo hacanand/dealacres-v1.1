@@ -1,30 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
 const Card = ({ imgsrc, service }) => {
   return (
-    <div>
-      <Link href='#' className="">
-      <div className="max-w-[1640px] mx-auto p-8 mt-0 py-12 sm:mb-4 grid md:grid-cols-3 gap-6">
-        {/* Card */}
-        <div className="rounded-xl h-14 w-36 sm:h-16 sm:w-48">
-          {/* Overlay */}
-          <div className="group">
-            <Image
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
-              src={imgsrc}
-              alt="/"
-              width={100}
-              height={100}
-            />
-          </div>
-        </div>
+    <div className="text-center max-w-[160px] mt-0 mb-4">
+      <div className="image-container rounded-xl overflow-hidden w-[160px] h-[160px] transition-transform duration-300 transform hover:scale-105">
+        <Image src={imgsrc} alt="Card Image" layout="fill" objectFit="cover" />
       </div>
-      <div className="text-gray-500 text-center mb-1">
-        <p className="px-2 font-semibold  sm:py-2  hover:text-black text-center">{service}</p>
+      <div className="mt-2 block max-w-[160px]">
+        <p className="text-center font-semibold font-[Poppins] text-gray-500 hover:text-black">
+          {service}
+        </p>
       </div>
-      </Link>
     </div>
   );
 };

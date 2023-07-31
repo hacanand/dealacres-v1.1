@@ -4,22 +4,16 @@ import Link from "next/link";
 
 const Card = ({ imgsrc, service }) => {
   return (
-    <div className="text-center p-8 mt-0 py-12 mb-4">
-    <Link href='#'>
-    <div className="block relative ">
-      <Image
-        src={imgsrc}
-        alt="Card Image"
-        className="object-cover rounded-xl transition-transform duration-300 transform hover:scale-105"
-        width={250}
-        height={160}
-      />
+    <div className="text-center max-w-[200px] mt-0 mb-4">
+      <div className="image-container rounded-xl overflow-hidden w-[200px] h-[160px] transition-transform duration-300 transform hover:scale-105">
+        <Image src={imgsrc} alt="Card Image" layout="fill" objectFit="cover" />
+      </div>
+      <div className="mt-2 block max-w-[200px]">
+        <p className="text-center font-semibold font-[Poppins] text-gray-500 hover:text-black">
+          {service}
+        </p>
+      </div>
     </div>
-    <div className="mt-2 block max-w-[250px]">
-      <p className="px-2 py-3 text-center font-semibold font-[Poppins] text-gray-500 hover:text-black">{service}</p>
-    </div>
-    </Link>
-  </div>
   );
 };
 

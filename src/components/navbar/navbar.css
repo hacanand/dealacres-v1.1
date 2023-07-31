@@ -6,14 +6,19 @@
     margin: 0;
     top: 0;
     right: 0;
+    max-height:40px;
     left: 0;
     background: transparent;
     z-index: 1000;
     position: fixed;
 }
+.IMG{
+    @apply mix-blend-color-burn
+}
 
 .navbar.scrolled {
-    background-color: rgb(17,24,39); 
+    background-color: #0061DF; 
+    opacity: 90%;
   }
 
 .navbar-links{
@@ -21,6 +26,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-links__logo{
@@ -30,7 +36,7 @@
 }
 
 .navbar-links__logo h3{
-    color: #0061DF;
+    /* color: #0061DF; */
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 5px;
@@ -40,7 +46,6 @@
 .navbar-links__container{
     display: flex;
     flex-direction: row;
-    @apply hover:cursor-pointer
 }
 
 .navbar-sign{
@@ -52,8 +57,8 @@
 .navbar-links__container p,
 .navbar-sign p,
 .navbar-menu_container p{
-    @apply font-[Poppins];
-    color:#fff;
+    @apply font-[Poppins] text-gray-300 hover:text-blue-500;
+    /* color:#fff; */
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
