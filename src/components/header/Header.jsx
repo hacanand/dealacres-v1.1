@@ -21,7 +21,7 @@ const Header = () => {
   useEffect(() => {
     let typingTimeout;
     const headerTitle = headerTitles[category];
-    const typingDelay = 100; // Set the delay between each character (in milliseconds)
+    const typingDelay = 40; // Set the delay between each character (in milliseconds)
 
     const startTyping = (currentIndex) => {
       if (currentIndex <= headerTitle.length) {
