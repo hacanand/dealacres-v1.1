@@ -60,8 +60,9 @@ export default function Home() {
         <Services2 />
         <Staticcardleft />
         <Staticcardright />
+        <WhyChooseUs/>
       </div>
-      <WhyChooseUs/>
+      
       <Testimonial />
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './services2.module.css'
 import Image from 'next/image'
+import {GoLinkExternal} from 'react-icons/go'
 import exp from '../../../public/caricatures/explore.webp'
 import acc from '../../../public/caricatures/Accountant.webp'
 import home from '../../../public/caricatures/home loan.webp'
@@ -25,7 +26,7 @@ const Services2 = () => {
             </div>
             <h6>Get assistance in selling faster</h6>
             <p>Dedicated Relationship manager to help you sell your property faster</p>
-            <h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <h4 style={{textAlign:'right'}}>
                 <a href='#explore'>Explore now ➜</a>
             </h4>
         </div>
@@ -84,7 +85,7 @@ const Services2 = () => {
                     <h3>Accountant</h3>
                 </div>
             </div>
-            <Link href='#allservices'> View all services </Link>
+            <Link href='#allservices'> View all services <GoLinkExternal style={{display:'inline'}}/></Link>
         </div>
     </div>
   )

@@ -70,11 +70,6 @@
     opacity: 0.5; 
   }
 
-  @media screen and (max-width:1400px){
-    .decorativeBackground{
-        width: 850px;
-    }
-  }
 
   @media screen and (max-width:1300px){
     .decorativeBackground{

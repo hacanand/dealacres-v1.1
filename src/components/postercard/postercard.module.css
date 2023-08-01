@@ -130,7 +130,7 @@
 }
 
 @media screen and (max-width:1050px){
-    .content{
+    .postercardContainer{
         flex-direction: column;
         row-gap: 2rem;
         align-items: center;
@@ -139,23 +139,31 @@
 
 @media screen and (max-width:800px){
 
-    .title{
-        font-size: 55px;
-    }
-
     .imgContainer{
-        width: 500px;
-        height: 530px
+        width: 450px;
+        height: 450px
     }
 
     .img{
         border-radius: 75px;
     }
+
+    .sideContent{
+        row-gap: 0.75rem;
+    }
+
+    .sideContent h3{
+        font-size: 26px;
+    }
+
+    .sideContent h4{
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width:590px){
     .title{
-        font-size: 35px;
+        font-size: 25px;
     }
 
     .imgContainer{
@@ -164,15 +172,24 @@
     }
 
     .sideContent{
+        padding: 0 3rem 0 3rem;
         row-gap: 0.5rem;
     }
 
+    .sideContent p{
+        font-size: 15px;
+    }
+
     .sideContent h3{
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    .sideContent h4{
+        font-size: 20px;
     }
 
     .sideContent h6{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .btn1{

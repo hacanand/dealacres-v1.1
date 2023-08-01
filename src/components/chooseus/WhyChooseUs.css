@@ -5,7 +5,7 @@
     background-color: #e1effc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin:40px;
+    margin: 40px 0 40px 0;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s, transform 0.5s;
@@ -70,3 +70,5 @@
   .image:hover {
     transform: scale(1.1);
   }
+
+  

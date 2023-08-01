@@ -62,17 +62,17 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction:column ;
-    justify-content: center;
+    row-gap: 2rem;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
 }
 
 .sideSubContent{
-    flex:1;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 2rem;
     row-gap: 2rem;
+    column-gap: 2rem;
 }
 
 .sideContent a{
@@ -87,7 +87,7 @@
     align-items: center;
     justify-content: center;
     width: 250px;
-    height: 140px;
+    height: 160px;
     cursor: pointer;
     border-radius: 20px;
 }
@@ -103,13 +103,7 @@
     object-fit: contain;
 }
 
-@media screen and (max-width: 1400px){
-  .blockSection{
-    width: 220px;
-    height: 100%;
-  }
 
-}
 
 @media screen and (max-width: 1200px) {
 
@@ -138,7 +132,6 @@
   /* Media Query for screens with a maximum width of 900px */
   @media screen and (max-width: 900px) {
     .services2Container {
-      margin: 2rem 2rem 6rem 2rem;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   
@@ -166,7 +159,6 @@
     .services2Container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       overflow: hidden;
-      margin: 1rem 1rem 6rem 1rem;
     }
   
     .explore h3 {
