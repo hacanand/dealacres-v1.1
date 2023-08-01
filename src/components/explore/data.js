@@ -43,4 +43,6 @@ export const cardData = [
       color:'#c1ebc0'
     },
   ];
+
+  export const carddata=['/11.png','/12.png','/13.png','/14.png','/15.png','/16.png']
   
