@@ -8,13 +8,13 @@
 }
 
 .imgContainer{
-    width: 500px;
-    height: 550px
+    width: 450px;
+    height: 500px
 }
 
 .img{
     object-fit: cover;
-    outline: 20px solid white;
+    outline: 15px solid white;
     border-radius: 100px;
     width: 100%;
     height: 100%;
@@ -27,7 +27,7 @@
 
 .sidecontent h3{
     margin-top: 0.75rem;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .sidecontent p{
@@ -37,7 +37,7 @@
 }
 
 .sidecontent h6{
-    margin-top: 3rem;
+    margin-top: 4rem;
     font-size: 25px;
 }
 
@@ -60,9 +60,9 @@
 }
 
 .decorativeBackground{
-    background: #FFEBEB;
+    background: #ffebeb;
     position: absolute;
-    transform: translate3d(-5%,-60%,0);
+    transform: translate3d(-5%,-60%,0); 
     z-index: -1;
     width: 850px; 
     height: 330px; 
