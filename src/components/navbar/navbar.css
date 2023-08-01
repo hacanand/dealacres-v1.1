@@ -6,10 +6,9 @@
     margin: 0;
     top: 0;
     right: 0;
-    max-height:40px;
     left: 0;
     background: transparent;
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
 
 }
@@ -78,6 +77,15 @@
     cursor: pointer;
 }
 
+.navbar-menu_container h5{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    padding: 5px;
+    border: 1px solid #b8860b;
+    border-radius: 10px ;
+}
+
 .navbar-sign button,
 .navbar-menu_container button{
     padding: 0.5rem 1rem;
@@ -105,22 +113,38 @@
     cursor: pointer;
 }
 
-.navbar-menu_container{
-    background-color: rgb(17,24,39);
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-    text-align: end;
-    padding: 2rem;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    margin-top: 1rem;
-    min-width: 210px;
-    border-radius: 5px;
-    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+.menu-button{
+    z-index: 20;
 }
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+.navbar-menu_container{
+    background-color: rgb(17,24,39,0.9);
+    animation: slideDown 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
 
 .navbar-menu_container p{
     margin: 1rem 0;

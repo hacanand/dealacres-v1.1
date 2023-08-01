@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="lg:ml-32 lg:mr-32">
+      <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-10 ml-10">
         <Services />
         <Explore />
         <Postercard

@@ -82,6 +82,7 @@ const Navbar = () => {
           <RiCloseLine
             color="#fff"
             size={27}
+            className='menu-button'
             onClick={() => {
               setToggleMenu(false);
             }}
@@ -90,17 +91,19 @@ const Navbar = () => {
           <RiMenu3Line
             color="#fff"
             size={27}
+            className='menu-button'
             onClick={() => {
               setToggleMenu(true);
             }}
           />
         )}
         {toggleMenu && (
-          <div className="navbar-menu_container scale-up-center">
+          <div className="navbar-menu_container">
             <div className="navabr-menu_container-links">
               <Menu />
               <div className="navbar-menu_container-links-sign">
                 <p>Sign In</p>
+                <h5>Post your Property</h5>
                 <button type="button">Sign Up</button>
               </div>
             </div>

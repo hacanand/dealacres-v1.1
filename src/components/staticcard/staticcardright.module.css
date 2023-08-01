@@ -113,17 +113,70 @@
 
   }
 
+  @media screen and (max-width:1400px){
+    .decorativeBackground{
+        width: 850px;
+    }
+  }
+
+  @media screen and (max-width:1100px){
+
+    .staticCardContainer{
+        margin: 4rem 4rem 8rem 4rem;
+    }
+
+    .decorativeBackground{
+        display: none;
+    }
+
+    .imgContainer{
+        width: 450px;
+        height: 450px;
+    }
+
+    .img{
+        outline: none;
+        border-radius: 75px;
+    }
+
+    .sidecontent{
+        max-width: 300px;
+    }
+
+    .sidecontent p{
+        font-size: 20px;
+    }
+    
+    .sidecontent h3{
+        margin-top: 0.5rem;
+        font-size: 35px;
+    }
+
+    .sidecontent h6{
+        margin-top: 1rem;
+        font-size: 18px;
+    }
+
+  }
+
   @media screen and (max-width:900px){
     .staticCardContainer{
-        flex-direction: column;
-        padding-left: 1rem;
-        margin: 2rem 2rem 8rem 2rem;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 1rem 4rem 1rem;
+    }
+
+    .sidecontent{
+        margin-top: 2rem;
+        max-width: 500px;
     }
 
     .imgContainer{
         width: 500px;
     }
   }
+
 
 @media screen and (max-width:590px){
     .staticCardContainer{
@@ -133,8 +186,8 @@
     }
    
     .imgContainer{
-        width: 350px;
-        height: 450px;
+        width: 300px;
+        height: 300px;
     }
 
     .img{
@@ -146,11 +199,20 @@
         padding-left: 1rem;
     }
 
+    .sidecontent p{
+        font-size: 15px;
+    }
+
     .sidecontent h3{
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .sidecontent h6{
-        font-size: 24px;
+        font-size: 12px;
+    }
+
+    .sidecontent button{
+        min-height: 40px;
+        font-size: 15px;
     }
 }
