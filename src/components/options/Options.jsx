@@ -50,7 +50,7 @@ const Options = () => {
     },
   };
   return (
-    <div className=" bg-yellow-50 bg-opacity-70 sm:rounded-full mb-4 ">
+    <div className=" bg-yellow-50 bg-opacity-70 rounded-3xl sm:rounded-full mb-4 ">
       <div className="w-full text-lg sm:text-xl lg:text-2xl mb-12 font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700 px-6 sm:px-4">
         GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
