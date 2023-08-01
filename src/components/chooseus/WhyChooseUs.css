@@ -173,6 +173,7 @@
   .container {
     max-width: 700px;
     margin: auto;
+    margin-bottom: 20px;
     padding:15px;
   }
 
@@ -191,6 +192,7 @@
   .container {
     max-width: 450px;
     margin: auto;
+    margin-bottom: 20px;
     padding:15px;
   }
 
@@ -211,6 +213,7 @@
     max-width: 350px;
     padding: 4px;
     margin: auto;
+    margin-bottom: 20px;
 
   }
 
