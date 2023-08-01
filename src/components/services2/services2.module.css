@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif; 
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
-  margin: 4rem 0 4rem 0;
+  margin: 3rem 0 3rem 0;
 }
 
 .explore{
@@ -19,7 +19,7 @@
 .explore h3{
     font-family:'Lucida handwriting',sans-serif;
     color: #C58940;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 400;
 }
 
@@ -32,17 +32,17 @@
 }
 
 .explore p{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 20px;
     color:#737373;
 }
 
 .imgContainer{
-    margin: 2rem;
+    margin: 2rem 2rem 1rem 2rem;
 }
 
 .explore h4{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .explore a{
@@ -87,7 +87,7 @@
     align-items: center;
     justify-content: center;
     width: 250px;
-    height: 160px;
+    height: 140px;
     cursor: pointer;
     border-radius: 20px;
 }
