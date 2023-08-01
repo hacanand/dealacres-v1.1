@@ -79,7 +79,7 @@
 
 .navbar-menu_container h5{
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     margin-bottom: 1rem;
     padding: 5px;
     border: 1px solid #b8860b;
@@ -155,9 +155,19 @@
 }
 
 @media screen and (max-width:1050px) {
+
+    .navbar-menu_container p{
+        font-size: 20px;
+    }
+
+    .navbar-menu_container button{
+        font-size: 20px;
+    }
+
     .navbar-links__container{
         display:none;
     }
+
     .navbar-menu{
         display: flex;
     }
