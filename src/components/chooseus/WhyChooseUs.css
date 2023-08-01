@@ -1,7 +1,7 @@
 .container {
     text-align: center;
     padding: 40px;
-    max-height: 600px;
+    /* max-height: 600px; */
     background-color: #e1effc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -17,21 +17,23 @@
   }
   
   .heading {
-    font-size: 48px;
+    /* font-size: 48px;
     font-weight: bold;
-    color: #030303;
-    margin-bottom: 20px;
+    color: #000000;
+    margin-bottom: 20px; */
+    @apply font-bold text-lg sm:text-xl md:text-3xl lg:text-5xl text-black mb-1 sm:mb-3 md:mb-5
   }
   
   .subheading {
-    font-size: 18px;
+    /* font-size: 18px;
     color: #078fe9;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
+    @apply text-xs sm:text-sm md:text-lg mb-3 sm:mb-5 md:mb-7 text-[#078fe9]
   }
   
   .imagesContainer {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     column-gap: 1rem;
     row-gap: 1rem;
     justify-content: center;
@@ -47,11 +49,11 @@
   .imageWrapper {
     width: 200px;
     height: 260px;
-    border-radius: 24px;
+    
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    @apply bg-blue-200 mx-2
+    @apply bg-blue-200 sm:mx-2 rounded-xl sm:rounded-3xl
   }
   
   .imageWrapper:hover {
@@ -64,9 +66,85 @@
     object-fit: cover;
     /* border: 12px solid #e0f0ff; */
     transition: transform 0.3s ease-in-out;
-    @apply rounded-full p-2
+    @apply rounded-xl sm:rounded-full sm:p-2 p-[2px]
   }
   
   .image:hover {
     transform: scale(1.1);
   }
+
+  /* For screens larger than 1024px */
+@media (min-width: 1024px) {
+  .container {
+    max-width: max-content;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 260px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* For screens between 600px and 1023px */
+@media (max-width: 1023px) and (min-width: 750px) {
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding:15px;
+  }
+
+  .imageWrapper {
+    width: 150px;
+    height: 190px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width:749px)
+{
+  .container {
+    max-width: 450px;
+    margin: auto;
+    padding:15px;
+  }
+
+  .imageWrapper {
+    width: 120px;
+    height: 150px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* For screens below 600px */
+@media (max-width: 499px) {
+  .container {
+    max-width: 350px;
+    padding: 4px;
+    margin: auto;
+
+  }
+
+  .imageWrapper {
+    width: 100px;
+    height: 90px;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+  }
+}
