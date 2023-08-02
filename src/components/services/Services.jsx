@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from './Card'
+import {GoLinkExternal} from 'react-icons/go'
 import Link from "next/link";
 import { services } from "./data";
 
@@ -91,7 +92,7 @@ const Services = () => {
             href="#"
             className="text-sm font-semibold  hover:text-blue-500 text-gray-800"
           >
-            View all Services
+            View all Services <GoLinkExternal style={{display:'inline'}}/>
           </Link>
         </p>
       </div>
