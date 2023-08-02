@@ -55,7 +55,7 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      <div className="w-full my-6 text-2xl sm:text-2xl lg:text-4xl font-semibold font-[Poppins] flex justify-center">
+      <div className="w-full my-6 text-lg sm:text-xl lg:text-3xl font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700  ">
           <span className="text-blue-600">Explore!</span> Our Services
         </h2>
