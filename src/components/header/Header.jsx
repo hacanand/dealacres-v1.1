@@ -16,30 +16,6 @@ const Header = () => {
                         'Mortgage':'Get access to a vast lender base'
                       }
 
-  const [title, setTitle] = useState('');
-
-  useEffect(() => {
-    let typingTimeout;
-    const headerTitle = headerTitles[category];
-    const typingDelay = 100; // Set the delay between each character (in milliseconds)
-
-    const startTyping = (currentIndex) => {
-      if (currentIndex <= headerTitle.length) {
-        setTitle(headerTitle.slice(0, currentIndex));
-        typingTimeout = setTimeout(() => {
-          startTyping(currentIndex + 1);
-        }, typingDelay);
-      }
-    };
-
-    startTyping(1);
-
-    return () => {
-      clearTimeout(typingTimeout);
-      setTitle('');
-    };
-  }, [category]);
-
   const handleCTAClick = () => {
     const targetPosition = window.innerHeight - 60; 
     const scrollDuration = 1500; 
@@ -72,7 +48,7 @@ const Header = () => {
             className='IMG'
         />
         <div className={styles.headerContent}>
-          <h1>{title}</h1>
+          <h1>{headerTitles[category]}</h1>
           <div className={styles.TextWrap}>
               <p 
                 onClick={()=>setCategory('Buy')}

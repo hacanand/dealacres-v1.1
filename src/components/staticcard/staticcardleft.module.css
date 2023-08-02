@@ -26,8 +26,8 @@
 }
 
 .sidecontent h3{
-    margin-top: 0.75rem;
-    font-size: 45px;
+    margin-top: 1rem;
+    font-size: 35px;
 }
 
 .sidecontent p{
@@ -44,14 +44,14 @@
 .sidecontent button{
     margin-top: 2rem;
     padding: 0.5rem 1rem;
-    min-height: 70px;
+    min-height: 65px;
     color: #fff;
     @apply 
     bg-gradient-to-r from-teal-400 to-blue-700
     hover:from-teal-600 hover:to-indigo-500
     font-[Poppins];
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
     border-radius: 10px;
     cursor: pointer;
