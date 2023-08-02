@@ -136,6 +136,10 @@
         row-gap: 2rem;
         align-items: center;
     }
+
+    .sideContent{
+        max-width: 400px;
+    }
 }
 
 @media screen and (max-width:800px){
