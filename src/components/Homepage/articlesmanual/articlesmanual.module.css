@@ -4,9 +4,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
     border-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .toparticlesContainer h3{
@@ -46,7 +46,7 @@
 .line{
     content:"";
     margin: 1rem 0 3rem 0;
-    width: 75%;
+    width: 80%;
     height: 2px;
     background-color: black;
 }
@@ -67,7 +67,7 @@
 }
 
 .withLine {
-    border-bottom: 2px solid rgb(126,126,126,0.7);
+    border-bottom: 1px solid rgb(166,166,166,0.5);
   }
 
 .imgContainer{
@@ -79,6 +79,7 @@
 .img{
     border-radius: 8px;
 }
+
 
 .texts{
     margin-left: 1rem;
@@ -97,20 +98,9 @@
 
 .toparticlesContainer a {
   color: #0061df;
-  text-align: center;
   font-size: 13px;
   font-weight: 600;
   margin-top: 1.5rem;
-}
-
-@media screen and (max-width: 1100px){
-    .toparticlesContainer{
-        margin: 6rem 1rem 6rem 1rem;
-    }
-
-    .toparticlesContainer h3{
-        font-size: 45px;
-    }
 }
 
 @media screen and (max-width: 1100px){

@@ -3,7 +3,7 @@ import React,{useState,useEffect} from 'react'
 import HeaderInput from './HeaderInput'
 import styles from './header.module.css'
 import Image from 'next/image'
-import background from '../../../public/background header.jpg'
+import background from '../../../../public/background header.jpg'
 import {FiChevronDown} from 'react-icons/fi'
 
 const Header = () => {
