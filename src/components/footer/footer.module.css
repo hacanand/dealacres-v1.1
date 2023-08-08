@@ -54,7 +54,7 @@
 }
 .item{
     @apply text-gray-400 
-    hover:text-teal-400 
+    hover:text-[#0061df] 
     duration-300
     text-sm
     font-[Poppins]

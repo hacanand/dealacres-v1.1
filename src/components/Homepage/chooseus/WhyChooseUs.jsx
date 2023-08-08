@@ -34,39 +34,43 @@ const WhyChooseUs = () => {
         <div className="imagesContainer">
           <div className="imageWrapper">
             <Image
-              src="/7.png"
+              src="/77.png"
               alt="Image 1"
               width={200}
               height={300}
-              className=" image"
+              className="image"
             />
+            <div className="textWrapper">We offer an extensive inventory of properties, providing diverse options for potential buyers or investors.</div>
           </div>
           <div className="imageWrapper">
             <Image
-              src="/8.png"
+              src="/78.png"
               alt="Image 2"
               width={200}
               height={300}
               className="image"
             />
+            <div className="textWrapper">We offer an easy-to-use website or app, enhancing the user experience and simplifying property searches.</div>
           </div>
           <div className="imageWrapper">
             <Image
-              src="/9.png"
+              src="/79.png"
               alt="Image 3"
               width={200}
               height={300}
               className="image"
             />
+            <div className="textWrapper">We prioritize transparency in property deals, ensuring secure and trustworthy transactions. to the clients </div>
           </div>
           <div className="imageWrapper">
             <Image
-              src="/10.png"
+              src="/80.png"
               alt="Image 4"
               width={200}
               height={300}
               className="image"
             />
+            <div className="textWrapper">We provide tailored property recommendations based on individual preferences and investment goals.</div>
           </div>
         </div>
       </div>

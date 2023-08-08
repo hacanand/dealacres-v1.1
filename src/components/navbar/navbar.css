@@ -12,9 +12,9 @@
     position: fixed;
 
 }
-.IMG{
+/* .IMG{
     @apply mix-blend-color-burn
-}
+} */
 
 .navbar.scrolled {
     background-color: #0061DF; 

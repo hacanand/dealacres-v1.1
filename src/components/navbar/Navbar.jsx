@@ -49,7 +49,7 @@ const Navbar = () => {
         <div className="navbar-links__logo">
           <Image
             alt="Logo"
-            src="/logo deal acres.png"
+            src="/lda.png"
             height={20}
             width={40}
             className="IMG"
