@@ -12,9 +12,21 @@
     position: fixed;
 
 }
-/* .IMG{
-    @apply mix-blend-color-burn
-} */
+
+.navbarPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    max-height: 80px;
+    background: #0061DF;
+    z-index: 10;
+    position: relative;
+}
 
 .navbar.scrolled {
     background-color: #0061DF; 
@@ -182,13 +194,21 @@
 @media screen and (max-width:700px) {
     .navbar{
         padding: 2rem 2rem;
-    }    
+    } 
+    
+    .navbarPage{
+        padding: 2rem 2rem;
+    }
 }
 
 @media screen and (max-width:550px) {
     .navbar{
         padding: 2rem;
-    }   
+    } 
+    
+    .navbarPage{
+        padding:2rem;
+    }
     
     .navbar-sign{
         display: none;
