@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation'
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import Image from "next/image";
@@ -8,6 +9,9 @@ import Image from "next/image";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/'
+
   const Menu = () => (
     <>
       <p>
@@ -44,7 +48,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`navbar${scrolled ? " scrolled" : ""}`}>
+    <div className={`navbar${isHomePage ? "" : "Page"}${scrolled ? " scrolled" : ""}`}>
       <div className="navbar-links">
         <div className="navbar-links__logo">
           <Image
