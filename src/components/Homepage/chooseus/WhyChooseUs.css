@@ -107,9 +107,9 @@
   /* For screens larger than 1024px */
 @media (min-width: 1024px) {
   .container {
-    max-width: max-content;
+    max-width:100%;
     margin: auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   .imageWrapper {
@@ -197,9 +197,9 @@
   /* For screens larger than 1024px */
 @media (min-width: 1024px) {
   .container {
-    max-width: max-content;
+    max-width:100%;
     margin: auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   .imageWrapper {
