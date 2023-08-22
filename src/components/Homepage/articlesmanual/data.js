@@ -1,4 +1,4 @@
-import source from '../../../public/toparticles/thumbnail-1.jpg'
+import source from '../../../../public/toparticles/thumbnail-1.jpg'
 
 export const data={
     'Buyer Manual':[

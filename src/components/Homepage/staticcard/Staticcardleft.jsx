@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './staticcardleft.module.css'
 import Image from 'next/image'
-import src from '../../../public/staticcard left img.jpg'
+import src from '../../../../public/staticcard left img.jpg'
 
 const Staticcardleft = () => {
   return (
