@@ -4,7 +4,7 @@ import background from "../../../public/bloghead.jpg";
 
 const Bloghead = () => {
   return (
-    <div className="relative mt-16 h-screen">
+    <div className="relative  h-screen">
       <Image
         src={background}
         alt="Header Background"
