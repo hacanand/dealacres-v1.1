@@ -1,0 +1,77 @@
+.localityOverviewContainer{
+    width: 100%;
+}
+
+.localityHead{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.localityHeadMain h2{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.localityHeadMain h5{
+    font-weight: 300;
+}
+
+.localityHead button{
+    background-color: #0061df;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-weight: 700;
+    min-height: 30px;
+    border-radius: 20px;
+}
+
+.localityContent{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.localityContentHead{
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.localityContentHead h3{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.localityContentHead h6{
+    color: #0061df;
+    cursor: pointer;
+}
+
+.localityContentData{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.localityContentDataProCon{
+    width: 95%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.localityContentDataProCon h2{
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.localityContentDataProCon li{
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+}

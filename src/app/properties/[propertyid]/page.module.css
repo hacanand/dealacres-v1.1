@@ -1,0 +1,12 @@
+.propertyContainer{
+    width: 100%;
+    padding: 5rem 12rem 5rem 12rem;
+}
+
+.contentContainer{
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 62% 32%;
+}

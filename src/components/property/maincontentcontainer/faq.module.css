@@ -1,0 +1,10 @@
+.faqContainer{
+    width: 100%;
+}
+
+.faqContainer p{
+    color: #0061df;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}

@@ -1,0 +1,20 @@
+.faqcardContainer{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 0.5rem;
+}
+
+.faqcardContainer h5{
+    font-weight: 700;
+    color: rgb(71,87,114);
+}
+
+.faqcardContainer h6{
+    color: rgb(135,145,163);
+}
