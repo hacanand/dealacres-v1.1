@@ -1,0 +1,28 @@
+.developerInfoContainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.developerInfoLogoContainer{
+    position: relative;
+    justify-content: center;
+    width: 23%;
+}
+
+.developerInfoContentContainer{
+    position: relative;
+    font-weight: 300;
+    justify-content: center;
+    width: 73%;
+}
+
+.developerInfoContentContainer span{
+    cursor: pointer;
+    margin-top: 2px;
+    color: #0061df;
+}

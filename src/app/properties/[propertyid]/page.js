@@ -1,3 +1,9 @@
+import styles from './page.module.css'
+import {data} from './dummydata'
+import Navbar02 from "@/components/property/navbar2/Navbar02"
+import ImageContainer from '@/components/property/imagecontainer/ImageContainer'
+import MainContentContainer from '@/components/property/maincontentcontainer/MainContentContainer'
+import SideContentContainer from '@/components/property/sidecontentcontainer/SideContentContainer'
 
 async function Property(params) {
   
@@ -5,9 +11,15 @@ async function Property(params) {
 
   return (
     <>
+        <Navbar02/>
+        <div className={styles.propertyContainer}>
+            <ImageContainer imageData = {data.imageContainer}/>
+            <div className={styles.contentContainer}>
+                <MainContentContainer content = {data.mainContent}/>
+                <SideContentContainer title = {data.mainContent.title}/>
+            </div>
+        </div>
     {/* 
-        navbar 2
-        image container
         content container(
         main container 
         side container

@@ -1,0 +1,47 @@
+.mainOverviewContainer{
+    width:100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    box-shadow: 1.5px 1.5px;
+}
+
+.overviewContent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.overviewData{
+    display: flex;
+    column-gap: 8px;
+}
+
+.overviewData h5{
+    color: #a6a6a6;
+    font-size: 15px;
+}
+
+.overviewData h6{
+    font-size: 15px;
+}
+
+.overviewActions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.overviewActions button{
+    text-align: center;
+    color: white;
+    background-color: #0061df;
+    min-height: 25px;
+    font-size: 15px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+}

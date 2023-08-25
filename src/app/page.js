@@ -1,6 +1,5 @@
 import Testimonial from "@/components/Homepage/testimonials/Testimonial";
 import Options from "@/components/Homepage/options/Options";
-import Card from "@/components/options/Card";
 import Explore from "@/components/Homepage/explore/Explore";
 import Cities from "@/components/Homepage/Cities/Cities";
 import Header from "../components/Homepage/header/Header";
