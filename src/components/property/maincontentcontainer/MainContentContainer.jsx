@@ -4,6 +4,7 @@ import {Lato} from 'next/font/google'
 import styles from './maincontent.module.css'
 import {BsCurrencyRupee} from 'react-icons/bs'
 import Mainoverview from './Mainoverview.jsx'
+import Amenities from './Amenities.jsx'
 import Specification from './Specification.jsx'
 import Locality from './Locality.jsx'
 import Developerinfo from './Developerinfo.jsx'
@@ -47,6 +48,7 @@ function MainContentContainer(props) {
           </div>
           <div>
             <h1>Amenities</h1>
+            <Amenities ameData={props.content.Amenities}/>
           </div>
           <div>
             <h1> About Developer</h1>

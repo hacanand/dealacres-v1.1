@@ -1,0 +1,18 @@
+.mainContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.mainContainer h1{
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+.mainContainerLine{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}

@@ -39,8 +39,8 @@ function ImageContainer(props) {
             />
           </div>
         </div>
-        <button className={styles.floorPlanButton}><BsMap style={{display:'inline'}}/> Floor Plan</button>
-        <button className={styles.viewImagesButton} onClick={() => {setCarasouel(true)}}><IoCameraOutline style={{display:'inline'}}/> View Images</button>
+        {props.floorPlan && <button className={styles.floorPlanButton}><BsMap style={{display:'inline'}}/> Floor Plan</button>}
+        <button className={`${styles.viewImagesButton} ${styles[props.imageButtonPosition]}`} onClick={() => {setCarasouel(true)}}><IoCameraOutline style={{display:'inline'}}/> View Images</button>
         {Carasouel &&
             <div className= {styles.imageCarasouelContainer}>
                 <RiCloseLine

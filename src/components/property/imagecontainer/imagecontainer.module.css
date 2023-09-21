@@ -34,9 +34,14 @@
     left: 14rem;
   }
 
-  .viewImagesButton{
+  .imageButtonClass1{
     top: 530px;
     right: 14rem;
+  }
+
+  .imageButtonClass2{
+    top: 490px;
+    right: 28rem
   }
   
   .floorPlanButton,
