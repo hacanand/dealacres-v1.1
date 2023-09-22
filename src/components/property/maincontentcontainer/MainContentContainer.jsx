@@ -13,7 +13,7 @@ import LeaveReview from './LeaveReview.jsx'
 const lato = Lato({
     subsets: ['latin'],
     weight: ['300','400','700','900']
-  })
+})
 
 function MainContentContainer(props) {
 
@@ -23,7 +23,7 @@ function MainContentContainer(props) {
     const mapSrc= `https://www.google.com/maps/embed/v1/place?q=${props.content.mapCoordinates.latitude},${props.content.mapCoordinates.longitude}&key=${API_KEY}`
 
     return (
-      <div className={`${styles.mainContainer} ${lato.className}`}>
+      <div style={lato.style} className={` ${styles.mainContainer} `}>
           <div className={styles.headerComp}>
               <h6>{props.content.currentStatus}</h6>
               <div className={styles.head}>{props.content.title}, <p style={{display:'inline'}}>{props.content.sideTitle}</p></div>
