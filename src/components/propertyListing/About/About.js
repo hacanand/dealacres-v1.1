@@ -38,7 +38,6 @@ const About = () => {
           className="bedroom"
         />
       </div>
-      {/* <div className=" bg-white w-full max-w-screen-xl p-5 text-center space-y-10 border-4 border-blue-200 why-choose-us"> */}
       <div className=" bg-white w-full max-w-screen-xl text-center why-choose-us">
       <div className="p-5 space-y-10 border-4 border-blue-200">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
