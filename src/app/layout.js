@@ -3,7 +3,8 @@ import { Inter} from 'next/font/google'
 import Navbar from '../components/navbar/Navbar'
 import Footer from '../components/footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'],
+                      weight: ['300','500','700','900'] })
 
 export const metadata = {
   title: 'Deal acres',

@@ -6,7 +6,7 @@ import {TextField} from '@mui/material'
 
 const lato = Lato({
   subsets: ['latin'],
-  weight: ['300','400','700']
+  weight: ['300','400','700', '900']
 })
 
 function SideContentContainer(props) {
