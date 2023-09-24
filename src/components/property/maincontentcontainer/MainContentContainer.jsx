@@ -24,7 +24,7 @@ function MainContentContainer(props) {
     const mapSrc= `https://www.google.com/maps/embed/v1/place?q=${props.content.mapCoordinates.latitude},${props.content.mapCoordinates.longitude}&key=${API_KEY}`
 
     return (
-      <div style={lato.style} className={` ${styles.mainContainer} `}>
+      <div style={lato.style} className={styles.mainContainer}>
           <div className={styles.headerComp}>
               <h6>{props.content.currentStatus}</h6>
               <div className={styles.head}>{props.content.title}, <p style={{display:'inline'}}>{props.content.sideTitle}</p></div>

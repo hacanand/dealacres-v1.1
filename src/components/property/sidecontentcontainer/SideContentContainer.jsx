@@ -19,7 +19,7 @@ function SideContentContainer(props) {
   }
 
   return (
-    <div className={`${styles.sideContainer} ${lato.className}`}>
+    <div style={lato.style} className={styles.sideContainer}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <h4> Looking for a Property in {props.title}</h4>
         <TextField
