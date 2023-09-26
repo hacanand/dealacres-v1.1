@@ -1,0 +1,23 @@
+.property-form{
+    align-self: center !important;
+    margin-top: auto;
+    margin-bottom: 1.5vh;
+}
+
+.free{
+    width: 25%;
+    font-size: 68px !important;
+}
+
+.property-ad-title{
+    width:55%;
+    align-self: center;
+}
+
+.property-ad{
+    padding: 80px 40px 20px 20px;
+}
+
+.property-ad-details{
+    margin-bottom: 90px;
+}
