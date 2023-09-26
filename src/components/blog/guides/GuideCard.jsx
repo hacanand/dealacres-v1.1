@@ -43,7 +43,7 @@ const GuideCard= ({
 
     
   return (
-    <div className={`${styles.guideCard} flex flex-col gap-8 items-center ${bgColor} border-l-[8px] ${borderColor} py-2 px-3`}>
+    <div className={`${styles.guideCard} col-span-1 flex flex-col gap-8 items-center shadow-lg ${bgColor} border-l-[8px] ${borderColor} py-2 px-3`}>
       <div className='font-bold text-3xl py-2 '>
         {
             title.split(' ')[0]
@@ -56,7 +56,7 @@ const GuideCard= ({
         </span>
       </div>
 
-      <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='max-w-[100px] ' />
+      <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='w-[100px] ' />
     </div>
   )
 }

@@ -138,7 +138,7 @@ export default function SingleBlogPage() {
     posts={allPostsData} 
     articles = {articlesData} />
 
-    <Guides guides={guidesData}/>
+    <Guides showHeading guides={guidesData} heading="Checkout Guides" align="center"/>
 
   
     </div>
