@@ -1,0 +1,12 @@
+.mainContainer2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.mainContainer2 h5{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}

@@ -13,6 +13,7 @@
 .mainContainer h5{
     font-size: 28px;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 
@@ -32,3 +33,4 @@
     color: #0061df;
     font-weight: 700;
 }
+

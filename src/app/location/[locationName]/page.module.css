@@ -25,3 +25,7 @@
     display: grid;
     grid-template-columns: 62% 32%;
 }
+
+.locationOverviewContent2Container{
+    width: 100%;
+}

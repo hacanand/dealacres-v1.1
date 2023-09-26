@@ -4,6 +4,7 @@ import ImageContainer from '@/components/property/imagecontainer/ImageContainer'
 import Navbar03 from "@/components/property/navbar2/Navbar03"
 import MainContent1 from '@/components/locationOverview/content1/MainContent1'
 import SideContent1 from '@/components/locationOverview/content1/SideContent1'
+import MainContent2 from '@/components/locationOverview/content2/MainContent2'
 
 const page = () => {
   return (
@@ -20,7 +21,9 @@ const page = () => {
                 <MainContent1/>
                 <SideContent1/>
             </div>
-            <div className={styles.locationOverviewContent2Container}></div>
+            <div className={styles.locationOverviewContent2Container}>
+                <MainContent2/>
+            </div>
             {/*
             content1 container
             (maincontent1,sidecontent)

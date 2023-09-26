@@ -33,7 +33,7 @@ export default function Home() {
         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
           <Toparticles />
         </div>
-        <Cities />
+        <Cities title = {true} />
         <Options />
         <Postercard
           title="Sell or Rent your property faster with DealAcres"

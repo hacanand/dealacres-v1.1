@@ -57,7 +57,7 @@ function MainContentContainer(props) {
           <div className = {styles.mainContainerLine}></div>
           <div>
             <h1>Locality Overview</h1>
-            <Locality localityData = {props.content.localityOverview}/>
+            <Locality localityData = {props.content.localityOverview} desc={true}/>
           </div>
           <div>
             <h1>Frequently Asked questions</h1>

@@ -10,13 +10,13 @@ function Locality(props) {
 
   return (
     <div className={styles.localityOverviewContainer}>
-        <div className={styles.localityHead}>
+        {props.desc&&<div className={styles.localityHead}>
             <div className={styles.localityHeadMain}>
                 <h2>{props.localityData.title}</h2>
                 <h5>{props.localityData.subtitle}</h5>
             </div>
             <button> View {props.localityData.title} Overview</button>
-        </div>
+        </div>}
         <div className={styles.localityContent}>
             <div className={styles.localityContentHead}>
                 <h3>Locality Introduction</h3>
