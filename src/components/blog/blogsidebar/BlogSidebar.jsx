@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Topics from './Topics';
 import PostsFeed from './PostsFeed';
@@ -16,9 +18,9 @@ const BlogSideBar = ({
     <div>
      
       <Topics topicList = {topics} />
-      <BrandBanner img={banner1} url='/banner1'/>
+      <BrandBanner hasCta img={banner1} url='banner1'/>
       <PostsFeed posts={allPosts}/>
-      <BrandBanner img={banner2} url='/banner2'/>
+      <BrandBanner img={banner2} url='banner2'/>
     </div>
   )
 }
