@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import testimony from "../../../public/testimonial/testimony.webp"
-import styles from "./testimonial.module.css"
+import styles from "./banner.module.css"
 
 
 const Banner = () => {
