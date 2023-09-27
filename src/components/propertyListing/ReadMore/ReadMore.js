@@ -9,7 +9,7 @@ const ReadMore = () => {
   const newsData = [
     {
       id: 1,
-      title: "Lorem Ipsum News",
+      title: "Lorem Ipsum News Magma",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at hendrerit justo. Duis ut vehicula dolor.",
       imageSrc: "https://via.placeholder.com/300x200",
       date: "September 1, 2023",
@@ -30,7 +30,7 @@ const ReadMore = () => {
     },
     {
       id: 4,
-      title: "Lorem Ipsum News",
+      title: "Lorem Ipsum News Dollar",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at hendrerit justo. Duis ut vehicula dolor.",
       imageSrc: "https://via.placeholder.com/300x200",
       date: "September 1, 2023",
@@ -71,8 +71,8 @@ const ReadMore = () => {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 4,
+            spaceBetween: 25,
           },
         }}
       >
