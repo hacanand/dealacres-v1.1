@@ -1,31 +1,27 @@
 "use client"
 import Image from 'next/image'
-import React, {useState,useEffect} from 'react'
+import React, {useState} from 'react'
 import data from "./data"
 import styles from "./reviews.module.css"
 
 const ReviewsLayout = () => {
 
-  const [screenWidth, setScreenWidth] = useState(0);
+  let [limit, setLimit] = useState(5)
+  const filteredData = data["Review"].slice(0, limit);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
+  const toggleDisplay = () => {
+    if (limit >= data.Review.length) {
+      setLimit(-1);
+    } else {
+      setLimit(limit+4);
+    }
+  };
 
-    setScreenWidth(window.innerWidth);
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const filteredData = screenWidth < 900 ? data["Review"].slice(0, 4) : data["Review"];
   return (
     <div>
       {filteredData.map((dt, index) => (
       <div key={dt.id} className={styles.reviewBlock}>
+        {/* <div> */}
       <div className={styles.User}>
         <div className={styles.UserImg}>
         <Image
@@ -42,7 +38,12 @@ const ReviewsLayout = () => {
       <p>{dt.description}</p>
     </div>
     </div>
+    // </div>
     ))}
+    <div className="text-center">
+    {limit >= data.Review.length ? '': 
+      <button className={styles.MoreReviews} onClick={toggleDisplay}> Load More </button>}
+      </div>
     </div>
   )
 }

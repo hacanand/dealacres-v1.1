@@ -1,12 +1,17 @@
 .reviewBlock{
-    position: relative;
-    margin: 2em 4em;
+    /* position: relative; */
+    margin: 0em 4em;
     padding: 20px 30px;
     border: 7px solid rgb(0, 0, 0, 0.1);
     border-radius: 15px;
     margin-bottom: 15px;
     background-color: rgb(255, 255, 255) !important;
 }
+
+/* .ReviewList{
+    margin-top: -30px !important;
+    overflow: auto;
+} */
 
 .User{
     display:flex;
@@ -28,12 +33,16 @@
     margin: 2rem 12rem;
 }
 
+
 .ReviewLayout{
-    margin-top: -115%;
-    margin-bottom: 100px;
+    margin-top: 5%;
+    padding: 40px 0px !important;
+    margin-bottom: 20px;
     background-color: rgb(0, 97, 253, 0.1);
-    position: static;
-    height: 165vh;
+    /* position: static; */
+    /* height: 165vh; */
+    height: 80% !important;
+    overflow-y: visible;
     border-radius: 20px;
     z-index: -1;
 }
@@ -45,34 +54,35 @@
     border-radius: 15px;
 }
 
+
 @media only screen and (max-width: 992px){
     .ReviewMargin{
         margin: 2rem 2.8rem;
     }
     .reviewBlock{
-        margin: 2em 2em;
+        margin: 0em 1em;
     }
-    .ReviewLayout{
+    /* .ReviewLayout{
         margin-top: -140%;
         margin-bottom: 180px;
         height: 75vh;
-    }
+    } */
 }
 @media only screen and (max-width: 500px){
     .ReviewMargin{
         margin: 2rem 2.2rem;
     }
-    .reviewBlock{
+    /* .reviewBlock{
         margin: 2em 2em;
     }
     .ReviewLayout{
         margin-top: -615%;
         margin-bottom: 180px;
         height: 215vh;
-    }
+    } */
 }
 
-@media only screen and (max-width:400px){
+/* @media only screen and (max-width:400px){
     .reviewBlock{
         padding: 10px 18px;
     }
@@ -83,4 +93,4 @@
     }
 
     
-}
+} */
