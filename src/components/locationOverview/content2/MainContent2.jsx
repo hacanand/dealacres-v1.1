@@ -64,6 +64,12 @@ function MainContent2() {
             <h5>Start with these guides</h5>
             <Guides guides={guidesData}/>
         </div>
+        <div>
+            <h5>Interesting Readings</h5>
+        </div>
+        <div>
+            <h5>Frequently Asked Questions</h5>
+        </div>
     </div>
   )
 }

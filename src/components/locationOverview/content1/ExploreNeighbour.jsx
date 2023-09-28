@@ -1,8 +1,16 @@
 import styles from './exploreneighbour.module.css'
+import ExploreNeighbourCard from './ExploreNeighbourCard'
 
 function ExploreNeighbour() {
   return (
-    <div>ExploreNeighbour</div>
+    <div>
+      <ExploreNeighbourCard/>
+      <ExploreNeighbourCard/>
+      <ExploreNeighbourCard/>
+      <ExploreNeighbourCard/>
+      <ExploreNeighbourCard/>
+      <ExploreNeighbourCard/>
+    </div>
   )
 }
 

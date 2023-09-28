@@ -1,0 +1,26 @@
+.sideUtilityBoxContainer{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.sideUtilityBoxContainer h4{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.sideUtilityBoxContainer h6{
+    font-size: 20px;
+}
+
+.sideUtilityBoxContainer button{
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: #0061df;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    border-radius: 14px;
+    overflow: hidden;
+}

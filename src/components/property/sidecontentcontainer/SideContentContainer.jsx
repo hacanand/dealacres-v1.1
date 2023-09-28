@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import styles from './sidecontent.module.css'
 import {Lato} from 'next/font/google'
 import {TextField} from '@mui/material'
+import Addbox from './Addbox'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -64,19 +65,7 @@ function SideContentContainer(props) {
         <p style={{color:'red'}}>{errors.TermsConditions && errors.TermsConditions.message}</p>
         <button>Send Message</button>
       </form>
-      <div className={styles.sideAdContainer}>
-        <div className={styles.sideAdContainerHead}>
-          <p>Post property ad to sell or rent online for</p>
-          <h1>FREE</h1>
-        </div>
-        <ul>
-          <li>Advertise for Free</li>
-          <li>Sell 10 X Faster</li>
-          <li>Connnect with genuine buyers</li>
-          <li>Get unlimited enquiries</li>
-        </ul>
-        <button> Post Property &nbsp;<span>FREE</span></button>
-      </div>
+      <Addbox/>
     </div>
   )
 }
