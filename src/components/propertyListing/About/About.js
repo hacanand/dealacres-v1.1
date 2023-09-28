@@ -36,6 +36,7 @@ const About = () => {
           layout="fill"
           objectFit="cover"
           className="bedroom"
+          alt="Why Choose Us?"
         />
       </div>
       <div className=" bg-white w-full max-w-screen-xl text-center why-choose-us">
