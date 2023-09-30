@@ -1,0 +1,28 @@
+.hotspotsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hotspotsItemContainer{
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotspotsItemContainer h6{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hotspotsImageContainer{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+}

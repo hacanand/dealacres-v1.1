@@ -18,7 +18,7 @@ function ImageContainer(props) {
               src={props.imageData.mainPic}
               alt="Big Image"
               layout="fill"
-              objectFit="cover"
+              style={{objectFit:"cover"}}
             />
         </div>
         <div className={styles.sideImgContainer}>
@@ -27,7 +27,7 @@ function ImageContainer(props) {
               src={props.imageData.sidePic1}
               alt="Side Image 1"
               layout="fill"
-              objectFit="cover"
+              style={{objectFit:"cover"}}
             />
           </div>
           <div className={styles.sideImage}>
@@ -35,12 +35,12 @@ function ImageContainer(props) {
               src={props.imageData.sidePic2}
               alt="Side Image 2"
               layout="fill"
-              objectFit="cover"
+              style={{objectFit:"cover"}}
             />
           </div>
         </div>
-        <button className={styles.floorPlanButton}><BsMap style={{display:'inline'}}/> Floor Plan</button>
-        <button className={styles.viewImagesButton} onClick={() => {setCarasouel(true)}}><IoCameraOutline style={{display:'inline'}}/> View Images</button>
+        {props.floorPlan && <button className={styles.floorPlanButton}><BsMap style={{display:'inline'}}/> Floor Plan</button>}
+        <button className={`${styles.viewImagesButton} ${styles[props.imageButtonPosition]}`} onClick={() => {setCarasouel(true)}}><IoCameraOutline style={{display:'inline'}}/> View Images</button>
         {Carasouel &&
             <div className= {styles.imageCarasouelContainer}>
                 <RiCloseLine

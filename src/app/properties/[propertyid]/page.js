@@ -13,18 +13,12 @@ async function Property(params) {
     <>
         <Navbar02/>
         <div className={styles.propertyContainer}>
-            <ImageContainer imageData = {data.imageContainer}/>
+            <ImageContainer imageData = {data.imageContainer} floorPlan = {true} imageButtonPosition = "imageButtonClass1"/>
             <div className={styles.contentContainer}>
                 <MainContentContainer content = {data.mainContent}/>
                 <SideContentContainer title = {data.mainContent.title}/>
             </div>
         </div>
-    {/* 
-        content container(
-        main container 
-        side container
-    )
-     */}
     </>
   )
 }

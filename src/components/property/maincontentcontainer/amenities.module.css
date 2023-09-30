@@ -1,0 +1,17 @@
+.amenitiesContainer{
+    padding:25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.amenitiesContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}

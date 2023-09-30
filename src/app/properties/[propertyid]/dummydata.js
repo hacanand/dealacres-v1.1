@@ -46,6 +46,7 @@ export const data = {
                 ]
             }
         },
+        Amenities:[1,2,3,4,5,6,7,9,10,11,43,21,51,29,31,32,33,41],
         mapCoordinates:{
             latitude:'28.532728318401112',
             longitude:'77.2406774322555',
