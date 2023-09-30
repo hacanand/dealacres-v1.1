@@ -8,9 +8,16 @@ const ContactStrip = ({
 }) => {
     return (
         <div className={`${isFullScreen ? 'w-screen': 'w-full'} bg-[#0061df] text-white  grid-cols-1 grid md:grid-cols-3 uppercase text-lg`}>
-            <div className='border-r border-r-black py-2 font-bold  flex  flex-col  justify-center md:border-b-0 border-b border-b-black px-4 items-center md:items-start '>
+            <div className='border-r border-r-black py-2 font-bold  flex  flex-col  justify-center
+            text-center
+            md:text-left
+            md:border-b-0 border-b border-b-black px-4 items-center  '>
+
+                <div>
                 <p>contact us</p>
                 <p>7015963201, 8307757571</p>
+
+                </div>
 
             </div>
             <div className='border-r border-r-black py-2 font-bold  flex items-center justify-center gap-4 md:border-b-0 border-b border-b-black '>
