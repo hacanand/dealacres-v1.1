@@ -1,3 +1,4 @@
+"use client"
 import styles from './maincontent2.module.css'
 import {Lato} from 'next/font/google'
 import Cities from '@/components/Homepage/Cities/Cities'
@@ -6,6 +7,9 @@ import Hotspots from './Hotspots'
 import Photos from './Photos'
 import Topdev from './Topdev'
 import Guides from '@/components/blog/guides/Guides'
+import IntrestingReading from './IntrestingReads'
+import FAQ from '@/components/property/maincontentcontainer/FAQ'
+import {data} from './dummydata';
 
 const lato = Lato({
   subsets: ['latin'],
@@ -66,9 +70,11 @@ function MainContent2() {
         </div>
         <div>
             <h5>Interesting Readings</h5>
+            <IntrestingReading />
         </div>
         <div>
             <h5>Frequently Asked Questions</h5>
+            <FAQ  faqdata = {data.mainContent.FaqData} />
         </div>
     </div>
   )
