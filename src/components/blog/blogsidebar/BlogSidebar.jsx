@@ -13,7 +13,7 @@ const BlogSideBar = ({
   allPosts
 }) => {
 
-    console.log("banner is ", banner1)
+
   return (
     <div>
      

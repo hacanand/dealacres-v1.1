@@ -9,4 +9,5 @@ export const data = {
             "/locationOverview/locationPic.jpg",
         ]
     },
+    
 }
