@@ -24,7 +24,7 @@ function InsightReview() {
           <div>
              <button onClick={handleClickYes}>Yes</button>
              <button onClick={handleClickNo}>No</button> 
-          </div>: (feedback == 0)? <span>Thanks For Your Support</span>: <span>Sorry to hear, We are progressively working on it to make your experience better</span>
+          </div>: (feedback == 0)? <span>Thanks For Your Support!!</span>: <span>Sorry to hear, We are progressively working on it to make your experience better!!</span>
           } 
         </div>
       </div>

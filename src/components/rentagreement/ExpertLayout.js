@@ -1,47 +1,48 @@
 "use client"
 import React, {useState} from 'react';
 import Image from 'next/image';
-import Expert from "../../../public/rentagreement/Expert.webp"
 import styles from "./expert.module.css"
 import { Rating } from '@mui/material';
 
-const ExpertLayout = () => {
+const ExpertLayout = (props) => {
     const [fvt, setFvt] = useState(false)
+
   return (
     <div>
-      
+      <div>
       <div className={styles.parentLayout}> 
       <div className={styles.ExpertLayout}>
 
     <div>
         <Image
-            src={Expert}
+            src={props.dt.src}
             alt='Experts'
             className={styles.ExpertImg}
         />
     </div>
 
     <div className={styles.ExpertInfo}>
-        <h3 className={styles.ExpertName}>Harvey Long</h3>
-        <Rating value={4} />
-        <p className={styles.ExpertPosition}>Dabra Chowk Hissar HO</p>
+        <h3 className={styles.ExpertName}>{props.dt.name}</h3>
+        <Rating value={props.dt.rating} />
+        <p className={styles.ExpertPosition}>{props.dt.location}</p>
         <div className={styles.ExpertStatus}>
-            <span> Property Dealer in Hisar </span>
-            <span> Property Dealer in Hisar </span>
-            <span> Property Dealer in Hisar </span>
+            <span> {props.dt.tags.tag1} </span>
+            <span> {props.dt.tags.tag2} </span>
+            <span> {props.dt.tags.tag3} </span>
         </div>
-        <p className={styles.ExpertTime}>Open untill 8:00 PM</p>
+        <p className={styles.ExpertTime}>Open untill {props.dt.availableTime}</p>
         <div className={styles.ExpertContact}>
             <button>Contact</button>
             <button>Send Enquiry</button>
         </div>
     <div className={styles.featured}>
-        <button>Featured</button>
+        {(props.dt.featured)? <button>Featured</button> : <button style = {{visibility: "hidden"}}>Featured</button> }
         <span onClick={()=> {
             setFvt(!fvt);
         }}>
         {fvt? "❤️" : "🤍"}
         </span>
+    </div>
     </div>
     </div>
     </div>

@@ -2,6 +2,7 @@
     background-color: #fff2cf;
     padding: 20px;
     display: flex;
+    border-radius: 20px;
 }
 /* 
 .InsightImgBox{
@@ -9,8 +10,8 @@
 } */
 
 .InsightImg{
-    width: 80px;
-    margin: 0px 20px;
+    width: 100px;
+    margin: 0px 30px;
 }
 
 .ReviewBox{
@@ -20,17 +21,19 @@
 
 .ReviewBox h2{
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 2px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
 }
 
 .ReviewBox button{
     background-color: #fdbd00;
     color: white;
+    font-size: large;
     font-weight: bold;
     margin-right: 15px;
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 5px 20px;
+    border-radius: 20px;
 
 }
 
