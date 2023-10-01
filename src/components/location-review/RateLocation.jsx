@@ -14,7 +14,7 @@ const RateLocation = ({ facility, onRate }) => {
 
   return (
     <div className="flex items-center justify-between">
-      <p className="text-xl max-sm:text-md">{facility}</p>
+      <p className="text-md max-sm:text-md">{facility}</p>
       <div className="flex space-x-2">
         {[1, 2, 3, 4, 5].map((starValue) => (
           <div key={starValue}>
@@ -23,7 +23,7 @@ const RateLocation = ({ facility, onRate }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="max-sm:w-5 max-sm:h-5 w-8 h-8 text-yellow-500"
+                className="max-sm:w-5 max-sm:h-5 w-6 h-6 text-yellow-500"
                 onClick={() => handleRating(starValue)}
               >
                 <path
@@ -39,7 +39,7 @@ const RateLocation = ({ facility, onRate }) => {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-8 h-8 max-sm:w-5 max-sm:h-5"
+                className="w-6 h-6 max-sm:w-5 max-sm:h-5"
                 onClick={() => handleRating(starValue)}
               >
                 <path

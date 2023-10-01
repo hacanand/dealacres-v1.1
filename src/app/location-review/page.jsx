@@ -65,13 +65,13 @@ const LocationReview = () => {
   return (
     <div className="w-full py-5 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] mt-10 mb-10">
       <div className="flex flex-col items-start border-2 border-blue-300 p-6">
-        <h2 className="block text-center text-4xl md:text-5xl font-bold w-full">
+        <h2 className="block text-center text-2xl md:text-3xl font-bold w-full">
           Write Your Reviews ✍
         </h2>
 
         <div className="w-full md:w-auto">
           <div className="space-y-4 md:space-y-2 mt-8">
-            <p className="text-xl md:text-2xl font-semibold">
+            <p className="text-lg md:text-xl font-semibold">
               What describes you the best?
             </p>
             <div className="flex flex-wrap gap-4 items-center">
@@ -87,7 +87,7 @@ const LocationReview = () => {
           </div>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-xl md:text-2xl font-semibold">
+            <p className="text-lg md:text-xl font-semibold">
               Select your locality / society to Review
             </p>
             <div className="relative">
@@ -111,32 +111,32 @@ const LocationReview = () => {
             </div>
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-lg md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-md md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
             Write Review
           </button>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-xl md:text-2xl font-semibold">
+            <p className="text-lg md:text-xl font-semibold">
               What do you like about the locality?
             </p>
-            <input
+            <textarea
               type="text"
               className="pl-5 md:pl-2 pt-2 pb-12 md:pb-24 border-2 border-blue-300 w-full rounded-md"
-            />
+            ></textarea>
           </div>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-xl md:text-2xl font-semibold">
+            <p className="text-lg md:text-xl font-semibold">
               What do you Dislike about the locality?
             </p>
-            <input
+            <textarea
               type="text"
               className="pl-5 md:pl-2 pt-2 pb-12 md:pb-24 border-2 border-blue-300 w-full rounded-md"
-            />
+            ></textarea>
           </div>
 
           <div className="space-y-4 mt-10 w-full">
-            <p className="text-xl md:text-2xl font-semibold">
+            <p className="text-lg md:text-xl font-semibold">
               Rate This - What you Thought
             </p>
             {serviceRatings.map((service, index) => (
@@ -148,7 +148,7 @@ const LocationReview = () => {
             ))}
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-lg md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-md md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
             Post Review
           </button>
         </div>
