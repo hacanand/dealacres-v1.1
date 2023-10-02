@@ -3,7 +3,13 @@ import Select from 'react-select'
 
 const CallingTimeSelector = ({
     value,
-    onChange
+    onChange,
+    register,
+    required,
+    id,
+    requireMessage,
+    pattern,
+    errors
 }) => {
 
     const options = [
@@ -27,10 +33,23 @@ const CallingTimeSelector = ({
     <div>
       <Select
       placeholder="Preffered Calling Time"
+      {...register(id, { required: (requireMessage ? requireMessage : ''),
+                pattern: (pattern ? {
+                  value: (pattern),
+                  message: (requireMessage ? requireMessage : 'Enter valid details.')
+                }: {required}) 
+              })}
         options={options}
         isClearable
         value={value}
         onChange = {(value) => onChange(value)}
+        classNames={{
+          control: () => `${errors[id] ? 'border-rose-500' : 'border-slate-300'}
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
+          input: () => 'text-lg',
+          option: () => 'text-lg'
+        }}
+      
       />
     </div>
   )

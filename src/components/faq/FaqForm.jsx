@@ -64,6 +64,7 @@ const FaqForm = () => {
                 register={register}
                 errors={errors}
                 required
+                requireMessage={"Please Enter the name."}
                 icon={<BsPerson size={30}/> }
             />
 
@@ -75,6 +76,7 @@ const FaqForm = () => {
                 id="location"
                 errors={errors}
                 required
+                register={register}
                 value={location}
                 onChange={(value) => setCustomValue('location', value )}
                 />
@@ -91,6 +93,7 @@ const FaqForm = () => {
                     register={register}
                     errors={errors}
                     required
+                    requireMessage={"Please Enter Mobile Nubmer"}
                     icon={<FiPhoneCall size={30}/> }
                 />
 
@@ -106,6 +109,8 @@ const FaqForm = () => {
                     register={register}
                     errors={errors}
                     required
+                    pattern = {/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/}
+                    requireMessage={'Enter valid email'}
                     icon={<AiOutlineMail size={30}/> }
                 />
 
@@ -120,6 +125,11 @@ const FaqForm = () => {
                
                 <CallingTimeSelector
                 value={cTime}
+                id={'cTime'}
+                required
+                register={register}
+                requireMessage={"Pleae fill this field."}
+                errors={errors}
                 onChange={(value) => setCustomValue('cTime', value)}
                 />
 

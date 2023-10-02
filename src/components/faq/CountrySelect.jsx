@@ -9,12 +9,16 @@ const CountrySelect = ({
     onChange,
     required,
     errors,
-    id
+    id,
+    register,
+    requireMessage,
+    pattern
 }) => {
 
     
 
     const {getAll} = useCountries();
+    console.log(errors)
 
     return (
         <div>
@@ -23,7 +27,12 @@ const CountrySelect = ({
         options={getAll()}
         value={value}
         onChange={(value) => onChange(value)}
-        required={required}
+        {...register(id, { required: (requireMessage ? requireMessage : ''),
+                pattern: (pattern ? {
+                  value: (pattern),
+                  message: (requireMessage ? requireMessage : 'Enter valid details.')
+                }: {}) 
+              })}
         formatOptionLabel={(option) => (
           <div className={`
           flex flex-row items-center  z-10 bg-white `}>

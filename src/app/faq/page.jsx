@@ -103,8 +103,10 @@ const page = () => {
 
       {/* Article Slider */}
 
-      <div className='max-w-screen-xl mx-auto px-4'>
-
+      <div className='max-w-screen-xl mx-auto px-4 my-8'>
+      <h3 className='font-bold text-3xl py-4 px-4'>
+          Articles
+        </h3>
 
         <ArticleSlider />
 
