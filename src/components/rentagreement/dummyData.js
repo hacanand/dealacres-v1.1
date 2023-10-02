@@ -54,6 +54,36 @@ const data={
         
     
     ],
+
+    "MostSearched": [
+        {
+          Location: "Hisar",
+          Categories: {
+            "Carpenter in Hisar": true,
+            "Electrician in Hisar": true,
+            "Sanitary Dealer in Hisar": true,
+            "Packer & Movers in Hisar": true,
+            "Furniture Dealer in Hisar": true,
+            "Home Loan Provider in Hisar": true,
+            "Plumbing Contractor in Hisar": true,
+            "Home Decor Provider in Hisar": true,
+            "Solar Product Dealer in Hisar": true,
+            "Home Interior Dealer in Hisar": true,
+            "Modular Kitchen Dealer in Hisar": true,
+            "Security System Dealer in Hisar": true,
+            "Construction Contractor in Hisar": true,
+            "Rent Agreement Provider in Hisar": true,
+            "Legal Services Provider in Hisar": true,
+            "Electronic Good Dealers in Hisar": true,
+            "Property Valuer Provider in Hisar": true,
+            "Flooring & Marble Dealer in Hisar": true,
+            "Painting Service Provider in Hisar": true,
+            "Pest Control Service Provider in Hisar": true,
+            "Chartered Accountant Provider in Hisar": true,
+            "Vastu Shartar Service Provider in Hisar": true
+          }
+        }
+      ]
        
 }
 

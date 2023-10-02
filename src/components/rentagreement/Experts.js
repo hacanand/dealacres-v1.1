@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import ExpertLayout from "./ExpertLayout";
 import data from "./dummyData";
 import styles from "./expert.module.css"
+import RealEstateAd from "./RealEstateAd";
+import SearchCategories from "./SearchCategories";
+import { Category } from "@mui/icons-material";
 
 const Experts = () => {
   let [limit, setLimit] = useState(5);
@@ -16,8 +19,13 @@ const Experts = () => {
     }
   };
   return (
-    <div className="container">
+    // <div className="container flex">
+    <div className={styles.MainLayout}>
       <div>
+        <h2 className={styles.Explore}>Explore our Rent Agreement Experts</h2>
+        <div>
+      <div>
+
       {filteredData.map((dt, index) => (
           <ExpertLayout
             // key={index}
@@ -27,11 +35,31 @@ const Experts = () => {
 
           />
       ))}
-        </div>
       <div className="text-center">
     
     <button className={styles.MoreExperts} onClick={toggleDisplay} >{limit == -1 ? 'View Less':  "View All" }</button>
     </div>
+        </div>
+        </div>
+        </div>
+
+        <div>
+
+
+
+        <div className={styles.MostSearched}>
+          {data["MostSearched"].map((Cate, index) => (
+    <SearchCategories city={Cate.Location} category = {Cate.Categories} />
+    ))}
+    </div>
+
+
+          <div>
+          <RealEstateAd />
+        </div>
+
+        </div>
+        {/* </div> */}
     </div>
   );
 };

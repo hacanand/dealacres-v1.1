@@ -1,3 +1,16 @@
+.MainLayout{
+    width: 100%;
+    display: flex;
+    /* margin: 0rem 12rem; */
+    padding: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+.Explore{
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .ExpertImg{
     width: 130px;
     height: 100%;
@@ -84,4 +97,15 @@
     border-radius: 15px;
     margin-bottom: 30px;
     margin-top: 10px;
+}
+
+.MostSearched{
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px 10px;  
+    border-radius: 10px;
+    margin-top: 55px;
+}
+.MostSearched h2{
+    font-weight: bold;
 }
