@@ -2,14 +2,15 @@ import React from "react";
 
 function NewsCard({ title, text, imageSrc, date, handleShare }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full sm:w-60 md:w-80 lg:w-72">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full sm:w-72 md:w-72 lg:w-64">
       <img
         src={imageSrc}
-        alt="News"
-        className="w-full h-48 sm:h-60 object-cover"
+        alt="Manual"
+        className="w-75  h-36 sm:h-64 object-cover"
+        style={{width: "inherit !important"}}
       />
       <div className="px-4 py-3 sm:py-4">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-2">{title}</h2>
+        <h3 className="font-semibold mb-2">{title}</h3>
         <p className="text-gray-700 text-sm sm:text-base">{text}</p>
         <div className="flex justify-between items-center mt-3 sm:mt-4">
           <div className="flex items-center space-x-2">

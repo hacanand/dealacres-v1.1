@@ -1,0 +1,58 @@
+.EstateService{
+    width: 75%;
+    margin: auto;
+
+}
+.Services{
+    display: flex;
+    flex-wrap: wrap;
+}
+.EstateService h2{
+    font-size: 35px;
+    /* font-weight: bold; */
+    margin: 20px 0px;
+
+
+}
+
+.MoreService{
+    background-color: #0061fd;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.ServiceLayout{
+    width: 140px;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 60px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    flex-basis: 200;
+    display: inline-block;
+}
+
+.ServiceLayout p{
+    font-size: 1.5 rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ServiceLayout img{
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    padding: 10px;
+    width:100px;
+    margin:auto;
+    margin-top: auto;
+}
+
+/* .Img{
+    width: 100px;
+    height: 300px;
+} */

@@ -5,7 +5,6 @@ import data from "./dummyData";
 import styles from "./expert.module.css"
 import RealEstateAd from "./RealEstateAd";
 import SearchCategories from "./SearchCategories";
-import { Category } from "@mui/icons-material";
 
 const Experts = () => {
   let [limit, setLimit] = useState(5);
@@ -38,6 +37,7 @@ const Experts = () => {
       <div className="text-center">
     
     <button className={styles.MoreExperts} onClick={toggleDisplay} >{limit == -1 ? 'View Less':  "View All" }</button>
+    
     </div>
         </div>
         </div>
