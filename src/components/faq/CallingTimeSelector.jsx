@@ -28,23 +28,26 @@ const CallingTimeSelector = ({
         label: "Anytime"
        }
     ]
-    
+
+    const formOptions = (pattern ?  { required: (requireMessage ? requireMessage : ''),
+                pattern: (pattern ? {
+                  value: (pattern),
+                  message: (requireMessage ? requireMessage : 'Enter valid details.')
+                }: {}) } : {required});
+
+
+ 
   return (
     <div>
       <Select
       placeholder="Preffered Calling Time"
-      {...register(id, { required: (requireMessage ? requireMessage : ''),
-                pattern: (pattern ? {
-                  value: (pattern),
-                  message: (requireMessage ? requireMessage : 'Enter valid details.')
-                }: {required}) 
-              })}
+      {...register(id, formOptions)}
         options={options}
         isClearable
         value={value}
         onChange = {(value) => onChange(value)}
         classNames={{
-          control: () => `${errors[id] ? 'border-rose-500' : 'border-slate-300'}
+          control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
           input: () => 'text-lg',
           option: () => 'text-lg'

@@ -18,21 +18,24 @@ const CountrySelect = ({
     
 
     const {getAll} = useCountries();
-    console.log(errors)
+    console.log(errors);
+
+    const formOptions = (pattern ?  { required: (requireMessage ? requireMessage : ''),
+    pattern: (pattern ? {
+      value: (pattern),
+      message: (requireMessage ? requireMessage : 'Enter valid details.')
+    }: {}) } : {required});
+
 
     return (
         <div>
              <Select
+       {...register(id,formOptions)}
         isClearable
         options={getAll()}
         value={value}
         onChange={(value) => onChange(value)}
-        {...register(id, { required: (requireMessage ? requireMessage : ''),
-                pattern: (pattern ? {
-                  value: (pattern),
-                  message: (requireMessage ? requireMessage : 'Enter valid details.')
-                }: {}) 
-              })}
+      
         formatOptionLabel={(option) => (
           <div className={`
           flex flex-row items-center  z-10 bg-white `}>
@@ -46,7 +49,7 @@ const CountrySelect = ({
           </div>
         )}
         classNames={{
-          control: () => `${errors[id] ? 'border-rose-500' : 'border-slate-300'}
+          control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
           input: () => 'text-lg',
           option: () => 'text-lg'
