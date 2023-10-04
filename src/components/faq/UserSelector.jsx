@@ -2,8 +2,14 @@ import React from 'react'
 import Select from 'react-select'
 
 const UserSelector = ({
-    value,
-    onChange
+  value,
+    onChange,
+    register,
+    required,
+    id,
+    requireMessage,
+    pattern,
+    errors
 }) => {
 
     const options = [
@@ -24,15 +30,29 @@ const UserSelector = ({
         label: "Dealer"
        },
     ]
+
+    const formOptions = (pattern ?  { required: (requireMessage ? requireMessage : ''),
+    pattern: (pattern ? {
+      value: (pattern),
+      message: (requireMessage ? requireMessage : 'Enter valid details.')
+    }: {}) } : {required});
     
   return (
     <div>
       <Select
+      {...register(id, formOptions)}
       placeholder="User Type"
         options={options}
         isClearable
         value={value}
         onChange = {(value) => onChange(value)}
+
+        classNames={{
+          control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
+          input: () => 'text-lg',
+          option: () => 'text-lg'
+        }}
       />
     </div>
   )
