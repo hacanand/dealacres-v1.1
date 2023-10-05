@@ -47,7 +47,7 @@ const FaqForm = () => {
 
     const setCustomValue = (id, value) => {
 
-        console.log("tried changind", id)
+  
         setValue(id, value, {
             shouldDirty: true,
             shouldValidate: true,

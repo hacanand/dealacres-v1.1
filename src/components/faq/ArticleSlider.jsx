@@ -51,6 +51,7 @@ const ArticleSlider = () => {
         centerPadding: '0px',
         className: '',
         nextArrow: <NextArrow />,
+        arrows: true,
         responsive: [
             {
               breakpoint: 1024,
