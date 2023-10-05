@@ -10,30 +10,22 @@ const ImgSlider = () => {
     const ManualData = [
         {
           id: 1,
-          imageSrc: "https://via.placeholder.com/250x140",
+          imageSrc: "/Agent/housing.webp",
         },
         {
           id: 2,
-          imageSrc: "https://via.placeholder.com/250x140",
+          imageSrc: "/Agent/housing2.jpg",
         },
         {
           id: 3,
-          imageSrc: "https://via.placeholder.com/250x140",
+          imageSrc: "/Agent/housing3.jpg",
         },
         {
           id: 4,
-          imageSrc: "https://via.placeholder.com/250x140",
-        },
-        {
-          id: 5,
-          imageSrc: "https://via.placeholder.com/250x140",
-        },
-        {
-          id: 6,
-          imageSrc: "https://via.placeholder.com/250x140",
+          imageSrc: "/Agent/housing4.jpg",
         },
       ];
-    
+
   return (
     <div>
       <div className={styles.slider}>
@@ -68,4 +60,4 @@ const ImgSlider = () => {
   )
 }
 
-export default ImgSlider
+export default ImgSlider;

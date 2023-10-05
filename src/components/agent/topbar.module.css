@@ -28,7 +28,7 @@
     border-radius: 20px;
     padding: 5px;
     align-self: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 50%;
     
 }
@@ -46,4 +46,11 @@
     border-radius: 50px;
     color: white;
     padding: 4px;
+}
+
+@media only screen and (max-width: 500px){
+    .searchBar{
+        width: 85%;
+        margin-bottom: 10px;
+    }
 }

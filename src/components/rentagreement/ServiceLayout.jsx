@@ -13,6 +13,8 @@ const ServiceLayout = (props) => {
       <Image
         src={props.source}
         alt={props.service}
+        width={150}
+        height={100}
       />
       {/* </div> */}
     </div>

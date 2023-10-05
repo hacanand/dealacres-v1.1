@@ -21,12 +21,12 @@ const TopBar = () => {
       </div>
 
       <div className={styles.searchLayout}>
-        <di className={styles.searchBar}>
+        <div className={styles.searchBar}>
           <input id="SearchAgent" type="search" />
           <label htmlFor="SearchAgent">
             <SearchRounded color="light" />
           </label>
-        </di>
+        </div>
 
         <div>
           <ButtonGroup size="large" aria-label="large button group">

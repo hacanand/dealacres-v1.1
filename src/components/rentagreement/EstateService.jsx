@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import ServiceLayout from "./ServiceLayout";
 import styles from "./estateservice.module.css";
-import data from "./dummyData";
+import datas from "./Data.js";
 
 const EstateService = () => {
   let [limit, setLimit] = useState(7);
-  const filteredData = data["EstateService"].slice(0, limit);
+  const filteredData = datas["EstateService"].slice(0, limit);
 
   let toggleDisplay = () => {
     if (limit == -1) {
@@ -26,7 +26,7 @@ const EstateService = () => {
             color={dt.color}
             bgColor={dt.bgColor}
             service={dt.service}
-            icon={dt.source}
+            source={dt.source}
           />
           ))}
           </div>
