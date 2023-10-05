@@ -1,6 +1,6 @@
 .guideCard {
     width: 10rem;
-    aspect-ratio: 1 / 1.5;
+    height: 15rem;
 }
 
 
@@ -16,6 +16,7 @@
 @media screen and (min-width: 1000px) {
 
     .guideCard {
+        height: 18rem;
         width: 12rem;
     }
 }
@@ -35,6 +36,7 @@
         width: 15rem;
         /* align-self: stretch; */
         justify-content: center;
+        height: 22.5rem;
       
     }
 }

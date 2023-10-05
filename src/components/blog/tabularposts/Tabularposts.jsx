@@ -12,10 +12,10 @@ const Tabularposts = ({
   articles
 }) => {
   return (
-    <div className='my-4'>
+    <div className='my-4 bg-[#edf6f7]'>
 
-      <Heading heading='Read More' />
-      <div className='=  min-[820px]:grid min-[820px]:grid-cols-3 bg-[#edf6f7]'>
+      {/* <Heading heading='Read More' /> */}
+      <div className='=  min-[820px]:grid min-[820px]:grid-cols-3 max-w-screen-2xl mx-auto'>
         <div className='my-2 px-4 min-[820px]:col-span-1 '>
           <div>
 
