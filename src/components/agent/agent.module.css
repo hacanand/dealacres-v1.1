@@ -1,0 +1,41 @@
+.agentLayout{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    gap: 20px;
+    flex-wrap:wrap;
+}
+.Explore{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.MostSearched{
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px 10px;  
+    border-radius: 10px;
+    margin-top: 55px;
+}
+
+.MostSearched h2{
+    font-weight: bold;
+}
+
+.sidebar{
+    margin-top: 80px;
+    width: 350px;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+@media only screen and (max-width: 500px){
+    .featured{
+        bottom: 30%;
+        left: 75%;
+    }
+    .ExpertContact{
+        text-align: end;
+        margin-top: 5px;
+    }    
+}

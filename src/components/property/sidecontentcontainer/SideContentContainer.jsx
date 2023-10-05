@@ -65,9 +65,13 @@ function SideContentContainer(props) {
         <p style={{color:'red'}}>{errors.TermsConditions && errors.TermsConditions.message}</p>
         <button>Send Message</button>
       </form>
-      <Addbox/>
+      {(props.Addbox)? "" :
+      <div>
+      <Addbox />
+        </div>
+        }
     </div>
   )
 }
 
-export default SideContentContainer
+export default SideContentContainer;

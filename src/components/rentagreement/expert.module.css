@@ -33,6 +33,7 @@
     border: 1px solid #0061fd;
     margin: 10px;
     padding: 10px;
+    border-radius: 15px;
 }
 
 .ExpertInfo{    
@@ -117,10 +118,17 @@
     font-weight: bold;
 }
 
+@media only screen and (max-width: 990px){
+    .featured{
+        bottom: 125%;
+        left: 80%;
+    }
+    
+}
 @media only screen and (max-width: 500px){
     .featured{
-        bottom: 130%;
-        left: 75%;
+        bottom: 125%;
+        left: 70%;
     }
     .ExpertContact{
         text-align: end;
