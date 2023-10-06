@@ -12,7 +12,7 @@ const Guides = ({
     subheading
 }) => {
     return (
-        <div className='font-bold text-2xl my-4 p-4'>
+        <div className='font-bold text-2xl p-4 my-4 '>
             
 
             <div className={`${subheading ? 'mx-0' : 'mx-auto'}`}>
