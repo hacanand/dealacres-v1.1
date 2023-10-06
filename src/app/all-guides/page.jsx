@@ -71,7 +71,7 @@ const articlesData = [
 const page = () => {
 
   const [tab, setTab] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(4)
+  const [cardsToShow, setCardsToShow] = useState(2)
 
   const cardsContRef = useRef(null);
 
@@ -159,7 +159,7 @@ const page = () => {
           </button>
           <span 
      
-          onClick={() => {setCardsToShow(4)
+          onClick={() => {setCardsToShow(2)
           scrollToCardContainer()
           }}
           className= 'hidden peer-disabled:inline text-blue-400 animate-pulse'>

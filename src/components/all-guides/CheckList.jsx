@@ -19,14 +19,14 @@ const dummyCheckList = ["What to Buy?",
 
 const CheckList = () => {
   return (
-    <div className={`${styles.checkListContainer} px-4 py-4`}>
+    <div className={`${styles.checkListContainer} max-w-[400px] md:max-w-full mx-auto md:mx-0 px-4 py-4`}>
 
     <ul className={`${styles.checkList} `}>
       {
-        dummyCheckList.map((item,index) => (<li key={index} className='font-bold text-lg md:text-2xl md:py-4 flex items-center gap-2  '>
+        dummyCheckList.map((item,index) => (<li key={index} className='font-bold text-lg min-[920px]:text-2xl min-[920px]:py-4 flex items-center gap-2  '>
             <span className='w-[50px] inline-flex'>{index + 1} </span>
             <span className='ml-2 border-b
-            border-b-neutral-500 py-2 md:py-4 '>{item}</span>
+            border-b-neutral-500 py-2 min-[920px]:py-4 '>{item}</span>
         </li>))
       }
     </ul>
