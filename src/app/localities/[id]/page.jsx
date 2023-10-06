@@ -39,7 +39,11 @@ const SingleLocality = () => {
         </div>
       );
     } else {
-      return null;
+      return (
+        <div className="text-6xl flex items-center justify-center p-[10rem]">
+          Insights Content
+        </div>
+      );
     }
   };
 
