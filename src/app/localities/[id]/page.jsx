@@ -47,7 +47,7 @@ const SingleLocality = () => {
     <Fragment>
       <header className="relative h-[20rem] w-full bg-cover bg-center bg-no-repeat bg-[url('https://e0.pxfuel.com/wallpapers/685/630/desktop-wallpaper-india-delhi-roads-street-lights-cities.jpg')]">
         <div className="absolute bg-[#004AAD] opacity-75 w-full h-full"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-2">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-2 p-2">
           <Image
             className="w-16 h-16 font-bold text-white"
             src={headerMapImage}
