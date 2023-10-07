@@ -1,10 +1,8 @@
 import React from 'react'
 import skyscrappers from '../../../public/all-guides/skyscrappers.webp'
-import handshakes from '../../../public/all-guides/handshake.webp'
 import bannerBg from '../../../public/all-guides/banner.png'
 import Image from 'next/image'
 import styles from './allguides.module.css'
-import BannerIcon from './BannerIcon'
 
 const AllGuidesBanner = () => {
   return (
