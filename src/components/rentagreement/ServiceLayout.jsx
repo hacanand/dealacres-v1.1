@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from "./estateservice.module.css";
-import source from "../../../public/rentagreement/ServiceIcons/RentAgreement.png"
+// import source from "../../../public/rentagreement/ServiceIcons/RentAgreement.png"
 
 const ServiceLayout = (props) => {
   // const source = require(`${props.icon}`);

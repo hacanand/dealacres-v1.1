@@ -1,6 +1,6 @@
 .feedbackPopup{
     position: fixed;
-    background-color: #ffce3850;
+    background-color: #ffce3880;
     top: 35%;
     left: 35%;
     z-index: 500;
@@ -54,5 +54,5 @@
         height: 30%;
         background-color: #ffce3880;
     }
-      
+     
 }
