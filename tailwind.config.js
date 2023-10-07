@@ -10,11 +10,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "engineer-with-camera": "url('/public/areaCalculator/engineer_camera.webp')",
-        "man-on-land": "url('/public/areaCalculator/man_on_land.webp')",
-        "camera-on-land": "url('/public/areaCalculator/camera_on_land.jpg')",
-      },
       backgroundColor: (theme) => ({
         ...theme("colors"),
       }),

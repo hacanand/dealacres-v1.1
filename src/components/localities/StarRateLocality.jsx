@@ -18,7 +18,7 @@ const StarRateLocality = () => {
       <Image
         src={girlLaptop}
         alt="girl with laptop"
-        className="w-32 h-32 sm:w-48 sm:h-48"
+        className="w-[5rem] h-[5rem]"
       />
       <div className="flex flex-col items-center justify-center space-y-3">
         <p className="text-lg sm:text-xl font-semibold text-center">
