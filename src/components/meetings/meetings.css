@@ -1,0 +1,11 @@
+.slideIn {
+    display: block;
+    animation: slideIn 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0%);
+    }
+}
