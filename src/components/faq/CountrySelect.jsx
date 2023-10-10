@@ -18,7 +18,7 @@ const CountrySelect = ({
     
 
     const {getAll} = useCountries();
-    console.log(errors);
+  
 
     const formOptions = (pattern ?  { required: (requireMessage ? requireMessage : ''),
     pattern: (pattern ? {
