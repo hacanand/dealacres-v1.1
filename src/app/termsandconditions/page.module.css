@@ -32,8 +32,16 @@
     list-style-type: decimal;
 }
 
-.TandCContent ul li{
+.TandCContent ul li, .TandCContent ol ul li{
     list-style-type: disc;
+}
+
+.TandCContent ol ul li{
+    margin-left: 60px;
+}
+
+.TandCContent ul ul li{
+    margin-left: 100px;
 }
 
 .h3Highlighted{

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './page.module.css'
+import SeeMore from './SeeMore'
 
 const Content = () => {
   return (
@@ -144,6 +145,8 @@ If company removes any content from its website or other platforms at any time. 
     </li>
 </ol>
 </div>
+
+    <SeeMore />
     </div>
 
   )
