@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Select from "react-select";
 
 import { FaExchangeAlt } from "react-icons/fa";
 
 import headerImage from "../../../public/areaCalculator/header.png";
-import girlQuestion from "../../../public/areaCalculator/girlQuestion.png";
+import girlQuestion from "../../../public/areaCalculator/girl_with_question.webp";
 
 import BlogCard from "@/components/areaCalculator/BlogCard";
 import FAQ from "@/components/areaCalculator/FAQ";
 
-import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const indianStates = [
@@ -61,11 +61,49 @@ const indianStates = [
   { value: "Puducherry", label: "Puducherry" },
 ];
 
+const conversionData = {
+  gaj: {
+    gaj: 1,
+    squareyard: 0.9,
+    acres: 0.0002,
+    squarefeet: 9,
+    hectare: 0.00008,
+  },
+  squareyard: {
+    gaj: 1,
+    squareyard: 1,
+    acres: 0.0002,
+    squarefeet: 9,
+    hectare: 0.00008,
+  },
+  acres: {
+    gaj: 4840.04,
+    squareyard: 4840,
+    acres: 1,
+    squarefeet: 43560,
+    hectare: 0.4,
+  },
+  squarefeet: {
+    gaj: 0.1,
+    squareyard: 0.1,
+    acres: 0.00002,
+    squarefeet: 1,
+    hectare: 0.000009,
+  },
+  hectare: {
+    gaj: 11959.99,
+    squareyard: 11959.89,
+    acres: 2.47,
+    squarefeet: 107639,
+    hectare: 1,
+  },
+};
+
 const options = [
   { value: "gaj", label: "Gaj" },
-  { value: "squareYard", label: "Square Yard" },
+  { value: "squareyard", label: "Square Yard" },
   { value: "acres", label: "Acres" },
-  { value: "squareFeet", label: "Square Feet" },
+  { value: "squarefeet", label: "Square Feet" },
   { value: "hectare", label: "Hectare" },
 ];
 
@@ -146,7 +184,34 @@ const faqData = [
 ];
 
 const AreaCalculator = () => {
+  const [selectedState, setSelectedState] = useState("");
+  const [totalUnits, setTotalUnits] = useState("");
+  const [fromValue, setFromValue] = useState("");
+  const [toValue, setToValue] = useState("");
+  const [result, setResult] = useState("");
+  const [isLastInputDisabled, setIsLastInputDisabled] = useState(true);
+  const [inputError, setInputError] = useState("");
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  useEffect(() => {
+    if (selectedState && totalUnits && fromValue && toValue) {
+      if (!isNaN(totalUnits) && parseFloat(totalUnits) >= 0) {
+        setIsLastInputDisabled(false);
+        const conversionFactor = conversionData[fromValue][toValue];
+        const convertedValue = totalUnits * conversionFactor;
+        setResult(convertedValue);
+        setInputError("");
+      } else {
+        setIsLastInputDisabled(true);
+        setResult("");
+        setInputError("Please enter a valid non-negative number.");
+      }
+    } else {
+      setIsLastInputDisabled(true);
+      setResult("");
+      setInputError("");
+    }
+  }, [selectedState, totalUnits, fromValue, toValue]);
 
   const toggleFaq = (index) => {
     if (openFaqIndex === index) {
@@ -155,6 +220,7 @@ const AreaCalculator = () => {
       setOpenFaqIndex(index);
     }
   };
+
   return (
     <div>
       <div className="relative p-5 mb-10 max-lg:hidden">
@@ -167,30 +233,43 @@ const AreaCalculator = () => {
         <div className="p-4 absolute top-[8rem] left-20 w-1/3 bg-white border-4 rounded-lg border-blue-400 h-auto max-xl:top-[5rem] max-lg:top-1">
           <h2 className="text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">
-            <Select options={indianStates} placeholder="State" />
+            <Select
+              options={indianStates}
+              placeholder="State"
+              onChange={(value) => setSelectedState(value.value)}
+            />
 
             <input
               placeholder="Total Units"
-              type="text"
+              type="number"
+              step="any"
+              min="0"
+              value={totalUnits}
+              onChange={(e) => setTotalUnits(e.target.value)}
               className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
+
+            {inputError && <p className="text-red-600">{inputError}</p>}
 
             <div className="flex flex-row items-center justify-center space-x-2">
               <Select
                 placeholder="From"
                 options={options}
-                className="w-full   focus:outline-blue-600 rounded-md text-gray-500"
+                className="w-full focus:outline-blue-600 rounded-md text-gray-500"
+                onChange={(value) => setFromValue(value.value)}
               />
               <FaExchangeAlt className="h-10 w-10" />
               <Select
-                placeholder="TO"
+                placeholder="To"
                 options={options}
-                className="w-full   focus:outline-blue-600 rounded-md text-gray-500"
+                className="w-full focus:outline-blue-600 rounded-md text-gray-500"
+                onChange={(value) => setToValue(value.value)}
               />
             </div>
 
             <input
-              disabled={true}
+              disabled={isLastInputDisabled}
+              value={result}
               className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
           </div>
@@ -201,11 +280,19 @@ const AreaCalculator = () => {
         <div className="p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
           <h2 className="text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">
-            <Select options={indianStates} placeholder="State" />
+            <Select
+              options={indianStates}
+              placeholder="State"
+              onChange={(value) => setSelectedState(value.value)}
+            />
 
             <input
               placeholder="Total Units"
-              type="text"
+              type="number"
+              step="any"
+              min="0"
+              value={totalUnits}
+              onChange={(e) => setTotalUnits(e.target.value)}
               className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
 
@@ -214,17 +301,20 @@ const AreaCalculator = () => {
                 placeholder="From"
                 options={options}
                 className="w-full   focus:outline-blue-600 rounded-md text-gray-500"
+                onChange={(value) => setFromValue(value.value)}
               />
               <FaExchangeAlt className="h-10 w-10" />
               <Select
                 placeholder="TO"
                 options={options}
+                onChange={(value) => setToValue(value.value)}
                 className="w-full   focus:outline-blue-600 rounded-md text-gray-500"
               />
             </div>
 
             <input
-              disabled={true}
+              disabled={isLastInputDisabled}
+              value={result}
               className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
           </div>
@@ -233,12 +323,24 @@ const AreaCalculator = () => {
 
       <div className="px-[5rem] mb-3 max-sm:px-[2rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
-        <div className="flex flex-wrap gap-8 mt-3">
+        <div className="flex flex-wrap gap-4 mt-3">
           <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
             Hectare to Acre
           </div>
           <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
-            Square to Acre
+            Acre to Hectare
+          </div>
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+            Square Feet to Cent
+          </div>
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+            Square Feet to Square Meter
+          </div>
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+            Square Feet to Square Yard
+          </div>
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+            Square Feet to Gaj
           </div>
         </div>
       </div>
@@ -269,11 +371,11 @@ const AreaCalculator = () => {
               their size varies from state to state.
             </p>
           </div>
-          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/46160/field-clouds-sky-earth-46160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"></div>
+          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473790/engineer_camera_ijgzj5.jpg')]"></div>
         </div>
 
         <div className="max-md:flex max-md:flex-col grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm">
-          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/2042161/pexels-photo-2042161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"></div>
+          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473980/man_on_land_ijehan.jpg')]"></div>
           <div>
             <h2 className="font-semibold">
               Land area measurement units used in North India
@@ -318,7 +420,7 @@ const AreaCalculator = () => {
             </p>
           </div>
 
-          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/636342/pexels-photo-636342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"></div>
+          <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696474042/camera_on_land_mmlizy.jpg')]"></div>
         </div>
       </div>
 
@@ -346,7 +448,7 @@ const AreaCalculator = () => {
           <div className="flex flex-col items-end justify-end max-lg:hidden">
             <p className="text-2xl font-bold text-[#40128B]">Any inquiry ?</p>
             <p className="text-2xl   text-[#40128B]">we are here to help you</p>
-            <Image src={girlQuestion} alt="girl question" />
+            <Image src={girlQuestion} alt="girl question" className="mt-5" />
           </div>
         </div>
       </div>
@@ -362,8 +464,8 @@ const AreaCalculator = () => {
         <div className="mt-5 w-full">
           <Swiper
             spaceBetween={16}
-            modules={[Navigation]}
-            navigation={true}
+            modules={[Pagination]}
+            pagination={{ el: ".swiper-pagination", clickable: true }}
             slidesPerView={1}
             breakpoints={{
               640: {
@@ -392,6 +494,9 @@ const AreaCalculator = () => {
                 </SwiperSlide>
               );
             })}
+            <div className="pt-10">
+              <div class="swiper-pagination"></div>
+            </div>
           </Swiper>
         </div>
       </div>
