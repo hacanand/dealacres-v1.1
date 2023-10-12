@@ -38,8 +38,8 @@ setTab}
         <div className='
         w-screen
         
-        bg-blue-600 text-white py-8 px-16  flex justify-between items-center'>
-            <div className='flex gap-16 items-center'>
+        bg-blue-600 text-white py-8 px-16  flex flex-col md:flex-row justify-between md:items-center'>
+            <div className='flex gap-16 md:items-center flex-col md:flex-row'>
                 <div className='flex flex-col text-xl'>
                     <span className='font-bold text-2xl'>
                         MEETING
@@ -62,7 +62,7 @@ setTab}
 
             <div>
                { tab === 0 ? <button
-                className='text-blue-500 font-bold text-4xl bg-white rounded shadow px-16 py-3 '
+                className='text-blue-500 font-bold text-2xl md:text-4xl bg-white rounded my-4 shadow px-16 py-3 '
                 onClick={handleNextClick}>
                     Next
                 </button> : <button

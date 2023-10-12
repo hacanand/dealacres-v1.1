@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {useRouter} from 'next/navigation'
+import { useRouter, useSearchParams} from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import DateInput from './DateInput';
 
@@ -16,14 +16,18 @@ import FormStatus from './FormStatus';
 import AppSelector from './AppSelector';
 import { useEffect,useCallback } from 'react';
 const TimeScheduler = () => {
+  const params = useSearchParams()
+  const mode = params.get('mode')
 
   const [showFullDate, setShowFullDate] = useState(false);
+  const [modeParams, setModeParams] = useState(true);
   const [tab, setTab] = useState(0);
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedMMode, setselectedMMode] = useState({
     inPerson: false,
     virtualMode: false,
   });
+
 
   const router = useRouter();
   const [selectedApp, setSelectedApp] = useState({
@@ -139,7 +143,25 @@ const TimeScheduler = () => {
 
 
 
+
+
   useEffect(() => {
+    if(mode && modeParams){
+
+
+      mode === 'inPerson' ? 
+      setselectedMMode({
+        inPerson: true,
+        virtualMode: false,
+      }) : setselectedMMode({
+        inPerson: false,
+        virtualMode: true,
+      })
+      setModeParams(false)
+    }
+
+    
+    
     if (getValues('date') === ' ') {
       setError('date', { type: 'focus', message: 'date is not selected' })
     }
@@ -205,12 +227,13 @@ const TimeScheduler = () => {
           <div className='flex '>
             <span
               id="meetingMode"
+              
               {...register('meetingMode', { required: true })}
               onClick={() => handleOnClick('meetingMode', {
                 inPerson: true,
                 virtualMode: false
               })}
-              className={`transition-[color] cursor-pointer border  py-2 px-4 text-center text-xl inline-flex items-center gap-2 ${selectedMMode.inPerson === true ? 'border-2 border-black text-green-500 font-bold' : 'border-neutral-500'}`}>
+              className={`transition-[color] cursor-pointer border  py-2 px-4 text-center text-xl inline-flex items-center gap-2 flex-col md:flex-row ${selectedMMode.inPerson === true ? 'border-2 border-black text-green-500 font-bold' : 'border-neutral-500'}`}>
               <RiAccountCircleFill size={33} /> Meet in Person
             </span>
             <span
@@ -220,7 +243,7 @@ const TimeScheduler = () => {
                 inPerson: false,
                 virtualMode: true
               })}
-              className={`transition-[color] cursor-pointer border border-black py-2 px-4 text-center text-xl border-l-0 flex items-center gap-2 ${selectedMMode.virtualMode === true ? 'border-2 border-black text-green-500 font-bold' : 'border-neutral-500'}`}>
+              className={`transition-[color] cursor-pointer border border-black py-2 px-4 text-center text-xl border-l-0 flex flex-col md:flex-row items-center gap-2 ${selectedMMode.virtualMode === true ? 'border-2 border-black text-green-500 font-bold' : 'border-neutral-500'}`}>
               <span className='rounded-full flex p-1 items-center justify-center border border-black'>
                 <AiFillYoutube size={25} />
               </span>
@@ -232,7 +255,7 @@ const TimeScheduler = () => {
         </div>
         <div>
           <h2 className='text-3xl font-bold py-4 '>Pick a Time</h2>
-          <div className='flex '>
+          <div className='flex flex-col md:flex-row '>
             {
               tSlots.map((slot, index) => {
                 return (
