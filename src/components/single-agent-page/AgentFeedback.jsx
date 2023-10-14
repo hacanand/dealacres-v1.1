@@ -1,8 +1,33 @@
 'use client'
 import React, { useState } from 'react'
+import { useForm } from 'react-hook-form';
 
 const AgentFeedback = () => {
     const [rating, setRating] = useState(0)
+
+    
+    const [isLoading, setIsLoading] = useState(false);
+    const onSubmit = async (data) => {
+
+        setIsLoading(true) 
+        setTimeout(() => {
+            console.log(data);
+            
+          
+            alert("You message has been successfully sent to the agent!")
+            setIsLoading(false)
+
+        }, 3000)
+
+       
+
+      
+
+    }
+    const {
+        register,
+        handleSubmit,
+        formState: { errors } } = useForm()
     return (
         <div className='w-full' >
             <h2 className='font-bold text-xl py-2'>
@@ -13,7 +38,7 @@ const AgentFeedback = () => {
                 <label className='font-bold' htmlFor="email">
                     Email
                 </label>
-                <input className='border border-black outline-none py-2 px-4 rounded shadow' type="text" />
+                <input id='email' {...register('email', {required: "Email is required."})} className='border border-black outline-none py-2 px-4 rounded shadow' type="text" />
             </div>
             <div className='flex  w-full py-2 gap-4'>
                 <div className='w-1/2 flex flex-col'>
