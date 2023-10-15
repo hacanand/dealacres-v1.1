@@ -20,6 +20,7 @@
     "@next/font": "^13.4.10",
     "autoprefixer": "10.4.14",
     "bootstrap-icons": "^1.11.1",
+    "country-state-city": "^3.2.1",
     "daisyui": "^3.5.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",

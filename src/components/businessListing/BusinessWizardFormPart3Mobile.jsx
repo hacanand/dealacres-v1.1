@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import TimePicker from "react-time-picker";
-import { FaTimes } from "react-icons/fa";
 
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 import DayTimeSelector from "./DayTimeSelector";
 
-const BusinessWizardFormPart3Mobile = () => {
+const BusinessWizardFormPart3Mobile = ({
+  onSaveAndContinue,
+  onPreviousClick,
+}) => {
   const [is24Hours, setIs24Hours] = useState(true);
 
   return (
@@ -38,6 +39,22 @@ const BusinessWizardFormPart3Mobile = () => {
       {["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((day, index) => {
         return <DayTimeSelector key={index} day={day} />;
       })}
+
+      <div className="w-full flex flex-col md:flex-row justify-between pr-2 md:pr-0 mt-5">
+        <button
+          className="mb-2 md:mb-0 font-semibold text-lg bg-blue-600 px-4 py-2 text-white rounded-md text-center"
+          onClick={onPreviousClick}
+        >
+          Previous
+        </button>
+
+        <button
+          className="font-semibold text-lg bg-blue-600 px-4 py-2 text-white rounded-md text-center"
+          onClick={onSaveAndContinue}
+        >
+          Save & Continue
+        </button>
+      </div>
     </div>
   );
 };
