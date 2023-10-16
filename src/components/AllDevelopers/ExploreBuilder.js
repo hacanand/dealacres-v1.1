@@ -7,7 +7,8 @@ import data from "./dummyData.js"
 
 const ExploreBuilder = () => {
     const [limit, setLimit] = useState(8);
-    const filteredData = data["Property"].slice(0, limit);
+    
+
     const [project, setProject] = useState("Residential");
     const [projectLimit, setProjectLimit] = useState(4);
 
@@ -26,6 +27,29 @@ const ExploreBuilder = () => {
   };
 
   const maxLength = -1;
+
+
+  // Pagination -->
+
+  const [currentPage, setCurrentPage] = useState(1);
+const cardsPerPage = 5; 
+const indexOfLastCard = currentPage * cardsPerPage;
+const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+const filteredData = data["Property"].slice(indexOfFirstCard, indexOfLastCard);
+
+const nextPage = () => {
+  if (currentPage < Math.ceil(data["Property"].length / cardsPerPage)) {
+    setCurrentPage(currentPage + 1);
+  }
+};
+
+const prevPage = () => {
+  if (currentPage > 1) {
+    setCurrentPage(currentPage - 1);
+  }
+};
+
+
 
   return (
     <div className={styles.ExploreBuilder}>
@@ -92,6 +116,12 @@ const ExploreBuilder = () => {
              </div>
 
 ))}
+
+<div className={styles.pagination}>
+
+  <span onClick={prevPage}> {"<"} Previous</span>
+  <span onClick={nextPage}>Next {">"}</span>
+</div>
     </div>
   )
 }

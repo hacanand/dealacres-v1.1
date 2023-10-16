@@ -91,6 +91,18 @@
 
 .SeeMore{
     color: #0061fd;
+    cursor: pointer;
+}
+
+.pagination{
+    display: flex;
+    color: #0061fd;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.pagination span{
+    cursor: pointer;
 }
 
 

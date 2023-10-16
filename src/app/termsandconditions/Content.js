@@ -1,8 +1,15 @@
-import React from 'react'
+"use client"
+import React, {useState} from 'react'
 import styles from './page.module.css'
 import SeeMore from './SeeMore'
 
 const Content = () => {
+    let [limit, setLimit] = useState(true);
+  
+    let toggleDisplay = () => {
+        setLimit(!limit);
+    };
+
   return (
     <div className={styles.TandCContent}>
       <div>
@@ -146,7 +153,11 @@ If company removes any content from its website or other platforms at any time. 
 </ol>
 </div>
 
+{(limit)? 
+<span onClick={toggleDisplay}>See More</span>:
+
     <SeeMore />
+}
     </div>
 
   )
