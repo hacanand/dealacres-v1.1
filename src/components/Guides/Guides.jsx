@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Guides = () => {
   return (
-    <div className="my-10">
-      <div className="flex space-x-2 justify-center">
+    <div className="my-10  ">
+      <div className="flex gap-8 flex-wrap md:justify-center ">
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
             src="/Flats.jpg"
