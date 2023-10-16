@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
         <div className={`max-w-screen min-w-screen flex justify-end  h-[400px] relative  `}>
             <div className='w-full h-full relative'>
-                <Image src={housebg} className='absolute w-full h-full object-cover ' />
+                <Image src={housebg} className='absolute w-full h-full object-cover ' alt={"House Image"} />
 
             </div>
             <div className={`

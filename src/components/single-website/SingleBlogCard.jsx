@@ -8,9 +8,9 @@ const SingleBlogCard = ({
     excrept
 }) => {
   return (
-    <div className='col-span-1  flex flex-col '>
-        <div className='h-1/2 w-full '>
-            <Image className='w-full h-full object-cover' src={`/single-website/${img}`} alt={title} width={300} height={900} />
+    <div className='col-span-1 h-full   flex flex-col '>
+        <div className='h-1/2 max-h-1/2 w-full '>
+            <Image className='w-full h-full object-cover' src={img} alt={title} width={300} height={900} />
         </div>
         <div className='text-sm py-4 h-1/2'>
             <h3 className='text-xl'>

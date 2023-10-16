@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 import imgSrc from '../../../public/single-website/bunglow.webp'
+import src2 from '../../../public/single-website/living-area.jpg'
 const ProjectListings = () => {
     return (
         <div className='bg-[##F6F6F6]'>
@@ -11,7 +12,7 @@ const ProjectListings = () => {
                         return (
                             <div className='col-span-1' key={index}>
                                 <ProjectCard 
-                                img={imgSrc}
+                                img={index % 2 === 0 ? imgSrc : src2}
                                 title={"Off the Arbour"}
                                 address="Sector 63, Gurgaon, Haryana, India"
                                 bathroomCount={1}
