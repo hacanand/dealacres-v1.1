@@ -4,7 +4,6 @@ import Navbar02 from "@/components/property/navbar2/Navbar02"
 import ImageContainer from '@/components/property/imagecontainer/ImageContainer'
 import MainContentContainer from '@/components/property/maincontentcontainer/MainContentContainer'
 import SideContentContainer from '@/components/property/sidecontentcontainer/SideContentContainer'
-import Addbox from '@/components/property/sidecontentcontainer/Addbox'
 
 async function Property(params) {
   

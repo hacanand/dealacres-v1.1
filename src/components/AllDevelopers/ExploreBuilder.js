@@ -75,7 +75,7 @@ const prevPage = () => {
         </div>
         
         <div className={styles.ProjectCategory}>
-            <div>
+            <div className={styles.Category}>
                 <span onClick={()=>{
                     setProject("Residential")
                 }}><strong>Residential Projects</strong> </span>
@@ -84,6 +84,8 @@ const prevPage = () => {
                     setProject("Commercial")
                 }}><strong>Commercial Projects</strong></span>
             </div>
+            <hr />
+            <br />
             <div className={styles.projectLine}>
                 {/* Featured start */}
                 {dt[project].slice(0, projectLimit).map((property, index) => (

@@ -35,7 +35,17 @@
     padding: 20px;
     border-radius: 15px;
 }
+.ProjectCategory hr{
+    margin-top: 2px;
+    border: 0.01em solid rgb(74, 74, 74);
+    margin: 0px !important;
+    padding: 0px !important;
+}
 
+.Category span{
+    margin-right:40px;
+    cursor: pointer;
+}
 
 .projectLine{
     display: flex;
