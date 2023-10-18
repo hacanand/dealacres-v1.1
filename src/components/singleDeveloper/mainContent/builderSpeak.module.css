@@ -1,0 +1,44 @@
+.builderSpeakContainer{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.subCategories{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.subCategories p{
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.selected{
+    color: #0061DF;
+    font-weight: 700;
+}
+
+.subContent{
+    padding: 1.5rem;
+}
+
+.subContent h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subContent h6{
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: #0061DF;
+    cursor: pointer;
+}

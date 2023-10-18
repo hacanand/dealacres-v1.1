@@ -52,7 +52,7 @@ const IntrestingReading = () => {
   ];
 
   return (
-    <div className="space-y-8 mt-10 py-5">
+    <div className="space-y-8 py-5">
       <Swiper
         spaceBetween={46}
         slidesPerView={1}
