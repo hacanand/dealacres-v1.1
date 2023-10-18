@@ -10,15 +10,26 @@ const Input = ({
     id,
     disabled,
     label,
-    icon: Icon
+    icon: Icon,
+    isEmail,
+    requireMessage,
+    pattern
 }) => {
+
+  
+  
   return (
     <div className="w-full relative">
            
             <input
                 id={id}
                 disabled={disabled}
-                {...register(id, { required })}
+                {...register(id, { required: (requireMessage ? requireMessage : ''),
+                pattern: (pattern ? {
+                  value: (pattern),
+                  message: (requireMessage ? requireMessage : 'Enter valid details.')
+                }: {required}) 
+              })}
                 placeholder="   "
                 type={type}
                 className={`

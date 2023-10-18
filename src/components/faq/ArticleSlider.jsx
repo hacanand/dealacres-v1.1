@@ -51,6 +51,7 @@ const ArticleSlider = () => {
         centerPadding: '0px',
         className: '',
         nextArrow: <NextArrow />,
+        arrows: true,
         responsive: [
             {
               breakpoint: 1024,
@@ -83,10 +84,10 @@ const ArticleSlider = () => {
           ],
     }
   return (
-    <div className=" py-8  mx-auto">
-        <h3 className='font-bold text-3xl py-4 px-4'>
+    <div className="   mx-auto">
+        {/* <h3 className='font-bold text-3xl py-4 px-4'>
           Articles
-        </h3>
+        </h3> */}
       <Slider {...settings} className="flex flex-nowrap justify-center items-stretch " >
       
         {articlesData.map((article, index) => (

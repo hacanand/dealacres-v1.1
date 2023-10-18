@@ -9,12 +9,14 @@ const PostCard= ({
   return (
     <div className='p-2 border border-b-gray-700 '>
       
-      <div className='flex items-center'>
-        
-            <Image alt={title} width={100} height={50} className=' w-[150px]' src={`/blog/${img}`} />
+      <div className='flex gap-4  '>
+        <div className='min-w-[100px] max-w-[100px] relative'>
+
+            <Image alt={title} width={100} height={100} className='w-full' src={`/blog/${img}`} />
+        </div>
        
 
-        <div className='p-2'>
+        <div className=''>
         {title}
         </div>
       </div>
