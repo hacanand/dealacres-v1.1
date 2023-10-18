@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import styles from './faq.module.css';
 import Faqcard from './Faqcard.jsx';

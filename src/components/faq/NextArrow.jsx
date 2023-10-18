@@ -10,7 +10,7 @@ const NextArrow = ({
     style={{...style}}
     >
 
-        <span className=' bg-sky-500 text-white w-[35px] h-[35px] rounded-full inline-flex items-center justify-center'>
+        <span className=' bg-sky-600 text-white w-[50px] h-[50px] rounded-full inline-flex items-center justify-center'>
 
         <AiOutlineArrowRight color="white" size={20}/>
         </span>

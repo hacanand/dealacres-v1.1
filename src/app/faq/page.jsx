@@ -66,7 +66,7 @@ const page = () => {
             <div className='relative mx-auto md:mx-0  lg:ml-auto  lg:px-4 py-4'>
               <div className='w-full'>
                 <p className='font-light text-xl py-2'>
-                  We'll get in touch with you.
+                  We &apos; ll get in touch with you.
                 </p>
                 <FaqForm />
               </div>
@@ -103,8 +103,10 @@ const page = () => {
 
       {/* Article Slider */}
 
-      <div className='max-w-screen-xl mx-auto px-4'>
-
+      <div className='max-w-screen-xl mx-auto px-4 my-8'>
+      <h3 className='font-bold text-3xl py-4 px-4'>
+          Articles
+        </h3>
 
         <ArticleSlider />
 

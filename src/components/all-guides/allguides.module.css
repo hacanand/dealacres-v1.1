@@ -1,0 +1,64 @@
+.banner {
+    background-image: url('../../../public/all-guides/banner.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.bannerIcons {
+    position: relative;
+    z-index: 2;
+}
+
+.bannerIcons::before, .bannerIcons::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+   
+ 
+    
+}
+
+
+
+
+
+.bannerText {
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 3px;
+}
+
+
+/* checklist */
+
+.checkListContainer{
+
+    border-radius: 1rem;
+    box-shadow: 15px 0px 0px 0px #E4E4E4, 6px -6px 0px 0px #E4E4E4, -6px -6px 0px 0px #E4E4E4,6px 6px 0px 0px #E4E4E4,
+    -6px 6px 0px 0px #E4E4E4;
+    z-index: 2;
+}
+
+.checkList{
+    position: relative;
+}
+.checkList::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    top:0;
+    bottom: 0;
+    left: -10px;
+    background-color: #E7F0FF ;
+    z-index: -1;
+    border-radius: 1rem;
+}
+
+/* manuals card */
+/* #E4E4E4 */
+.cardContainer {
+    border-radius: 1rem;
+    box-shadow: 10px 8px 0px 0px #E4E4E4, -10px -8px 0px 0px #E4E4E4, -10px 8px 0px 0px #E4E4E4,10px -8px 0px 0px #E4E4E4;
+}

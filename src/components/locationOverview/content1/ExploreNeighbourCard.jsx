@@ -1,12 +1,12 @@
 import styles from './exploreNeighbourCard.module.css'
 
-function ExploreNeighbourCard() {
+function ExploreNeighbourCard(props) {
   return (
     <div className={styles.exploreNeigbourCardContainer}>
-        <h6>Schools & Colleges</h6>
+        <h6>{props.title}</h6>
         <ul>
             <li>St. Michaels Sr. Secondary School</li>
-            <li>govt sec school</li>
+            <li>Govt sec school</li>
             <li>Dronacharya Government College</li>
         </ul>
     </div>

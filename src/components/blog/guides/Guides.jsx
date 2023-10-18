@@ -12,7 +12,7 @@ const Guides = ({
     subheading
 }) => {
     return (
-        <div className='font-bold text-2xl my-4 p-4'>
+        <div className='font-bold text-2xl p-4 my-4 '>
             
 
             <div className={`${subheading ? 'mx-0' : 'mx-auto'}`}>
@@ -31,7 +31,7 @@ const Guides = ({
                 {
                     guides.map((guide, index) => {
                         return (
-                            <GuideCard title={guide.title} img={guide.img} theme={guide.theme} key={index} />
+                            <GuideCard title={guide.title} img={guide.img} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} key={index} />
                         )
                     })
                 }

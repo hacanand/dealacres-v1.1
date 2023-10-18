@@ -175,12 +175,12 @@ const Feedback = () => {
             defaultValue=""
             render={({ field }) => (
               <div className="relative w-full">
-                <input
+                <textarea
                   {...field}
                   type="text"
                   placeholder=""
-                  className="pl-5 top-4 pb-16 text-gray-400 bg-white border-2 border-gray-300 w-full rounded-md text-left align-top"
-                />
+                  className="pl-5 pt-4 pb-16 text-gray-400 bg-white border-2 border-gray-300 w-full rounded-md text-left align-top"
+                ></textarea>
                 {field.value.trim().length === 0 && (
                   <p className="absolute top-1 left-5 text-gray-400 text-md">
                     Type your message...
