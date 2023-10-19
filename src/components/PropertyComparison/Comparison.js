@@ -2,6 +2,7 @@ import React from 'react'
 import { Rating } from '@mui/material'
 import Image from 'next/image'
 import { SearchRounded } from "@mui/icons-material";
+import Source from "../../../public/propertyComparison/product.jpg"
 
 import styles from "./comparison.module.css"
 
@@ -10,24 +11,34 @@ const Comparison = () => {
     <div>
       <div className={styles.Comparison}>
         <h2>Compare Projects</h2>
-        <p>Shubharambh in Uttam Nagar Vs Neelkanth Plots in Sector 34 Rohini</p>
+        <p>Shubharambh in Uttam Nagar Vs Neelkantd Plots in Sector 34 Rohini</p>
 
         <table>
-            <thead>
-                <tr>
-                    <td></td>
-                    <td>
-                        <div>
-                            <div className={styles.Head}>
-                            <p>Shubharambh</p>
-                            </div>
 
+                <tr>
+                    <td  rowspan="2"></td>
+                    <th>Shubharambh</th>
+                    <th>Neelkantd Plots</th>
+                    <th><div className={styles.searchBar}>
+          <input id="Search" type="search" />
+          <label htmlFor="Search">
+            <SearchRounded color="light" />
+          </label>
+        </div></th>
+                </tr>
+
+                <tr>
+                    <td className={styles.White}>
+                        <div>
                             <div>
                                 <p><strong>Shubharambh</strong></p>
                                 <p>Sector 93 Gurgaon</p>
                                 <p>730 - 1530 Sq.ft</p>
                                 <p>3BHK, FLATS, RESIDENTIAL PROPERTIES</p>
-                                <Image />
+                                <Image
+                                src={Source}
+                                alt= "Shubharambh"
+                                 />
                                 <tr><td>Location</td><td>N/A</td></tr>
                                 <tr><td>Nearby Facilities</td><td>N/A</td></tr>
                                 <tr><td>Socity</td><td>N/A</td></tr>
@@ -37,16 +48,16 @@ const Comparison = () => {
                     </td>
                     <td>
                     <div>
-                            <div  className={styles.Head}>
-                            <p>Neelkanth Plots</p>
-                            </div>
 
                             <div>
-                                <p><strong>Neelkanth Plots</strong></p>
+                                <p><strong>Neelkantd Plots</strong></p>
                                 <p>Sector 93 Gurgaon</p>
                                 <p>730 - 1530 Sq.ft</p>
                                 <p>3BHK, FLATS, RESIDENTIAL PROPERTIES</p>
-                                <Image />
+                                <Image
+                                src={Source}
+                                alt="Neelkanth Plots"
+                                />
                                 <tr><td>Location</td><td>N/A</td></tr>
                                 <tr><td>Nearby Facilities</td><td>N/A</td></tr>
                                 <tr><td>Socity</td><td>N/A</td></tr>
@@ -55,19 +66,14 @@ const Comparison = () => {
                         </div>
                     </td>
                     <td>
-                    <div className={styles.searchBar}>
-          <input id="Search" type="search" />
-          <label htmlFor="Search">
-            <SearchRounded color="light" />
-          </label>
-        </div>
+                    
                         </td>
                 </tr>
-            </thead>
+            {/* </thead>
 
-            <tbody>
+            <tbody> */}
                 <tr>
-                    <th>Status</th>
+                    <td><strong>Status</strong></td>
                     <td>
                         <div>
                             <p><strong>Under Construction</strong></p>
@@ -78,88 +84,92 @@ const Comparison = () => {
                     <td>
                         <div>
                             <p><strong>Ready to Move</strong></p>
-                            <tr><td>Construction Age</td> <td>    N/A</td></tr>
+                            <tr><td>Construction Page</td> <td>    N/A</td></tr>
                         </div>
                     </td>
                     <td></td>
                 </tr>
 
-                <tr>
-                    <th>Highlights</th>
+                {/* <div  className={styles.NoBorder}> */}
+                {/* <td colspan="4"> */}
+                <tr className={styles.Highlights}>
+                    <td><strong>Highlights</strong></td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
-                <tr>
-                    <th>Amenities</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                <tr className={styles.NoBorder}>
+                    <td><strong>Amenities</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
-                <tr>
+                <tr  className={styles.NoBorder}>
                     <td>Power Back Up</td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
 
-                <tr>
+                <tr  className={styles.NoBorder}>
                     <td>Lift</td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
 
-                <tr>
+                <tr  className={styles.NoBorder}>
                     <td>Reserved Parking</td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
                 
-                <tr>
+                <tr className={styles.NoBorder}>
                     <td>Security</td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
-                <tr>
+                <tr className={styles.NoBorder}>
                     <td>More +</td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
+                {/* </td> */}
+                {/* </div> */}
 
                 <tr>
-                    <th>Total Project Area</th>
+                    <td><strong>Total Project Area</strong></td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
 
                 <tr>
-                    <th>Prices</th>
+                    <td><strong>Prices</strong></td>
                     <td>₹  71.15 L - 1.85 Cr</td>
                     <td>₹  71.15 L - 1.85 Cr</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <th>Units</th>
+                    <td><strong>Units</strong> </td>
                     <td>2 Towers, 40 Units</td>
                     <td>40 Units</td>
                     <td></td>
                 </tr>
 
                 <tr>
-                    <th>Annual Rental Yield</th>
+                    <td><strong>Annual Rental Yield</strong></td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
                 </tr>
 
                 <tr>
-                    <th>Project Comments</th>
+                    <td><strong>Project Comments</strong></td>
                     <td>N/A</td>
                     <td>N/A</td>
                     <td></td>
@@ -167,31 +177,38 @@ const Comparison = () => {
 
                 <tr>
                     <td>
-                        <p><strong>Developer Details</strong></p>
-
-                        <p>Experience</p>
-                        <p>Total Projects</p>
-                        <p>Ongoing Projects</p>
+                        <strong>Developer Details</strong>
                         </td>
                     <td>
-                    <p>S Gambhir Buildtech Pvt. Ltd</p>
-
-                    <p><strong>13 yrs</strong></p>
-                    <p><strong>2</strong></p>
-                    <p><strong>1</strong></p>
+                    S Gambhir Buildtech Pvt. Ltd
                     </td>
                     <td>
-                    <p>S Gambhir Buildtech Pvt. Ltd</p>
-
-<p><strong>13 yrs</strong></p>
-<p><strong>2</strong></p>
-<p><strong>1</strong></p>
+                    S Gambhir Buildtech Pvt. Ltd
                     </td>
                     <td></td>
                 </tr>
 
+                <tr  className={styles.NoBorder}>
+                    <td>Experience</td>
+                    <td><strong>13 yrs</strong></td>
+                    <td><strong>13 yrs</strong></td>
+                    <td></td>
+                </tr>
+                <tr  className={styles.NoBorder}>
+                    <td>Total Projects</td>
+                    <td><strong>2</strong></td>
+                    <td><strong>1</strong></td>
+                    <td></td>
+                </tr>
+                <tr  className={styles.NoBorder}>
+                    <td>Ongoing Projects</td>
+                    <td><strong>2</strong></td>
+                    <td><strong>1</strong></td>
+                    <td></td>
+                </tr>
+
                 <tr>
-                    <th>Overall Locality Overview</th>
+                    <td><strong>Overall Locality Overview</strong></td>
                     <td>
                         <tr>
                             <td>Commuting</td>
@@ -237,7 +254,7 @@ const Comparison = () => {
                             <td><Rating /></td>
                         </tr>
 
-                        <div>
+                        <div className={styles.ProjectDetails}>
                             <button>View Project Details</button>
                         </div>
                         
@@ -288,16 +305,14 @@ const Comparison = () => {
                             <td><Rating /></td>
                         </tr>
                         
-                        <div>
+                        <div className={styles.ProjectDetails}>
                             <button>View Project Details</button>
                         </div>
-                        
                     </td>
+                    <td></td>
                 </tr>
 
                 
-            </tbody>
-
         </table>
       </div>
 
