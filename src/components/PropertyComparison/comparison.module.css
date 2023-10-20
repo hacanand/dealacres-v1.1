@@ -1,5 +1,11 @@
 .Comparison{
     border: 1px solid grey; 
+    padding: 5px;
+    margin-top: 15px;
+}
+.Comparison h2{
+    font-size:25px;
+    font-weight: bold; 
 }
 .Comparison img{
     padding: 10px 0px; 
