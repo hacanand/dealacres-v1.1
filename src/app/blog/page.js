@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <div className='bg-white '>
     {/* <Bloghead heading='Finanace' content='Something Something'/> */}
-    <NewBlogHead/>s
+    <NewBlogHead/>
     
     
     

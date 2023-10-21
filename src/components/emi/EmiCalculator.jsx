@@ -1,0 +1,115 @@
+'use client'
+import React, { useMemo, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { EmiPie } from './EmiPie';
+import { useCallback } from 'react';
+import { useEffect } from 'react';
+
+const EmiCalculator = () => {
+
+    const [monthlyEmi, setMonthEmi] = useState()
+    const [pieData, setPieData] = useState([100,0])
+
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: {
+            errors
+        }
+    } = useForm();
+
+    const amt = watch('amt', '')
+    const roi = watch('roi', '')
+    const tenure = watch('tenure', '')
+
+    const getMonthlyEmi = useCallback((amount, roi, tenure) => {
+        if(!roi | !amount | !tenure){
+            return
+        }
+        amount = parseInt(amount, 10)
+        roi = parseInt(roi, 10)/12/100;
+        tenure = parseInt(tenure, 10)
+        const emi = (amount * roi * (1+roi)**(tenure*12))/((1+roi)**(tenure * 12) - 1)
+
+        const intPay = Math.round((amount * roi*100*12 * tenure)/100)
+        const total = intPay + amount;
+
+        // console.log(amount, roi, tenure)
+        return [ Math.round(emi), intPay , total ];
+    },[amt, roi, tenure])
+    
+
+    
+
+   
+
+    useEffect(() => {
+        console.log("changed")
+        const loanData = getMonthlyEmi(amt, roi, tenure);
+        if(loanData){
+            setMonthEmi(loanData[0])
+            setPieData([loanData[1], loanData[2]]);
+        }
+         
+        
+      }, [amt, roi, tenure])
+    return (
+        <div className='grid grid-cols-2 grid-rows-6 place-items-center border rounded-lg shadow border-gray-400 px-2 sm:px-8 py-4 max-w-[500px] md:max-w-none mx-auto md:mx-0 '>
+            <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center'>
+                <input
+                className='border border-gray-400 py-2 px-4  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg '
+                placeholder='Loan Amount'
+                type='text' id='amt' {...register('amt', {required: "Please enter a valid loan amount"})}/>
+            </div>
+            <div className='row-start-2 md:row-start-1 row-span-1  col-span-1 w-full flex justify-center'>
+                <input type='text'
+                className='border border-gray-400 py-2 px-4  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg '
+                placeholder='Loan Tenure'
+                 id='tenure' {...register('tenure', {required: "Please enter a valid loan tenure."})}/>
+            </div>
+
+            <div className='row-start-1 md:row-start-2 row-span-3 md:row-span-4 col-start-2 md:col-start-1  col-span-1 flex justify-center md:h-full md:w-full  max-w-[200px] sm:max-w-none max-h-[300px] md:max-h-full'>
+                {/* <div className='h-[300px] w-[300px] rounded-full bg-slate-300 shadow-lg border-black border'>
+
+                </div> */}
+                <EmiPie data={pieData}/>
+            </div>
+            <div className='row-start-3 md:row-start-2 row-span-1 col-span-1 w-full flex justify-center'>
+                <input type='text'
+                className='border border-gray-400 py-2 px-4  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg '
+                placeholder='Rate Of Interest'
+                 id='roi' {...register('roi', {required: "Please enter a valid loan interest."})}/>
+            </div>
+            <div className='row-start-[5] md:row-start-3 row-span-3 col-span-2 md:col-span-1 h-full w-full flex justify-center'>
+               <div className='w-2/3 rounded-lg shadow py-2 px-4 border-gray-400 border text-center h-full flex flex-col justify-around  '>
+                    <p className='font-bold'>Monthly EMI</p>
+                    <p className='font-bold text-xl'>₹ {(monthlyEmi && typeof monthlyEmi !== NaN && monthlyEmi !== Infinity) && monthlyEmi.toLocaleString('en-IN')}</p>
+                    <p>Total Payable Amount
+                    <br/>
+                    ₹ {pieData[1].toLocaleString('en-IN')}
+                    </p>
+
+                    <button className='bg-blue-600 text-white rounded shadow py-1 px-2 '>
+                        Get Instant Loan
+                    </button>
+               </div>
+            </div>
+            <div className='row-start-[4] md:row-start-6 row-span-1 col-span-2 md:col-span-1 h-full w-[80%] py-2 gap-2 flex justify-between text-center'>
+               <p>
+                Principle Amount
+                <br/>
+                {pieData[1]}
+               </p>
+               <p>
+                Interest Amount
+                <br/>
+                {pieData[0]}
+               </p>
+            </div>
+        </div>
+    )
+}
+
+export default EmiCalculator

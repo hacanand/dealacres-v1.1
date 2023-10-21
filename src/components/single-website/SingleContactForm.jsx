@@ -65,7 +65,7 @@ const SingleContactForm = () => {
                 </h2>
             </div>
 
-            <div className='flex  justify-between min-w-full gap-8 py-4 '>
+            <div className='flex flex-col md:flex-row  justify-between min-w-full gap-8 py-4 '>
                 <div className='w-full flex flex-col'> 
                 <input  {...register('name', {
                   required: "Pleae enter your name"

@@ -13,9 +13,6 @@ const Navbar = () => {
   const isHomePage = pathname === '/' || pathname === '/blog'
 
 
-
-  console.log("pathname is ", pathname);
-
   const Menu = () => (
     <>
       <p>
