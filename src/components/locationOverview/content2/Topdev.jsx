@@ -6,7 +6,8 @@ const topdevStyle={
   display:'flex',
   flexWrap:'wrap',
   justifyContent:'space-between',
-  alignItems:'center'
+  alignItems:'center',
+  marginTop:'1rem'
 }
 
 function Topdev() {

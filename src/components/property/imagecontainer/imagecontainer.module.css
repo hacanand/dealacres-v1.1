@@ -75,3 +75,72 @@
     right: 5rem;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1400px){
+    .floorPlanButton{
+      top: 520px;
+      left: 11rem;
+    }
+  
+    .imageButtonClass1{
+      top: 520px;
+      right: 11rem;
+    }
+  } 
+
+  @media screen and (max-width: 1200px){
+    .floorPlanButton{
+      top: 520px;
+      left: 9rem;
+    }
+  
+    .imageButtonClass1{
+      top: 520px;
+      right: 9rem;
+    }
+  } 
+
+  @media screen and (max-width: 1000px){
+    .floorPlanButton{
+      top: 500px;
+      left: 7rem;
+    }
+  
+    .imageButtonClass1{
+      top: 500px;
+      right: 7rem;
+    }
+  }
+  
+  @media screen and (max-width: 800px){
+    .floorPlanButton{
+      top: 440px;
+      left: 5rem;
+    }
+  
+    .imageButtonClass1{
+      top: 440px;
+      right: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px){
+    .container{
+      height: 250px;
+      grid-template-columns: 100%;
+    }
+
+    .sideImgContainer{
+      display: none;
+    }
+
+    .floorPlanButton{
+      top: 320px;
+      left: 3rem;
+    }
+  
+    .imageButtonClass1{
+      top: 320px;
+      right: 3rem;
+    }
+  }

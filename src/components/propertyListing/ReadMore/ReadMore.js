@@ -53,8 +53,8 @@ const ReadMore = () => {
 
   return (
     <div className="px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 mt-10 py-5">
-      <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold">
-        Interesting Reads
+      <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold">
+        Interesting Readings
       </h2>
       <Swiper
         spaceBetween={46}

@@ -13,11 +13,11 @@ const ExpertLayout = (props) => {
       <div className={styles.parentLayout}> 
       <div className={styles.ExpertLayout}>
 
-    <div>
+    <div className={styles.ExpertImg}>
         <Image
             src={props.dt.src}
             alt='Experts'
-            className={styles.ExpertImg}
+            
         />
     </div>
 

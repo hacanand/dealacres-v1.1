@@ -1,0 +1,45 @@
+.RentalManual{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ManualImg{
+    width: 30%;
+    align-self: center;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+.ManualImg img{
+    padding: 20px;
+    margin: auto;
+
+}
+
+.ManualImg h3{
+    font-size: 40px;
+    color: #593d34;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.Articles{
+    width: 70%;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+@media only screen and (max-width: 500px){
+    .ManualImg{
+        width: 100%;
+    }
+    .RentalManual{
+        display: block;
+    }
+    .Articles{
+        width: 100%;
+    }
+    .w-sm-75 img{
+        width: inherit !important;
+    }
+}

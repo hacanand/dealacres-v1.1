@@ -2,7 +2,7 @@ import React from "react";
 
 function NewsCard({ title, text, imageSrc, date, handleShare }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full sm:w-60 md:w-96 lg:w-72">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg w-full sm:w-60 md:w-80 lg:w-72">
       <img
         src={imageSrc}
         alt="News"

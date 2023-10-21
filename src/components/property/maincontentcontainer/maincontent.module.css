@@ -8,12 +8,12 @@
 .mainContainer h1{
     font-weight: 700;
     font-size: 25px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .headerComp{
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid black;
 }
 
@@ -68,3 +68,11 @@
     background-color: black;
 }
 
+@media screen and (max-width: 1000px){
+    .head{
+        font-size: 35px;
+    }
+
+    .headerComp{}
+
+}

@@ -66,7 +66,7 @@ const page = () => {
             <div className='relative mx-auto md:mx-0  lg:ml-auto  lg:px-4 py-4'>
               <div className='w-full'>
                 <p className='font-light text-xl py-2'>
-                  We'll get in touch with you.
+                  We &apos; ll get in touch with you.
                 </p>
                 <FaqForm />
               </div>
