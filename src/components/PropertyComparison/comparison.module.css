@@ -1,10 +1,27 @@
 .Comparison{
     border: 1px solid grey; 
+    padding: 5px;
+    margin-top: 15px;
+}
+.Comparison h2{
+    font-size:25px;
+    font-weight: bold; 
+}
+.Comparison img{
+    padding: 10px 0px; 
+}
+.Comparison tr:nth-child(1) th{
+    border: 1px solid grey; 
+    padding: 5px;
+    color: #0061df;
 }
 
-.Comparison tr td, .Comparison tr th{
-    border: 1px solid grey; 
-    padding: 5px;   
+.Comparison tr td{
+    border-style: solid;
+    border-color: grey;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    padding: 15px 10px;   
     text-align: left;
     vertical-align: top;
 }
@@ -14,6 +31,10 @@
 
 .Comparison tr th:nth-child(1){
     background-color: rgb(0, 0, 0, 0.06);
+}
+
+.White{
+    background-color: white !important;
 }
 
 .Head{
@@ -29,8 +50,6 @@
     padding: 5px;   
     margin-right: 10px;
 }
-
-
 
 
 .searchBar{
@@ -51,6 +70,26 @@
     border-radius: 50px;
     color: white;
     padding: 4px;
+}
+
+.ProjectDetails{
+    background-color: #0061df;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius:10px;
+    margin: 15px 10px;
+}
+
+.TextCenter{
+    text-align: center !important;
+}
+
+.NoBorder td{
+    border-top-width: 0px !important;
+}
+.Highlights{
+    padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 800px){
