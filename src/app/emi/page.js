@@ -10,7 +10,30 @@ const page = () => {
             <EmiBanner/>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
                <EmiCalculator/>
+              
+            </div>
+            <div className='max-w-screen-lg mx-auto py-4 px-4  '>
+                <h2 className='text-3xl font-bold py-4'>
+                    About EMI Calculator
+                </h2>
+                
+                <p className='text-lg text-justify pb-2'>
+                A home loan EMI calculator helps compute the monthly installments that a borrower needs to pay against the total amount availed. Such a tool assists you in making an informed decision about the outflow towards the home loan every month.
+                </p>
+                    <p className='py-2 text-lg'>
+                    To identify your home loan EMI, you need to fill in the following 
+                    </p>
 
+                <ul className='list-disc text-lg px-8 flex flex-col gap-1 text-justify'>
+
+                    {
+                        ["Loan Amount: The total amount that you need to avail for your property.",
+                        "Loan Tenure: You would be required to furnish the desired loan term (in years). A longer tenure helps in reducing the monthly EMI.",
+                        "Interest Rate: Input interest rate.",].map((li, i) => <li className="px-2" key={i}>{li}</li>)
+                    }
+
+                </ul>
+              
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
                 <div className='py-4'>
@@ -46,7 +69,7 @@ const page = () => {
                 </div>
                 <div className='flex flex-col gap-4 py-2'>
                     {
-                        emiData.benefitsFeatures.slice(0, 3).map((feature, index) => {
+                        emiData.factorsFeatures.slice(0, 3).map((feature, index) => {
                             return (
                                 <div key={index}>
                                     <EmiFeatureListItem label={feature.label} text={feature.text} img={feature.img} />
@@ -64,7 +87,7 @@ const page = () => {
 
                 <div className='flex flex-col gap-4 py-2'>
                     {
-                        emiData.benefitsFeatures.slice(3,).map((feature, index) => {
+                        emiData.factorsFeatures.slice(3,).map((feature, index) => {
                             return (
                                 <div key={index}>
                                     <EmiFeatureListItem label={feature.label} text={feature.text} img={feature.img} />

@@ -30,5 +30,37 @@ export const emiData = {
             text: "Every person’s financial status is different. Thus, it is obvious that the affordability of every individual will also differ from one another. So, every user will desire to get results relevant to them. This is exactly what the affordability calculator does. It asks for information from every user and gives customized results based on that.",
             img: "custom-results.webp"
         },
+    ],
+    factorsFeatures: [
+        {
+            label: "Your Monthly Income",
+            text: "your affordability will be high if you have a higher monthly income. This is because a higher income would state a higher ability to repay the loan every month.",
+            img: "monthly-income.webp"
+        },
+        {
+            label: "The downpayment you can make",
+            text: "Usually, a borrower has to pay 20% of the property cost as the down payment. The rest, 80%, is paid by the lending organization. But, if you can arrange a higher down payment, you may be eligible for a higher loan amount. It will also impact your affordability.",
+            img: "down-payment.webp"
+        },
+        {
+            label: "Existing EMIs",
+            text: "If you have any current EMIs, it will reduce your affordability. It is because existing EMIs reduce your ability to repay the home loan every month.",
+            img: "existing-emi.webp"
+        },
+        {
+            label: "Your Current Age",
+            text: "Age is a significant factor that affects how much home loan you can get. Younger individuals have a higher chance of getting higher home loans as they have more time to repay that loan. The situation is inverted for older people. Like home loan eligibility, age affects affordability as well. You will have higher affordability than someone older if you are young and financially stable.",
+            img: "current-age.webp"
+        },
+        {
+            label: "CIBIL Score",
+            text: "Every lending organization considers your CIBIL score before giving you a home loan. your loan application might get rejected if you get low scoring. Thus, a higher CIBIL score is directly proportional to your affordability. A higher CIBIL score will result in higher affordability.",
+            img: "cibil-score.webp"
+        },
+        {
+            label: "Availability of collateral",
+            text: "Offering collateral always increases the chances of getting a home loan because lenders see it as a secure investment. If you have a low CIBIL score but you are able to offer collateral, you may increase your chance of getting a loan. Thus, the availability of collateral increases your affordability.",
+            img: "collateral.webp"
+        },
     ]
 }
