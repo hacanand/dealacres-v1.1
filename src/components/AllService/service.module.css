@@ -1,0 +1,49 @@
+.ServiceBlock{
+    border: 1px solid black;
+    width: 200px;
+    height: 170px;
+    padding: 20px;
+    margin: 0px 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+.ServiceBlock img{
+    height: 100px;
+    width: auto;
+    margin: 0px auto;
+    padding: 20px;
+}
+.ServiceBlock p{
+    text-align: center;
+    margin-top: auto !important;
+}
+
+.PropertyService{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MoreService{
+    background-color: #0061fd;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.Services{
+    padding-left: 10px;
+}
+
+.Services h2{
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Services p{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

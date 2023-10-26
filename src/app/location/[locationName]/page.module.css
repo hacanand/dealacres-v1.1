@@ -1,6 +1,7 @@
 .locationOverviewContainer{
     width: 100%;
     padding: 2rem 12rem 2rem 12rem;
+    overflow: hidden;
 }
 
 .locationOverviewTopContainer{
@@ -28,4 +29,39 @@
 
 .locationOverviewContent2Container{
     width: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    .locationOverviewContainer{
+        padding:2rem 9rem 2rem 9rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .locationOverviewContainer{
+        padding: 2rem 7rem 2rem 7rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .locationOverviewContainer{
+        padding: 2rem 5rem 2rem 5rem;
+    }
+
+    .locationOverviewTopContainer{
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .locationOverviewContainer{
+        padding: 2rem 3rem 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .locationOverviewContainer{
+        padding: 2rem;
+    }
 }

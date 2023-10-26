@@ -1,0 +1,43 @@
+.Layout{
+    margin: 0rem 8rem;
+    display: flex;
+}
+
+.title{
+    margin: 0rem 8rem;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Sidebar{
+    width: 400px;
+}
+
+.mainContainer{
+    width: calc(100% - 220px);
+}
+
+@media only screen and (max-width: 990px){
+    .Layout{
+        margin:auto;
+        margin-left: 40px;
+        display: block;
+    }
+    
+    .title{
+        margin: 0rem 1.5rem;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .Layout{
+        margin: 0rem 2rem;
+    }
+    .mainContainer{
+        width: calc(100% - 0px);
+    }
+    .Sidebar{
+        width: 100%;
+    }
+}
