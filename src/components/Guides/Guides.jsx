@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const Guides = () => {
   return (
-    <div className="my-10">
-      <div className="flex space-x-2 justify-center">
+    <div className="my-10  ">
+      <div className="flex gap-8 flex-wrap justify-center ">
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
             src="/Flats.jpg"
             alt="Your Image"
-            layout="fill"
+            fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
@@ -26,7 +26,7 @@ const Guides = () => {
           <Image
             src="/Flats.jpg"
             alt="Your Image"
-            layout="fill"
+            fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
@@ -43,7 +43,7 @@ const Guides = () => {
           <Image
             src="/Flats.jpg"
             alt="Your Image"
-            layout="fill"
+            fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
@@ -60,7 +60,7 @@ const Guides = () => {
           <Image
             src="/Flats.jpg"
             alt="Your Image"
-            layout="fill"
+            fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />

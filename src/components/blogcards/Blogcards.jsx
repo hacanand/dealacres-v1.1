@@ -4,65 +4,37 @@ import "./Blogcard.css";
 import Link from "next/link";
 import Image from "next/image";
 import background from "../../../public/home.jpg";
+import loan1 from "../../../public/all blog/loan1.webp";
+import loan2 from "../../../public/all blog/loan2.webp";
+import loan3 from "../../../public/all blog/loan3.jpg";
+import FeatureCard from "../Featured/FeatureCard";
 
 const Blogcards = () => {
   return (
-    <div className="my-4">
-      <div className="flex mx-10 h-28 py-8 m-8  w-screen text-black bg-white">
-        <div>
-          <h2 className="text-5xl mr-2 font-[Poppins]">Finance</h2>
-          <p className="text-xs mt-0 font-[Poppins] text-black block text-end">
-            stay informed
-          </p>
+    <div className="my-12 md:my-8">
+      <div className="flex gap-1  py-4 mb-4 w-full   text-black bg-white items-start">
+        <div className="min-w-[30%] md:min-w-0 max-w-[30%]">
+          <h2 className=" inline-flex flex-col
+          text-2xl md:text-3xl lg:text-4xl font-[Poppins]">Loan Assistance
+          <span className="self-end text-base font-normal">
+            Stay Informed
+          </span>
+          </h2>
+          
         </div>
-        <div className=" flex mt-7 border-t-2 border-black w-[1015px]"></div>
-        <h2 className="text-black font-medium text-base ml-2 mt-4">
-          <Link className="text-blue-600" href="/">
-            Show more
+        <div className=" inline self-center  border-t-4 border-black min-w-[50%] md:min-w-[68%] "></div>
+        <h2 className="self-center max-w-[20%] md:max-w-[12%] text-right ">
+          <Link className="text-blue-600 font-bold break-keep  text-base md:text-lg block w-full lg:text-xl" href="/">
+            Read More
           </Link>
         </h2>
       </div>
-      <div className="flex mx-10 space-x-10">
-        <div className="my-6 border-1 shadow-md hover:shadow-lg hover:shadow-slate-700 shadow-slate-500 w-72 h-[275px]">
-          <div>
-            <Image src={background} alt="card" className="w-full h-52" />
-          </div>
-          <div className="flex justify-center text-center">
-            <span className="p-3">
-              Mastering Mortgage Basics: 10 Key Concepts Every
-            </span>
-          </div>
-        </div>
-        <div className="my-6 border-1 shadow-md hover:shadow-lg hover:shadow-slate-700 shadow-slate-500 w-72 h-[275px]">
-          <div>
-            <Image src={background} alt="card" className="w-full h-52" />
-          </div>
-          <div className="flex justify-center text-center">
-            <span className="p-3">
-              Mastering Mortgage Basics: 10 Key Concepts Every
-            </span>
-          </div>
-        </div>
-        <div className="my-6 border-1 shadow-md hover:shadow-lg hover:shadow-slate-700 shadow-slate-500 w-72 h-[275px]">
-          <div>
-            <Image src={background} alt="card" className="w-full h-52" />
-          </div>
-          <div className="flex justify-center text-center">
-            <span className="p-3">
-              Mastering Mortgage Basics: 10 Key Concepts Every
-            </span>
-          </div>
-        </div>
-        <div className="my-6 border-1 shadow-md hover:shadow-lg hover:shadow-slate-700 shadow-slate-500 w-72 h-[275px]">
-          <div>
-            <Image src={background} alt="card" className="w-full h-52" />
-          </div>
-          <div className="flex justify-center text-center">
-            <span className="p-3">
-              Mastering Mortgage Basics: 10 Key Concepts Every
-            </span>
-          </div>
-        </div>
+      <div className="flex gap-4 flex-wrap md:flex-nowrap justify-center  md:justify-normal    ">
+        <FeatureCard img={loan1} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
+        <FeatureCard img={loan2} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
+        <FeatureCard img={loan3} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
+   
+
       </div>
     </div>
   );
