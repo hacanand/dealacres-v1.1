@@ -1,0 +1,14 @@
+.slick-slider , .slick-slider > * {
+    max-height: 100% !important;
+    height: 100% !important;
+}
+
+.slick-track, .slick-slide, .slick-slide > * {
+    max-height: 100% !important;
+    height: 100% !important;
+
+}
+
+.slick-prev, .slick-next {
+    z-index: 50;
+}
