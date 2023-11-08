@@ -10,22 +10,16 @@ export function ComparePropertyProvider({ children }) {
   const [compareProperties, setCompareProperties] = useState([]);
 
   const addToCompare = (property) => {
-    console.log(compareProperties);
-
     setCompareProperties((prevProperties) => [...prevProperties, property]);
   };
 
   const removeFromCompare = (property) => {
-    console.log(compareProperties);
-
     setCompareProperties((prevProperties) =>
       prevProperties.filter((p) => p.id !== property.id)
     );
   };
 
   const isAddedToCompare = (property) => {
-    console.log(compareProperties);
-
     return compareProperties.some((p) => p.id === property.id);
   };
 

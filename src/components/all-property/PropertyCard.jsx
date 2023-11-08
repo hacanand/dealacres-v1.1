@@ -23,7 +23,7 @@ const PropertyCard = ({
   };
 
   return (
-    <div className="p-4 border border-blue-600 rounded-xl bg-white max-sm:w-full max-md:w-[calc(50%-1rem)]">
+    <div className="p-4 border border-blue-600 rounded-2xl bg-white max-sm:w-full max-md:w-[calc(50%-1rem)] shadow-md">
       <div className="md:flex md:grid md:grid-cols-3 md:gap-4">
         <div className="md:col-span-1">
           <div className="rounded-2xl overflow-hidden w-full h-full">
