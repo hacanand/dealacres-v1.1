@@ -4,8 +4,62 @@
     animation-fill-mode: forwards;
 }
 
+.react-calendar__tile {
+	max-width: 100%;
+	padding: 10px 6.6667px;
+	background: none;
+	text-align: center;
+	line-height: 16px;
+	font: inherit;
+	font-size: 0.833em;
+	font-size: 1rem;
+	font-weight: bold;
+	background: #456f9426;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.react-calendar__month-view__days {
+    gap: 8px;
+}
+
+.react-calendar {
+	width: 450px;
+	background: white;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.125em;
+    color: black;
+
+}
+
+.react-calendar__month-view__weekdays{
+    text-align: left;
+}
+
+.react-calendar__tile--active{
+    background-color: black;
+    color: white;
+}
+
+.react-calendar__tile--active:enabled:hover{
+    background-color: none;
+}
+
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+	background-color: none !important;
+    /* border: black solid 1px; */
+}
+
 @keyframes slideIn {
     to {
         transform: translateX(0%);
     }
+}
+
+@media screen and (max-width: 768px) {
+    .react-calendar {
+        width: 100% !important;
+    }
+    
 }
