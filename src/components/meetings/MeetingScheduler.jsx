@@ -42,7 +42,7 @@ const MeetingScheduler = () => {
   }, [time])
 
   return (
-    <div className='grid md:grid-cols-12 max-w-screen-lg mx-auto py-4 gap-4 md:gap-0 border bg-white transition-all duration-1000 border-gray-400 rounded-xl shadow'>
+    <div className='grid md:grid-cols-12 max-w-screen-lg mx-auto py-4 gap-4 md:gap-0 border overflow-hidden bg-white transition-all duration-1000 border-gray-400 rounded-xl shadow'>
       <div className='md:col-span-3 px-4 transition-all col-span-1'>
         <MeetAgentInfo selectedDetails={(selectedDate && time) && { date: selectedDate, time }} />
       </div>
