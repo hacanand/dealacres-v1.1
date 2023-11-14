@@ -10,6 +10,7 @@ import Locality from './Locality.jsx'
 import Developerinfo from './Developerinfo.jsx'
 import FAQ from './FAQ.jsx'
 import LeaveReview from './LeaveReview.jsx'
+import MortgageCalculator from '../mortgagecalculator/MortGageCalculator'
 
 const lato = Lato({
     subsets: ['latin'],
@@ -49,6 +50,10 @@ function MainContentContainer(props) {
           <div>
             <h1>Amenities</h1>
             <Amenities ameData={props.content.Amenities}/>
+          </div>
+          <div>
+            <h1>Mortgage Calculator</h1>
+            <MortgageCalculator/>
           </div>
           <div>
             <h1> About Developer</h1>

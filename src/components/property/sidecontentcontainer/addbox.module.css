@@ -17,6 +17,34 @@
     margin-bottom: 5px;
 }
 
+/* @media screen and (min-width: 768px) and (max-width: 979px) {
+    .sideAdContainerHead{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .sideAdContainer button{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+} */
+@media screen and (max-width: 980px) {
+
+    .sideAdContainer {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .sideAdContainerHead{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .sideAdContainer button{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
 .sideAdContainer p{
     flex: 1.5;
     font-weight: 700;
@@ -36,12 +64,13 @@
 
 .sideAdContainer button{
     margin-top: 1rem;
-    font-size: 20px;
+    
     width: 100%;
-    min-height: 35px;
+   
     border-radius: 30px;
     background-color: #0061df;
     color: #fff;
+    padding: 8px 16px;
 }
 
 .sideAdContainer button span{
