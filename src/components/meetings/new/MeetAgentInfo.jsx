@@ -6,7 +6,7 @@ const MeetAgentInfo = ({
     selectedDetails
 }) => {
 
-    console.log(selectedDetails)
+    
   return (
     <div className='w-full border-r border-r-gray-300 flex flex-col gap-2 h-full py-2 px-4 items-center md:items-start '>
         <div className='flex flex-col items-center md:items-start'>

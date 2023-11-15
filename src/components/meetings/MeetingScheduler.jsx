@@ -20,7 +20,7 @@ const MeetingScheduler = () => {
     setSelectedDate(value.toString())
 
   }
-  console.log(selectedDate + "from parent")
+  
 
   const handleTimeChange = (value) => {
     setTime(value);

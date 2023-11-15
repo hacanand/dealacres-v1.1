@@ -29,7 +29,7 @@ const SingleAgentPage = () => {
 
   const { name, img, contacts, languages, address, agentInfo, services, forSaleListings, forRentListings } = singleAgentData;
 
-  console.log(agentData)
+  // console.log(agentData)
   
   if(!agentData){
     return <div className='bg-neutral-300 min-h-screen flex items-center justify-center'>

@@ -28,21 +28,21 @@ const MeetTime = ({
 
  
     const buttonRefs = [...Array(48)].map(() => useRef());
-    // console.log(buttonRefs)
+    // 
     
     const handleTimeChange = (e, i) => {
 
 
     
         setSelectedTime(e.target.textContent)
-        console.log(buttonRefs[e.target.value])
+        
 
         setTimeout(() => {
             triggerTimeSelected(selectedTime)
         }, 400)
     }
 
-    console.log(selectedTime);
+    
     return (
 
 
