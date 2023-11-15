@@ -14,7 +14,7 @@ const MeetAgentInfo = ({
                 <RxAvatar size={30}/>
             </span>
             <span className='text-gray-600 text-lg font-semibold'>
-                Govind Kulkarni
+                Sanya Bansal
             </span>
         </div>
 
