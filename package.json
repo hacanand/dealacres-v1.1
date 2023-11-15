@@ -37,6 +37,7 @@
     "react-hook-form": "^7.46.2",
     "react-icons": "^4.10.1",
     "react-multi-carousel": "^2.8.4",
+    "react-range-slider-input": "^3.0.7",
     "react-responsive-carousel": "^3.2.23",
     "react-select": "^5.7.5",
     "react-slick": "^0.29.0",
