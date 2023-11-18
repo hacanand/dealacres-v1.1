@@ -21,7 +21,7 @@ function SideContentContainer(props) {
 
   return (
     <div style={lato.style} className={styles.sideContainer}>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="my-8 md:my-0 flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
         <h4> Looking for a Property in {props.title}</h4>
         <TextField
           fullWidth

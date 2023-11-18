@@ -13,6 +13,7 @@
     column-gap: 5px;
     row-gap: 15px;
     margin-bottom: 1rem;
+    word-break: break-all;
 }
 
 .overviewData{
@@ -44,4 +45,12 @@
     font-size: 15px;
     padding: 5px 15px 5px 15px;
     border-radius: 15px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .overviewContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }

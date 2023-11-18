@@ -4,6 +4,7 @@ import EmiFeatureListItem from '@/components/emi/EmiFeatureListItem'
 import ArticleSlider from '@/components/faq/ArticleSlider'
 import EmiBanner from '@/components/emi/EmiBanner'
 import EmiCalculator from '@/components/emi/EmiCalculator'
+// import FNQ from '@/components/localities/FNQ'
 const page = () => {
     return (
         <div>
@@ -103,6 +104,7 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 '>
 
+                {/* <FNQ/> */}
                 <h2 className='font-bold py-4 text-4xl'>
                     EMI Calculator related Articles
                 </h2>
