@@ -12,6 +12,8 @@ import FAQ from '@/components/property/maincontentcontainer/FAQ'
 import {data} from './dummydata';
 import GuideCard from '@/components/blog/guides/GuideCard'
 import LocationGuides from './LocationGuides'
+import PopularProjects from '../content1/PopularProjects'
+import ArticleSlider from '@/components/faq/ArticleSlider'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -63,6 +65,10 @@ const guidesData = [
 function MainContent2() {
   return (
     <div className={styles.mainContainer2} style={lato.style}>
+        {/* <div className='md:max-w-[68%]'>  
+        <h5>Popular Projects in Sector 37D</h5>
+        <PopularProjects/>
+      </div> */}
         <div>
             <h5>Explore nearby localities</h5>
             <Cities/>
@@ -82,6 +88,7 @@ function MainContent2() {
         </div>
         <div className=''>
             <h5>Start with these guides</h5>
+            <p>Know all that you need to know before you start.</p>
             <LocationGuides guides={guidesData}/>
 
             <div className='grid grid-cols-5 gap-8 '>
@@ -94,9 +101,10 @@ function MainContent2() {
             } */}
             </div>
         </div>
-        <div>
+        <div className='my-4'>
             <h5>Interesting Readings</h5>
-            <IntrestingReading />
+            {/* <IntrestingReading /> */}
+            <ArticleSlider/>
         </div>
         <div>
             <h5>Frequently Asked Questions</h5>

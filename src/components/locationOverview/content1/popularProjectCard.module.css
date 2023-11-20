@@ -1,14 +1,18 @@
 .popularProjectCardContainer{
-    width: 220px;
+    width: 180px;
+    /* width: calc(100% / 3 - 2rem); */
     height: 270px;
     border: 2px solid black;
     border-radius: 20px;
-    padding: 10px;
+    padding: 4px 6px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin: 0 auto; */
 }
+
+
 
 .ImgCont{
     position: relative;

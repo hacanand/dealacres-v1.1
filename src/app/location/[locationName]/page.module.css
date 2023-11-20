@@ -27,6 +27,7 @@
     grid-template-columns: 62% 32%;
 }
 
+
 .locationOverviewContent2Container{
     width: 100%;
 }
@@ -61,7 +62,16 @@
 }
 
 @media screen and (max-width: 600px){
+
     .locationOverviewContainer{
         padding: 2rem;
     }
 }
+@media screen and (max-width: 768px){
+
+    .locationOverviewContent1Container{
+        grid-template-columns: 1fr;
+    }
+}
+
+

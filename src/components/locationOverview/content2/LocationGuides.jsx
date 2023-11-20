@@ -8,20 +8,34 @@ const LocationGuides = ({
     
 }) => {
     return (
-        <div className='font-bold text-2xl p-4 my-4 '>
+        <div className='font-bold text-2xl py-4 my-4 '>
             
 
             <div className={``}>
 
             
 
-            <div className={`flex gap-4 w-full justify-between `}>
+            <div className={`flex gap-4 w-full flex-wrap min-[920px]:flex-nowrap justify-center min-[920px]:justify-normal   `}>
 
+{/*                         w-[10rem]
+                            h-[15rem]
+                            min-[1220px]:w-[10rem]
+                            min-[1220px]:h-[15rem]
+                            min-[1420px]:w-[12rem]
+                            min-[1420px]:h-[18rem]
+                            min-[1520px]:w-[15rem]
+                            min-[1520px]:h-[21rem] */}
                 {
                     guides.map((guide, index) => {
                         return (
-                            <div key={index} className='w-[8rem] min-[1220px]:w-[10rem] min-[1220px]:h-[15rem] min-[1420px]:w-[12rem] min-[1420px]:h-[18rem]
-                            min-[1520px]:w-[15rem] min-[1520px]:h-[21rem]'>
+                            <div key={index} className='
+                            w-[8rem]
+                            sm:w-[10rem]
+                            md:w-[11rem]
+                            min-[920px]:w-[calc(100%/5-16px)]
+                            min-[920px]:max-w-[10rem]
+
+                            '>
 
 
                                 <GuideCard
@@ -33,9 +47,9 @@ const LocationGuides = ({
                 }
 
             </div>
-            <div className='flex flex-col py-4 justify-self-end'>
+            <div className=' py-4 '>
 
-                <span className='md:self-end text-blue-500 font-normal text-xl flex items-center justify-center gap-2'>
+                <span className=' text-blue-500 font-normal text-xl flex items-center justify-center min-[920px]:justify-normal gap-2'>
                     <Link href='/guides' className=''>View More</Link>
                     <FaExternalLinkAlt size={20} />
                 </span>
