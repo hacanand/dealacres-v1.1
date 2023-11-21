@@ -14,6 +14,8 @@ import GuideCard from '@/components/blog/guides/GuideCard'
 import LocationGuides from './LocationGuides'
 import PopularProjects from '../content1/PopularProjects'
 import ArticleSlider from '@/components/faq/ArticleSlider'
+import GuidesSlider from '@/components/all-guides/GuidesSlider'
+import { allGuidesData } from '@/app/all-guides/allGuidesData'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -86,20 +88,13 @@ function MainContent2() {
             <h5>Top Developers in Sector 37D</h5>
             <Topdev/>
         </div>
-        <div className=''>
-            <h5>Start with these guides</h5>
-            <p>Know all that you need to know before you start.</p>
-            <LocationGuides guides={guidesData}/>
+        <div className='py-4'>
+            <h5 className='!mb-0'>Start with these guides</h5>
+            <p className='text-gray-400 text-lg py-2'>Know all that you need to know before you start.</p>
+            {/* <LocationGuides guides={guidesData}/> */}
 
-            <div className='grid grid-cols-5 gap-8 '>
-            {/* {
-                guidesData.map((guide, index) => {
-                    return (<div className="col-span-1" key={index}>
-                        <GuideCard variableWidth title={guide.title} img={guide.img} borderColor={guide.borderColor} bgColor={guide.bgColor} textColor={guide.textColor}/>
-                    </div>)
-                })
-            } */}
-            </div>
+            <GuidesSlider allGuides={allGuidesData} handleTabChange={(value) => value}/>
+           
         </div>
         <div className='my-4'>
             <h5>Interesting Readings</h5>
