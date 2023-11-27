@@ -2,7 +2,7 @@ import React from "react";
 
 const TagsContainer = ({ tags, onTagClick, currentlySelected }) => {
   return (
-    <div className="flex flex-wrap gap-3 py-2">
+    <div className="flex justify-center md:justify-normal flex-wrap gap-3 py-2">
       {tags.map((tag) => (
         <span
           key={tag}

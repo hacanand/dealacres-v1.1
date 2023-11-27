@@ -6,22 +6,23 @@ const popularProjectContentStyle = {
   width:'100%',
   display:'flex',
   flexWrap:'wrap',
-  rowGap: '2rem',
-  justifyContent:'space-between',
+  gap: '10px',
   alignItems:'center',
-  margin:'1.5rem 0 1.5rem 0',
+  margin:'',
+  
+  
 }
 
 function PopularProjects() {
   return (
     <div style={{width:'100%',marginBottom:'1rem'}}>
-      <div style={popularProjectContentStyle}>
+      <div className="justify-center md:justify-normal" style={popularProjectContentStyle}>
         <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>
       </div>
-      <div style={{width:'100%',display:'flex',justifyContent:'flex-end',alignItems:'center',color:'#0061df'}}>
-        <Link href='#viewMore'>View More <FaExternalLinkAlt style={{display:'inline'}}/></Link>
+      <div className='w-1/2 py-2 rounded my-4 flex items-center justify-center text-white font-bold bg-blue-500 mx-auto md:mx-0 '>
+        <Link className='' href='#viewMore'>More <FaExternalLinkAlt style={{display:'inline'}}/></Link>
       </div>  
     </div>
   )

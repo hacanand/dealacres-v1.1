@@ -11,6 +11,8 @@
 }
 
 .faqcardContainer h5{
+    font-size: 1rem !important;
+    margin-bottom: unset !important;
     font-weight: 700;
     color: rgb(71,87,114);
 }
