@@ -27,7 +27,7 @@ const Experts = () => {
 
       {filteredData.map((dt, index) => (
           <ExpertLayout
-            // key={index}
+            key={index}
             dt = {dt}
             filteredData={filteredData}
             limit={limit}
@@ -48,7 +48,7 @@ const Experts = () => {
 
         <div className={styles.MostSearched}>
           {data["MostSearched"].map((Cate, index) => (
-    <SearchCategories city={Cate.Location} category = {Cate.Categories} />
+    <SearchCategories key={index} city={Cate.Location} category = {Cate.Categories} />
     ))}
     </div>
 

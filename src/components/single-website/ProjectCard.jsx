@@ -67,7 +67,7 @@ const ProjectCard = ({
                 </span>
                 <span className='grid grid-cols-2 '>
                     {
-                        [...Array(bathroomCount)].map((_, index) => (<span className='col-span-1'>
+                        [...Array(bathroomCount)].map((_, index) => (<span key={index} className='col-span-1'>
                             <MdOutlineBathroom size={30} />
                         </span>))
                     }
@@ -80,7 +80,7 @@ const ProjectCard = ({
                 </span>
                 <span>
                     {
-                        [...Array(bathroomCount)].map((_, index) => (<span>
+                        [...Array(bathroomCount)].map((_, index) => (<span key={index}>
                             <PiGarageDuotone size={30} />
                         </span>))
                     }

@@ -121,7 +121,7 @@ const DoughNut = ({
         {isChartRendered && (amount && insurance && roi && pmi) && <div className=" self-center bg-neutral-200/50 right-4 top-[50%] flex flex-col gap-2 px-4">
             {data.labels.map((label, i) => {
                 return (
-                    <p className="flex flex-row gap-8 border-b border-b-gray-400 py-2">
+                    <p className="flex flex-row gap-8 border-b border-b-gray-400 py-2" key={i}>
                         
                         <div className=' h-[30px] w-[30px]' style={{
                         borderColor: data.datasets   [0].backgroundColor[i],
