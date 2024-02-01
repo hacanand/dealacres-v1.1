@@ -16,7 +16,7 @@ function Photos() {
   ]
 
   return (
-    <div className={styles.content2PhotosContainer}>
+    <div className={`${styles.content2PhotosContainer} !grid !grid-cols-1 sm:!grid-cols-2 md:!grid-cols-[repeat(4,1fr)]`}>
       <div className={styles.content2PhotosItem}>
       <Image
         src='/locationOverview/locationPic.jpg'

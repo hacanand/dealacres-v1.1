@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Hotspots() {
   return (
-    <div className={styles.hotspotsContainer}>
+    <div className={`${styles.hotspotsContainer}`}>
       <div className={styles.hotspotsItemContainer}>
         <div className={styles.hotspotsImageContainer}>
             <Image

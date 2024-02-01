@@ -30,12 +30,12 @@ function MainContent1() {
       <div className = {styles.mainContainerLine}></div>
       <div className={styles.mainContainerContent}>
         <h5>About Locality</h5>
-        <p>{showFull?about:`${about.substring(0,600)}`}</p>
-        <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6>
+        <p className="text-justify">{showFull? about : about.split(' ').slice(0, (about.split(' ').length / 2)).join(' ')}</p>
+        <h6 onClick={()=>setShowFull(prev => !prev)}>{showFull? 'Show Less':'Show More'}</h6>
       </div>
       <div>
-        <h5> Explore Neighbourhood </h5>
-        <ExploreNeighbour/>
+        {/* <h5> Explore Neighbourhood </h5>
+        <ExploreNeighbour/> */}
       </div>
       <div>
         <h5> Key Highlights of sector 37D, Gurgaon </h5>

@@ -11,3 +11,6 @@
     padding-right: 10px !important;
 }
 
+.slick-prev::before {
+    content: unset;
+}

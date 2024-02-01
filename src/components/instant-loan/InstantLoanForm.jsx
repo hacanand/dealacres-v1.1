@@ -10,6 +10,8 @@ import { Button, Checkbox, Grid, InputAdornment, OutlinedInput, Stack, TextField
 import { useForm } from 'react-hook-form';
 import { useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
+
 
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -18,6 +20,7 @@ export default function InstantLoanForm({
 }) {
 
   const params = useSearchParams()
+ 
   
 
   const [tcChecked, setTcChecked] = useState(false)
@@ -36,6 +39,12 @@ export default function InstantLoanForm({
   }
 
   useEffect(() => {
+   
+
+
+  }, [])
+
+  useLayoutEffect(() => {
     if(params.get('amount')){
       setValue('amount', params.get('amount'))
     }
@@ -46,7 +55,7 @@ export default function InstantLoanForm({
 
     }
 
-
+   
   }, [])
 
   // console.log(getValues('tenure'))

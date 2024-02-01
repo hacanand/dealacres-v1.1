@@ -1,9 +1,14 @@
+'use client'
+
+import { useState } from 'react'
 import styles from './specification.module.css'
 
 function Specification(props) {
 
     const parking = props.specificationData.Parking
     const interior = props.specificationData.Interior
+
+    const [readMore, setReadMore] = useState(false)
 
     return (
       <div className={styles.specificationContainer}>
@@ -55,6 +60,10 @@ function Specification(props) {
                         ))}
                     </ul>
                 </div>
+               
+               {
+               readMore &&  
+               <>
                 <div className={styles.specificationSubContainerDataBlock}>
                     <h4>Room Information</h4>
                     <ul>
@@ -71,7 +80,7 @@ function Specification(props) {
                         ))}
                     </ul>
                 </div>
-                <div className={styles.specificationSubContainerDataBlock}>
+               <div className={styles.specificationSubContainerDataBlock}>
                     <h4>Room Information</h4>
                     <ul>
                         {interior.room4Info.map((dt,index)=>(
@@ -111,6 +120,8 @@ function Specification(props) {
                         ))}
                     </ul>
                 </div>
+
+                
                 <div className={styles.specificationSubContainerDataBlock}>
                     <h4>Interior Features</h4>
                     <ul>
@@ -119,6 +130,11 @@ function Specification(props) {
                         ))}
                     </ul>
                 </div>
+              </>
+                }
+                <span className='text-blue-700 font-semibold border-b border-b-blue-700 inline pb-2   hover:text-blue-300 transition-all text-lg hover:cursor-pointer' onClick={() => setReadMore(prev => !prev)}>
+                    Read {readMore ? 'Less': 'More'}
+                </span>
               </div>
           </div>
       </div>

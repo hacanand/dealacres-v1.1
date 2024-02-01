@@ -49,7 +49,11 @@ const EmiCalculator = () => {
                 <input
                 className='border border-gray-400 py-2 px-4  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg '
                 placeholder='Loan Amount'
-                type='text' id='amt' {...register('amt', {required: "Please enter a valid loan amount"})}/>
+                type='text'
+                 id='amt'
+                {...register('amt', {required: "Please enter a valid loan amount"})}
+                
+                />
             </div>
             <div className='row-start-2 md:row-start-1 row-span-1  col-span-1 w-full flex justify-center'>
                 <input type='text'

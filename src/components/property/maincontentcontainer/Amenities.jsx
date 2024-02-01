@@ -17,7 +17,7 @@ const Amenities = (props) => {
         </div>
       ))}
       {props.ameData.length > 11 && (
-        <div className={styles.amenitiesContent} style = {{backgroundColor:'#E5EFFF',color:'#0061df',borderRadius:'15px',width:'120px',height:'80px'}}>
+        <div className={styles.amenitiesContent} style = {{backgroundColor:'#E5EFFF',color:'#0061df',borderRadius:'15px',width:'100%',height:'80px'}}>
           <button onClick={() => setShowAll(!showAll)}>
             {showAll ? 'Show Less' : 'Show all'}
           </button>
