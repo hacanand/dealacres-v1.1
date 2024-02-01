@@ -54,7 +54,7 @@ const prevPage = () => {
   return (
     <div className={styles.ExploreBuilder}>
         {filteredData.map((dt, index) => (
-      <div className="mt-12">
+      <div className="mt-12" key={index}>
         <div className={styles.TopBuilders}>
             <div className={styles.Logo}>
             <Image

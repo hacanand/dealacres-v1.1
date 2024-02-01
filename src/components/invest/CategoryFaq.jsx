@@ -62,7 +62,7 @@ const CategoryFaq2 = () => {
 
                         console.log(item, index)
                         return index === tab ? (
-                            item.faq.map((q, i) => <FaqListItem question={q} />)
+                            item.faq.map((q, i) => <FaqListItem key={i} question={q} />)
                         ) : ""
                     })
                 }

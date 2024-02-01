@@ -41,7 +41,7 @@ const Hotspot = () => {
         </h2>
         <div className={styles.Hotspot}>
         {Location["Gurgaon"].map((dt, index) => (
-        <div>
+        <div key={index}>
             <Image 
             src={dt.img}
             alt={dt.img}

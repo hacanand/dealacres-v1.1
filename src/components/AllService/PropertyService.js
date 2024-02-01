@@ -14,7 +14,7 @@ const PropertyService = () => {
       </div>
     <div className={styles.PropertyService}>
         {filteredData.map((dt, index) => (
-      <ServiceLayout source={dt.source} service={dt.service}
+      <ServiceLayout key={index} source={dt.source} service={dt.service}
        />
       ))}
     </div>

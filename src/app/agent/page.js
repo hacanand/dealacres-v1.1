@@ -8,7 +8,7 @@ import RealAgent from '@/components/agent/RealAgent'
 import TopBar from '@/components/agent/TopBar'
 import React, {useState, useEffect} from 'react'
 
-const page = () => {
+const AgentPage = () => {
   const [scrollCount, setScrollCount] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
 
@@ -53,4 +53,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AgentPage

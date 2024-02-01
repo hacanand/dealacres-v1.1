@@ -54,6 +54,7 @@ const ManualCategorySlider = ({
                     allGuides.map((guide, index) => {
                         return (
                             <button
+                                key={index}
                                 value={index}
                                 onClick={(e) => handleTabChange(e.target.value)}
                                 className={`mr-4 

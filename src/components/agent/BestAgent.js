@@ -28,7 +28,7 @@ const Agent = (props) => {
 
         <div className={styles.MostSearched}>
           {data["MostSearched"].map((Cate, index) => (
-    <SearchCategories city={Cate.Location} category = {Cate.Categories} />
+    <SearchCategories key={index} city={Cate.Location} category = {Cate.Categories} />
     ))}
     </div>
 

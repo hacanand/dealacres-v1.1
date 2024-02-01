@@ -12,7 +12,7 @@ const Agent = (props) => {
 
       {filteredData.map((dt, index) => (
           <AgentLayout
-            // key={index}
+           key={index}
             dt = {dt}
             filteredData={filteredData}
             // limit={props.limit}
