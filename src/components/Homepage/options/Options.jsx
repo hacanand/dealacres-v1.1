@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "./Card";
+import Card from "./card";
 import { options } from "./data";
 const Options = () => {
     const [deviceType, setDeviceType] = useState("");
