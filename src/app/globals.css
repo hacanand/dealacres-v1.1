@@ -19,7 +19,32 @@
   }
 }
 
-
+.font-normal {
+  @apply text-sm md:text-base;
+}
+.font-heading {
+  @apply font-medium md:font-bold lg:text-3xl text-xl uppercase;
+}
+.custom-border{
+  @apply border-t-4 border-r-2 border-l-2 border-[#c7e3f6] border-b-4
+}
+.custom-border-2{
+  @apply border-t-2 border-r-4 border-l-4 border-[#cde6f7] border-b-2
+}
+.custom-border-3{
+  @apply border-4 border-[#cde6f7]
+}
+.custom-border-hero{
+  @apply border-t-8 border-l-8 border-b-2 border-[#c7e3f6]
+}
+.input-checkbox {
+  height: 1.40rem; 
+  width: 1.40rem; 
+}
+.input-checkbox-2 {
+  height: 1.25rem; 
+  width: 1.25rem; 
+}
 
 
 
