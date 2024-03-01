@@ -7,7 +7,8 @@ const Socialicons = () => {
   const containerStyle = {
     display: 'flex',
     padding: '0 2rem 0 2rem',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+    gap: '1rem',
     alignItems: 'center',
   };
 
