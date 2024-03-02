@@ -7,7 +7,7 @@ import Link from 'next/link';
 import FREE from '../../../../public/propertyListing/assets/free.png'
 
 
-const Herosection = () => {
+const HeroSection = () => {
 
     const [isResedentialClicked, setIsResedentialClicked] = useState(false);
     const [isCommercialClicked, setCommercialClicked] = useState(false);
@@ -138,4 +138,4 @@ const Herosection = () => {
     )
 }
 
-export default Herosection
+export default HeroSection

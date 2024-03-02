@@ -2,13 +2,11 @@
 
 import About from "@/components/propertyListing/About/About";
 import Guide from "@/components/propertyListing/Guide/Guide";
-import Hero from "@/components/propertyListing/Hero/Hero";
 import FAQ from "@/components/property/maincontentcontainer/FAQ.jsx";
 import {data} from './dummydata'
 import React, { Fragment } from "react";
 import ReadMore from "@/components/propertyListing/ReadMore/ReadMore";
 import HeroSection from "@/components/propertyListing/HeroSection/HeroSection.jsx";
-
 
 const page = () => {
   return (
