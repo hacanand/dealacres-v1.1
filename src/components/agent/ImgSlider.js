@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import React from "react";
 import Card from "./Card";
 import styles from "./imgslider.module.css";
+import { FreeMode, Navigation } from "swiper/modules";
 
 const ImgSlider = () => {
   const ManualData = [
@@ -31,24 +32,14 @@ const ImgSlider = () => {
       <div className={styles.slider}>
         <Swiper
           spaceBetween={46}
-          slidesPerView={1}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            798: {
-              slidesPerView: 2.5,
-              spaceBetween: 10,
-            },
-            1024: {
-              slidesPerView: 3.5,
-              spaceBetween: 50,
-            },
-          }}
+          slidesPerView={"auto"}
+          loop={true}
+          freeMode={true}
+          modules={[FreeMode, Navigation]}
+          navigation={true}
         >
           {ManualData.map((ManualItem) => (
-            <SwiperSlide key={ManualItem.id}>
+            <SwiperSlide key={ManualItem.id} className="max-w-fit">
               <Card imageSrc={ManualItem.imageSrc} />
             </SwiperSlide>
           ))}
