@@ -164,9 +164,9 @@
   }
   .agentLayout {
     display: block;
-    width: 90%;
+    width: 50%;
+    border: 8px solid red;
     margin: auto;
     gap: 0px;
   }
 }
-
