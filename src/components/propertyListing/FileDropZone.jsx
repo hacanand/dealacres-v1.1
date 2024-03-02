@@ -1,18 +1,30 @@
+ 'use client';
 
-import Image from 'next/image';
 import React, { useCallback, useState } from 'react';
-import { useDropzone } from 'react-dropzone';
+import { useDrop } from 'react-dnd';
+import { NativeTypes } from 'react-dnd-html5-backend';
+import Image from 'next/image'; 
 
-
-const FileDropzone = ({ onFilesDrop,description }) => {
+const FileDropzone = ({ onFilesDrop, description }) => {
   const [selectedFiles, setSelectedFiles] = useState([]);
 
-  const onDrop = useCallback((acceptedFiles) => {
-    setSelectedFiles((prevFiles) => [...prevFiles, ...acceptedFiles]);
-    if (onFilesDrop) {
-      onFilesDrop([...acceptedFiles]);
+  const handleDrop = useCallback((item) => {
+    if (item.files) {
+      handleFiles(item.files);
     }
-  }, [onFilesDrop]);
+  }, []);
+
+  const handleFiles = (files) => {
+    const validFiles = Array.from(files).filter((file) => file.type.startsWith('image/'));
+
+    console.log('Accepted files:', validFiles);
+
+    setSelectedFiles((prevFiles) => [...prevFiles, ...validFiles]);
+
+    if (onFilesDrop) {
+      onFilesDrop(validFiles);
+    }
+  };
 
   const removeFile = (index) => {
     const updatedFiles = [...selectedFiles];
@@ -20,19 +32,33 @@ const FileDropzone = ({ onFilesDrop,description }) => {
     setSelectedFiles(updatedFiles);
   };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
-    accept: 'image/*', // Accept only image files
+  const [{ isOver, canDrop }, drop] = useDrop({
+    accept: NativeTypes.FILE,
+    drop: handleDrop,
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+      canDrop: monitor.canDrop(),
+    }),
   });
+
+  const handleUploadButtonClick = () => {
+    
+    document.getElementById('file-input').click();
+  };
+
+  const handleFileInputChange = (event) => {
+  
+    handleFiles(event.target.files);
+  };
 
   return (
     <div>
-      <div {...getRootProps()} className='bg-[#e6f1f8] px-16 flex flex-col items-center justify-center'>
-        <input {...getInputProps()} />
-        <Image src={'/propertyListing/assets/upload.png'} width={60} height={60} className='mt-10' />
-        <p className='font-bold'>{isDragActive ? 'Drop the images here' : 'Drag & drop Image here'}</p>
+      <div ref={drop} className='bg-[#e6f1f8] px-16 flex flex-col items-center justify-center'>
+        <Image src={'/propertyListing/assets/upload.png'} alt='upload' width={60} height={60} className='mt-10' />
+        <p className='font-bold'>{isOver && canDrop ? 'Drop the images here' : 'Drag & drop Image here'}</p>
         <p className='text-xs'>{description}</p>
-        <button className='bg-blue-600 rounded-md px-6 py-1 font-bold text-white mt-4 mb-8'>Upload</button>
+        <button onClick={handleUploadButtonClick} className='bg-blue-600 rounded-md px-6 py-1 font-bold text-white mt-4 mb-8'>Upload</button>
+        <input id="file-input" type="file" onChange={handleFileInputChange} style={{ display: 'none' }} />
       </div>
       <div>
         {selectedFiles.map((file, index) => (

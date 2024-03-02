@@ -1,8 +1,27 @@
+'use client'
+
 import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useState } from 'react';
 const Page = () => {
+
+  const [formData, setFormData] = useState({
+    state: '',
+    city: '',
+    projectName: '',
+    area: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const isFormValid = () => {
+    const { state, city, projectName, area } = formData;
+    return state && city && projectName && area;
+  };
 
   return (
     <section className='mt-12 container mx-auto lg:w-4/5'>
@@ -24,16 +43,27 @@ const Page = () => {
      <div className='h-full md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
          <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-3">
          Your Property Location?</h1>
-         <input placeholder='State' type='text' className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'/>
-         <input placeholder='City' type='text' className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'/>
-         <input placeholder='Name of Project/Property' type='text' className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'/>
-         <input placeholder='Area/Sector' type='text' className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'/>
+         {['state', 'city', 'projectName', 'area'].map((fieldName) => (
+            <input
+              key={fieldName}
+              name={fieldName}
+              placeholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
+              type='text'
+              className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'
+              onChange={handleInputChange}
+            />
+          ))}
         
          
-         <Link href={'property-profile'}>
-         <button className='w-full bg-blue-600 rounded-md px-8 py-3 font-bold text-white hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 my-3'>Continue</button>
-         
-         </Link>
+        <Link href={isFormValid() ? 'property-profile' : '#'}>
+            <button
+              disabled={!isFormValid()}
+              className={`w-full rounded-md px-8 py-3 font-bold text-white my-3 hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 
+      ${!isFormValid() ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600'}`}
+            >
+              Continue
+            </button>
+          </Link>
      </div>
  </div>
  </section>

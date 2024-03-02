@@ -14,6 +14,8 @@ const Page = () => {
     const toggleVisibility = () => {
         setIsExpanded((prevIsExpanded) => !prevIsExpanded);
     };
+    const isContinueButtonDisabled = totalFloor.trim() === '' || property.trim() === '';
+
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
             <NavigationBroker />
@@ -150,7 +152,14 @@ const Page = () => {
 
 
                     <Link href={'photos'}>
-                        <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Continue</button>
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${
+                                isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+                            }`}
+                            disabled={isContinueButtonDisabled}
+                        >
+                            Continue
+                        </button>
                     </Link>
                 </div>
                 <div className='flex flex-col gap-5'>

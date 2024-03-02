@@ -1,9 +1,20 @@
-import React from 'react'
+'use client';
+import {useState} from 'react'
 import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRupeeSign } from "react-icons/fa";
 const page = () => {
+
+  const [expectedPrice, setExpectedPrice] = useState('');
+  const [pricePerSqYd, setPricePerSqYd] = useState('');
+  const [brokenCharge, setBrokenCharge] = useState('');
+
+  const isContinueButtonDisabled =
+        expectedPrice.trim() === '' ||
+        pricePerSqYd.trim() === '' ;
+       
+
   return (
     <section className='mt-12 container mx-auto lg:w-4/5'>
       <NavigationBroker />
@@ -13,8 +24,20 @@ const page = () => {
           <h1 className="font-medium md:font-bold md:text-2xl text-xl">
             Price Details
           </h1>
-          <input type="text" className="custom-border-2 px-2 py-3 rounded-xl w-[80%] mt-2" placeholder="Expected Price" />
-          <input type="text" className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2" placeholder="Price per Sq.Yd" />
+          <input
+            type="text"
+            className="custom-border-2 px-2 py-3 rounded-xl w-[80%] mt-2"
+            placeholder="Expected Price"
+            value={expectedPrice}
+            onChange={(e) => setExpectedPrice(e.target.value)} />
+
+          <input
+            type="text"
+            className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2"
+            placeholder="Price per Sq.Yd"
+            value={pricePerSqYd}
+            onChange={(e) => setPricePerSqYd(e.target.value)} />
+
           <div className='flex flex-wrap gap-4 my-6'>
             <div className='flex flex-row items-center gap-2'>
               <input
@@ -90,7 +113,12 @@ const page = () => {
 
           </div>
           <div className="relative ">
-            <input type="text" className='custom-border-2 px-4 py-4 rounded-lg' />
+            <input
+              type="text"
+              className='custom-border-2 px-4 py-4 rounded-lg'
+              value={brokenCharge}
+              onChange={(e) => setBrokenCharge(e.target.value)} />
+
             <label className='absolute text-xs top-[20%] left-2 transform -translate-y-1/2'>Enter Brokrage Charges</label>
             <FaRupeeSign className='absolute top-[60%] left-1 transform -translate-y-1/2 text-lg ' />
           </div>
@@ -106,7 +134,13 @@ const page = () => {
             </div>
           </div>
           <Link href={'amenities'}>
-            <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Continue</button>
+            <button
+              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+                }`}
+              disabled={isContinueButtonDisabled}
+            >
+              Continue
+            </button>
           </Link>
         </div>
 
@@ -123,3 +157,4 @@ const page = () => {
 }
 
 export default page
+

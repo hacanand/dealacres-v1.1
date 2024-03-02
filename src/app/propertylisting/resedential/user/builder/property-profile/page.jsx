@@ -31,31 +31,12 @@ const Page = () => {
         setBalconieCount((prevCount) => (prevCount === count ? null : count));
     };
 
-    // const handlePujaButtonClick = () => {
-    //     setPoojaRoom("Pooja Room");
-    //     setIsOtherRoomInfoVisible(!isOtherRoomInfoVisible);
-    //     setSelectedButton('pooja');
-    //   };
+    const isContinueButtonDisabled =
+        totalFloor.trim() === '' ||
+        property.trim() === '' ||
+        (bedroomCount === null && bathroomCount === null && balconieCount === null);
 
-    //   const handleStudyButtonClick = () => {
-    //     setStudyRoom("Study Room");
-    //     setIsOtherRoomInfoVisible(!isOtherRoomInfoVisible);
-    //     setSelectedButton('study');
-    //   };
-
-    //   const handleServentButtonClick = () => {
-    //     setServentRoom("Servant Room");
-    //     setIsOtherRoomInfoVisible(!isOtherRoomInfoVisible);
-    //     setSelectedButton('servant');
-    //   };
-
-    //   const handleStoreButtonClick = () => {
-    //     setStoreRoom("Store Room");
-    //     setIsOtherRoomInfoVisible(!isOtherRoomInfoVisible);
-    //     setSelectedButton('store');
-    //   };
-
-
+  
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
@@ -224,10 +205,16 @@ const Page = () => {
                         </button>
                     </div>
 
-
                     <Link href={'photos'}>
-                        <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Continue</button>
-                    </Link>
+                    <button
+                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${
+                            isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+                        }`}
+                        disabled={isContinueButtonDisabled}
+                    >
+                        Continue
+                    </button>
+                </Link>
                 </div>
                 <div className='flex flex-col gap-5'>
                     <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>

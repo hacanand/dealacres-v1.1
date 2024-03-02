@@ -2,9 +2,14 @@
 import { useState } from 'react';
 import { IoMdLock } from "react-icons/io";
 
-const ContactNumber = () => {
+const ContactNumber = ({ onContactNumberChange}) => {
     const [countryCode, setCountryCode] = useState('+91');
-    const [phoneNumber, setPhoneNumber] = useState('');
+  
+
+    const handleContactNumberChange = (e) => {
+        const newContactNumber = e.target.value;
+        onContactNumberChange(newContactNumber);
+    };
 
     return (
         <div className='md:w-[87%]'>
@@ -25,8 +30,7 @@ const ContactNumber = () => {
                     <input
                         type="text"
                         placeholder="Enter your number"
-                        value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        onChange={handleContactNumberChange}
                         className="border rounded-md p-2 w-full "
                     />
                     <IoMdLock className="absolute top-1/2 right-1 transform -translate-y-1/2 text-xl md:text-2xl text-gray-600" />

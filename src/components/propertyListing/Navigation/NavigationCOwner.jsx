@@ -14,14 +14,14 @@ const NavigationCOwner = () => {
   ];
 
   const currentPath = usePathname();
-  console.log(currentPath)
+
 
   let flag=0;
 
   let n=currentPath.split('/').length
-  console.log(n)
+
   let xy=currentPath.split('/')[n-1]
-  console.log(xy)
+
   if(xy.includes('amenities')){
   flag=3;
   }else if(xy.includes('photos')){

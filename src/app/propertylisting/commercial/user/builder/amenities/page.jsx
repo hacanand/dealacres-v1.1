@@ -1,23 +1,44 @@
 'use client';
 
-import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
+import NavigationBroker from "@/components/propertyListing/Navigation/NavigationBroker";
 
 import Image from "next/image";
-import AmenitiesList from "@/components/propertyListing/Amenities";
+import AmenitiesList from '@/components/propertyListing/Amenities';
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import FileDropzone from "@/components/propertyListing/FileDropZone";
 import { propertyFacing } from "@/components/propertyListing/constants";
 import Button from "@/components/propertyListing/Button/Button";
 import Link from 'next/link';
+import { useState } from "react";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 
 
 const Page = () => {
+    
+    const [selectedPropertyFacing, setSelectedPropertyFacing] = useState([]);
+    const [uploadedFiles, setUploadedFiles] = useState([]);
+
+    const areFieldsFilled = selectedPropertyFacing.length > 0 || uploadedFiles.length > 0;
+
     const handleFilesDrop = (acceptedFiles) => {
         console.log('Dropped files:', acceptedFiles);
+        setUploadedFiles(acceptedFiles);
     };
-  
+
+    const handlePropertyFacingChange = (face) => {
+        setSelectedPropertyFacing((prevFacing) => {
+            if (prevFacing.includes(face)) {
+                return prevFacing.filter((facing) => facing !== face);
+            } else {
+                return [...prevFacing, face];
+            }
+        });
+    };
+
     return (
+        <DndProvider backend={HTML5Backend}>
         <section className='mt-12 container mx-auto lg:w-4/5'>
 
             <NavigationBroker />
@@ -34,10 +55,13 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold md:text-2xl text-xl my-2">
                         Property Facing
                     </h1>
-                    {propertyFacing.map((face,idx) => (
-
-                        <Button heading={face} key={idx} />
-
+                    {propertyFacing.map((face, idx) => (
+                        <Button
+                            key={idx}
+                            heading={face}
+                            onClick={() => handlePropertyFacingChange(face)}
+                            selected={selectedPropertyFacing.includes(face)}
+                        />
                     ))}
                     <h1 className="font-medium md:font-bold md:text-2xl text-xl my-2">
                         Upload Floor Plan
@@ -55,17 +79,24 @@ const Page = () => {
                     <p className='text-lg'>You Can Email Us</p>
                     <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
                 </div>
-               
+
             </div>
-            <div className='md:px-36'>
-            <Link href={'builder-details'}>
-            <button  className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Continue Property</button>
-            </Link>
+            <div className='md:px-24'>
+                <Link href={'builder-details'}>
+                    <button
+                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${!areFieldsFilled ? 'cursor-not-allowed bg-gray-400' : ''
+                            }`}
+                        disabled={!areFieldsFilled}
+                    >
+                        Continue Property
+                    </button>
+                </Link>
             </div>
-           
 
 
-        </section>)
+
+        </section>
+        </DndProvider>)
 
 }
 

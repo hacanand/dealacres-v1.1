@@ -9,14 +9,16 @@ import Link from 'next/link';
 
 const Login = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const handleChange = (index, value) => {
         const newOtp = [...otp];
         newOtp[index] = value;
-        if (value !== '' && index <  otp.length - 1) {
+        if (value !== '' && index < otp.length - 1) {
             document.getElementById(`otp-input-${index + 1}`).focus();
         }
         setOtp(newOtp);
+        setIsButtonDisabled(newOtp.some(digit => digit === ''));
     };
 
     return (
@@ -63,8 +65,11 @@ const Login = () => {
                 </div>
                 <p className='text-sm text-blue-400 mt-1 pb-10'>Resend OTP</p>
                 <Link href={'user/choose-info'}>
-                <button className='w-full bg-blue-600 rounded-md px-8 py-3 font-bold text-white mb-3 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-700'>Verify & Login</button>
-                <button className='w-full bg-white rounded-xl px-8 py-3 font-bold border-4 border-blue-600 text-blue-600 mb-4 hover:border-none'>Login via - E-mail</button>
+                    <button
+                        className={`w-full bg-blue-600 rounded-md px-8 py-3 font-bold text-white mb-3 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-700 ${isButtonDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                        disabled={isButtonDisabled}
+                    >Verify & Login</button>
+                    <button className='w-full bg-white rounded-xl px-8 py-3 font-bold border-4 border-blue-600 text-blue-600 mb-4  hover:border-none'>Login via - E-mail</button>
                 </Link>
             </div>
         </section>

@@ -2,15 +2,31 @@
 
 import Navigation from '@/components/propertyListing/Navigation/Navigation';
 import Image from 'next/image';
-
+import { useState } from 'react';
 import Link from 'next/link';
 import RoundedDiv from '@/components/propertyListing/RoundedDiv';
 const Page = () => {
 
+    const [formData, setFormData] = useState({
+        propertyDescription: '',
+        totalFloors: '',
+        propertyOnFloor: '',
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const isFormValid = () => {
+        const { propertyDescription, totalFloors, propertyOnFloor } = formData;
+        return propertyDescription && totalFloors && propertyOnFloor;
+    };
+
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
-            <Navigation   />
+            <Navigation />
             <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
                 <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
@@ -22,10 +38,11 @@ const Page = () => {
 
                     <textarea
                         id="myTextArea"
-                        name="myTextArea"
+                        name="propertyDescription"
                         rows={10}
                         cols={40}
                         className='my-6 custom-border-2 rounded-md'
+                        onChange={handleInputChange}
                     />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Add Room Details
@@ -34,11 +51,11 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Bathrooms
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5}/>
+                    <RoundedDiv width={35} height={35} size={5} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Balconies
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5}/>
+                    <RoundedDiv width={35} height={35} size={5} />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Other Rooms
                     </h1>
@@ -73,20 +90,30 @@ const Page = () => {
                     <div className='flex flex-col'>
                         <div className='flex flex-row items-center gap-10'>
                             <p className='text-md'>Covered Parking</p>
-                        <RoundedDiv width={25} height={25} size={2}/>
+                            <RoundedDiv width={25} height={25} size={2} />
                         </div>
                         <div className='flex flex-row items-center gap-14'>
                             <p className='text-md'>Open Parking</p>
-                        <RoundedDiv width={25} height={25} size={2}/>
+                            <RoundedDiv width={25} height={25} size={2} />
                         </div>
 
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-4">
-                       Flooring Details
+                        Flooring Details
                     </h1>
                     <p className='text-md'>Total No of Floor</p>
-                    <input className='custom-border py-4 px-2 my-2 rounded-xl' placeholder='Total Floors'></input>
-                    <input className='custom-border py-4 px-2 mb-2 rounded-xl' placeholder='Property on Floor'></input>
+                    <input
+                        name='totalFloors'
+                        className='custom-border py-4 px-2 my-2 rounded-xl'
+                        placeholder='Total Floors'
+                        onChange={handleInputChange}
+                    />
+                    <input
+                        name='propertyOnFloor'
+                        className='custom-border py-4 px-2 mb-2 rounded-xl'
+                        placeholder='Property on Floor'
+                        onChange={handleInputChange}
+                    />
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Availability Status
                     </h1>
@@ -102,15 +129,21 @@ const Page = () => {
                         Age of Property
                     </h1>
                     <div className='flex flex-row  gap-2 mt-2'>
-                    <button className='custom-border h-full px-2 rounded-lg'>0-1 years</button>
-                    <button className='custom-border h-full px-2 rounded-lg'>1-5 years</button>
-                    <button className='custom-border h-full px-2 rounded-lg'>5-10 years</button>
-                    <button className='custom-border h-full px-2 rounded-lg'>10+ years</button>
+                        <button className='custom-border h-full px-2 rounded-lg'>0-1 years</button>
+                        <button className='custom-border h-full px-2 rounded-lg'>1-5 years</button>
+                        <button className='custom-border h-full px-2 rounded-lg'>5-10 years</button>
+                        <button className='custom-border h-full px-2 rounded-lg'>10+ years</button>
                     </div>
 
-                   
-                    <Link href={'photos'}>
-                        <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600'>Continue</button>
+
+                    <Link href={isFormValid() ? 'photos' : '#'}>
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 
+              ${!isFormValid() ? 'cursor-not-allowed opacity-50' : ''}`}
+                            disabled={!isFormValid()}
+                        >
+                            Continue
+                        </button>
                     </Link>
                 </div>
                 <div className='flex flex-col gap-5'>
