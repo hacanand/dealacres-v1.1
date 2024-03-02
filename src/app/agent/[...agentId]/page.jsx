@@ -54,7 +54,7 @@ const SingleAgentPage = () => {
           <AgentContactForm />
         </div>
         <div className='w-full sm:w-1/2  my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[400px] -order-1 sm:order-2'>
-          <Image src={`/about-us/${img}`} className='rounded-[2rem] w-full h-auto object-center self-start ' width={300} height={300} />
+          <Image src={`/about-us/${img}`} alt='abot-agent' className='rounded-[2rem] w-full h-auto object-center self-start ' width={300} height={300} />
         </div>
      
 
@@ -64,7 +64,7 @@ const SingleAgentPage = () => {
           <AgentFeedback />
         </div>
         <div className='h-1/2 -order-1 md:order-2 w-full sm:w-3/4 md:w-1/2 mx-auto md:mx-0 '>
-          <Image src={feedbackBg} className='w-full h-full' />
+          <Image src={feedbackBg} alt='feedback' className='w-full h-full' />
         </div>
 
       </div>

@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react'
+import { useState } from 'react';
 import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRupeeSign } from "react-icons/fa";
+
 const page = () => {
 
   const [expectedPrice, setExpectedPrice] = useState('');
