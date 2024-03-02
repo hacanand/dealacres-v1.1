@@ -5,9 +5,15 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import styles from "./topbar.module.css";
 
 const buttons = [
-  <Button key="Buy">Buy</Button>,
-  <Button key="Sell">Sell</Button>,
-  <Button key="Rent">Rent</Button>,
+  <Button variant="text" size="large" key="Buy" className="border-r">
+    Buy
+  </Button>,
+  <Button variant="text" key="Sell">
+    Sell
+  </Button>,
+  <Button variant="text" key="Rent">
+    Rent
+  </Button>,
 ];
 
 const TopBar = () => {
@@ -22,16 +28,21 @@ const TopBar = () => {
 
       <div className={styles.searchLayout}>
         <div className={styles.searchBar}>
-          <input id="SearchAgent" type="search" />
+          <input
+            id="SearchAgent"
+            type="search"
+            className="px-8"
+            placeholder="Enter Locality, Agent Name"
+          />
           <label htmlFor="SearchAgent">
             <SearchRounded color="light" />
           </label>
         </div>
 
-        <div>
-          <ButtonGroup size="large" aria-label="large button group">
-            {buttons}
-          </ButtonGroup>
+        <div className="join px-8 rounded-xl">
+          <button className="btn join-item px-8">Buy</button>
+          <button className="btn join-item px-8">Sell</button>
+          <button className="btn join-item px-8">Rent</button>
         </div>
       </div>
     </div>

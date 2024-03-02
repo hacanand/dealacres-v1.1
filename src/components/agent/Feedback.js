@@ -51,7 +51,7 @@ const StyledRating = styled(Rating)(({ theme }) => ({
 
 const Feedback = ({ onClose }) => {
   return (
-    <div className={styles.feedbackPopup}>
+    <div className={`${styles.feedbackPopup} opacity-95`}>
         <button onClick={onClose} className={styles.closeButton}>
           <Close />
         </button>

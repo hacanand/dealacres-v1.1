@@ -1,56 +1,56 @@
-.topbarLayout{
-    width: 75%;
-    margin: auto;
+.topbarLayout {
+  width: 75%;
+  margin: auto;
 }
 
-.title h1{
-    font-size: 35px;
-    font-weight: bold;
+.title h1 {
+  font-size: 35px;
+  font-weight: bold;
 }
 
-.title p{
-    margin: 10px 0px;
+.title p {
+  margin: 10px 0px;
 }
 
-.title a{
-    color: #0061fd;
+.title a {
+  color: #0061fd;
 }
 
-.searchLayout{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.searchLayout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.searchBar{
-    display: flex;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 5px;
-    align-self: center;
-    /* flex-wrap: wrap; */
-    width: 50%;
-    
+.searchBar {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+  align-self: center;
+  /* flex-wrap: wrap; */
+  width: 50%;
 }
 
-.searchBar input{
-    flex-grow: 1;
-    flex-basis: 50;
-    overflow: hidden;
+.searchBar input {
+  flex-grow: 1;
+  flex-basis: 50;
+  overflow: hidden;
+  outline: none;
 }
 
-.searchBar label{
-    /* width: 40px; */
-    flex-grow: 0;
-    background-color: #0061fd;
-    border-radius: 50px;
-    color: white;
-    padding: 4px;
+.searchBar label {
+  /* width: 40px; */
+  flex-grow: 0;
+  background-color: #0061fd;
+  border-radius: 50px;
+  color: white;
+  padding: 4px;
 }
 
-@media only screen and (max-width: 500px){
-    .searchBar{
-        width: 85%;
-        margin-bottom: 10px;
-    }
+@media only screen and (max-width: 500px) {
+  .searchBar {
+    width: 85%;
+    margin-bottom: 10px;
+  }
 }
