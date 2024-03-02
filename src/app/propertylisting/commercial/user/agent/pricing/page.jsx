@@ -4,7 +4,7 @@ import NavigationBroker from '@/components/propertyListing/Navigation/Navigation
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRupeeSign } from "react-icons/fa";
-const page = () => {
+const Page = () => {
 
   const [expectedPrice, setExpectedPrice] = useState('');
   const [pricePerSqYd, setPricePerSqYd] = useState('');
@@ -156,5 +156,5 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 

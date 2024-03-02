@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaRupeeSign } from "react-icons/fa";
-const page = () => {
+const Page = () => {
 
  const [expectedPrice,setExpectedPrice]= useState('');
   const [pricePerSqYd, setPricePerSqYd] = useState('');
@@ -157,5 +157,5 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
 
