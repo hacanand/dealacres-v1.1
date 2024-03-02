@@ -6,13 +6,12 @@ import FAQ from "@/components/property/maincontentcontainer/FAQ.jsx";
 import {data} from './dummydata'
 import React, { Fragment } from "react";
 import ReadMore from "@/components/propertyListing/ReadMore/ReadMore";
-import HeroSection from "@/components/propertyListing/HeroSection/HeroSection.jsx";
+import Hero from "@/components/propertyListing/HeroProperty/Hero";
 
 const page = () => {
   return (
     <Fragment>
-      {/* <Hero /> */}
-      <HeroSection />
+    <Hero />
       <Guide />
       <About />
       <div className='px-4 sm:px-8 md:px-16 lg:px-32 space-y-8  py-5'>
