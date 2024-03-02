@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import styles from "./sidecontent.module.css";
 import { Lato } from "next/font/google";
-import { TextField } from "@mui/material";
+import { MenuItem, Select, TextField } from "@mui/material";
 import Addbox from "./Addbox";
 
 const lato = Lato({
@@ -76,10 +76,15 @@ function SideContentContainer(props) {
           multiline
           fullWidth
           margin="dense"
-          label="Comments(Optional)"
+          label="Address"
           rows={4}
-          {...register("Comments")}
+          {...register("Address")}
         />
+
+        <Select labelId="type-select-label" id="type-select" size="small">
+          <MenuItem value="buyer">Buyer</MenuItem>
+          <MenuItem value="seller">Seller</MenuItem>
+        </Select>
         <div className={styles.formTermsCond}>
           <input
             type="checkbox"
@@ -111,4 +116,3 @@ function SideContentContainer(props) {
 }
 
 export default SideContentContainer;
-
