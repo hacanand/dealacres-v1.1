@@ -1,6 +1,6 @@
 import Item from "./Item";
-import styles from '@/components/footer/footer.module.css'
-import { COMPANY,DEALACRES,RESOURCES,EXPLORECITIES } from "./Menu";
+import styles from "@/components/footer/footer.module.css";
+import { COMPANY, DEALACRES, RESOURCES, EXPLORECITIES } from "./Menu";
 const ItemsContainer = () => {
   return (
     <div className={`${styles.itemcont} flex justify-around`}>
