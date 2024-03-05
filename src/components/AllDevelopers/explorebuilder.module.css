@@ -1,6 +1,8 @@
 .ExploreBuilder {
     margin-right: 100px;
     text-align: justify;
+    width: 90%;
+    
 }
 
 .TopBuilders{
@@ -9,7 +11,7 @@
     border: 1px solid black;
     border-radius: 20px;
     padding: 20px;
-    width: 80%;
+    width: 70%;
     margin-top: 50px;
     margin: auto;
 
@@ -110,10 +112,12 @@
     justify-content: space-between;
     margin-top: 20px;
     font-weight: bold;
+    align-items: center;
 }
 .pagination span{
     cursor: pointer;
 }
+
 
 
 /* sidebar */
@@ -122,14 +126,16 @@
     font-weight: bold;
     background-color: #ffbf0025;
     padding: 20px;
+    width: 80%;
+    margin: auto;
 }
 
 .sideBlock h4, .sideBlock span{
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .sideBlock img{
-    width: calc(100% - 100px);
+    width: calc(100% - 50px);
     margin: auto;
     padding: 20px;
 }

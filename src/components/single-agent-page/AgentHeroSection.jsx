@@ -30,7 +30,7 @@ const AgentHeroSection = ({
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
+    <div className='w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
       
       <div className='text-white  col-span-2'>
         <div className='py-8 px-6 flex flex-col justify-between h-full gap-8'>

@@ -5,8 +5,21 @@
 
 .title{
     margin: 0rem 8rem;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
+}
+.heading{
+    margin: 1rem 8rem;
+    font-size: 15px;   
+}
+.heading a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.heading a:hover {
+    color: blue;
 }
 
 .Sidebar{
@@ -14,7 +27,7 @@
 }
 
 .mainContainer{
-    width: calc(100% - 220px);
+    width: calc(100% - 280px);
 }
 
 @media only screen and (max-width: 990px){

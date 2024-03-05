@@ -82,69 +82,74 @@ const data={
         },
         {
             id:12,
+            service:"Electronic Good Dealers",
+            source: "/ServiceIcons/electroniBuilder.png",
+        },
+        {
+            id:13,
             service: "Packer & Movers",
             source: "/ServiceIcons/PackerMover.png",
             color:"rgb(206, 206, 90)",
             bgColor: "rgb(206, 206, 90, 0.15)"
         },
         {
-            id:13,
+            id:14,
             service: "Pest Control",
             source: "/ServiceIcons/PestControl.png",
             color:"rgb(255, 105, 105)",
             bgColor: "rgb(255, 105, 105, 0.15)"
         },
         {
-            id:14,
+            id:15,
             service: "Sanitary Dealer",
             source: "/ServiceIcons/SanitaryDealer.svg",
             color:"rgb(0, 97, 253)",
             bgColor: "rgb(0, 97, 253, 0.15)"
         },
         {
-            id:15,
+            id:16,
             service: "Carpentar",
             source: "/ServiceIcons/Carpenter.png",
             color:"rgb(49, 132, 62)",
             bgColor: "rgb(49, 132, 62, 0.15)"
         },
         {
-            id:16,
+            id:17,
             service: "Painting Service",
             source: "/ServiceIcons/PaintingService.png",
             color:"rgb(137, 129, 33)",
             bgColor: "rgb(137, 129, 33, 0.15)"
         },
         {
-            id:17,
+            id:18,
             service: "Electrician",
             source: "/ServiceIcons/Electrician.png",
             color:"rgb(186, 112, 79)",
             bgColor: "rgb(186, 112, 79, 0.15)"
         },
         {
-            id:18,
+            id:19,
             service: "Security System",
             source: "/ServiceIcons/SecuritySystem.png",
             color:"rgb(7, 214, 46)",
             bgColor: "rgb(7, 214, 46, 0.15)"
         },
         {
-            id:19,
+            id:20,
             service: "Solar Product Dealer",
             source: "/ServiceIcons/Solar.svg",
             color:"rgb(225, 174, 96)",
             bgColor: "rgb(225, 174, 96, 0.15)"
         },
         {
-            id:20,
+            id:21,
             service: "Plumbing Contractor",
             source: "/ServiceIcons/Plumbing.png",
             color:"rgb(70, 130, 169)",
             bgColor: "rgb(70, 130, 169, 0.15)"
         },
         {
-            id:21,
+            id:22,
             service: "Flooring & Marble Dealer",
             source: "/ServiceIcons/Flooring.png",
             color:"rgb(70, 69, 140)",
