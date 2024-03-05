@@ -21,7 +21,7 @@ const HomeDesign = () => {
   return (
     <div>
       <div  className={styles.Services}>
-        <h2>Value Added Service </h2>
+       <h2>Home Designing</h2>
         <p>specialized in designing spaces efficiently and aesthetically based on client inputs. I have experience in this business.</p>
       </div>
     <div className={styles.PropertyService}>

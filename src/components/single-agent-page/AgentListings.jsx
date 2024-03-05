@@ -14,7 +14,7 @@ const AgentListings = (
 
     const [selectedTab, setSelectedTab] = useState('sale')
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-7 place-content-center content-center items-center justify-center'>
+        <div className='w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-7 place-content-center content-center items-center justify-center'>
             <div className={`
             sm:self-center
             col-span-2 flex flex-row gap-4 sm:gap-0 sm:flex-col items-start justify-around sm:justify-center transition-all after:transition-all  border-b-2 border-r-0 sm:border-b-0 sm:border-r-2 border-black relative after:absolute ${selectedTab === 'sale' ? 'after:left-[20px] sm:after:left-auto sm:after:top-0': 'after:left-[50%] sm:after:left-auto sm:after:top-[55%]'} 
