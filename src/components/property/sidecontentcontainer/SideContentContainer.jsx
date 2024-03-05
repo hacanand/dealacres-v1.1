@@ -76,15 +76,11 @@ function SideContentContainer(props) {
           multiline
           fullWidth
           margin="dense"
-          label="Address"
+          label="Comments(Optional)"
           rows={4}
-          {...register("Address")}
+          {...register("Comments")}
         />
 
-        <Select labelId="type-select-label" id="type-select" size="small">
-          <MenuItem value="buyer">Buyer</MenuItem>
-          <MenuItem value="seller">Seller</MenuItem>
-        </Select>
         <div className={styles.formTermsCond}>
           <input
             type="checkbox"
