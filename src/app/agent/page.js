@@ -1,12 +1,13 @@
-"use client"
-import AskDealAcres from '@/components/agent/AskDealAcres'
-import BestAgent from '@/components/agent/BestAgent'
-import FeedbackPopup from '@/components/agent/Feedback'
-import ImgSlider from '@/components/agent/ImgSlider'
-import NormalAgent from '@/components/agent/NormalAgent'
-import RealAgent from '@/components/agent/RealAgent'
-import TopBar from '@/components/agent/TopBar'
-import React, {useState, useEffect} from 'react'
+"use client";
+import AskDealAcres from "@/components/agent/AskDealAcres";
+import BestAgent from "@/components/agent/BestAgent";
+import FeedbackPopup from "@/components/agent/Feedback";
+import ImgSlider from "@/components/agent/ImgSlider";
+import NormalAgent from "@/components/agent/NormalAgent";
+import RealAgent from "@/components/agent/RealAgent";
+import TopBar from "@/components/agent/TopBar";
+import { Button } from "@mui/material";
+import React, { useState, useEffect } from "react";
 
 const AgentPage = () => {
   const [scrollCount, setScrollCount] = useState(0);
@@ -17,15 +18,15 @@ const AgentPage = () => {
       setScrollCount(scrollCount + 1);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollCount]);
 
   useEffect(() => {
-    if (scrollCount == 5) {
+    if (scrollCount == 10) {
       setShowPopup(true);
     }
   }, [scrollCount]);
@@ -39,18 +40,13 @@ const AgentPage = () => {
       <ImgSlider />
       <TopBar />
       <BestAgent />
-      {showPopup && 
-      <FeedbackPopup onClose={closePopup} />}
+      {showPopup && <FeedbackPopup onClose={closePopup} />}
       <RealAgent />
       <NormalAgent />
       <AskDealAcres />
-      <NormalAgent />
-
-
-
-
+      <NormalAgent button={true} />
     </div>
-  )
-}
+  );
+};
 
-export default AgentPage
+export default AgentPage;
