@@ -71,7 +71,8 @@ const articlesData = [
 const AllGuidesPage = () => {
 
   const [tab, setTab] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(2)
+  const [cardsToShow, setCardsToShow] = useState(5)
+
 
   const cardsContRef = useRef(null);
 
@@ -88,6 +89,8 @@ const AllGuidesPage = () => {
   const handleTabChange = useCallback((value) => {
     setTab(value)
   }, [tab])
+
+
   return (
     <div className={`scroll-smooth`}>
 
@@ -102,28 +105,28 @@ const AllGuidesPage = () => {
 
       {/* Real Estate Made easy.... */}
       <div className='px-4 max-w-screen-xl mx-auto'>
-        <h2 className='text-4xl font-bold py-2'>
+        <h2 className='text-3xl font-bold py-2'>
           Real Estate Made Easy: Your Comprehensive Manual
         </h2>
 
-        <p className='text-justify text-xl py-4'>
+        <p className='text-justify text-lg py-4'>
           Our real estate manuals are like helpful guides for buying and selling homes. They explain everything step by step, from finding the perfect property to signing the paperwork. These manuals are easy to understand, with clear explanations and tips to make real estate transactions smooth and simple.
         </p>
       </div>
 
-      <div className='max-w-screen-xl mx-auto my-4 px-4'>
+      <div className='max-w-screen-lg mx-auto my-4 px-4'>
         <ManualCategorySlider allGuides={allGuidesData}
-          handleTabChange={handleTabChange} tab={tab} />
+          handleTabChange={handleTabChange}  tab={tab} />
       </div>
 
 
 
 
       <div className='max-w-screen-xl md:mx-auto px-8 my-6 flex flex-col md:flex-row justify-between gap-12'>
-        <div className='w-full md:w-[35%]'>
-          <CheckList />
+        <div className='w-full md:w-[30%]'>
+          <CheckList tab={tab}  />
         </div>
-        <div className='w-full md:w-[65%]'>
+        <div className='w-full md:w-[70%]'>
           <h3 className='font-bold text-4xl py-2 text-center md:text-left'>
             {allGuidesData[tab].title}
 
@@ -173,7 +176,7 @@ const AllGuidesPage = () => {
 
       {/* tabular posts */}
 
-      <div className='py-4'>
+      <div className='py-4 w-[90%] mx-auto'>
 
         <Tabularposts
           posts={allPostsData}

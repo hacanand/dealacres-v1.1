@@ -1,51 +1,78 @@
-.propertyContainer{
+.propertyContainer {
     width: 100%;
-    padding: 5rem 12rem 5rem 12rem;
+    padding: 5rem 12rem 0rem 12rem;
     overflow: hidden;
 }
 
-.contentContainer{
+.contentContainer {
     margin-top: 2rem;
     width: 100%;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: 62% 32%;
+    display: flex;
+    justify-content: space-around;
 }
 
-@media screen and (max-width: 1400px){
-    .propertyContainer{
-        padding:4rem 9rem 4rem 9rem;
+.leftColumn {
+    width: 65%; 
+    margin-bottom: 2rem; 
+}
+
+.rightColumn {
+    width: 30%; /* Full width on smaller screens */
+}
+
+.bottomContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem 12rem 2rem 12rem;
+}
+
+.bottomContainer h1 {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .propertyContainer {
+        padding: 4rem 9rem 4rem 9rem;
     }
 }
 
-@media screen and (max-width: 1200px){
-    .propertyContainer{
-        padding:4rem 7rem 4rem 7rem;
+@media screen and (max-width: 1200px) {
+    .propertyContainer {
+        padding: 4rem 7rem 4rem 7rem;
     }
 }
 
-@media screen and (max-width: 1000px){
-    .propertyContainer{
-        padding:3rem 5rem 3rem 5rem;
+@media screen and (max-width: 1000px) {
+    .propertyContainer {
+        padding: 3rem 5rem 3rem 5rem;
     }
 }
 
-@media screen and (max-width: 800px){
-    .propertyContainer{
-        padding:3rem;
+@media screen and (max-width: 800px) {
+    .propertyContainer {
+        padding: 3rem;
     }
 }
 
-@media screen and (max-width:768px){
-    .propertyContainer{
-        padding:2rem;
+@media screen and (max-width: 768px) {
+    .propertyContainer {
+        padding: 2rem;
     }
 
-    .contentContainer{
-        grid-template-columns: 1fr;
+    .bottomContainer {
+        padding: 2rem;
+    }
+
+    .contentContainer {
+        flex-direction: column; /* Adjusted for smaller screens */
+    }
+
+    .leftColumn,
+    .rightColumn {
+        width: 100%; /* Full width on smaller screens */
     }
 }
-
-
-
-
