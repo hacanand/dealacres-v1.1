@@ -71,7 +71,7 @@ const articlesData = [
 const AllGuidesPage = () => {
 
   const [tab, setTab] = useState(0)
-  const [cardsToShow, setCardsToShow] = useState(5)
+  const [cardsToShow, setCardsToShow] = useState(4)
 
 
   const cardsContRef = useRef(null);

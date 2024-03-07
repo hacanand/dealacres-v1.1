@@ -30,10 +30,10 @@ const PropertyBuilder = () => {
 
     return (
         <div className="pt-5">
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold pt-2 pb-5">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold px-4 pt-2 pb-5">
                 Projects by DLF Builders
             </h2>
-            <div className="flex space-x-4 pb-4">
+            <div className="flex space-x-4 pb-4 pl-4">
                 <button
                     className={`rounded-full px-4 py-2 border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'ongoing' ? 'bg-blue-100' : ''}`}
                     onClick={() => handleTabClick('ongoing')}
