@@ -34,8 +34,15 @@ export default function Home() {
         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
           <Toparticles />
         </div>
+        <div className="">
         <Cities title = {true} />
+
+        </div>
+
+        <div className="mt-16">
         <Options />
+
+        </div>
         <Postercard
           title="Sell or Rent your property faster with DealAcres"
           src={src2}
