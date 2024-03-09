@@ -61,19 +61,19 @@
     cursor-pointer 
     leading-6
 }
+
+
 .itemcont{
-    @apply grid 
-    grid-cols-1 
+    @apply sm:grid 
     sm:grid-cols-3 
     lg:grid-cols-4 
-    gap-6 
+    sm:first-line:gap-6 
     sm:px-8 
-    px-5 
-    py-16
+
 }
+
 .lastdiv{
     @apply grid 
-    grid-cols-1 
     sm:grid-cols-2 
     lg:grid-cols-3 
     gap-10
@@ -82,4 +82,13 @@
     text-gray-400 
     text-sm pb-8 
     font-[Poppins]
+}
+
+@media screen and (max-width: 640px) {
+    .itemcont{
+        @apply flex flex-nowrap gap-8  overflow-x-auto px-4 py-8 pb-16 max-h-[500px] overflow-y-auto
+    }
+
+
+    
 }
