@@ -61,17 +61,17 @@ const TeamSlider = () => {
 
     };
   return (
-    <div className={`relative ${styles.sliderContainer} max-h-[900px] `}>
+    <div className={`relative ${styles.sliderContainer} max-h-[600px] sm:max-h-[900px] `}>
 
       
         
-       <div className={`relative max-w-[900px] mx-auto py-[8rem]  max-h-[900px] `} >
+       <div className={`relative max-w-[900px] mx-auto py-[4rem] sm:py-[8rem]  max-h-[900px] `} >
 
-       <h3 className='max-w-screen-xl mx-auto z-30 px-8 absolute font-bold text-2xl md:text-3xl top-[5%] lg:top-[10%] lg:left-[-5%] '>
+       <h3 className='max-w-screen-xl mx-auto z-30 px-8 absolute font-bold text-2xl md:text-3xl top-[3%] sm:top-[5%] lg:top-[10%] lg:left-[-5%] '>
             Our Team
         </h3>
       <Slider {...settings} className="flex " >
-        <div className='min-w-[300px]  !flex md:inline-blockjustify-center'>
+        <div className='min-w-[300px]  !flex md:inline-block justify-center'>
         <MemberCard img={member1}/>
 
         </div>

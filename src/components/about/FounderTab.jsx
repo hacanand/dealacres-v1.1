@@ -9,10 +9,10 @@ const FounderTab = ({img, content, altText}) => {
     
     `}>
   
-      {img && <div className={`relative col-span-5 overflow-hidden min-h-[300px] max-h-[400px] `}>
-        <Image src={img} alt={"any "} className='absolute object-center min-h-full w-auto h-auto'/>
+      {img && <div className={`relative col-span-5 overflow-hidden min-h-[240px] max-h-[320px] sm:min-h-[300px] sm:max-h-[400px] `}>
+        <Image src={img} alt={"any "} className='absolute object-center min-h-full w-full sm:w-auto h-auto'/>
       </div>}
-      <p className={`text-lg text-justify col-span-7 justify-self-start `}>
+      <p className={`text-base sm:text-lg text-justify col-span-7 justify-self-start `}>
         {content}
       </p>
     </div>
