@@ -15,12 +15,14 @@ import src2 from "../../public/postercardimg2.jpg";
 import src3 from "../../public/postercardimg3.jpg";
 import WhyChooseUs from "@/components/Homepage/chooseus/WhyChooseUs";
 import NewExplore from "@/components/Homepage/explore/NewExplore";
+import NewServicesSection from "@/components/Homepage/services/NewServices";
 export default function Home() {
   return (
     <div>
       <Header />
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
         <Services />
+      
         <NewExplore />
         <Postercard
           title="Find Better Places to Live Work and Wonder..."

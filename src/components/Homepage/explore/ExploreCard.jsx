@@ -6,7 +6,7 @@ const ExploreCard = ({card}) => {
     return (
         <div
             key={card.id}
-            className="rounded-xl shadow  py-4 px-4 sm:text-lg grid grid-rows-7  items-center flex-col gap-4 min-w-[230px] min-[400px]:min-w-[300px] min-[740px]:min-w-[250px]"
+            className="rounded-xl shadow  py-4 px-4 sm:text-lg grid grid-rows-7  items-center flex-col gap-4 min-w-[200px] min-[400px]:min-w-[250px] min-[740px]:min-w-[250px]"
             style={{
                 backgroundColor: card.color
             }}
