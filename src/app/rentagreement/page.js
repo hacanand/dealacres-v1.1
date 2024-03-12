@@ -11,7 +11,7 @@ import { useState } from 'react'
 import girlQuestion from "../../../public/areaCalculator/girl_with_question.webp";
 import Image from 'next/image';
 
-const page = () => {
+const Page = () => {
   const faqData = [
     {
       question: "How do I successfully close a deal?",
@@ -117,4 +117,4 @@ const page = () => {
   )
 }
 
-export default page;
+export default Page;
