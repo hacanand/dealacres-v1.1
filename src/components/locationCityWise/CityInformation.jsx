@@ -12,7 +12,7 @@ const CityInformation = () => {
       </div>
 
       <div className="w-full grid grid-cols-2 max-md:grid-cols-1 gap-6 max-lg:gap-4">
-        <div className="w-full rounded-md border-[1px] border-black">
+        <div className="w-full rounded-md border-[1px] border-black/50">
           <div className="py-4 px-3 border-b-[1px] border-gray-600 text-lg font-semibold max-lg:py-2 max-lg:px-2 max-lg:text-md">
             Information about gurgaon
           </div>

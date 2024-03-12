@@ -425,33 +425,34 @@ const AreaCalculator = () => {
       </div>
 
       <div className="bg-[#EDE4FF] mt-10 mb-3 px-[5rem] py-[3rem] max-sm:px-[1rem] max-sm:py-[2rem]">
-        <div className="grid grid-cols-2 gap-8 items-center max-lg:grid-cols-1">
-          <div>
-            <h2 className="text-3xl font-bold max-sm:text-xl">
-              Frequently Asked Question
-            </h2>
+  <div className="grid grid-cols-2 items-center max-lg:grid-cols-1">
+    <div>
+      <h2 className="text-3xl font-bold max-sm:text-xl">
+        Frequently Asked Question
+      </h2>
 
-            <div className="mt-5 w-full">
-              {faqData.map((faq, index) => {
-                return (
-                  <FAQ
-                    key={index}
-                    question={faq.question}
-                    answer={faq.answer}
-                    isOpen={index === openFaqIndex}
-                    toggleFaq={() => toggleFaq(index)}
-                  />
-                );
-              })}
-            </div>
-          </div>
-          <div className="flex flex-col items-end justify-end max-lg:hidden">
-            <p className="text-2xl font-bold text-[#40128B]">Any inquiry ?</p>
-            <p className="text-2xl   text-[#40128B]">we are here to help you</p>
-            <Image src={girlQuestion} alt="girl question" className="mt-5" />
-          </div>
-        </div>
+      <div className="mt-5 w-full">
+        {faqData.map((faq, index) => {
+          return (
+            <FAQ
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={index === openFaqIndex}
+              toggleFaq={() => toggleFaq(index)}
+            />
+          );
+        })}
       </div>
+    </div>
+    <div className="flex flex-col items-end justify-end max-lg:hidden">
+      <p className="text-2xl font-bold text-[#40128B]">Any inquiry ?</p>
+      <p className="text-2xl text-[#40128B]">we are here to help you</p>
+      <Image src={girlQuestion} alt="girl question" className="mt-5 w-80 h-180 max-sm:w-16 max-sm:h-16" />
+    </div>
+  </div>
+</div>
+
 
       <div className="mt-10 px-[5rem] mb-10 max-sm:px-[1rem]">
         <div className="flex flex-row items-center justify-between">
@@ -477,7 +478,7 @@ const AreaCalculator = () => {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 50,
               },
             }}

@@ -53,7 +53,7 @@ const Faq = () => {
             className="flex items-center justify-between bg-white p-3 rounded-md shadow-md cursor-pointer"
             onClick={() => toggleFaq(index)}
           >
-            <div className="text-xl">{faq.question}</div>
+            <div className="text-lg">{faq.question}</div>
             <div>
               {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
             </div>

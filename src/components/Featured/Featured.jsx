@@ -7,8 +7,8 @@ import FeatureSlider from "../allBlog/FeatureSlider";
 
 const Featured = () => {
   return (
-    <div className="px-4 py-8 flex flex-col gap-16 ">
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-12  py-12">
+    <div className="px-4  flex flex-col gap-16 ">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-12 ">
         <div className="col-span-1 py-4   ">
           <div className="flex justify-start my-4">
             <h2 className="text-4xl border-b border-b-black font-[Poppins]">

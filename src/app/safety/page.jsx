@@ -52,47 +52,48 @@ const guidesData = [
 
 const SafetyGuide = () => {
 
-  
+
   return (
     <div className='overflow-x-hidden'>
 
 
-    <div className='px-4 max-w-screen-2xl mx-auto'>
+      
+     
+      <div className='max-w-screen-xl mx-auto px-4'>
       <SafetyBanner img={bannerBg} heading="Safety Guide" />
+        <div className='py-8'>
 
-      <div className='py-8'>
+          <SafetyInro title={safetyData.intro.title} content={safetyData.intro.content} />
+        </div>
 
-        <SafetyInro title={safetyData.intro.title} content={safetyData.intro.content} />
+        <div>
+          {
+            safetyData.sections.map((section, index) => (
+              <SafetySection key={index} title={section.title}
+                content={section.content}
+                hasList={section.has_list}
+                listHeader={section.list_header}
+                lists={section.lists}
+                img={section.img}
+                order={index === 2 ? 'reverse' : 'normal'}
+              />
+            ))
+          }
+        </div>
+
       </div>
 
-      <div>
-        {
-          safetyData.sections.map((section, index) => (
-            <SafetySection key={index} title={section.title}
-              content={section.content}
-              hasList={section.has_list}
-              listHeader={section.list_header}
-              lists={section.lists}
-              img={section.img}
-              order={index === 2 ? 'reverse' : 'normal'}
-            />
-          ))
-        }
+      <div className='my-4'>
+        <ContactStrip />
       </div>
-  
-    </div>
 
-    <div className='my-4'>
-    <ContactStrip/>
-    </div>
-
-    <div className='max-w-screen-2xl mx-auto py-4'>
-      {/* <div className='px-4 md:pl-12 '>
+      <div className='max-w-screen-xl mx-auto py-4'>
+        {/* <div className='px-4 md:pl-12 '>
         <p className='font-bold text-3xl'></p>
         <p className='font-light text-xl'></p>
       </div> */}
-        <Guides showHeading guides = {guidesData} heading="Explore Our More Guides" subheading="Know all that you need to know before you start."/>
-    </div>
+        <Guides showHeading guides={guidesData} heading="Explore Our More Guides" subheading="Know all that you need to know before you start." />
+      </div>
     </div>
   )
 }

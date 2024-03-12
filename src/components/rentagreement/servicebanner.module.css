@@ -1,8 +1,8 @@
 
 .BannerDetails{
-    height: 70vh;
-    background-color: rgb(0, 0, 0, 0.4);
-    width: 450px;
+    height: 50vh;
+    background-color: rgba(9, 8, 8, 0.737);
+    width: 400px;
     padding: 10px;
 }
 
@@ -34,13 +34,14 @@
     flex-basis: 200;
 }
 
-.BannerBg{
-    /* background: url("../../../public/Contact/ContactBg.webp"); */
-    background: url("https://media-public.canva.com/zMN8I/MAEJn-zMN8I/1/s.jpg");
-    background-repeat: no-repeat, repeat;
+.BannerBg {
+    background: url("/rentagreement/bannerrent.jpg");
+    background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    padding: 1% 1%; 
+    background-size: 100% auto;
+    padding: 3% 1%;
+    height: 75vh;
+  
 }
 
 @media only screen and (max-width: 500px){

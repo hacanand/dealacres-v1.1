@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import TandCBanner from "../../../public/TandC/BannerTandC.webp"
+import TandCBanner from "../../../public/TandC/T&Cbanner.png"
 import styles from "./page.module.css"
 import Content from './Content'
 const page = () => {

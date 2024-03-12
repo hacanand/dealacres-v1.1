@@ -1,15 +1,13 @@
-.popularProjectCardContainer{
-    width: 180px;
-    /* width: calc(100% / 3 - 2rem); */
-    height: 270px;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 4px 6px ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin: 0 auto; */
+.popularProjectCardContainer {
+  width: 180px;
+  height: 270px;
+  border: 2px solid rgba(0, 0, 0, 0.25); 
+  border-radius: 20px;
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 

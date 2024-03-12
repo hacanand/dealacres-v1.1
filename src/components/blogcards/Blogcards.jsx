@@ -33,9 +33,10 @@ const Blogcards = () => {
         <FeatureCard img={loan1} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
         <FeatureCard img={loan2} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
         <FeatureCard img={loan3} text={"Mastering Mortgage Basics: 10 Key Concepts Every"} />
-   
-
+        
       </div>
+      
+
     </div>
   );
 };
