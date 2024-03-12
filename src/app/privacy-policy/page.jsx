@@ -4,7 +4,7 @@ import React from 'react'
 
 const PrivacyPolicy = () => {
   return (
-    <div className='px-4 max-w-screen-2xl mx-auto'>
+    <div className='px-4 max-w-screen-xl mx-auto'>
 
       <div className='  border border-l-gray-500 my-2 '>
         <PrivacyBanner/>
