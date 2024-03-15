@@ -21,7 +21,7 @@ const Tabularposts = ({
 
             <TableHeader header='Popular Posts' />
           </div>
-          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px] min-[820px]:overflow-y-scroll'>
+          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px] '>
             {
               posts.map((post, index) => {
                 return (
@@ -37,7 +37,7 @@ const Tabularposts = ({
           {/* Latest Posts do some validation for grabing latest posts through date. */}
 
           <TableHeader header='Latest Posts' />
-          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px] min-[820px]:overflow-y-scroll'>
+          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px]'>
             {
               posts.map((post, index) => {
                 return (

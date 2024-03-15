@@ -8,6 +8,8 @@ import postData from "./blogData.json"
 import BlogPost from "@/components/blog/post/BlogPost";
 import Tabularposts from "@/components/blog/tabularposts/Tabularposts";
 import Guides from "@/components/blog/guides/Guides";
+import EstateService from "@/components/rentagreement/EstateService";
+import AgentLinks from "@/components/blog/AgentLinks/AgentLinks";
 
 
 const topicsData = [
@@ -134,7 +136,7 @@ export default function SingleBlogPage() {
 
 
   return (
-    <div className="max-w-screen-2xl mx-auto">
+    <div className="max-w-screen-xl mx-auto ">
       <div className='flex flex-col min-h-screen min-[960px]:grid min-[960px]:grid-cols-6'>
 
         <div className="min-[960px]:col-span-4 px-2 py-2">
@@ -142,7 +144,7 @@ export default function SingleBlogPage() {
           <BlogPost postData={postData} />
         </div>
 
-        <div className="min-[960px]:col-span-2 px-2 py-2">
+        <div className="min-[960px]:col-span-2 px-2 py-4">
           {/* Feeds section */}
           <BlogSideBar allPosts={allPostsData} topics={topicsData} />
         </div>
@@ -154,8 +156,8 @@ export default function SingleBlogPage() {
     articles = {articlesData} />
 
     <Guides showHeading guides={guidesData}  align="center"/>
-
-  
+<EstateService />
+ <AgentLinks />
     </div>
   )
 }

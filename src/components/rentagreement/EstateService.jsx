@@ -5,12 +5,12 @@ import styles from "./estateservice.module.css";
 import datas from "./Data.js";
 
 const EstateService = () => {
-  let [limit, setLimit] = useState(7);
+  let [limit, setLimit] = useState(8);
   const filteredData = datas["EstateService"].slice(0, limit);
 
   let toggleDisplay = () => {
     if (limit == -1) {
-      setLimit(7);
+      setLimit(8);
     } else {
       setLimit(-1);
     }

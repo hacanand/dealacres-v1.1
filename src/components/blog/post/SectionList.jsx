@@ -8,10 +8,10 @@ const SectionList = ({
 }) => {
   return (
     <li className='py-2'>
-        <div className='font-medium text-2xl'>
+        <div className='font-medium text-xl'>
             {title}
         </div>
-        <div className='text-xl text-justify'>
+        <div className='text-md text-justify'>
             {content}
         </div>
       

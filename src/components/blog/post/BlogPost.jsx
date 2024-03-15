@@ -24,7 +24,7 @@ const  BlogPost = ({
 
       <PublishedOn date={publishedOn} align='left' />
 
-      <div className="text-justify text-xl" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
+      <div className="text-justify text-md" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
 
       <div className='py-4'>
         <Image src={`/blog/${img}`} alt='post cover' width={200} height={100} className='w-full max-w-full' />

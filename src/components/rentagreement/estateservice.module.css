@@ -1,5 +1,5 @@
 .EstateService{
-    width: 75%;
+    width: 100%;
     margin: auto;
 
 }
@@ -25,7 +25,7 @@
 }
 
 .ServiceLayout{
-    width: 140px;
+    width: 100px;
     background-color: antiquewhite;
     padding: 20px;
     margin-right: 10px;
@@ -37,7 +37,7 @@
 }
 
 .ServiceLayout p{
-    font-size: 1.5 rem;
+    font-size: 0.90rem;
     margin-bottom: 30px;
     text-align: center;
     font-weight: bold;

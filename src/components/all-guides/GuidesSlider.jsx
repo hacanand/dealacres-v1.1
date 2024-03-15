@@ -49,10 +49,10 @@ const GuidesSlider = ({
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='mr-2' onClick={() => handleTabChange(index)}>
+                            <div key={index} className='mr-2 ' onClick={() => handleTabChange(index)}>
 
 
-                                <GuideCard title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />
+                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />
                             </div>
                         )
                     })

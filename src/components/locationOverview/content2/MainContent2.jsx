@@ -16,6 +16,7 @@ import PopularProjects from '../content1/PopularProjects'
 import ArticleSlider from '@/components/faq/ArticleSlider'
 import GuidesSlider from '@/components/all-guides/GuidesSlider'
 import { allGuidesData } from '@/app/all-guides/allGuidesData'
+import AgentLinks from './AgentLinks/AgentLinks'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -71,24 +72,26 @@ function MainContent2() {
         <h5>Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div> */}
-        <div>
+        <div className='w-[80%]'>
             <h5>Explore nearby localities</h5>
             <Cities/>
         </div>
+        <div className='w-[80%]'>
         <InsightReview/>
-        <div>
+        </div>
+        <div className='w-[80%]'>
             <h5>Hotspots in Gurgaon</h5>
             <Hotspots/>
         </div>
-        <div>
+        {/* <div className='w-[80%]'>
             <h5>Photos</h5>
             <Photos/>
-        </div>
+        </div> */}
         <div>
             <h5>Top Developers in Sector 37D</h5>
             <Topdev/>
         </div>
-        <div className='py-4'>
+        <div className='py-4 w-[80%]'>
             <h5 className='!mb-0'>Start with these guides</h5>
             <p className='text-gray-400 text-lg py-2'>Know all that you need to know before you start.</p>
             {/* <LocationGuides guides={guidesData}/> */}
@@ -104,6 +107,9 @@ function MainContent2() {
         <div>
             <h5>Frequently Asked Questions</h5>
             <FAQ  faqdata = {data.mainContent.FaqData} />
+        </div>
+        <div>
+          <AgentLinks />
         </div>
     </div>
   )
