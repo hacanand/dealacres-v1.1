@@ -6,7 +6,7 @@ import { LuExternalLink } from "react-icons/lu";
 
 const Item = ({ Links, title, isSocial }) => {
   return (
-    <ul className={`${isSocial ? 'min-w-[60%]' : 'min-w-[80%]'} sm:max-h-none pb-4 px-2 sm:px-4 border-r border-r-gray-100/20  ${isSocial && 'border-r-0'}`}>
+    <ul className={`${isSocial ? 'min-w-[60%] sm:min-w-[35%]' : 'min-w-[80%] sm:min-w-[60%]'} sm:max-h-none pb-4 px-2 sm:px-4 border-r border-r-gray-100/20  ${isSocial && 'min-[1024px]:border-r-0'} max-h-[500px] overflow-y-auto`}>
       <h1 className={` mb-1 text-base sm:text-lg  font-[Poppins] font-semibold`}>{title}</h1>
       {Links.map((link) => (
         <li key={link.name}>

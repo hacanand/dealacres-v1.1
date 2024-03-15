@@ -70,13 +70,14 @@
     lg:grid-cols-4 
     sm:first-line:gap-6 
     sm:px-8 
+    pb-8
 
 }
 
 .lastdiv{
     @apply grid 
-    sm:grid-cols-2 
-    lg:grid-cols-3 
+
+    sm:grid-cols-3 
     gap-10
     text-center 
     pt-2 
@@ -85,9 +86,9 @@
     font-[Poppins]
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
     .itemcont{
-        @apply flex flex-nowrap gap-8  overflow-x-auto px-4 py-8 pb-4  overflow-y-auto 
+        @apply flex flex-nowrap gap-8  overflow-x-auto px-4 py-8 pb-4 
     }
 
 

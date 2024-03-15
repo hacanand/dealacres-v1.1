@@ -9,7 +9,7 @@ const Card = ({ imgsrc, service }) => {
   return (
     <div className="text-center rounded-xl border-2 shadow-xl h-[150px] border-gray-200 flex flex-col justify-center items-center ">
       <div className=" rounded-xl overflow-hidden transition-transform duration-300 transform hover:scale-105 flex justify-center  w-[100px] h-[100px] ">
-        <Image src={imgsrc} alt="Card Image" width={50} height={50} className="w-full h-full object-cover"/>
+        <Image src={imgsrc} alt="Card Image" width={50} height={50} className="w-full h-full object-contain"/>
         {/* <IoHomeOutline size={70}/> */}
         </div>
       <div className="mt-2 block max-w-[160px]">
