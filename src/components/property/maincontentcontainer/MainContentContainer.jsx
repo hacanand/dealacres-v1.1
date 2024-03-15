@@ -8,9 +8,9 @@ import Amenities from './Amenities.jsx'
 import Specification from './Specification.jsx'
 import Locality from './Locality.jsx'
 import Developerinfo from './Developerinfo.jsx'
-import FAQ from './FAQ.jsx'
-import LeaveReview from './LeaveReview.jsx'
+
 import MortgageCalculator from '../mortgagecalculator/MortGageCalculator'
+
 
 const lato = Lato({
     subsets: ['latin'],
@@ -64,14 +64,7 @@ function MainContentContainer(props) {
             <h1>Locality Overview</h1>
             <Locality localityData = {props.content.localityOverview} desc={true}/>
           </div>
-          <div>
-            <h1>Frequently Asked questions</h1>
-            <FAQ faqdata = {props.content.FaqData}/>
-          </div>
-          <div>
-            <h1>Leave a review</h1>
-            <LeaveReview/>
-          </div>
+          
       </div>
     )
 }

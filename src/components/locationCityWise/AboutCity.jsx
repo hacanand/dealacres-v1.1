@@ -21,7 +21,7 @@ const AboutCity = () => {
         <div className="w-[60%] mt-2 h-1 bg-yellow-500"></div>
       </div>
 
-      <div className="p-4 border-[1px] border-black text-md text-gray-600 rounded-lg leading-6">
+      <div className="p-4 border-[1px] border-black/50 text-md text-gray-600 rounded-lg leading-6">
         {showFullText ? initialText : `${initialText.slice(0, 200)}...`}
         {initialText.length > 200 && (
           <span

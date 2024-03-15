@@ -6,9 +6,9 @@ const popularProjectContentStyle = {
   width:'100%',
   display:'flex',
   flexWrap:'wrap',
-  gap: '10px',
+  gap: '20px',
   alignItems:'center',
-  margin:'',
+ margin:''
   
   
 }

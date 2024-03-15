@@ -90,7 +90,7 @@ const ManualCategorySlider = ({
                     />
                     </div>
 
-                    <p className='md:col-span-8 text-xl p-4 text-justify'>
+                    <p className='md:col-span-8 text-lg p-4 text-justify'>
                         {guide.content}
                     </p>
                 </div>
