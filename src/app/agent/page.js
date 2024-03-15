@@ -7,6 +7,7 @@ import NormalAgent from "@/components/agent/NormalAgent";
 import RealAgent from "@/components/agent/RealAgent";
 import TopBar from "@/components/agent/TopBar";
 import { Button } from "@mui/material";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const AgentPage = () => {
@@ -26,7 +27,7 @@ const AgentPage = () => {
   }, [scrollCount]);
 
   useEffect(() => {
-    if (scrollCount == 10) {
+    if (scrollCount == 5) {
       setShowPopup(true);
     }
   }, [scrollCount]);
@@ -34,10 +35,19 @@ const AgentPage = () => {
   const closePopup = () => {
     setShowPopup(false);
   };
+ 
 
   return (
     <div>
-      <ImgSlider />
+      {/* <ImgSlider /> */}
+      <div style={{ position: 'relative', width: '100%', height: '35vh',marginBottom:"30px" }}>
+      <Image
+        src='/Agent/agent_banner_2.png'
+        alt='banner'
+        layout='fill'
+        objectFit='cover'
+      />
+    </div>
       <TopBar />
       <BestAgent />
       {showPopup && <FeedbackPopup onClose={closePopup} />}

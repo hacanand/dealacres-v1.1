@@ -68,7 +68,7 @@ const data={
         },
         {
             id:10,
-            service: "Construction Contractor",
+            service: "Construc tion Contractor",
             source: "/ServiceIcons/ConstructionContractor.png",
             color:"rgb(118, 88, 39)",
             bgColor: "rgb(118, 88, 39, 0.15)"

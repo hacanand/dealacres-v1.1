@@ -7,13 +7,13 @@ const Guides = () => {
       <div className="flex gap-8 flex-wrap justify-center ">
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
-            src="/Flats.jpg"
+            src="/all blog/flat1.jpg"
             alt="Your Image"
             fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
-          <div className="absolute inset-0 bg-blue-700 opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+          <div className="absolute inset-0 bg-[#252680] opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-3">
             <h2 className="text-white text-2xl font-semibold">Buyer Guide</h2>
             <p className="text-white  text-sm pr-8 mt-2">
@@ -24,13 +24,13 @@ const Guides = () => {
         </div>
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
-            src="/Flats.jpg"
+            src="/all blog/flat1.jpg"
             alt="Your Image"
             fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
-          <div className="absolute inset-0 bg-blue-700 opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+          <div className="absolute inset-0 bg-[#252680] opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-3">
             <h2 className="text-white text-2xl font-semibold">Buyer Guide</h2>
             <p className="text-white text-sm pr-4 mt-2">
@@ -41,13 +41,13 @@ const Guides = () => {
         </div>
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
-            src="/Flats.jpg"
+            src="/all blog/flat1.jpg"
             alt="Your Image"
             fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
-          <div className="absolute inset-0 bg-blue-700 opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+          <div className="absolute inset-0 bg-[#252680] opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-3">
             <h2 className="text-white text-2xl font-semibold">Buyer Guide</h2>
             <p className="text-white text-sm pr-4 mt-2">
@@ -58,13 +58,13 @@ const Guides = () => {
         </div>
         <div className="relative w-52 h-96 overflow-hidden group">
           <Image
-            src="/Flats.jpg"
+            src="/all blog/flat1.jpg"
             alt="Your Image"
             fill
             objectFit="cover"
             className="transition-transform duration-300 hover:scale-105 group-hover:filter-none filter brightness-125"
           />
-          <div className="absolute inset-0 bg-blue-700 opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
+          <div className="absolute inset-0 bg-[#252680] opacity-40 transition-opacity duration-300 group-hover:opacity-0"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-3">
             <h2 className="text-white text-2xl font-semibold">Buyer Guide</h2>
             <p className="text-white text-sm  pr-4 mt-2">

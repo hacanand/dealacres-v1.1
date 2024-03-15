@@ -13,8 +13,8 @@ const ManualCard = () => {
     return (
         <div className={`flex flex-col md:flex-row gap-8  p-4 ${styles.cardContainer}`}>
             <div className='min-w-full
-            h-[200px]
-            md:min-w-[150px] md:min-h-[150px] py-2 self-start aspect-square relative'>
+            h-[180px]
+            md:min-w-[120px] md:min-h-[120px] py-2 self-start aspect-square relative'>
                 <Image 
                 fill
                 className='object-cover ' src={bg} />

@@ -28,7 +28,7 @@ const PostSection = ({
         </div>
         }
         <PostHeader size='medium' heading={title} align='left' style={isItalic ? 'italic': ''}/>
-        <div className='text-xl  text-justify'>
+        <div className='text-md  text-justify'>
             {content}
         </div>
         <ul className='py-2'>

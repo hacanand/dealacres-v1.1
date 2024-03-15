@@ -38,10 +38,11 @@
 .ExpertLayout {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #0061fd;
+  border: 1px solid #052861;
   margin: 4px;
   padding: 10px 2px 0px 2px;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .ExpertInfo {
@@ -116,7 +117,7 @@
 }
 
 .MostSearched {
-  border: 2px solid black;
+  border: 1px solid black;
   display: inline-block;
   padding: 20px 10px;
   border-radius: 10px;
