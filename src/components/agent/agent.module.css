@@ -164,9 +164,31 @@
   }
   .agentLayout {
     display: block;
-    width: 50%;
-    border: 8px solid red;
-    margin: auto;
+
+    /* border: 8px solid red; */
+
     gap: 0px;
   }
+}
+
+
+@media screen and (max-width: 768px){
+  .agentLayout {
+    display: flex;
+    width: 100%;
+    margin: unset;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+  }
+
+  .sidebar {
+    margin-top: unset;
+
+  }
+}
+@media screen and (min-width: 768px){
+ 
+
+
 }

@@ -29,7 +29,7 @@ const NewBlogHead = () => {
 
           </div>
 
-          <div className='text-2xl md:text-4xl font-medium py-4 text-center md:w-2/3 mx-auto'>
+          <div className='text-xl  md:text-4xl font-medium py-4 text-center md:w-2/3 mx-auto'>
           Deal Acres is your ultimate destination for valuable insights and knowledge in the ever-evolving world of real estate. 
           </div>
           <div className=' md:text-4xl flex justify-center flex-wrap lg:flex-nowrap  gap-4 py-4  md:w-2/3 md:mx-auto overflow-scroll sm:overflow-hidden'>

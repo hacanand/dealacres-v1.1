@@ -60,6 +60,7 @@
     font-[Poppins]
     cursor-pointer 
     leading-6
+    py-1
 }
 
 
@@ -86,7 +87,7 @@
 
 @media screen and (max-width: 640px) {
     .itemcont{
-        @apply flex flex-nowrap gap-8  overflow-x-auto px-4 py-8 pb-16 max-h-[500px] overflow-y-auto
+        @apply flex flex-nowrap gap-8  overflow-x-auto px-4 py-8 pb-4  overflow-y-auto 
     }
 
 

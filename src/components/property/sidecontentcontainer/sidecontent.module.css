@@ -41,4 +41,10 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+    .sideContainer form{
+        width: 100%;
+        margin:  unset;
+    }
 
+} 
