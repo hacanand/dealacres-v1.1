@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const PostedBySelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [selectedPostedBy, setSelectedPostedBy] = useState([]);
   const postedByOptions = ["Builder", "Owner", "Dealer", "Feature Dealer"];
 

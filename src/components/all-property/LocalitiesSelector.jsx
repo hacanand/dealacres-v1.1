@@ -55,10 +55,10 @@ const LocalitiesSelector = () => {
               <div className="flex items-center">
                 <p className="text-gray-600">{locality.name}</p>
 
-                <div className="ml-3 flex items-center text-xs bg-green-100 p-[2px]">
+                {/* <div className="ml-3 flex items-center text-xs bg-green-100 p-[2px]">
                   <p className="text-gray-600">{locality.rating}</p>
                   <span className="text-gray-600 pl-1">★</span>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

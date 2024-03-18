@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const BHKSelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [showAllBHK, setShowAllBHK] = useState(false);
   const [selectedBHK, setSelectedBHK] = useState([]);
   const bhkOptions = [

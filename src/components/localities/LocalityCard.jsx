@@ -2,7 +2,7 @@ import React from "react";
 
 const LocalityCard = () => {
   return (
-    <div className="mb-5 mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 border-2 border-gray-300 rounded-xl">
+    <div className="mb-5 mt-5 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 border-2 border-gray-300 rounded-xl">
       <div className="bg-[url('https://assets-news.housing.com/news/wp-content/uploads/2022/03/28143140/Difference-between-flat-and-apartment.jpg')] bg-cover bg-no- rounded-lg h-64 sm:h-auto"></div>
       <div className="flex flex-col justify-between">
         <div className="mb-2">

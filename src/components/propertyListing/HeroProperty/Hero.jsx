@@ -44,7 +44,7 @@ const Hero = () => {
     
     return (
         <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl p-4 custom-border-hero'>
+            <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero'>
                 <h1 className="font-heading my-2">
                     Post Your Property for free
                 </h1>

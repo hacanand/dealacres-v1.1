@@ -10,7 +10,7 @@ function valuetext(value) {
 }
 
 const AreaRangeSelector = () => {
-  const [isAreaVisible, setIsAreaVisible] = useState(false);
+  const [isAreaVisible, setIsAreaVisible] = useState(true);
   const [value, setValue] = useState([500, 5000]);
 
   const handleChange = (event, newValue) => {
@@ -20,6 +20,16 @@ const AreaRangeSelector = () => {
   const toggleAreaVisibility = () => {
     setIsAreaVisible(!isAreaVisible);
   };
+  const minArray = Array.from({ length: 13 }, (_, i) => (i + 1) * 100);
+  const minOptions = minArray.map(number => ({
+    value: number,
+    label: `${number} `
+  }));
+  const maxArray = Array.from({ length: 30 }, (_, i) => (i + 1) * 100);
+  const maxOptions = maxArray.map(number => ({
+    value: number,
+    label: `${number} `
+  }));
 
   return (
     <div>
@@ -45,8 +55,13 @@ const AreaRangeSelector = () => {
           />
 
           <div className="flex flex-row items-center justify-between mt-6">
-            <Select placeholder="Min Area" />
-            <Select placeholder="Max Area" />
+          <Select  placeholder="Min"
+              options={minOptions}
+             />
+             
+             <Select  placeholder="Max"
+              options={maxOptions}
+             />
           </div>
         </div>
       )}
