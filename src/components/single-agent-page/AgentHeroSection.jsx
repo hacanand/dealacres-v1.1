@@ -10,11 +10,11 @@ import { useCallback } from 'react'
 
 const AgentHeroSection = ({
   img,
-    name,
-    contacts,
-    address,
-    languages,
-    
+  name,
+  contacts,
+  address,
+  languages,
+
 
 }) => {
 
@@ -30,64 +30,64 @@ const AgentHeroSection = ({
   }
 
   return (
-    <div className='w-[85%] mx-auto grid grid-cols-1 sm:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
-      
-      <div className='text-white  col-span-2'>
-        <div className='py-8 px-6 flex flex-col justify-between h-full gap-8'>
-            <div className='text-center sm:text-left'>
-            <h2 className='inline-flex w-1/2 flex-col text-5xl font-bold   '>
-                {name}
-                <div className='flex justify-center sm:justify-start' >
-            <HeadingBorder/>
+    <div className='w-full md:w-[85%] mx-auto grid grid-cols-4 md:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
 
-                </div>
+      <div className='text-white  col-span-2'>
+        <div className='py-8 px-2 md:px-6 flex flex-col md:justify-between h-full gap-2 md:gap-8'>
+          <div className='text-left'>
+            <h2 className='inline-flex w-1/2 flex-col text-2xl md:text-5xl font-bold   '>
+              {name}
+              <div className='flex justify-start' >
+                <HeadingBorder />
+
+              </div>
             </h2>
-            <p className='text-lg'>
-                {contacts.map((contact, index) => (<span key={index}>{contact}</span>))}
+            <p className='text-base md:text-lg'>
+              {contacts.map((contact, index) => (<span key={index}>{contact}</span>))}
             </p>
-            <p className='font-bold text-lg'>
-            {languages.map((language, index) => (<span key={index}>
+            <p className='font-bold text-base md:text-lg'>
+              {languages.map((language, index) => (<span key={index}>
                 {language + ' '}</span>))}
             </p>
 
-            <p className='text-lg py-4'>
-                {address}
+            <p className='text-base md:text-lg py-4'>
+              {address}
             </p>
-            </div>
+          </div>
 
-            <div className='flex flex-col gap-4 items-center sm:items-start '>
-                <p className='text-lg font-bold'>
-                    Meet with Sanya Bansal
-                </p>
-                <div className='flex flex-row gap-8 accent-green-500'>
-                  <div className='flex flex-row gap-2'> 
-                  <input type="radio" id='inperson' name='mode' value={'inPerson'}  onClick={() => handleContactClick('inPerson')}/>
-                  <label htmlFor="inperson">
-                    In Person
-                  </label>
-                  </div>
-                  <div className='accent-green-500 flex flex-row gap-2'> 
-                  <input type="radio" id='video' name='mode' value={'videoChat'}
-                  onClick={() => handleContactClick('videoChat')}/>
-                  <label htmlFor="video">
-                    Video Call
-                  </label>
-                  </div>
-                </div>
-                <span className='py-2 px-4 bg-blue-600 text-white font-bold text-xl cursor-pointer' onClick={() => handleGetIntoTouch()}>
-                    Get In Touch
-                </span>
-
+          <div className='flex flex-col gap-4 items-start '>
+            <p className='text-base md:text-lg font-bold'>
+              Meet with Sanya Bansal
+            </p>
+            <div className='flex flex-row gap-4 md:gap-8 accent-green-500 text-xs md:text-base'>
+              <div className='flex flex-row gap-2'>
+                <input type="radio" id='inperson' name='mode' value={'inPerson'} onClick={() => handleContactClick('inPerson')} />
+                <label htmlFor="inperson">
+                  In Person
+                </label>
+              </div>
+              <div className='accent-green-500 flex flex-row gap-2 '>
+                <input type="radio" id='video' name='mode' value={'videoChat'}
+                  onClick={() => handleContactClick('videoChat')} />
+                <label htmlFor="video">
+                  Video Call
+                </label>
+              </div>
             </div>
+            <span className='w-full py-2 px-4 bg-blue-600 text-white text-center font-bold text-lg md:text-xl cursor-pointer ' onClick={() => handleGetIntoTouch()}>
+              Get In Touch
+            </span>
+
+          </div>
 
         </div>
 
-       
+
       </div>
 
-      <div className='-order-1   sm:order-2 sm:relative rounded-3xl w-full sm:h-[95%] col-span-1 sm:after:absolute after:w-[100%] after:h-[101%] after:bg-white after:right-2 after:rounded-3xl after:top-1 py-4 md:py-0'>
-                <Image src={`/about-us/${img}`} className='rounded-3xl mx-auto sm:mx-0 h-[500px] w-auto sm:w-full sm:h-full  object-cover sm:absolute  z-10' width={300} height={300}/>
-        </div>
+      <div className='md:order-2 sm:relative rounded-3xl h-[100%] w-full sm:h-[95%] col-span-2 md:col-span-1 md:after:absolute after:w-[100%] after:h-[101%] after:bg-white after:right-2 after:rounded-3xl after:top-1 py-4 md:py-0 '>
+        <Image src={`/about-us/${img}`} className='rounded-3xl mx-auto sm:mx-0 h-[400px]  w-auto sm:w-full sm:h-full  object-cover sm:absolute  z-10' width={300} height={300} />
+      </div>
     </div>
   )
 }

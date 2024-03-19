@@ -124,7 +124,7 @@ const AllGuidesPage = () => {
 
       <div className='max-w-screen-xl md:mx-auto px-8 my-6 flex flex-col md:flex-row justify-between gap-12'>
         <div className='w-full md:w-[30%]'>
-          <CheckList tab={tab}  />
+          <CheckList data={allGuidesData} tab={tab}  />
         </div>
         <div className='w-full md:w-[70%]'>
           <h3 className='font-bold text-4xl py-2 text-center md:text-left'>

@@ -22,7 +22,7 @@ const dummyCheckList = [
   "Real Estate Technology",
 ];
 
-const CheckList = ({ tab }) => {
+const CheckList = ({ tab, data }) => {
   const [selectedGuide, setSelectedGuide] = useState(tab);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const CheckList = ({ tab }) => {
   return (
     <div className={`${styles.checkListContainer} max-w-[400px] md:max-w-full mx-auto md:mx-0 px-4 py-4`}>
       <ul className={`${styles.checkList} `}>
-        {dummyCheckList.map((item, index) => (
+        {data[tab].checklist.map((item, index) => (
           <li
             key={index}
             className={`font-bold text-lg min-[920px]:text-2xl min-[920px]:py-4 flex items-center gap-2 cursor-pointer`}
