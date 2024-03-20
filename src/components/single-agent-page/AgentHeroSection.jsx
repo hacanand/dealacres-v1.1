@@ -74,7 +74,7 @@ const AgentHeroSection = ({
                 </label>
               </div>
             </div>
-            <span className='w-full py-2 px-4 bg-blue-600 text-white text-center font-bold text-lg md:text-xl cursor-pointer ' onClick={() => handleGetIntoTouch()}>
+            <span className='w-full sm:w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
               Get In Touch
             </span>
 

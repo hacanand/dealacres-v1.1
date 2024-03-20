@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './allguides.module.css';
+import ManualCard from './ManualCard';
 
 const dummyCheckList = [
   "What to Buy?",
@@ -22,8 +23,10 @@ const dummyCheckList = [
   "Real Estate Technology",
 ];
 
-const CheckList = ({ tab, data }) => {
+const CheckList = ({ tab, data, DropIcon }) => {
   const [selectedGuide, setSelectedGuide] = useState(tab);
+  const [selectedTopic, setSelectedTopic] = useState(-1);
+
 
   useEffect(() => {
     setSelectedGuide(tab);
@@ -31,22 +34,54 @@ const CheckList = ({ tab, data }) => {
 
   const handleGuideClick = (index) => {
     setSelectedGuide(index);
-    console.log('Clicked on item:', dummyCheckList[index],selectedGuide);
+    console.log('Clicked on item:', dummyCheckList[index], selectedGuide);
   };
 
   return (
     <div className={`${styles.checkListContainer} max-w-[400px] md:max-w-full mx-auto md:mx-0 px-4 py-4`}>
       <ul className={`${styles.checkList} `}>
         {data[tab].checklist.map((item, index) => (
-          <li
-            key={index}
-            className={`font-bold text-lg min-[920px]:text-2xl min-[920px]:py-4 flex items-center gap-2 cursor-pointer`}
-            style={{ color: selectedGuide === index ? 'blue' : 'black' }}
-            onClick={() => handleGuideClick(index)}
-          >
-            <span className='w-[50px] inline-flex'>{index + 1} </span>
-            <span className={`ml-2 py-2 min-[920px]:py-4`}>{item}</span>
-          </li>
+          <div key={index}>
+            <li
+
+              className={`font-bold text-lg min-[920px]:text-2xl min-[920px]:py-4 flex items-center gap-2 cursor-pointer`}
+              style={{ color: selectedGuide === index ? 'blue' : 'black' }}
+              onClick={() => handleGuideClick(index)}
+            >
+              <span className='w-[50px] inline-flex'>{index + 1} </span>
+              <div className={`ml-2 py-2 min-[920px]:py-4 flex justify-between w-full`}  onClick={() => {
+                  if(selectedTopic === index){
+                    setSelectedTopic(-1)
+                  }else{
+                    setSelectedTopic(index)
+                  }
+                }}>
+                {item}
+                <DropIcon size={30} />
+              </div>
+
+              
+            </li>
+
+            <div id="manualCards" className={` flex-row flex-nowrap overflow-x-auto gap-4 md:gap-16 py-4  ${selectedTopic === index ? 'flex' : 'hidden'} md:hidden`}>
+              {[...Array(10).keys()].map((key) => {
+
+
+
+                return (<div className='' key={key}>
+                  <ManualCard />
+                </div>
+                )
+              }
+
+              )}
+            </div>
+
+          
+          </div>
+
+
+
         ))}
       </ul>
     </div>
