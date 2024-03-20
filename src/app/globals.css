@@ -23,7 +23,7 @@
   @apply text-sm md:text-base;
 }
 .font-heading {
-  @apply font-medium md:font-bold lg:text-3xl text-xl uppercase;
+  @apply font-medium md:font-bold lg:text-2xl text-xl uppercase;
 }
 .custom-border{
   @apply border-t-4 border-r-2 border-l-2 border-[#c7e3f6] border-b-4

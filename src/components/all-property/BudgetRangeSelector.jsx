@@ -10,7 +10,7 @@ function valuetext(value) {
 }
 
 const BudgetRangeSelector = () => {
-  const [isBudgetVisible, setIsBudgetVisible] = useState(false);
+  const [isBudgetVisible, setIsBudgetVisible] = useState(true);
   const [value, setValue] = useState([1, 100]);
 
   const handleChange = (event, newValue) => {
@@ -20,6 +20,8 @@ const BudgetRangeSelector = () => {
   const toggleBudgetVisibility = () => {
     setIsBudgetVisible(!isBudgetVisible);
   };
+
+  
 
   return (
     <div>
@@ -45,8 +47,13 @@ const BudgetRangeSelector = () => {
           />
 
           <div className="flex flex-row items-center justify-between mt-6">
-            <Select placeholder="Min" />
-            <Select placeholder="Max" />
+            <Select  placeholder="Min"
+              
+             />
+             
+             <Select  placeholder="Max"
+       
+             />
           </div>
         </div>
       )}

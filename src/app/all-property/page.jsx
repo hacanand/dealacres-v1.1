@@ -15,6 +15,7 @@ import ConnectWithTopAgents from "@/components/all-property/ConnectWithTopAgents
 import InterestingReads from "@/components/all-property/InterestingReads";
 import FNQ from "@/components/localities/FNQ";
 import { ComparePropertyProvider } from "@/context/ComparePropertyContext";
+import Insights from "@/components/all-property/Insights";
 
 const AllProperty = () => {
   function handleClick(event) {
@@ -39,7 +40,7 @@ const AllProperty = () => {
   ];
   return (
     <ComparePropertyProvider>
-      <div className="px-[3rem] py-[2rem] w-full rounded-xl max-md:px-[2rem] max-sm:px-4">
+      <div className="px-[5rem] py-[3rem] w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
         <div className="flex flex-row w-full">
           <div className="w-[25%] max-xl:w-0">
             <div className="my-4 max-xl:hidden">
@@ -58,7 +59,7 @@ const AllProperty = () => {
           <PropertyFlatList />
           <ProjectCompareSidebar />
         </div>
-
+        <Insights />
         <InterestingReads />
         <FNQ />
       </div>

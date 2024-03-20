@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const PurchaseType = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [selectedPurchaseType, setSelectedPurchaseType] = useState([]);
   const purchaseTypeOptions = ["Resale", "New Booking"];
 

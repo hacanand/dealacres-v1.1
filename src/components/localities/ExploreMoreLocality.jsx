@@ -14,7 +14,7 @@ const ExploreMoreLocality = () => {
       <h2 className="text-2xl text-center mb-5">
         Explore different popular Cities Reviews and Overview with Deal Acres
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-full mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 w-full mt-4">
         {localityArray.map((_, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">
             <Image src={mapIcon} className="h-[4rem] w-[7rem]" alt="map icon" />

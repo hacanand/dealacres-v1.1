@@ -25,7 +25,7 @@ const InvestWithDealAcres = () => {
   return (
     <div className='max-w-screen-xl mx-auto px-4'>
       <InvestBanner />
-
+<div className='max-w-screen-lg mx-auto px-4'>
       <div className='text-lg text-justify'>
         Investing with Deal Acres in real estate is a wise choice. Our team provides expert guidance and access to prime properties, making your investment journey hassle-free. With our proven track record, you can trust us to find lucrative opportunities. Plus, our personalized approach ensures your unique goals are met. Make your real estate investments confident – choose Deal Acres for a secure and rewarding experience.
       </div>
@@ -94,7 +94,7 @@ const InvestWithDealAcres = () => {
         {/* <IntrestingReading/> */}
         <ArticleSlider />
       </div>
-
+      </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const AmenitiesSelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [showAllAmenities, setShowAllAmenities] = useState(false);
   const [selectedAmenities, setSelectedAmenities] = useState([]);
   const amenityOptions = [

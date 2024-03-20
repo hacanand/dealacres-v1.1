@@ -16,7 +16,7 @@ const ProjectListings = () => {
                                 title={"Off the Arbour"}
                                 address="Sector 63, Gurgaon, Haryana, India"
                                 bathroomCount={1}
-                                bedroomCount={8}
+                                bedroomCount={1}
                                 hasGarage={true}
                                 area={700}
                                 />

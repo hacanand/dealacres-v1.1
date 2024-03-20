@@ -11,6 +11,9 @@ import BannerAdvertisement from "./ViewAllComponents/BannerAdvertisement";
 import LocationTagFilterComponent from "./ViewAllComponents/LocationTagFilterComponent";
 
 const ViewAll = () => {
+
+  const exploreLocalitiesData = Array.from({ length: 12 });
+
   return (
     <Fragment>
       <BannerAdvertisement />
@@ -23,12 +26,9 @@ const ViewAll = () => {
         <Sidebar />
         <div className="w-full p-4 flex flex-col items-center justify-center max-lg:p-2 max-sm:p-0">
           <div className="flex flex-wrap gap-8 pt-10 justify-evenly max-lg:pl-2 max-lg:gap-y-4 max-lg:gap-x-4">
-            <ExploreLocalitiesBox />
-            <ExploreLocalitiesBox />
-            <ExploreLocalitiesBox />
-            <ExploreLocalitiesBox />
-            <ExploreLocalitiesBox />
-            <ExploreLocalitiesBox />
+            {exploreLocalitiesData.map((_, index) => (
+              <ExploreLocalitiesBox key={index} />
+            ))}
           </div>
           <div className="w-full flex items-center justify-center py-3 mt-5">
             <button className="font-semibold text-lg bg-blue-600 px-3 py-1 text-white rounded-md">
@@ -40,13 +40,14 @@ const ViewAll = () => {
 
       <Explore />
 
-      <div className="w-full pl-10 lg:pl-5 max-sm:pl-0">
+      <div className="max-w-screen-xl mx-auto pl-10 lg:pl-5 max-sm:pl-0">
         <Services2 />
+        <InterestingReads />
+
+<FNQ />
       </div>
 
-      <InterestingReads />
-
-      <FNQ />
+     
     </Fragment>
   );
 };

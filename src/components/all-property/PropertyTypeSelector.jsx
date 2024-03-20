@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const PropertyTypeSelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [showAllTags, setShowAllTags] = useState(false);
   const [selectedTags, setSelectedTags] = useState([]);
   const tags = [
@@ -12,7 +12,7 @@ const PropertyTypeSelector = () => {
     "Commercial",
     "Industrial",
     "Agricultural",
-    "Vacation",
+  
     "Other",
   ];
   const maxVisibleTags = 5;

@@ -6,6 +6,7 @@ import HotProperties from "./HotProperties";
 import PropertyAd from "./PropertyAd";
 import ServiceExplore from "./ServiceExplore";
 import Pagination from "./Pagination";
+import Services from "../Homepage/services/Services";
 
 import { useCompareProperty } from "@/context/ComparePropertyContext";
 
