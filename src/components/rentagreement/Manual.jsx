@@ -52,29 +52,35 @@ const ReadMore = () => {
   ];
 
   return (
-    <div className="space-y-8 mt-10 py-5">
+    <div className="">
       <Swiper
+
         spaceBetween={46}
         slidesPerView={1}
         modules={[Pagination]}
-        pagination={{ clickable: true }}
+        wrapperClass="min-h-[400px] flex items-center"
+        pagination={{ clickable: true, totalClass: '-b-4', currentClass: '-b-8', horizontalClass: 'rentSwiperDots' }}
         breakpoints={{
-          640: {
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          500: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 10,
           },
           798: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
+            slidesPerView: 2.5,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 35,
+            spaceBetween: 10,
           },
         }}
       >
         {ManualData.map((ManualItem) => (
-          <SwiperSlide className="pb-12" key={ManualItem.id}>
+          <SwiperSlide className="min-w-[210px] md:min-w-[250px]" key={ManualItem.id}>
             <Card
               title={ManualItem.title}
               text={ManualItem.text}

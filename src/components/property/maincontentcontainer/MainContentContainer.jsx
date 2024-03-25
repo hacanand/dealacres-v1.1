@@ -36,14 +36,14 @@ function MainContentContainer(props) {
               <p>{showFull?props.content.about:`${props.content.about.substring(0,600)}`}</p>
               <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6>
           </div>
-          <div>
+          <div className='text-[20px]'>
             <h1>{props.content.title} Overview</h1>
             <Mainoverview overviewData = {props.content.overview} />
           </div>
           <div className={styles.mapContainer}>
             <iframe src={mapSrc} width="600" height="450" style={{border:'0'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div>
+          <div id="#seller">
             <h1>Specification: {props.content.title}</h1>
             <Specification specificationData = {props.content.specification}/>
           </div>
@@ -61,7 +61,7 @@ function MainContentContainer(props) {
           </div>
           <div className = {styles.mainContainerLine}></div>
           <div>
-            <h1>Locality Overview</h1>
+            <h1 className=''>Locality Overview</h1>
             <Locality localityData = {props.content.localityOverview} desc={true}/>
           </div>
           

@@ -1,8 +1,10 @@
 .InsightBox{
-    background-color: #fff2cf;
+    background-color: #E4EBF6;
     padding: 20px;
     display: flex;
     border-radius: 20px;
+    gap: 1rem;
+    justify-content: center;
 }
 /* 
 .InsightImgBox{
@@ -27,8 +29,8 @@
 }
 
 .ReviewBox button{
-    background-color: #fdbd00;
-    color: white;
+    background-color: #C5DFF8;
+    color: black;
     font-size: large;
     font-weight: bold;
     margin-right: 15px;
@@ -43,16 +45,25 @@
         margin-right: 80px;
     }
     .ReviewBox h2{
-        font-size: 25px;
+        font-size: 18px;
         margin-bottom: 5px;
     }
-}
-@media only screen and (max-width: 500px) {
-    .InsightBox{
-        display: inline-block;
+
+    .ReviewBox button{
+
+        font-size: 16px;
+
+    
     }
+}
+@media only screen and (max-width: 540px) {
+
     .InsightImg{
-        width: 80px;
+        /* width: 80px; */
         margin: 0px;
+    }
+    .ReviewBox h2{
+        font-size: 16px;
+
     }
 }
