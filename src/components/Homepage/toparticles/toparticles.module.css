@@ -7,6 +7,7 @@
     padding: 1.5rem; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 35px;
+    background-color: white;
 }
 
 .toparticlesContainer h3{
@@ -94,7 +95,11 @@
   font-size: 10px;
   color: #666;
 }
-
+.content h2 {
+    font-size: 10px;
+    color: #000000;
+    font-weight: bold;
+  }
 .toparticlesContainer a {
   color: #0061df;
   text-align: center;

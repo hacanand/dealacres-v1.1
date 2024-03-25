@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['media.canva.com'],
+        domains: ['media.canva.com','www.canva.com','media-public.canva.com'],
         remotePatterns: [
             {
                 'protocol': "https",

@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
             />
             <div className="textWrapper">We offer an easy-to-use website or app, enhancing the user experience and simplifying property searches.</div>
           </div>
-          <div className="imageWrapper">
+          <div className="imageWrapper ">
             <Image
               src="/79.png"
               alt="Image 3"

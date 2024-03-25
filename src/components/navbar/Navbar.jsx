@@ -5,33 +5,56 @@ import { useParams, usePathname } from 'next/navigation'
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import Image from "next/image";
+import FlyoutMenuSections from "./FlyoutMenuSections";
+import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState('Gurugaon');
+  const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
   const pathname = usePathname();
   const isHomePage = pathname === '/' || pathname === '/blog'
 
+  const getSections = (menu) => {
+    switch (menu) {
+      case "buyer":
+        return buyerMenuContent.sections;
+      case "seller":
+        return sellerMenuContent.sections;
+      case "tenant":
+        return tenantMenuContent.sections;
+      case "blog":
+        return blogMenuContent.sections;
+      case "services":
+        return serviceMenuContent.sections;
+      default:
+        return [];
+    }
+  };
 
-  const Menu = () => (
-    <>
-      <p>
-        <a href="##buyer">Buyer</a>
-      </p>
-      <p>
-        <a href="#seller">Seller</a>
-      </p>
-      <p>
-        <a href="#tenant">Tenant</a>
-      </p>
-      <p>
-        <a href="blog">Blog</a>
-      </p>
-      <p>
-        <a href="#services">Services</a>
-      </p>
-    </>
-  );
+  const Menu = ({ handleMenuClick, selectedMenu }) => {
+    return (
+      <>
+        <p>
+          <a href="#" onClick={(e) => handleMenuClick("buyer", e)}>Buyer</a>
+        </p>
+        <p>
+          <a href="#" onClick={(e) => handleMenuClick("seller", e)}>Seller</a>
+        </p>
+        <p>
+          <a href="#" onClick={(e) => handleMenuClick("tenant", e)}>Tenant</a>
+        </p>
+        <p>
+          <a href="#" onClick={(e) => handleMenuClick("blog", e)}>Blog</a>
+        </p>
+        <p>
+          <a href="#" onClick={(e) => handleMenuClick("services", e)}>Services</a>
+        </p>
+      </>
+    );
+  };
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -48,6 +71,15 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleMenuClick = (menu, event) => {
+    setSelectedMenu(selectedMenu === menu ? null : menu);
+    const rect = event.target.getBoundingClientRect();
+    setMenuPosition({ top: rect.bottom, left: rect.left });
+  };
+  const handleLocationChange = (e) => {
+    setSelectedLocation(e.target.value);
+  };
+
   return (
     <div className={`navbar${isHomePage ? "" : "Page"}${scrolled ? " scrolled" : ""}`}>
       <div className="navbar-links">
@@ -61,8 +93,13 @@ const Navbar = () => {
           />
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
+        <select value={selectedLocation} onChange={handleLocationChange} className="text-white bg-transparent font-bold">
+        <option className="text-black" value="Gurugaon">Gurugaon</option>
+        <option className="text-black"value="Delhi">Delhi</option>
+        <option className="text-black"value="Mumbai">Mumbai</option>
+      </select>
         <div className="navbar-links__container">
-          <Menu />
+          <Menu handleMenuClick={handleMenuClick} selectedMenu={selectedMenu} />
         </div>
         <div className="navbar-sign">
           <Link
@@ -82,39 +119,45 @@ const Navbar = () => {
           <button type="button">Sign Up</button>
         </div>
       </div>
-      <div className="navbar-menu">
-        {toggleMenu ? (
-          <RiCloseLine
-            color="#fff"
-            size={45}
-            className='close'
-            onClick={() => {
-              setToggleMenu(false);
-            }}
-          />
-        ) : (
-          <RiMenu3Line
-            color="#fff"
-            size={27}
-            onClick={() => {
-              setToggleMenu(true);
-            }}
-          />
-        )}
-        {toggleMenu && (
-          <div className="navbar-menu_container">
-            <div className="navabr-menu_container-links">
-              <Menu />
-              <div className="navbar-menu_container-links-sign">
-                <p>Sign In</p>
-                <h5>Post your Property</h5>
-                <button type="button">Sign Up</button>
-              </div>
+     
+      {selectedMenu && (
+        <div className="flyout-menu-container mt-6" style={{ top: menuPosition.top, left: menuPosition.left }}>
+          <FlyoutMenuSections sections={getSections(selectedMenu)} />
+        </div>
+      )}
+        <div className="hidden">
+      {toggleMenu ? (
+        <RiCloseLine
+          color="#fff"
+          size={45}
+          className='close'
+          onClick={() => {
+            setToggleMenu(false);
+          }}
+        />
+      ) : (
+        <RiMenu3Line
+          color="#fff"
+          size={27}
+          onClick={() => {
+            setToggleMenu(true);
+          }}
+        />
+      )}
+      {toggleMenu && (
+        <div className="navbar-menu_container">
+          <div className="navabr-menu_container-links">
+            <Menu />
+            <div className="navbar-menu_container-links-sign">
+              <p>Sign In</p>
+              <h5>Post your Property</h5>
+              <button type="button">Sign Up</button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
+    </div >
   );
 };
 

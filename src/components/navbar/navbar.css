@@ -69,6 +69,24 @@
     /* border-bottom: 1px solid rgba(255, 255, 255, 0.212); 
     padding: 20px 0px; */
 }
+.flyout-menu-container {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+.triangle-pointer {
+    position: absolute;
+    top: -30px; /* Adjust the position if needed */
+    left: 10px; /* Adjust the position if needed */
+    border-width: 15px; /* Increase the size of the pointer */
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    z-index: 1;
+} 
+
 
 .navbar-sign{
     display: flex;
