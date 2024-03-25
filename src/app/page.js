@@ -43,7 +43,7 @@ export default function Home() {
 
 
 
-        <div className="mt-10 lg:mt-80">
+        <div className="mt-10 lg:mt-[23rem]">
           <Options />
 
 
