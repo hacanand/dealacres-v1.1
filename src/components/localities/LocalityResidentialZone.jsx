@@ -4,22 +4,22 @@ const delhiCities = [
   {
     name: "Explore Central Delhi Locality",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/800_433_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hbUJkRS9NQUZzNTVhbUJkRS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAJcOxeU_gkhSj1vDqde2rHf7QlKOzFItqkRH5rS1aVuX&exp=1696500181&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAACfiQ8HWdGItZYUKual7yaKPLkH82GBFk5M9M8d-qVR-",
+      "https://media.canva.com/1/image-resize/1/800_433_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hbUJkRS9NQUZzNTVhbUJkRS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAESC7pJ8ymR2eBAtL6OzZznqpYuyI_bP8IksBvZvrhFT&exp=1711450981&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAF95052zahjiy0J2HO82YXt3QtFbl3b_4HYlMz1HME5u",
   },
   {
     name: "Explore East Delhi Locality",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/800_488_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9PTWpVNC9NQUZzNTlPTWpVNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAABKimnj6MN4ues_e07ej-aIR-0dAhleGC-xajNp4ndXA&exp=1696501614&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAPL_G20EqcJhkjlwzls_2QKmc3LqJdqUaIM_FbDGpoYS",
+      "https://media.canva.com/1/image-resize/1/800_488_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9PTWpVNC9NQUZzNTlPTWpVNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAPbQc7_3qDPt6Hr25NSL8HFEm9XOjLphwYTe5bQAXw3w&exp=1711448814&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAALT7Eqk-TF_hYSF5Hby9di4_uhBpfraGJMk6u0wtYsk3",
   },
   {
     name: "Explore North Delhi Locality",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/800_574_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9qdEwwWS9NQUZzNTlqdEwwWS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAMsBCPGJUeLqcRISONfNAGRDmNb6LsVQTc925-mtMqyn&exp=1696501563&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAGOzSyI9QM0Z1nEvXa6-b3HJcIpcwadv9DH8a1SDa3Bn",
+      "https://media.canva.com/1/image-resize/1/800_574_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9qdEwwWS9NQUZzNTlqdEwwWS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAAjcBeH0Xg30Znn33gttMqHpf6mQbmwK2R9iMS0RsQNQ&exp=1711448763&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAANQVBt-kdOxG3tx2lH2n-PKx2Wtys6SpmO606ze_OzWo",
   },
   {
     name: "Explore West Delhi Locality",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/640_429_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9FYjcxVS9NQUZzNXlFYjcxVS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAIWzyawoMK7A6G0Zh3pFf-cANoEiUPyBpLNrK-bHGfWn&exp=1696502343&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAACQDPP7XQQyxlIzzM5LlBEqVpGJQMoDZ3t0-4QNogFDh",
+      "https://media.canva.com/1/image-resize/1/640_429_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9FYjcxVS9NQUZzNXlFYjcxVS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAJ4AQwWcSA_mnUtwq_KxUnSTa_ENhCczM-nkwENRKQq3&exp=1711449543&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAALI9kV043EN6VQWOaa_eWG5LR8mUXl3dsv399ONwTIbR",
   },
 ];
 
@@ -33,7 +33,7 @@ const LocalityResidentialZone = () => {
         <div className="grid grid-cols-3 gap-6 mt-3">
           <div className="col-span-1 rounded-lg overflow-hidden flex-1 items-center flex flex-col justify-between">
             <img
-              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAACqdOVSPHEtebakIo5FyddWlHfy-AUZoKWSqs3lE2Jwi&exp=1710446953&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAEvD6sgAaK5CKQJ73Ojx0FjiqJcQzwxb3QUsZpsJd579"
+              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAL5L9Wv9W9J3bAAnkrChPZ88Q3UAooC3I7dLN4_bp-iA&exp=1711447753&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAK7Qz1S22jFgf99PB6bvhVI4sF9mUOedM1tMu8mljx-s"
               alt="Qutub Minar"
               className="rounded-lg h-full"
             />
@@ -79,7 +79,7 @@ const LocalityResidentialZone = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-3">
           <div className="col-span-1 rounded-lg overflow-hidden flex flex-col justify-between">
             <img
-              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAK4kd10FjwIy5fFLuCEmarzhYOLR-Nl3uvWLv_REwl9l&exp=1696500553&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAMrrLxLAE92Ze71uldMY7Em7n_447Jxt3tFNzmpxTGj4"
+              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAL5L9Wv9W9J3bAAnkrChPZ88Q3UAooC3I7dLN4_bp-iA&exp=1711447753&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAK7Qz1S22jFgf99PB6bvhVI4sF9mUOedM1tMu8mljx-s"
               alt="Qutub Minar"
               className="rounded-lg h-auto sm:h-full"
             />

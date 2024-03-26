@@ -82,7 +82,7 @@ const ViewAll = () => {
   </div>
 
 
-
+      
       <Explore />
 
       <LocalityResidentialZone />

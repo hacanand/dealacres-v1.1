@@ -36,9 +36,7 @@ const HeaderInput = (props) => {
 
   const placeholder = placeholderText.slice(0, typingIndex);
 
-  const handleLocationChange = (e) => {
-    setSelectedLocation(e.target.value);
-  };
+  
   const handleResedentialChange = (e) => {
     setSelectedResedential(e.target.value);
   };
@@ -47,7 +45,7 @@ const HeaderInput = (props) => {
     <div className={styles.HeaderContentInput}>
       <div className={styles.LocationDropdown}>
         <select className='text-sm'   value={selectedResedential} onChange={handleResedentialChange}>
-        <option className='text-md'  >All Resedential</option>
+        <option className='text-md'  >All Residential</option>
           <option className='text-md' value="Gurugaon">Gurugaon</option>
           <option className='text-md' value="Delhi">Delhi</option>
           <option className='text-md' value="Mumbai">Mumbai</option>

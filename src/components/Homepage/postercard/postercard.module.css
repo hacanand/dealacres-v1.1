@@ -2,24 +2,27 @@
 
 .postercardContainer{
     display: flex;
-    justify-content: center;
+   
     align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
-    column-gap: 3rem;
+    margin: auto;
+    column-gap: 2.5rem;
     margin: 3rem 0 3rem 0;
+
 }
 
 
 .title{
     font-family: 'Poppins', sans-serif; 
     line-height: 1.4;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;   
 }
 
 .imgContainer{
-    width: 600px;
-    height: 500px;
+    width: 450px;
+    height: 380px;
 }
 
 .img{
@@ -36,7 +39,7 @@
     align-items: flex-start;
     justify-content: center;
     row-gap: 0.5rem;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .sideContent p{
@@ -49,7 +52,7 @@
 }
 
 .sideContent h3{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .sideContent h3:empty{
@@ -57,7 +60,7 @@
 }
 
 .sideContent h4{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -78,7 +81,7 @@
 }
 
 .sideContent h6{
-    font-size: 20px;
+    font-size: 18px;
     color: #737373;
 }
 
@@ -97,7 +100,7 @@
     cursor: pointer;
     outline: none;
     border: 0;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .inputField{

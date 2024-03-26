@@ -40,7 +40,7 @@ const ExploreServices = () => {
             heading: 'Chartered Accountant'
         },
         {
-            imageUrl: '	https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hdGZfcy9NQUZfTHdhdGZfcy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAALWXJfU-s0xz985UYGWorWg8ljztfspQXYvUEHdoTaGL&exp=1710963337&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAAFGe6GjkA-TYkRU5eS7kAWjPpiWBH6EAbmxXdbFZxw08',
+            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hdGZfcy9NQUZfTHdhdGZfcy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAF99tzaOKW7EKljohVaDM_-L0nJBGnOFki3hDWaXc7jO&exp=1711398937&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAALte7d49G6CE3MdPOutgtjTxvma92qBJUKn9mkzB8pP8',
             heading: 'Home Decor'
         },
         {

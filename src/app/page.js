@@ -24,15 +24,16 @@ export default function Home() {
     <div>
       <Header />
       <ExploreServices />
+     
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
-        <Explore />
+      <Explore />
         <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
             src={src1}
             alt="src1"
             sidecontent1="BUY A HOME"
-            sidecontent2="Search, Buy & Own Your Dream Home"
+            sidecontent4="Search, Buy & Own Your Dream Home"
             sidecontent3="Explore from apartments, land, builders, floor, villas and more"
             buttontext="Find a Home"
           />
@@ -43,7 +44,7 @@ export default function Home() {
 
 
 
-        <div className="mt-10 lg:mt-[23rem]">
+        <div className="mt-10 lg:mt-[22rem]">
           <Options />
 
 
@@ -66,17 +67,18 @@ export default function Home() {
           </div>
          
         </div>
-        <div className="mt-10 lg:mt-[22rem]">
-          <Postercard
+        <div className="mt-10 lg:mt-[20rem]">
+          {/* <Postercard
             src={src3}
             alt="src3"
             sidecontent1="RENT A HOME"
             sidecontent4="Rental Homes for Everyone "
             sidecontent3="Explore from Apartments, builder homes, villas and more"
             buttontext="Find a home for RENT"
-          />
+          /> */}
+           <TopProject />
         </div>
-        <TopProject />
+       
         <PopularBuilder />
         {/* <Services2 />
         <Staticcardleft />
