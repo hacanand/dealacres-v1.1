@@ -11,6 +11,7 @@ import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuConten
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const [hoveredMenu, setHoveredMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('Gurugaon');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
@@ -34,27 +35,59 @@ const Navbar = () => {
     }
   };
 
-  const Menu = ({ handleMenuClick, selectedMenu }) => {
+  const Menu = ({ handleMenuHover, handleMenuClick }) => {
+
+    const handleMouseEnter = (menu, event) => {
+      handleMenuHover(menu);
+      handleMenuClick(menu, event); // Pass event parameter to handleMenuClick
+    };
+  
+    const handleMouseLeave = () => {
+      handleMenuHover(null);
+      handleMenuClick(null, null); // Clear hovered menu when mouse leaves
+    };
+  
     return (
       <>
-        <p>
-          <a href="#" onClick={(e) => handleMenuClick("buyer", e)}>Buyer</a>
+        <p
+          onMouseEnter={(e) => handleMouseEnter("buyer", e)} // Pass event parameter
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleMenuClick("buyer", null)} // Pass null event parameter
+        >
+          <a href="#">Buyer</a>
         </p>
-        <p>
-          <a href="#" onClick={(e) => handleMenuClick("seller", e)}>Seller</a>
+        <p
+          onMouseEnter={(e) => handleMouseEnter("seller", e)}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleMenuClick("seller", null)}
+        >
+          <a href="#">Seller</a>
         </p>
-        <p>
-          <a href="#" onClick={(e) => handleMenuClick("tenant", e)}>Tenant</a>
+        <p
+          onMouseEnter={(e) => handleMouseEnter("tenant", e)}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleMenuClick("tenant", null)}
+        >
+          <a href="#">Tenant</a>
         </p>
-        <p>
-          <a href="#" onClick={(e) => handleMenuClick("blog", e)}>Blog</a>
+        <p
+          onMouseEnter={(e) => handleMouseEnter("blog", e)}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleMenuClick("blog", null)}
+        >
+          <a href="#">Blog</a>
         </p>
-        <p>
-          <a href="#" onClick={(e) => handleMenuClick("services", e)}>Services</a>
+        <p
+          onMouseEnter={(e) => handleMouseEnter("services", e)}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => handleMenuClick("services", null)}
+        >
+          <a href="#">Services</a>
         </p>
       </>
     );
   };
+  
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -72,10 +105,25 @@ const Navbar = () => {
   }, []);
 
   const handleMenuClick = (menu, event) => {
-    setSelectedMenu(selectedMenu === menu ? null : menu);
-    const rect = event.target.getBoundingClientRect();
-    setMenuPosition({ top: rect.bottom, left: rect.left });
+    setSelectedMenu( menu);
+    if (event) {
+      const rect = event.target.getBoundingClientRect();
+      setMenuPosition({ top: rect.bottom, left: rect.left });
+    }
   };
+
+  const handleMenuHover = (menu, event) => {
+    setHoveredMenu(menu);
+    if (event) {
+      const rect = event.target.getBoundingClientRect();
+      setMenuPosition({ top: rect.bottom, left: rect.left });
+    }
+  };
+  
+  const handleClickOutside = () => {
+    setSelectedMenu(null);
+  };
+  
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
   };
@@ -99,7 +147,10 @@ const Navbar = () => {
         <option className="text-black"value="Mumbai">Mumbai</option>
       </select>
         <div className="navbar-links__container">
-          <Menu handleMenuClick={handleMenuClick} selectedMenu={selectedMenu} />
+        <Menu
+        handleMenuClick={handleMenuClick}
+        handleMenuHover={handleMenuHover}
+      />
         </div>
         <div className="navbar-sign">
           <Link
@@ -120,11 +171,15 @@ const Navbar = () => {
         </div>
       </div>
      
-      {selectedMenu && (
-        <div className="flyout-menu-container mt-6" style={{ top: menuPosition.top, left: menuPosition.left }}>
-          <FlyoutMenuSections sections={getSections(selectedMenu)} />
-        </div>
-      )}
+      {(selectedMenu || hoveredMenu) && (
+          <div
+            className="flyout-menu-container mt-6"
+            style={{ top: menuPosition.top, left: menuPosition.left }}
+            onClick={handleClickOutside}
+          >
+            <FlyoutMenuSections sections={getSections(selectedMenu || hoveredMenu)} />
+          </div>
+        )}
         <div className="hidden">
       {toggleMenu ? (
         <RiCloseLine

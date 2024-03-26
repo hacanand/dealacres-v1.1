@@ -1,7 +1,10 @@
-
-.carousel-container {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-  }
+.slick-prev {
+  display: none !important;
+}
+.slick-prev::before {
+  content: unset;
+}
+.slick-next {
+  right: 1px !important;
+ 
+}

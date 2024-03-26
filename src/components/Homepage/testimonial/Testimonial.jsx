@@ -7,6 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonialData } from "./tdata";
 import Image from "next/image";
+// import NextArrow from "@/components/faq/NextArrow";
+import './Testimonial.css'
+import NextArrow from "./NextArrow";
 
 const Testimonial = () => {
   const [deviceType, setDeviceType] = useState("");
@@ -45,14 +48,19 @@ const Testimonial = () => {
   }, [testimonialData]);
 
   const settings = {
-
-    arrows: false,
     infinite: true,
     speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: deviceType !== "mobile",
+    autoplay: false,
+    rows: 1,
+    centerMode: true,
+    centerPadding: '0px',
     autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: null, // Ensure this is set to null
+    arrows: true,
+    
     responsive: [
       {
         breakpoint: 1024,
@@ -60,7 +68,6 @@ const Testimonial = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          
         }
       },
       {
@@ -69,7 +76,7 @@ const Testimonial = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          
+          arrows: false,
         }
       },
       {
@@ -78,7 +85,7 @@ const Testimonial = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          
+          arrows: false,
         }
       }
     ]
@@ -99,7 +106,7 @@ const Testimonial = () => {
           </p>
         </div>
         <div className="max-w-screen-lg -mb-24 pt-5 lg:pt-10 ">
-          <Slider {...settings}>
+          <Slider {...settings} prevArrow={null} >
             {testimonialData.map((testimonial) => (
               <div key={testimonial.id}>
                 <div className="bg-white shadow-blue-800 shadow-sm rounded-lg p-6 mx-4 mt-3 mb-2 pb-3">
