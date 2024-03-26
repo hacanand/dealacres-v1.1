@@ -64,7 +64,7 @@ const ExploreServices = () => {
         <div className='bg-[#e3f4f4] p-16'>
         <h2 className='text-center font-semibold text-lg md:text-2xl mb-10'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
         <div className='flex justify-center'>
-          <div className=' mx-auto  grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-6'>
+          <div className=' mx-auto  grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-6 cursor-pointer'>
             {cardData.map((card, index) => (
               <Card key={index} imageUrl={card.imageUrl} heading={card.heading} />
             ))}

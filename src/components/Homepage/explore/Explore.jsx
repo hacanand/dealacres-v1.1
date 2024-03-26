@@ -18,7 +18,7 @@ const Explore = () => {
           Explore! <span className="text-blue-500">Insights and tools</span>
         </h2>
       </div>
-      <div className="cards-container">
+      <div className="cards-container cursor-pointer">
         {cardData.map((card) => (
           <>
             <div

@@ -175,7 +175,7 @@ const Navbar = () => {
         </div>
       </div>
      
-      {(selectedMenu || hoveredMenu) && (
+      {(selectedMenu && hoveredMenu) && (
           <div
             className="flyout-menu-container mt-6"
             style={{ top: menuPosition.top, left: menuPosition.left }}
