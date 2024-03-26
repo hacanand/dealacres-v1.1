@@ -35,7 +35,7 @@ const Navbar = () => {
     }
   };
 
-  const Menu = ({ handleMenuHover, handleMenuClick }) => {
+  const Menu = ({ handleMenuHover, handleMenuClick,setHoveredMenu,setSelectedMenu }) => {
 
     const handleMouseEnter = (menu, event) => {
       handleMenuHover(menu);
@@ -43,8 +43,10 @@ const Navbar = () => {
     };
   
     const handleMouseLeave = () => {
-      handleMenuHover(null);
-      handleMenuClick(null, null); // Clear hovered menu when mouse leaves
+      setHoveredMenu(null);
+      setSelectedMenu(null);
+      handleMenuClick(null,null);
+      handleMenuHover(null)
     };
   
     return (
@@ -150,6 +152,8 @@ const Navbar = () => {
         <Menu
         handleMenuClick={handleMenuClick}
         handleMenuHover={handleMenuHover}
+        setHoveredMenu={setHoveredMenu}
+        setSelectedMenu={setSelectedMenu}
       />
         </div>
         <div className="navbar-sign">
