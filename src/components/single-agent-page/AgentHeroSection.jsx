@@ -42,15 +42,15 @@ const AgentHeroSection = ({
 
               </div>
             </h2>
-            <p className='text-base md:text-lg'>
+            <p className='text-sm sm:text-base md:text-lg'>
               {contacts.map((contact, index) => (<span key={index}>{contact}</span>))}
             </p>
-            <p className='font-bold text-base md:text-lg'>
+            <p className='font-bold text-sm sm:text-base md:text-lg'>
               {languages.map((language, index) => (<span key={index}>
                 {language + ' '}</span>))}
             </p>
 
-            <p className='text-base md:text-lg py-4'>
+            <p className='text-sm sm:text-base md:text-lg py-4'>
               {address}
             </p>
           </div>

@@ -120,11 +120,12 @@ const Page = () => {
 
 
       <InsightReview />
-      <div className=" mt-10 mb-3 px-[12rem] py-[1rem] max-sm:px-[1rem] max-sm:py-[2rem]">
+      <div className=" mt-10 mb-3 px-[12rem] py-[1rem] max-md:px-[1rem] max-md:py-[2rem]">
         <EstateService />
       </div>
 
       <ReadMore />
+      {/* <ArticleSlider /> */}
 
     </div>
   )

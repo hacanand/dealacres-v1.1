@@ -13,6 +13,8 @@ import qna from '../../../public/faq/q&a.webp'
 import { generalQuestions, questionByTopic, questionTopics } from './faqData'
 
 import Image from 'next/image'
+import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
+
 
 
 const page = () => {
@@ -104,11 +106,10 @@ const page = () => {
       {/* Article Slider */}
 
       <div className='max-w-screen-xl mx-auto px-4 my-8'>
-      <h3 className='font-bold text-3xl py-4 px-4'>
-          Articles
-        </h3>
+     
 
-        <ArticleSlider />
+        {/* <ArticleSlider /> */}
+        <ReadMore isFullScreen={true} header='Articles'/>
 
         {/* Add Interesting Readings Here remove the article slider */}
       </div>

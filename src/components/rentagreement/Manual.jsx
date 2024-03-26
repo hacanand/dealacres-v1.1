@@ -63,7 +63,8 @@ const ReadMore = () => {
         breakpoints={{
           400: {
             slidesPerView: 1,
-            spaceBetween: 10
+            spaceBetween: 10,
+            
           },
           500: {
             slidesPerView: 2,
@@ -72,6 +73,7 @@ const ReadMore = () => {
           798: {
             slidesPerView: 2.5,
             spaceBetween: 10,
+            
           },
           1024: {
             slidesPerView: 3,

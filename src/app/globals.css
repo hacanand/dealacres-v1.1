@@ -49,7 +49,17 @@
 
 
 .rentSwiperDots {
-  bottom: 62px;
+  bottom: 25px !important;
+}
+
+.MuiRating-iconEmpty  {
+  color: black !important;
+}
+
+@media screen and (min-width: 768px){
+  .rentSwiperDots{
+    display: none !important;
+  }
 }
 
 
