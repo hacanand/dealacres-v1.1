@@ -40,11 +40,11 @@ const ExploreServices = () => {
             heading: 'Chartered Accountant'
         },
         {
-            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hdGZfcy9NQUZfTHdhdGZfcy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAF99tzaOKW7EKljohVaDM_-L0nJBGnOFki3hDWaXc7jO&exp=1711398937&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAALte7d49G6CE3MdPOutgtjTxvma92qBJUKn9mkzB8pP8',
+            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hdGZfcy9NQUZfTHdhdGZfcy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAG7nY1VllUHOtienx68xW0A17EWsrVDhfKYcPEa3wXAw&exp=1711452937&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAAFJMztft6Vd3mEtRMy3wLw9eBHl_22xdZlSAoibGngk5',
             heading: 'Home Decor'
         },
         {
-            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hYU9jQS9NQUZfTDNhYU9jQS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAJyLd1VQECFwha-6VMkAYFpH-o9T3naSd956wwypUH2o&exp=1711014120&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAALVIbw1PmSsT3ZpPqppAag7kuWtlwR1pxdVgOrST9RCF',
+            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hYU9jQS9NQUZfTDNhYU9jQS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAACWa77Bi6j-0Jgeh-ppTGBgPnNL3GdqfC02m9O0ljOHf&exp=1711449720&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAALU2dFmQ_aiAIT2WhGMs8Q6Y6TwDEN-meFVc1meTQUgb',
             heading: 'Home Interior'
         },
         {
@@ -52,11 +52,11 @@ const ExploreServices = () => {
             heading: 'Vastu Sartar'
         },
         {
-            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS8wMHo3Zy9NQUZfTHkwMHo3Zy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAHsNsmvJpqVHg-H8rPOBxS-lGfianb1TAKrYDdTYomCu&exp=1710980203&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAAPxVfOxGzK3mCxldz9S0mZv8yzVhc1532ZlebIKo8gqT',
+            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS8wMHo3Zy9NQUZfTHkwMHo3Zy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAALFwRkphHr9yoMD7oOBQYbY45ZceHRj0TQDz0OY8CedI&exp=1711451803&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAACqotp7YaidiYjaIBSgeCiXAzq5uwItV54IfprfZKr85',
             heading: 'Construction Contractor'
         },
         {
-            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9NV0NYZy9NQUZfTUZNV0NYZy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAErVH8LeeUWalqZ-biz4zKyjXxnjB0MQAF-elDJaOfZg&exp=1711014948&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAAE_y_bQ9uiNycMnHL-AV3YWK93IdDTxRHWm0l8BqvO_b',
+            imageUrl: 'https://media.canva.com/1/image-resize/1/200_200_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9NV0NYZy9NQUZfTUZNV0NYZy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAE02JtSLQYPzFwJI-43dZ3FccRwMq4Y36J-MliIrex9r&exp=1711450548&x-canva-quality=thumbnail&csig=AAAAAAAAAAAAAAAAAAAAAAzHuQhWHDO8JYEnMkNAx_4SqgE2LB30JmdwdbdcE_0V',
             heading: 'Modular Kitchen'
         }
     ];
