@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const NewLocalitiesAndSocietiesSelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const options = ["New Projects", "Societies", "Residential", "Commercial"];
 

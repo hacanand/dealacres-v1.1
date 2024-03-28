@@ -86,7 +86,7 @@ const BusinessCategory = () => {
         </p>
 
         <div className="flex items-end justify-start space-x-3 w-full mb-4 max-md:space-x-2">
-          <FaSearch className="h-6 w-6 -mt-1" />
+        <FaSearch className="h-6 w-6 mb-2" color="#747264" />
           <div className="w-full">
             <label className="text-lg max-md:text-md">
               Primary Business Category
@@ -101,7 +101,7 @@ const BusinessCategory = () => {
         </div>
 
         <div className="flex items-end justify-start space-x-3 w-full mb-4">
-          <FaSearch className="h-6 w-6 -mt-1" />
+          <FaSearch className="h-6 w-6 mb-2" color="#747264" />
           <div className="w-full">
             <label className="text-lg max-md:text-md">
               Secondary Business Category

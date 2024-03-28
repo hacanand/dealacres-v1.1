@@ -102,6 +102,15 @@ const page = () => {
         </div>
 
       </div>
+      <div className='bg-blue-600 flex flex-col md:flex-row items-center justify-center gap-6 p-5'>
+          <div className='uppercase'>
+          <h1 className='text-xs md:text-lg text-white font-bold'> BUY OUR REAL ESTATE SERVICES AND SMOOTH YOUR <br />
+          <span className='text-2xl md:text-5xl text-yellow-400 font-bold'>REAL ESTATE JOURNEY</span></h1>
+          </div>
+          <div>
+            <button className='rounded-md bg-white px-6 py-2 text-blue-500 font-semibold'>Click Here</button>
+          </div>
+      </div>
 
       {/* Article Slider */}
 

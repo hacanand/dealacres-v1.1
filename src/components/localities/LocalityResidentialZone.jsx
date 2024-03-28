@@ -33,7 +33,7 @@ const LocalityResidentialZone = () => {
         <div className="grid grid-cols-3 gap-6 mt-3">
           <div className="col-span-1 rounded-lg overflow-hidden flex-1 items-center flex flex-col justify-between">
             <img
-              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAK4kd10FjwIy5fFLuCEmarzhYOLR-Nl3uvWLv_REwl9l&exp=1696500553&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAMrrLxLAE92Ze71uldMY7Em7n_447Jxt3tFNzmpxTGj4"
+              src="https://media.canva.com/1/image-resize/1/800_530_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9vQk9NNC9NQUZzNTRvQk9NNC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAACqdOVSPHEtebakIo5FyddWlHfy-AUZoKWSqs3lE2Jwi&exp=1710446953&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAEvD6sgAaK5CKQJ73Ojx0FjiqJcQzwxb3QUsZpsJd579"
               alt="Qutub Minar"
               className="rounded-lg h-full"
             />

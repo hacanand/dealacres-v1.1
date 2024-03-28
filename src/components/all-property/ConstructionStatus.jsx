@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const ConstructionStatusSelector = () => {
-  const [isMainVisible, setIsMainVisible] = useState(false);
+  const [isMainVisible, setIsMainVisible] = useState(true);
   const [showAllStatus, setShowAllStatus] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState([]);
   const constructionStatusOptions = [

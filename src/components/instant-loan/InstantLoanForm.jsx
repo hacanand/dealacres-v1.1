@@ -284,7 +284,7 @@ export default function InstantLoanForm({
               checked={tcChecked}
               onChange={() => setTcChecked(prev => !prev)}
             />
-            <h1 className="text-gray-400 text-lg text-justify">
+            <h1 className="text-gray-400 text-md text-justify">
               I authorize dealacres.com relevant loan providers and their representives to call, SMS or email me with reference to the application ** accept dealacres.com "Terms & Conditions". This consent shall override any DNC/NDNC registration.
             </h1>
           </div>

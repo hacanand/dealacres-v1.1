@@ -4,7 +4,7 @@ import BusinessInformationWizardForm from "@/components/businessListing/Business
 
 const BusinessInformation = () => {
   return (
-    <div className="p-10">
+    <div className="max-w-screen-xl mx-auto p-10">
       <BusinessInformationWizardForm />
     </div>
   );

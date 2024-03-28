@@ -28,7 +28,7 @@ const ViewAll = () => {
 
   return (
     <Fragment>
-      <div className="mt-10 mb-10 flex items-center justify-center space-x-2 max-lg:px-5">
+      <div className="mt-10 mb-10 flex items-center justify-center space-x-2 max-lg:px-5 ">
         <div className="relative w-1/3 max-lg:w-full max-lg:px-[5rem] max-md:px-1">
           <input
             type="text"
@@ -57,28 +57,31 @@ const ViewAll = () => {
         />
       )}
 
-      <div className="px-5 mb-10 flex items-start w-full space-x-14 max-md:space-x-0">
-        <SideFilter />
-        <div className="pr-[10rem] max-xl:pr-[5rem] max-md:pr-0 w-full">
-          <LocalityCard />
 
-          <StarRateLocality />
+  <div className="px-5 mb-10 md:pl-12 flex items-start justify-between w-full space-x-14 max-md:space-x-0 mx-auto">
+    <SideFilter />
+    <div className=" max-xl:pr-[5rem] max-md:pr-0 w-full md:w-4/5">
+      <LocalityCard />
 
-          <LocalityCard />
+      <StarRateLocality />
 
-          <LocalityCard />
+      <LocalityCard />
 
-          <ThumbRating />
+      <LocalityCard />
 
-          <LocalityCard />
+      <ThumbRating />
 
-          <div className="w-full flex items-center justify-center py-3">
-            <button class="font-bold text-lg rounded-md bg-blue-600 px-3 py-1 text-white">
-              Show More
-            </button>
-          </div>
-        </div>
+      <LocalityCard />
+
+      <div className="w-full flex items-center justify-center py-3">
+        <button class="font-bold text-lg rounded-md bg-blue-600 px-3 py-1 text-white">
+          Show More
+        </button>
       </div>
+    </div>
+  </div>
+
+
 
       <Explore />
 
@@ -87,8 +90,10 @@ const ViewAll = () => {
       <LocalityCommercialZone />
 
       <ExploreMoreLocality />
-
-      <FNQ />
+        <div className="max-w-screen-xl mx-auto">
+        <FNQ />
+        </div>
+     
     </Fragment>
   );
 };
