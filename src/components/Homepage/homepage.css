@@ -14,8 +14,8 @@
     /* For medium and large screens */
     .Articlesmanual-container {
       position: absolute;
-      top: 68%;
-      left: 23%;
+      top: 76%;
+      left: 35%;
     }
   }
   @media only screen and (max-width: 767px) {
@@ -32,8 +32,8 @@
     /* For medium and large screens */
     .toparticles-container {
       position: absolute;
-      top: 72%;
-      left: 23%;
+      top: 80%;
+      left: 30%;
     }
   }
   

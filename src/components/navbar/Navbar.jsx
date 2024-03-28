@@ -20,7 +20,7 @@ const Menu = ({ setMenuPosition, setHoveredMenu }) => {
 
   const handleMouseLeave = () => {
     setHoveredMenu(null);
-    setMenuPosition(null); 
+    setMenuPosition(null);
   };
 
   return (
@@ -87,7 +87,7 @@ const Navbar = () => {
 
 
 
-  
+
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -104,7 +104,7 @@ const Navbar = () => {
     };
   }, []);
 
-  
+
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
   };
@@ -123,18 +123,24 @@ const Navbar = () => {
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
         <select value={selectedLocation} onChange={handleLocationChange} className="text-white bg-transparent font-bold">
-        <option className="text-black" value="Gurugaon">Gurugaon</option>
-        <option className="text-black"value="Delhi">Delhi</option>
-        <option className="text-black"value="Mumbai">Mumbai</option>
-      </select>
+          <option className="text-black" value="Gurugaon">Gurugaon</option>
+          <option className="text-black" value="Delhi">Delhi</option>
+          <option className="text-black" value="Mumbai">Mumbai</option>
+        </select>
         <div className="navbar-links__container">
-        <Menu
-       setMenuPosition={setMenuPosition}
-        setHoveredMenu={setHoveredMenu}
-        
-      />
+          <Menu
+            setMenuPosition={setMenuPosition}
+            setHoveredMenu={setHoveredMenu}
+
+          />
         </div>
         <div className="navbar-sign">
+          <Link
+            href="#"
+            className=" text-sm sm:text-base md:text-lg text-center mr-5   font-light  text-white sm:font-normal md:font-medium shadow-blue-200 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
+          >
+            Post For Business
+          </Link>
           <Link
             href="#"
             className=" text-sm sm:text-base md:text-lg text-center   font-light  text-white sm:font-normal md:font-medium shadow-blue-200 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
@@ -152,47 +158,48 @@ const Navbar = () => {
           <button type="button">Sign Up</button>
         </div>
       </div>
-     
-      { hoveredMenu && (
-          <div
-            className="flyout-menu-container mt-6"
-            style={{ top: menuPosition.top, left: menuPosition.left }}
-          >
-            <FlyoutMenuSections sections={getSections( hoveredMenu)} />
-          </div>
+      <div className="navbar-menu">
+        {toggleMenu ? (
+          <RiCloseLine
+            color="#fff"
+            size={45}
+            className='close'
+            onClick={() => {
+              setToggleMenu(false);
+            }}
+          />
+        ) : (
+          <RiMenu3Line
+            color="#fff"
+            size={27}
+            onClick={() => {
+              setToggleMenu(true);
+            }}
+          />
         )}
-        <div className="hidden">
-      {toggleMenu ? (
-        <RiCloseLine
-          color="#fff"
-          size={45}
-          className='close'
-          onClick={() => {
-            setToggleMenu(false);
-          }}
-        />
-      ) : (
-        <RiMenu3Line
-          color="#fff"
-          size={27}
-          onClick={() => {
-            setToggleMenu(true);
-          }}
-        />
-      )}
-      {toggleMenu && (
-        <div className="navbar-menu_container">
-          <div className="navabr-menu_container-links">
-            <Menu />
-            <div className="navbar-menu_container-links-sign">
-              <p>Sign In</p>
-              <h5>Post your Property</h5>
-              <button type="button">Sign Up</button>
+        {toggleMenu && (
+          <div className="navbar-menu_container">
+            <div className="navabr-menu_container-links">
+              <Menu />
+              <div className="navbar-menu_container-links-sign">
+                <p>Sign In</p>
+                <h5>Post your Property</h5>
+                <h5>Post For Business</h5>
+                <button type="button">Sign Up</button>
+              </div>
             </div>
           </div>
+        )}
+      </div>
+      
+      {hoveredMenu && (
+        <div
+          className="flyout-menu-container mt-6"
+          style={{ top: menuPosition.top, left: menuPosition.left }}
+        >
+          <FlyoutMenuSections sections={getSections(hoveredMenu)} />
         </div>
       )}
-    </div>
     </div >
   );
 };

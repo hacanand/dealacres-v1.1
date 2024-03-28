@@ -8,9 +8,9 @@ const Card = ({ index, selectedCity }) => {
    
   
     return (
-      <div key={index} className="relative">
+      <div key={index} className="relative  shadow-white/50 shadow-md">
         <div
-          className="bg-cover bg-center w-full h-36 rounded-lg"
+          className="bg-cover bg-center w-full h-36 rounded-lg "
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className="absolute bottom-0 left-0 p-4 text-left text-sm text-white">

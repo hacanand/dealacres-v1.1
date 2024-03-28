@@ -24,7 +24,7 @@ const Toparticles = () => {
     };
   }, []);
 
-  const filteredData = screenWidth < 900 ? data[category].slice(0, 4) : data[category];
+  const filteredData =  data[category];
 
   return (
     <div className={styles.toparticlesContainer}>

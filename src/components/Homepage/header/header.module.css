@@ -60,7 +60,7 @@
 
 .HeaderContentInput{
     display: flex;
-    width: 70%;
+    width: 80%;
     background-color: white;
     padding: 8px;
     border-radius: 10px;
@@ -100,19 +100,20 @@
 }
 .LocationDropdown {
     display: flex;
-    flex: 1;
-  }
+    flex: 2;
+    
+}
   
-  .LocationDropdown select {
+.LocationDropdown select {
     width: 100%;
     min-height: 50px;
     font-size: 18px;
     line-height: 27px;
     color: black;
     outline: none;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     border-radius: 5px;
-  }
+}
 
 .cta{
     position: absolute;

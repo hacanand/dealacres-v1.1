@@ -6,8 +6,7 @@ export const data={
         {id:2,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:3,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:4,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:5,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:6,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
     'Independent Floors':[
@@ -15,8 +14,7 @@ export const data={
         {id:2,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:3,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:4,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:5,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:6,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
     'Villas':[
@@ -24,8 +22,7 @@ export const data={
         {id:2,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:3,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:4,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:5,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:6,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
     'Plot/Land':[
@@ -33,8 +30,7 @@ export const data={
         {id:2,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:3,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
         {id:4,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:5,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
-        {id:6,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        
     ],
     
 }

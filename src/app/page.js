@@ -44,7 +44,7 @@ export default function Home() {
 
 
 
-        <div className="mt-10 lg:mt-[22rem]">
+        <div className="mt-10 lg:mt-[19rem]">
           <Options />
 
 
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
          
         </div>
-        <div className="mt-10 lg:mt-[20rem]">
+        {/* <div className="mt-10 lg:mt-[20rem]">
           {/* <Postercard
             src={src3}
             alt="src3"
@@ -76,7 +76,10 @@ export default function Home() {
             sidecontent3="Explore from Apartments, builder homes, villas and more"
             buttontext="Find a home for RENT"
           /> */}
-           <TopProject />
+           {/* <TopProject /> */}
+        {/* </div> */} 
+        <div style={{ position: "relative", width: "100vw", marginTop:"20vw", marginLeft: "-50vw", marginRight: "-50vw", left: "50%", right: "50%" }}>
+          <TopProject />
         </div>
        
         <PopularBuilder />
