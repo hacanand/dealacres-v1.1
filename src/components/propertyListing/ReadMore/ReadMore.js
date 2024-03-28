@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 // import "swiper/css/navigation";
 import Card from "@/components/propertyListing/Card/Card";
 import ArticleCard from "@/components/faq/ArticleCard";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 // import ArticleCard from ";
@@ -59,7 +60,7 @@ const ReadMore = ({
   ];
 
   return (
-    <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 mt-10 py-5'}}`}>
+    <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 mt-10 py-5'}} relative`}>
       <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold py-4">
         {header ? header : 'Interesting Readings'}
       </h2>
@@ -106,14 +107,17 @@ const ReadMore = ({
           </SwiperSlide>
         ))}
 
-        <div className="nextArrow bg-blue-500 text-white w-[48px] h-[48px] p-4 hidden md:flex items-center justify-center rounded-[100%] -right-4 top-[40%] mb-8 -translate-x-1/2 absolute z-10">
-          <FaArrowRightLong size={20} />
-        </div>
-        <div className="prevArrow bg-blue-500 text-white w-[48px] h-[48px] p-4 hidden md:flex items-center justify-center rounded-[100%] mb-8 -translate-x-1/2 left-8 top-[40%] absolute z-10 cursor-pointer pointer-events-auto">
-          <FaArrowLeftLong size={20} />
-        </div>
 
+       
       </Swiper>
+
+      <div className="absolute inset-0">
+         <div className={`nextArrow bg-blue-500 text-white w-[36px] h-[36px]  hidden md:grid items-center justify-center rounded-[100%]  top-[50%] mb-8 -translate-x-1/2 absolute z-10 cursor-pointer hover:bg-blue-500/70 transition-all ${isFullScreen ? 'right-[-2rem]' : 'right-[2rem] lg:right-[6rem] '}`}>
+          <FaArrowRightLong size={20}/>
+
+        </div>
+       
+      </div>
     </div>
   );
 };

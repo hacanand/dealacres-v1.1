@@ -32,9 +32,10 @@
   
   
   @media screen and (max-width: 768px) {
-    .prevButton,
+    .prevButton {
+      left: 3%;
+    }
     .nextButton {
-      font-size: 12px;
-      padding: 6px 10px;
+      right: 3%;
     }
   }

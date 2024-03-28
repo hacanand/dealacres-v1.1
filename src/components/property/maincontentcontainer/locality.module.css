@@ -155,7 +155,8 @@
     .localityContentData{
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 250px 250px;
+        overflow-x: auto;
         justify-content: space-between;
         align-items: center;
         gap: 16px;
@@ -185,15 +186,32 @@
     }
 }
 
-@media  screen and (max-width: 480px) {
-    .localityContentData{
-
-        grid-template-columns: 1fr;
-     
-    }
+/* @media  screen and (max-width: 480px) {
+  
 
     .localityContentDataProCon{
-
-        max-width: 100%;
+        gap: 0px;
     }
-}
+
+    .localityContentData {
+        margin-bottom: 0px;
+        gap: 4px;
+    }
+    .localityContentDataProCon h2{
+        font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .localityContentDataProCon li{
+        font-size: 16px;
+        padding:  0;
+   
+    }
+
+    .localityContent{
+        width: 100%;
+        border: 2px solid rgba(63, 62, 62, 0.5);
+        border-radius: 20px;
+        padding: 10px;
+    }
+} */
