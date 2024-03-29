@@ -31,7 +31,7 @@ const NewOption = () => {
             className={`card ${activeCard === card.id ? "active" : ""}`}
             style={{
               flex: activeCard === card.id ? "0 0 160px" : "0 0 160px",
-              minWidth: activeCard === card.id ? "80%" : "230px",
+              minWidth: activeCard === card.id ? "80%" : "280px",
               height: activeCard === card.id ? "100%" : "230px",
               width: activeCard === card.id ? "80%" : "230px",
               margin: activeCard === card.id ? "0px" : "0px",
@@ -67,8 +67,11 @@ const NewOption = () => {
                   </ul>
                 </div>
               )}
+             
             </div>
+            <div className="mt-2 text-md text-center ">{card.title}</div>
           </div>
+          
         ))}
       </div>
     </div>

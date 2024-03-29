@@ -4,24 +4,24 @@ import { useState } from 'react';
 
 
 const Card = ({ index, selectedCity }) => {
-     const imageUrl = '/office-image.jpg'; 
-   
-  
-    return (
-      <div key={index} className="relative  shadow-white/50 shadow-md">
-        <div
-          className="bg-cover bg-center w-full h-36 rounded-lg "
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        >
-          <div className="absolute bottom-0 left-0 p-4 text-left text-sm text-white">
-            <p>DLF The Arbour</p>
-            <p className='text-xs'>3/4 BHK Apartment, Sector 57, {selectedCity}</p>
-            <p className='font-bold'>1.46 Cr *</p>
-          </div>
+  const imageUrl = '/office-image.jpg';
+
+  return (
+    <div key={index} className="relative shadow-black/80 shadow-md">
+      <div
+        className="relative bg-cover bg-center w-full h-36 rounded-lg"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
+        <div className="absolute inset-0 bg-black/60 opacity-50 rounded-lg" />
+        <div className="absolute bottom-0 left-0 p-4 text-left text-sm text-white">
+          <p>DLF The Arbour</p>
+          <p className="text-xs">3/4 BHK Apartment, Sector 57, {selectedCity}</p>
+          <p className="font-bold">1.46 Cr *</p>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
   const TopProject = () => {
     const [selectedCity, setSelectedCity] = useState('Navi Mumbai');

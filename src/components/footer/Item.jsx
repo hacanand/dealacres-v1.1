@@ -4,10 +4,12 @@ import Link from "next/link";
 
 const Item = ({ Links, title }) => {
   return (
-    <ul className="text-center">
+    <ul className="flex flex-col items-center" >
       <h1 className="mb-1 text-xl font-[Poppins] font-semibold">{title}</h1>
+     <div>
       {Links.map((link) => (
-        <li key={link.name}>
+        
+        <li className=" text-left" key={link.name}>
           <Link
             className={styles.item}
             href={link.link}
@@ -16,6 +18,7 @@ const Item = ({ Links, title }) => {
           </Link>
         </li>
       ))}
+     </div>
     </ul>
   );
 };
