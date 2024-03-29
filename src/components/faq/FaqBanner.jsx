@@ -5,16 +5,15 @@ const FaqBanner = ({
     img
 }) => {
     return (
-        <div className=' relative min-h-[350px] max-h-[500px]  flex items-center justify-center'>
+        <div className=' relative h-[200px] md:h-auto sm:min-h-[350px] sm:max-h-[500px]  flex items-center justify-end md:justify-center'>
             <Image src={img} alt='Question Mark Image.' className='
-      object-cover
-      absolute
       w-full
       h-full
+      absolute
       '/>
 
-            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 px-4-translate-y-1/2 flex flex-col '>
-                <h1 className='text-2xl sm:text-3xl lg:text-4xl font-bold py-4'>Hey, how can we help?</h1>
+            <div className='md:absolute top-1/2 left-1/2 md:-translate-x-1/2 px-4 md:-translate-y-1/2 flex flex-col '>
+                <h1 className='z-10 text-2xl sm:text-3xl lg:text-4xl font-bold py-4'>Hey, how can we help?</h1>
 
                 <div className='relative'>
                     <span className='absolute 

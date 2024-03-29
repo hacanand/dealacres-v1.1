@@ -36,8 +36,8 @@ const Input = ({
         peer
         w-full
         px-4
-        py-2
-     
+        py-4
+
         font-light 
         bg-white 
         border-2
@@ -59,7 +59,8 @@ const Input = ({
         transform 
         top-1/2
         left-4
-        
+        text-lg
+        capitalize
         origin-[0] 
         pointer-events-none
         invisible

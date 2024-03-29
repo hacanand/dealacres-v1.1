@@ -49,9 +49,10 @@ const UserSelector = ({
 
         classNames={{
           control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
-          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
-          input: () => 'text-lg',
-          option: () => 'text-lg'
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2 text-lg py-2`,
+          input: () => 'placeholder:!text-xl',
+          option: () => 'text-lg',
+
         }}
       />
     </div>

@@ -50,7 +50,7 @@ const CountrySelect = ({
         )}
         classNames={{
           control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
-          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2`,
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2 py-2 text-lg`,
           input: () => 'text-lg',
           option: () => 'text-lg'
         }}
