@@ -35,7 +35,7 @@ const CategoryFaq2 = () => {
 
    
     return (
-        <div className='px-4'>
+        <div className=''>
             <div className='' >
                 
                 <Slider {...settings}>
