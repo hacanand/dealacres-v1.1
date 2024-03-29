@@ -22,12 +22,12 @@ import '../components/Homepage/homepage.css'
 export default function Home() {
   return (
     <div>
-      <Header />
-      <ExploreServices />
+       <Header />
+      <ExploreServices /> 
      
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
       <Explore />
-        <div style={{ position: "relative" }}>
+        {/* <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
             src={src1}
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="toparticles-container">
             <Toparticles />
           </div>
-        </div>
+        </div> */}
 
 
 
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         {/* <Cities title={true} /> */}
 
-        <div style={{ position: "relative" }}>
+        {/* <div style={{ position: "relative" }}>
           <Postercard
             title="Sell or Rent your property faster with DealAcres"
             src={src2}
@@ -66,7 +66,7 @@ export default function Home() {
             <Articlesmanual />
           </div>
          
-        </div>
+        </div> */}
         {/* <div className="mt-10 lg:mt-[20rem]">
           {/* <Postercard
             src={src3}

@@ -58,16 +58,23 @@ const Testimonial = () => {
     centerPadding: '0px',
     autoplaySpeed: 3000,
     nextArrow: <NextArrow />,
-    prevArrow: null, // Ensure this is set to null
+    prevArrow: null, 
     arrows: true,
     
     responsive: [
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+      
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
+          slidesToScroll: 1,
         }
       },
       {
@@ -75,25 +82,15 @@ const Testimonial = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-        }
-      },
-      {
-        breakpoint: 464,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
         }
       }
-    ]
+    ],
   };
+  
 
   return (
     <div className="relative py-10 bg-indigo-50 mb-16">
-      <div className="max-w-full mx-auto px-20 lg:flex lg:justify-center lg:gap-8 ">
+      <div className="max-w-full mx-auto px-10 xl:flex xl:justify-center  ">
         <div className="flex flex-col items-start justify-center">
           <h2 className="text-3xl font-bold font-[Poppins] mb-4 uppercase text-blue-900">
             Testimonials
@@ -105,7 +102,7 @@ const Testimonial = () => {
             Hear from our satisfied buyers, tenants, owners and dealers
           </p>
         </div>
-        <div className="max-w-screen-lg -mb-24 pt-5 lg:pt-10 ">
+        <div className=" max-w-screen-lg -mb-24 pt-5 lg:pt-10  ">
           <Slider {...settings} prevArrow={null} >
             {testimonialData.map((testimonial) => (
               <div key={testimonial.id}>

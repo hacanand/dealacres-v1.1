@@ -9,6 +9,7 @@ import FlyoutMenuSections from "./FlyoutMenuSections";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
+  
 
   const handleMouseEnter = (menu, event) => {
     setHoveredMenu(menu);
@@ -67,6 +68,27 @@ const Navbar = () => {
   const pathname = usePathname();
   const isHomePage = pathname === '/' || pathname === '/blog'
 
+  const MenuMobile = () => (
+    <>
+      <p>
+        <a href="#buyer">Buyer</a>
+      </p>
+      <p>
+        <a href="#seller">Seller</a>
+      </p>
+      <p>
+        <a href="#tenant">Tenant</a>
+      </p>
+      <p>
+        <a href="blog">Blog</a>
+      </p>
+      <p>
+        <a href="#services">Services</a>
+      </p>
+    </>
+  );
+
+
   const getSections = (menu) => {
     switch (menu) {
       case "buyer":
@@ -122,7 +144,7 @@ const Navbar = () => {
           />
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
-        <select value={selectedLocation} onChange={handleLocationChange} className="text-white bg-transparent font-bold">
+        <select value={selectedLocation} onChange={handleLocationChange} className="text-white bg-transparent font-bold hidden md:block ">
           <option className="text-black" value="Gurugaon">Gurugaon</option>
           <option className="text-black" value="Delhi">Delhi</option>
           <option className="text-black" value="Mumbai">Mumbai</option>
@@ -180,7 +202,7 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="navbar-menu_container">
             <div className="navabr-menu_container-links">
-              <Menu />
+              <MenuMobile />
               <div className="navbar-menu_container-links-sign">
                 <p>Sign In</p>
                 <h5>Post your Property</h5>
