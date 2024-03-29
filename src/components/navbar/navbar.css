@@ -1,8 +1,8 @@
-.navbar {
+.navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px; 
+    padding: 1rem 6rem;
     margin: 0;
     top: 0;
     right: 0;
@@ -10,22 +10,22 @@
     background: transparent;
     z-index: 10;
     position: fixed;
-   
+
 }
 
 .navbarPage{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0; 
+    padding: 1rem 1rem;
     margin: 0;
     top: 0;
     right: 0;
     left: 0;
-    background: transparent;
+    max-height: 80px;
+    background: #0061DF;
     z-index: 10;
-    position: fixed;
-    box-sizing: border-box; /* Add box-sizing property */
+    position: relative;
 }
 
 .navbar.scrolled {
@@ -38,7 +38,6 @@
     border-bottom: none;
     padding: 8px 0px;
   }
-
 .navbar-links{
     flex: 2;
     display: flex;
@@ -66,6 +65,7 @@
 .navbar-links__container{
     display: flex;
     flex-direction: row;
+    gap: 15px;
    
 }
 .flyout-menu-container {

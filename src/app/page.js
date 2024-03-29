@@ -19,14 +19,15 @@ import ExploreServices from "@/components/Homepage/ExploreServices/ExploreServic
 import PopularBuilder from "@/components/Homepage/PopularBuilder/PopularBuilder";
 import Testimonial from "@/components/Homepage/testimonial/Testimonial";
 import '../components/Homepage/homepage.css'
+import NewOption from "@/components/Homepage/Option/Option";
 export default function Home() {
   return (
-    <div>
-       <Header />
-      <ExploreServices /> 
-     
+    <div className=" overflow-hidden">
+      <Header />
+      <ExploreServices />
+
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
-      <Explore />
+        <Explore />
         <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
@@ -41,33 +42,33 @@ export default function Home() {
             <Toparticles />
           </div>
         </div>
+      </div>
 
 
 
-        <div className="mt-10 xl:mt-[19rem]">
-          <Options />
+      <div className="mt-10 xl:mt-[19rem] w-full">
+        <NewOption />
+      </div>
+       
 
+      <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
+          <div style={{ position: "relative" }}>
+            <Postercard
+              title="Sell or Rent your property faster with DealAcres"
+              src={src2}
+              alt="src2"
+              sidecontent1="POST YOUR PROPERTY"
+              sidecontent4="Register to post your property for "
+              s2spantext="FREE"
+              sidecontent3="Sell or rent your residential/commercial property"
+              buttontext="Post your property FREE"
+            />
+            <div className="Articlesmanual-container">
+              <Articlesmanual />
+            </div>
 
-        </div>
-        {/* <Cities title={true} /> */}
-
-         <div style={{ position: "relative" }}>
-          <Postercard
-            title="Sell or Rent your property faster with DealAcres"
-            src={src2}
-            alt="src2"
-            sidecontent1="POST YOUR PROPERTY"
-            sidecontent4="Register to post your property for "
-            s2spantext="FREE"
-            sidecontent3="Sell or rent your residential/commercial property"
-            buttontext="Post your property FREE"
-          />
-          <div className="Articlesmanual-container">
-            <Articlesmanual />
           </div>
-         
-        </div> 
-        {/* <div className="mt-10 lg:mt-[20rem]">
+          {/* <div className="mt-10 lg:mt-[20rem]">
           {/* <Postercard
             src={src3}
             alt="src3"
@@ -76,21 +77,23 @@ export default function Home() {
             sidecontent3="Explore from Apartments, builder homes, villas and more"
             buttontext="Find a home for RENT"
           /> */}
-           {/* <TopProject /> */}
-        {/* </div> */} 
-    
-       
-       
-        {/* <Services2 />
+          {/* <TopProject /> */}
+          {/* </div> */}
+
+
+
+          {/* <Services2 />
         <Staticcardleft />
         <Staticcardright /> */}
       </div>
-      <div className="mt-10 xl:mt-[20rem] hidden md:block">  <TopProject /></div>
-    
+     
+      <div className="mt-10 xl:mt-[20rem]">  <TopProject /></div>
+
       <PopularBuilder />
       <WhyChooseUs />
       <Testimonial />
     </div>
+
   );
 }
 
