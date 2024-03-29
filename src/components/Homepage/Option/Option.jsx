@@ -37,7 +37,7 @@ const NewOption = () => {
               margin: activeCard === card.id ? "0px" : "0px",
             }}
             onClick={() => handleCardClick(card.id)}
-          >
+          ><>
             <div
               className="card-content"
               style={{
@@ -70,6 +70,7 @@ const NewOption = () => {
              
             </div>
             <div className="mt-2 text-md text-center ">{card.title}</div>
+            </>
           </div>
           
         ))}
