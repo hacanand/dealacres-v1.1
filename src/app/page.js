@@ -27,7 +27,7 @@ export default function Home() {
      
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
       <Explore />
-        {/* <div style={{ position: "relative" }}>
+        <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
             src={src1}
@@ -40,18 +40,18 @@ export default function Home() {
           <div className="toparticles-container">
             <Toparticles />
           </div>
-        </div> */}
+        </div>
 
 
 
-        <div className="mt-10 lg:mt-[19rem]">
+        <div className="mt-10 xl:mt-[19rem]">
           <Options />
 
 
         </div>
         {/* <Cities title={true} /> */}
 
-        {/* <div style={{ position: "relative" }}>
+         <div style={{ position: "relative" }}>
           <Postercard
             title="Sell or Rent your property faster with DealAcres"
             src={src2}
@@ -66,7 +66,7 @@ export default function Home() {
             <Articlesmanual />
           </div>
          
-        </div> */}
+        </div> 
         {/* <div className="mt-10 lg:mt-[20rem]">
           {/* <Postercard
             src={src3}
@@ -78,15 +78,16 @@ export default function Home() {
           /> */}
            {/* <TopProject /> */}
         {/* </div> */} 
-        <div style={{ position: "relative", width: "100vw", marginTop:"20vw", marginLeft: "-50vw", marginRight: "-50vw", left: "50%", right: "50%" }}>
-          <TopProject />
-        </div>
+    
        
-        <PopularBuilder />
+       
         {/* <Services2 />
         <Staticcardleft />
         <Staticcardright /> */}
       </div>
+      <div className="mt-10 xl:mt-[20rem] hidden md:block">  <TopProject /></div>
+    
+      <PopularBuilder />
       <WhyChooseUs />
       <Testimonial />
     </div>

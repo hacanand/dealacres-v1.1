@@ -33,7 +33,7 @@ const PopularBuilder = () => {
             <h2 className='text-center text-xl md:text-3xl font-semibold mt-2'>Popular Builders in India</h2>
             <p className='text-center text-md md:text-xl mt-2'>Best Developers in India</p>
             <div className='flex justify-center mt-8'>
-                <div className='mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8'>
                     {Array.from({ length: 4 }).map((_, index) => (
                         <Card
                             key={index}
