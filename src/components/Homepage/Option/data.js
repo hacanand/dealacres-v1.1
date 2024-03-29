@@ -2,7 +2,7 @@ export const cardData = [
     {
       id: 1,
       title: "RESIDENTIAL PROPERTIES",
-      imageUrl: "/homepage/option1.jpg",
+      imageUrl: "/homePage/option1.jpg",
       links: [
         "Flats for Sale in New Delhi",
         "House for Sale in New Delhi",
@@ -27,7 +27,7 @@ export const cardData = [
     {
       id: 2,
       title: "FLATS",
-      imageUrl: "/homepage/option2.webp",
+      imageUrl: "/homePage/option2.webp",
       links: [
         "Flats for Sale in New Delhi",
         "House for Sale in New Delhi",
@@ -52,7 +52,7 @@ export const cardData = [
     {
       id: 3,
       title: "COMMERCIAL PROPERTIES",
-      imageUrl: "/homepage/option3.jpg",
+      imageUrl: "/homePage/option3.jpg",
       links: [
         "Flats for Sale in New Delhi",
         "House for Sale in New Delhi",
@@ -78,7 +78,7 @@ export const cardData = [
     {
       id: 4,
       title: "OFFICES",
-      imageUrl: "/homepage/option4.webp",
+      imageUrl: "/homePage/option4.webp",
       links: [
         "Commercial Space for Sale in New Delhi",
         "Office space for Sale in New Delhi",
