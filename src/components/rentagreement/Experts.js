@@ -19,46 +19,43 @@ const Experts = () => {
   };
   return (
     // <div className="container flex">
-    <div className={styles.MainLayout}>
-      <div>
-        <h2 className={styles.Explore}>Explore our Rent Agreement Experts</h2>
+    <div className={`${styles.MainLayout}  `}>
+      <div className="max-[768px]:!px-4">
+        <h2 className={`${styles.Explore} max-[768px]:!text-2xl max-[768px]:!py-4`}>Explore our Rent Agreement Experts</h2>
         <div>
-      <div>
+          <div className="max-[768px]:!gap-8">
 
-      {filteredData.map((dt, index) => (
-          <ExpertLayout
-            key={index}
-            dt = {dt}
-            filteredData={filteredData}
-            limit={limit}
-          />
-      ))}
-      <div className="text-center">
-    
-    <button className={styles.MoreExperts} onClick={toggleDisplay} >{limit == -1 ? 'View Less':  "View All" }</button>
-    
-    </div>
+            {filteredData.map((dt, index) => (
+              <ExpertLayout
+                key={index}
+                dt={dt}
+                filteredData={filteredData}
+                limit={limit}
+              />
+            ))}
+            <div className="text-center">
+
+              <button className={styles.MoreExperts} onClick={toggleDisplay} >{limit == -1 ? 'View Less' : "View All"}</button>
+
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
 
-        <div>
-
+      <div className="max-[768px]:!w-full max-[768px]:!px-4  ">
 
 
-        <div className={styles.MostSearched}>
+
+        <div className={` ${styles.MostSearched} max-[768px]:!w-full justify-center  `}>
           {data["MostSearched"].map((Cate, index) => (
-    <SearchCategories key={index} city={Cate.Location} category = {Cate.Categories} />
-    ))}
-    </div>
-
-
-          <div>
-          <RealEstateAd />
+            <SearchCategories key={index} city={Cate.Location} category={Cate.Categories} />
+          ))}
         </div>
 
-        </div>
-        {/* </div> */}
+
+
+      </div>
+      {/* </div> */}
     </div>
   );
 };

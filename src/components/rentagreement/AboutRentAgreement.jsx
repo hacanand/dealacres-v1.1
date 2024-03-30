@@ -15,7 +15,8 @@ const AboutRentAgreement = () => {
   return (
     <div>
 
-      <h2 className={styles.AboutTitle}>All you need to know about Rent Agreement</h2>
+      <h2 className={`${styles.AboutTitle} !text-2xl`}>All you need to know about <span className="text-[#FFCE38]">Rent Agreement</span>
+      </h2>
 {/* What is Rent Agreement? */}
       <div className={styles.MainLayout}>
         <div>

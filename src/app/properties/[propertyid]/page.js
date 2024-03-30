@@ -9,6 +9,8 @@ import LeaveReview from '@/components/property/maincontentcontainer/LeaveReview'
 import PropertyBuilder from '@/components/property/PropertyBuilder'
 import SimilarProject from '@/components/property/SimilarProject'
 import ReadMoreProperty from '@/components/property/ReadMoreProperty'
+import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
+
 
 async function Property(params) {
 
@@ -41,11 +43,7 @@ async function Property(params) {
           <h1>Frequently Asked questions</h1>
           <FAQ faqdata={data.mainContent.FaqData} />
         </div>
-        <div>  <h1>
-          Interesting Readings
-        </h1>
-          <ReadMoreProperty />
-        </div>
+        <ReadMore isFullScreen={true}/>
 
 
         <div>

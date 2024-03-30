@@ -15,13 +15,13 @@ const Tabularposts = ({
     <div className='my-4 bg-[#edf6f7]'>
 
       {/* <Heading heading='Read More' /> */}
-      <div className='=  min-[820px]:grid min-[820px]:grid-cols-3 max-w-screen-2xl mx-auto'>
-        <div className='my-2 px-4 min-[820px]:col-span-1 '>
+      <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full overflow-x-auto max-h-[500px] overflow-y-auto'>
+        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           <div>
 
             <TableHeader header='Popular Posts' />
           </div>
-          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px] '>
+          <div className='bg-[#edf6f7] lg:max-h-[600px] '>
             {
               posts.map((post, index) => {
                 return (
@@ -33,11 +33,11 @@ const Tabularposts = ({
 
         </div>
 
-        <div className='my-2 px-4 min-[820px]:col-span-1 '>
+        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           {/* Latest Posts do some validation for grabing latest posts through date. */}
 
           <TableHeader header='Latest Posts' />
-          <div className='bg-[#edf6f7] min-[820px]:max-h-[600px]'>
+          <div className='bg-[#edf6f7] lg:max-h-[600px]'>
             {
               posts.map((post, index) => {
                 return (
@@ -48,12 +48,12 @@ const Tabularposts = ({
           </div>
         </div>
 
-        <div className='my-2 px-4 min-[820px]:col-span-1 '>
+        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           {/* Relevant Articles. */}
 
 
           <TableHeader header='Relevant Articles' />
-          <div className={`min-[820px]:max-h-[600px] min-[820px]:overflow-y-scroll
+          <div className={`lg:max-h-[600px] lg:overflow-y-scroll
           ${styles.articles}
           `}>
 

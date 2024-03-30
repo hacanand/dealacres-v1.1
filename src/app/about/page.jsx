@@ -14,17 +14,17 @@ const About = () => {
   return (
     <>
       <div className='max-w-screen-xl mx-auto py-8'>
-        <div className='px-8 py-4'>
+        <div className='px-4 sm:px-8 py-4'>
           <AboutIntro />
         </div>
 
         {/* Ethics Tabs */}
-        <div className='px-8 py-4'>
+        <div className='px-4  sm:px-8 py-4'>
           <AboutEthics />
         </div>
 
         {/* Leaders Tabs */}
-        <div className='px-8 py-4'>
+        <div className='px-4 sm:px-8 py-4'>
           <Leaders />
         </div>
 

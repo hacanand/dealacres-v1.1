@@ -57,9 +57,15 @@
         display: flex;
     }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 768px){
     .AboutTitle{
-        font-size:18px;
+        font-size: 30px;
+        padding: 12px 20px;
+        padding-bottom: 0px;
+    }
+
+    .AboutTitle span {
+        display: block;
     }
     .MainLayout{
         display: flex;
@@ -72,5 +78,11 @@
         width:100% !important;
         /* flex-direction: column-reverse; */
         flex-flow: row-reverse wrap-reverse;
+    }
+
+
+    .MainLayout img {
+        max-height: 180px;
+        object-fit: unset;
     }
 }

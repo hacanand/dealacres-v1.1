@@ -16,6 +16,7 @@ import { FaArrowUp } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import styles from './allguides.module.css'
 import Link from 'next/link'
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const allPostsData = [
   {
@@ -124,15 +125,15 @@ const AllGuidesPage = () => {
 
       <div className='max-w-screen-xl md:mx-auto px-8 my-6 flex flex-col md:flex-row justify-between gap-12'>
         <div className='w-full md:w-[30%]'>
-          <CheckList tab={tab}  />
+          <CheckList DropIcon={RiArrowDropDownLine} data={allGuidesData} tab={tab}  />
         </div>
-        <div className='w-full md:w-[70%]'>
+        <div className='hidden md:block w-full md:w-[70%]'>
           <h3 className='font-bold text-4xl py-2 text-center md:text-left'>
             {allGuidesData[tab].title}
 
           </h3>
 
-          <div id="manualCards" ref={cardsContRef} className='flex flex-col gap-16 py-4 '>
+          <div id="manualCards" ref={cardsContRef} className='hidden md:flex flex-col gap-16 py-4 '>
             {[...Array(10).keys()].map((key) => {
 
               if(key < cardsToShow){

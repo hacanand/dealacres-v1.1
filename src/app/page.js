@@ -1,6 +1,6 @@
 import Testimonial from "@/components/Homepage/testimonials/Testimonial";
 import Options from "@/components/Homepage/options/Options";
-import Explore from "@/components/Homepage/explore/Explore";
+// import Explore from "@/components/Homepage/explore/Explore";
 import Cities from "@/components/Homepage/Cities/Cities";
 import Header from "../components/Homepage/header/Header";
 import Services from "@/components/Homepage/services/Services";
@@ -14,13 +14,16 @@ import src1 from "../../public/postercardimg1.jpg";
 import src2 from "../../public/postercardimg2.jpg";
 import src3 from "../../public/postercardimg3.jpg";
 import WhyChooseUs from "@/components/Homepage/chooseus/WhyChooseUs";
+import NewExplore from "@/components/Homepage/explore/NewExplore";
+import NewServicesSection from "@/components/Homepage/services/NewServices";
 export default function Home() {
   return (
     <div>
       <Header />
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
         <Services />
-        <Explore />
+      
+        <NewExplore />
         <Postercard
           title="Find Better Places to Live Work and Wonder..."
           src={src1}
@@ -33,8 +36,15 @@ export default function Home() {
         <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
           <Toparticles />
         </div>
+        <div className="">
         <Cities title = {true} />
+
+        </div>
+
+        <div className="mt-16">
         <Options />
+
+        </div>
         <Postercard
           title="Sell or Rent your property faster with DealAcres"
           src={src2}

@@ -100,15 +100,17 @@
 
   .cards-container-responsive{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     column-gap: 1rem;
     row-gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    justify-content: start;
+
+    align-items: stretch;
     position: relative;
-    max-width: 1400px;
-    @apply compact
+
+    /* max-width: 1400px; */
+
   }
 }
 

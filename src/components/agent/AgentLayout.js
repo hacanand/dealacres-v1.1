@@ -15,11 +15,28 @@ const ExpertLayout = (props) => {
           <div className={styles.parentLayout}>
             <div className={styles.ExpertLayout}>
               <div className={styles.ExpertImg}>
-                <Image src={props.dt.src} alt="Experts" />
+                <Image src={props.dt.src} alt="Experts" width={100} height={200} />
               </div>
 
               <div className={styles.ExpertInfo}>
-                <h3 className={styles.ExpertName}>{props.dt.name}</h3>
+                <div className={styles.ExpertName}>
+                <h3 >{props.dt.name}</h3>
+
+                <div className={`${styles.mfeatured}`}>
+                  {props.dt.featured ? (
+                    <button>Featured</button>
+                  ) : (
+                    <button style={{ visibility: "hidden" }}>Featured</button>
+                  )}
+                  <span
+                    onClick={() => {
+                      setFvt(!fvt);
+                    }}
+                  >
+                    {fvt ? "❤️" : "🤍"}
+                  </span>
+                </div>
+                </div>
                 <Rating value={props.dt.rating} />
                 <p className={styles.ExpertPosition}>{props.dt.location}</p>
                 <div className={styles.ExpertStatus}>

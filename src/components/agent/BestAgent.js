@@ -21,6 +21,7 @@ const Agent = (props) => {
       <div className={styles.sidebar}>
         <SideContentContainer Addbox={true} />
 
+        <div className="max-[768px]:w-full max-[768px]:flex max-[768px]:justify-center">  
         <div className={styles.MostSearched}>
           {data["MostSearched"].map((Cate, index) => (
             <SearchCategories
@@ -29,6 +30,7 @@ const Agent = (props) => {
               category={Cate.Categories}
             />
           ))}
+        </div>
         </div>
       </div>
     </div>

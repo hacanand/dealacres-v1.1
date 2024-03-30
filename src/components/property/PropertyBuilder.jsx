@@ -30,7 +30,7 @@ const PropertyBuilder = () => {
 
     return (
         <div className="pt-5">
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold px-4 pt-2 pb-5">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pt-2 pb-5">
                 Projects by DLF Builders
             </h2>
             <div className="flex space-x-4 pb-4 pl-4">
@@ -59,12 +59,22 @@ const PropertyBuilder = () => {
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 breakpoints={{
-                    640: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    400: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 20,
+                    },
+                    560: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
-                    798: {
-                        slidesPerView: 1.5,
+                    
+
+                    768: {
+                        slidesPerView: 2.5,
                         spaceBetween: 20,
                     },
                     1024: {

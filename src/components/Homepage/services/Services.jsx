@@ -43,18 +43,18 @@ const Services = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 600 },
-      items: 3,
+      items: 4,
       slidesToSlide: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 3,
       slidesToSlide: 1,
     },
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <div className="w-full my-6 text-lg sm:text-xl lg:text-3xl font-semibold font-[Poppins] flex justify-center">
         <h2 className="mt-6 text-gray-700  ">
           <span className="text-blue-600">Explore!</span> Our Services
@@ -86,7 +86,7 @@ const Services = () => {
           </div>
         ))}
       </Carousel>
-      <div className="text-center pt-2">
+      <div className="text-center pt-4">
         <p>
           <Link
             href="#"

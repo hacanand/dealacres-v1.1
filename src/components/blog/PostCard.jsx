@@ -16,7 +16,7 @@ const PostCard= ({
         </div>
        
 
-        <div className=''>
+        <div className='text-sm md:text-base'>
         {title}
         </div>
       </div>

@@ -31,6 +31,7 @@ const ImgSlider = () => {
     <div>
       <div className={styles.slider}>
         <Swiper
+
           spaceBetween={46}
           slidesPerView={"auto"}
           loop={true}

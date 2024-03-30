@@ -69,3 +69,31 @@
         width: 100%;
     }
 }
+@media only screen and (max-width: 768px){
+    .RealAgent h2{
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: unset;
+    }
+
+    .Reasons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        background-color: #ffffff;
+        border: 1px solid black;
+        padding: 8px;
+        width: unset;
+        flex-grow: unset;
+        flex-basis: unset;
+        margin-right: unset;
+    }
+
+    .Reasons p {
+        text-align: center;
+        font-size: 16px;
+    }
+}

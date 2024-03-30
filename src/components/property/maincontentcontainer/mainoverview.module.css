@@ -47,10 +47,45 @@
     border-radius: 15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 
     .overviewContent {
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr); */
     }
+
+
+    .overviewData{
+        display: flex;
+        gap: 8px;
+    }
+    
+    .overviewData h5{
+        color: #a6a6a6;
+        font-size: 12px;
+
+
+    }
+    
+    .overviewData h6{
+        font-size: 10px;
+    }
+
+    
+.overviewActions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+}
+
+.overviewActions button{
+    text-align: center;
+    color: white;
+    background-color: #0061df;
+    min-height: unset;
+    font-size: 12px;
+    padding: 4px 12px 4px 12px;
+    border-radius: 15px;
+}
     
 }

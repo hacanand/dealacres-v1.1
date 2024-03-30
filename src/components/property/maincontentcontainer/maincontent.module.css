@@ -23,6 +23,8 @@
     font-weight: 900;
 }
 
+
+
 .head{
     font-size: 40px;
     font-weight: 700;
@@ -78,4 +80,46 @@
 
     .headerComp{}
 
+}
+@media screen and (max-width: 768px){
+
+    .headerComp h6{
+        font-size: 12px;
+        font-weight: 900;
+    }
+
+    .head{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .head p{
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+
+ 
+    
+    .aboutProperty h3{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    
+    .aboutProperty h6{
+        cursor: pointer;
+        margin-top: 4px;
+        color: #0061df;
+        font-weight: 700;
+    }
+
+    .aboutProperty p {
+        font-size: 14px;
+    }
+    
+
+    .mainContainer h1{
+
+        font-size: 18px;
+    }
 }
