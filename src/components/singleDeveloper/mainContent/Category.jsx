@@ -5,6 +5,7 @@ function Category() {
   return (
     <div className={styles.categoryContainer}>
         <h1>Explore Magnificent Project By <span> M3M India Pvt. Ltd</span></h1>
+        <div className={styles.categoryImagesWrapper}>
         <div className={styles.categoryContentContainer}>
             <div className={styles.categoryImgContainer}>
                 <Image
@@ -26,6 +27,7 @@ function Category() {
                 />
             </div>
         <h6>Residential Projects</h6>
+        </div>
         </div>
     </div>
   )

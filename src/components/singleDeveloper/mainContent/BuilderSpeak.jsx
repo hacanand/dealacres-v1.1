@@ -19,17 +19,19 @@ function BuilderSpeak() {
         <div className={styles.subCategories}>
             <p
             onClick={()=>setBuilderInfo('Chairman Message')} 
-            className={builderInfo==='Chairman Message'?styles.selected:''}>
+            className={`${builderInfo==='Chairman Message'?styles.selected:''} border-r border-r-black py-4 min-w-[160px]`}>
                 Chairman Message
             </p>
             <p
             onClick={()=>setBuilderInfo('Mission')} 
-            className={builderInfo==='Mission'?styles.selected:''} style={{borderLeft:'1px solid black', borderRight:'1px solid black'}}>
+            className={`${builderInfo==='Mission'?styles.selected:''} border-r border-r-black py-4`}
+            >
                 Mission
             </p>
             <p
             onClick={()=>setBuilderInfo('Vision')} 
-            className={builderInfo==='Vision'?styles.selected:''}>
+            className={`${builderInfo==='Vision'?styles.selected:''}  py-4`}
+            >
                 Vision
             </p>
         </div>

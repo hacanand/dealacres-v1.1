@@ -13,7 +13,7 @@ const topdevStyle={
 
 function Topdev() {
   return (
-    <div  style={topdevStyle} className='md:!justify-normal'>
+    <div  className='md:!justify-normal w-full flex flex-nowrap md:flex-wrap justify-normal items-center gap-4 md:gap-2 mt-4 overflow-x-auto'>
       <Devcard imgSrc="/property/developerLogo.webp"/>
       <Devcard imgSrc="/property/developerLogo.webp"/>
       <Devcard imgSrc="/property/developerLogo.webp"/>

@@ -1,6 +1,6 @@
 import PopularProjectCard from './PopularProjectCard'
 import Link from 'next/link'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaAngleDown, FaExternalLinkAlt } from 'react-icons/fa'
 
 const popularProjectContentStyle = {
   width:'100%',
@@ -16,13 +16,14 @@ const popularProjectContentStyle = {
 function PopularProjects() {
   return (
     <div style={{width:'100%',marginBottom:'1rem'}}>
-      <div className="justify-center md:justify-normal" style={popularProjectContentStyle}>
+      <div className="md:justify-normal flex-nowrap md:flex-wrap overflow-x-auto w-full flex gap-5 items-center" >
         <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>
       </div>
-      <div className='w-1/2 py-2 rounded my-4 flex items-center justify-center text-white font-bold bg-blue-500 mx-auto md:mx-0 '>
-        <Link className='' href='#viewMore'>More <FaExternalLinkAlt style={{display:'inline'}}/></Link>
+      <div className='w-1/2 py-1 rounded my-4 flex items-center justify-center text-white font-bold bg-blue-700 gap-2  md:mx-0 '>
+        <Link className='' href='#viewMore'>More <FaAngleDown size={20} style={{display: 'inline'}}/> </Link>
+       
       </div>  
     </div>
   )

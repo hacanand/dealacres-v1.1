@@ -6,6 +6,8 @@ import SideContentContainer from '@/components/property/sidecontentcontainer/Sid
 import Topdev from '@/components/locationOverview/content2/Topdev'
 import IntrestingReading from '@/components/locationOverview/content2/IntrestingReads'
 import FAQ from '@/components/property/maincontentcontainer/FAQ'
+import NewHeader from '@/components/singleDeveloper/NewHeader'
+import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
 
 const lato = Lato({
     subsets: ['latin'],
@@ -37,19 +39,21 @@ const FaqData = [
 function page() {
     return(
         <>
-            <Header/>
+            {/* <Header/> */}
+            <NewHeader/>
             <div style={lato.style} className={styles.singleDevPageContainer}>
                 <div className={styles.singleDevPageContentContainer}>  
                     <Maincontent/>
                     <SideContentContainer title='M3M India Pvt. Ltd'/>
                 </div>
                 <div>
-                    <h5>Top Developers in Sector 37D</h5>
+                    <h5>Other Developers</h5>
                     <Topdev/>
                 </div>
                 <div>
-                    <h5>Intresting Readings</h5>
-                    <IntrestingReading/>
+                    
+                    {/* <IntrestingReading/> */}
+                    <ReadMore isFullScreen={true}/>
                 </div>
                 <div>
                     <h5>Frequently Asked Questions</h5>

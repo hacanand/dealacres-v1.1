@@ -7,7 +7,7 @@ import Topdev from '@/components/locationOverview/content2/Topdev'
 
 function Maincontent() {
   return (
-    <div className = {styles.singleDevMainContainer}>
+    <div className = {`${styles.singleDevMainContainer} `}>
         <AboutDev/>
         <div>
             <h5 className='mb-5'>Ongoing projects by M3M India Pvt. Ltd.</h5>

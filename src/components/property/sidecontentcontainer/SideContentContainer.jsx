@@ -25,7 +25,7 @@ function SideContentContainer(props) {
   return (
     <div
       style={lato.style}
-      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4`}
+      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4 my-4 md:my-0 self-start`}
     >
       <form
         className="my-8 md:my-0 flex flex-col gap-2"
@@ -103,7 +103,7 @@ function SideContentContainer(props) {
       {props.Addbox ? (
         ""
       ) : (
-        <div>
+        <div className="hidden">
           <Addbox />
         </div>
       )}

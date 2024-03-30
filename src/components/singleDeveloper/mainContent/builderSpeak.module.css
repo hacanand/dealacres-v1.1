@@ -18,7 +18,8 @@
     width: 100%;
     cursor: pointer;
     font-size: 20px;
-    padding: 1rem;
+    font-weight: bold;
+
 }
 
 .selected{
@@ -28,6 +29,7 @@
 
 .subContent{
     padding: 1.5rem;
+    text-align: justify;
 }
 
 .subContent h2{
@@ -41,4 +43,12 @@
     font-weight: 700;
     color: #0061DF;
     cursor: pointer;
+}
+
+@media screen and (max-width: 640px){
+    
+.subCategories p{
+    font-size: 16px;
+
+}
 }

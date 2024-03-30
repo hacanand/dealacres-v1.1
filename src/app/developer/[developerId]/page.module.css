@@ -4,6 +4,7 @@
     flex-direction: column;
     row-gap: 2rem;;
     padding: 3rem 12rem 3rem 12rem;
+    max-width: 100%;
 }
 
 .singleDevPageContentContainer{
@@ -16,4 +17,54 @@
 .singleDevPageContainer h5{
     font-size: 28px;
     font-weight: 700;
+}
+
+
+@media screen and (max-width: 768px) {
+    .singleDevPageContainer{
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        row-gap: 2rem;;
+        padding: 0 2rem;
+    }
+    
+    .singleDevPageContentContainer{
+        width: 100%;
+        justify-content: space-between;
+        display: block;
+
+    }
+    
+    .singleDevPageContainer h5{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
+    
+    
+}
+@media screen and (max-width: 640px) {
+    .singleDevPageContainer{
+        width: 100%;
+        display: block;
+
+        row-gap: 2rem;;
+        padding: 0 1rem;
+    }
+    
+    .singleDevPageContentContainer{
+        width: 100%;
+        justify-content: space-between;
+        display: block;
+
+    }
+    
+    .singleDevPageContainer h5{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
+    
+    
 }
