@@ -1,5 +1,5 @@
-.cards-wrapper {
-  margin: 1rem 2rem 4rem 2rem;
+.wrap {
+  margin: 10rem 3rem 4rem 3rem;
   justify-content: center;
 }
 
@@ -9,28 +9,37 @@
   gap: 20px; 
 }
 
-.card {
+/* .card {
   background-color: #fdfcfc;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+} */
+.title{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  
 }
 
-.card-content {
-  position: relative;
-}
-
-.card-image {
-  width: 100%;
-  height: 200px; 
+.img {
+  flex: 1;
   background-size: cover;
   background-position: center;
+  @apply object-cover
 }
 
-.card.active {
-  width: 80%; 
-  margin: 0;
-}
 
 .close-button {
   position: absolute;

@@ -18,9 +18,9 @@ const NewOption = () => {
   };
 
   return (
-    <div className="cards-wrapper">
+    <div className="wrap">
       <div>
-        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
+        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-3 ">
           GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
         </h2>
       </div>
@@ -33,15 +33,15 @@ const NewOption = () => {
               flex: activeCard === card.id ? "0 0 160px" : "0 0 160px",
               minWidth: activeCard === card.id ? "80%" : "280px",
               height: activeCard === card.id ? "100%" : "230px",
-              width: activeCard === card.id ? "80%" : "230px",
+              width: activeCard === card.id ? "80%" : "160px",
               margin: activeCard === card.id ? "0px" : "0px",
             }}
             onClick={() => handleCardClick(card.id)}
           ><>
             <div
-              className="card-content"
+              className="contents"
               style={{
-                background: "blue",
+                background: activeCard === card.id ? "blue" : "none",
               }}
             >
               {activeCard === card.id && (
@@ -53,12 +53,12 @@ const NewOption = () => {
                 </button>
               )}
               <div
-                className="card-image"
-                style={{ backgroundImage: `url(${card.imageUrl})` }}
+                className="img"
+                style={{ backgroundImage: `url(${card.imageUrl})` ,height: activeCard== card.id ?'100%':'75%'}}
               />
               {activeCard === card.id && (
                 <div className="md:ml-5 lg:ml-14">
-                  <ul className="py-4 text-sm grid grid-cols-3 text-white gap-1">
+                  <ul className="py-2 text-sm grid grid-cols-3 text-white gap-2">
                     {card.links.map((link, index) => (
                       <li key={index} className="mr-3 hover:text-black">
                         <a href="#">{link}</a>
@@ -69,7 +69,7 @@ const NewOption = () => {
               )}
              
             </div>
-            <div className="mt-2 text-md text-center ">{card.title}</div>
+            <div className=" title mt-2 text-md text-center ">{card.title}</div>
             </>
           </div>
           

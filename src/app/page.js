@@ -46,7 +46,7 @@ export default function Home() {
 
 
 
-      <div className="mt-10 xl:mt-[19rem] w-full">
+      <div className="mt-10 xl:mt-[20rem] w-full">
         <NewOption />
       </div>
        
