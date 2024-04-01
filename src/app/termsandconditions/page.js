@@ -9,6 +9,8 @@ const page = () => {
       <Image
       src={TandCBanner}
       alt='Terms and Conditions'
+      width={400}
+      height={200}
       className={styles.banner}
       />
       <Content />

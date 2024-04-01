@@ -34,7 +34,7 @@ DealAcres can change these rules at any time. If they do, the new rules will be 
 <li><strong>User:</strong> Encompasses individuals or corporate entities who act as Subscribers/Advertisers and Browsers/Visitors. This term applies to both those who are named in the application form, as well as their successors and authorized assignees. "User" or "You" also encompasses any individual accessing or utilizing the Services offered by the Company to host, publish, share, list, transact, view, display, or upload information or opinions. Additionally, it includes other individuals jointly participating in using the Company's provided Services.</li>
         </ol>
 
-        <p>Interpretation:</p>
+        <h2>Interpretation:</h2>
         <ul>
             <li>In this Agreement, words indicating the masculine gender are also inclusive of the feminine gender, and singular terms encompass the plural, and vice versa, as warranted by the context.
             </li>
