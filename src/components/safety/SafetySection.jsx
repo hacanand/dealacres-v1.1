@@ -16,7 +16,7 @@ const SafetySection = ({
     const [showFull, setShowFull] = useState(false);
     return (
         <div>
-            <div className='py-2 font-bold text-3xl'>
+            <div className='py-2 font-bold text-2xl md:text-3xl'>
                 {title}
             </div>
            
@@ -51,7 +51,7 @@ const SafetySection = ({
                                 className='
                                 transition-all
                                 text-blue-600
-                                hover:text-blue-400 font-medium text-lg px-8 py-4'>
+                                hover:text-blue-400 font-medium text-base md:text-lg px-8 '>
                                     {showFull ? 'Read Less' : 'Read More'}
                                 </button>
                             </div>
@@ -61,7 +61,7 @@ const SafetySection = ({
 
                 
                 {img && (
-                    <div className={`relative mx-auto  w-full min-h-[400px]  min-[968px]:w-1/2 min-[968px]:max-h-[600px] ${order === 'reverse' ? '-order-1' : 'order-1'}`}>
+                    <div className={`relative mx-auto  w-full min-h-[400px]  min-[968px]:w-1/2 min-[968px]:max-h-[600px] ${order === 'reverse' ? '-order-1' : 'order-1'} hidden md:block`}>
                         <Image
                             src={`/safety/${img}`}
                             fill

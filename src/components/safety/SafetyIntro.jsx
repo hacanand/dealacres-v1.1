@@ -6,7 +6,7 @@ const SafetyInro = ({
 }) => {
   return (
     <div>
-        <p className='font-bold text-xl'>{title}</p>
+        <p className='font-bold text-2xl md:text-xl'>{title}</p>
         <p className='text-justify text-lg font-normal'>{content}</p> 
     </div>
   )
