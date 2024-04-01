@@ -1,52 +1,55 @@
 /* banner */
 
 .Banner{
-    padding: 0rem 12rem;
-    position: relative !important;
+    margin: 0rem 12rem;
+
+
+
+
 }
 
 .Title{
-    font-size: 5.5rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 400;
     letter-spacing: 5px;
-    position: absolute;
-    top: 25%;
-    right: 15%;
+    padding-right: 4px;
 }
 
 
 @media only screen and (max-width: 1034px)  {
     .Title{
-        font-size: 4rem;
+        font-size: 2.5rem;
         letter-spacing: 4px;
         top: 28%;
     }
     .Banner{
-        padding: 0rem 3rem;
+        margin: 0rem 3rem;
         height: 30vh;
     }
 }
 @media only screen and (max-width: 992px)  {
     .Title{
-        font-size: 3rem;
+        font-size: 2rem;
         letter-spacing: 3px;
         top: 15%;
     }
     .Banner{
-        padding: 0rem 3rem;
+        margin: 0rem 3rem;
         height: 30vh;
     }
 }
 
 
-@media only screen and (max-width: 500px)  {
+
+@media only screen and (max-width: 768px)  {
     .Title{
-        font-size: 1.4rem;
+        font-size: 2rem;
         letter-spacing: 1px;
-        top: 13%;
+     
     }
     .Banner{
-        padding: 0rem 3rem;
-        height: 40vh;
+        margin: 0rem;
+
+        object-fit: unset;
     }
 }

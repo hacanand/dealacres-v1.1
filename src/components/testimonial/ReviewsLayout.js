@@ -18,7 +18,7 @@ const ReviewsLayout = () => {
   };
 
   return (
-    <div>
+    <div className="relative overflow-visible after:content-[''] after:absolute after:h-[90%] after:w-[100%]  after:top-[7rem] after:rounded-[2rem] after:bg-[#e4eefe]  after:-z-10 flex flex-col gap-4 px-4 items-center justify-center">
       {filteredData.map((dt, index) => (
       <div key={dt.id} className={styles.reviewBlock}>
         {/* <div> */}
@@ -27,6 +27,7 @@ const ReviewsLayout = () => {
         <Image
         src={dt.src}
         alt='User'
+        className='w-full h-full'
         />
       </div>
       <div className={styles.UserInfo}>
