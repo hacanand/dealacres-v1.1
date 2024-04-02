@@ -2,9 +2,7 @@
 
 .postercardContainer{
     display: flex;
-   
     align-items: flex-start;
-    justify-content: center;
     width: 100%;
     margin: auto;
     column-gap: 2.5rem;
@@ -22,7 +20,7 @@
 }
 
 .imgContainer{
-    width: 350px;
+    width: 450px;
     height: 350px;
 }
 

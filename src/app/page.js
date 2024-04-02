@@ -25,9 +25,9 @@ export default function Home() {
     <div className=" overflow-hidden">
       <Header />
       <ExploreServices />
-      <Explore />
-      <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
-  
+
+      <div className="max-w-[1100px] mx-auto">
+        <Explore />
         <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
@@ -41,56 +41,43 @@ export default function Home() {
           <div className="toparticles-container">
             <Toparticles />
           </div>
-        </div> 
-      </div>
-
-
- 
-      <div className="mt-10 lg:mt-[24rem] xl:mt-[20rem] w-full">
+        </div>
+        <div className="mt-10 lg:mt-[20rem] w-full">
         <NewOption />
-      </div> 
-       
-
-      <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
-          <div style={{ position: "relative" }}>
-            <Postercard
-              title="Sell or Rent your property faster with DealAcres"
-              src={src2}
-              alt="src2"
-              sidecontent1="POST YOUR PROPERTY"
-              sidecontent4="Register to post your property for "
-              s2spantext="FREE"
-              sidecontent3="Sell or rent your residential/commercial property"
-              buttontext="Post your property FREE"
-            />
-            <div className="Articlesmanual-container">
-              <Articlesmanual />
-            </div>
-
-          </div>
-          {/* <div className="mt-10 lg:mt-[20rem]">
-          {/* <Postercard
-            src={src3}
-            alt="src3"
-            sidecontent1="RENT A HOME"
-            sidecontent4="Rental Homes for Everyone "
-            sidecontent3="Explore from Apartments, builder homes, villas and more"
-            buttontext="Find a home for RENT"
-          /> */}
-          {/* <TopProject /> */}
-          {/* </div> */}
-
-
-
-          {/* <Services2 />
-        <Staticcardleft />
-        <Staticcardright /> */}
       </div>
-     
-      <div className="mt-10 xl:mt-[20rem]">  <TopProject /></div>
+      </div>
 
-      <PopularBuilder />
-      <WhyChooseUs />
+
+
+     
+
+
+      <div className="max-w-[1100px] mx-auto">
+        <div style={{ position: "relative" }}>
+          <Postercard
+            title="Sell or Rent your property faster with DealAcres"
+            src={src2}
+            alt="src2"
+            sidecontent1="POST YOUR PROPERTY"
+            sidecontent4="Register to post your property for "
+            s2spantext="FREE"
+            sidecontent3="Sell or rent your residential/commercial property"
+            buttontext="Post your property FREE"
+          />
+          <div className="Articlesmanual-container">
+            <Articlesmanual />
+          </div>
+
+        </div>
+
+      </div>
+
+      <div className="mt-10 lg:mt-[20rem]">  <TopProject /></div>
+      <div className="max-w-[1100px] mx-auto">
+        <PopularBuilder />
+        <WhyChooseUs />
+      </div>
+
       <Testimonial />
     </div>
 

@@ -36,10 +36,10 @@ const Explore = () => {
             key={card.id}
             className={`card ${activeCard === card.id ? "active" : ""}`}
             style={{
-              flex: activeCard === card.id ? "0 0 160px" : "0 0 160px",
-              minWidth: activeCard === card.id ? "80%" : "160px",
+              flex: activeCard === card.id ? "0 0 180px" : "0 0 170px",
+              minWidth: activeCard === card.id ? "100%" : "170px",
               height: activeCard === card.id ? "100%" : "230px",
-              width: activeCard === card.id ? "80%" : "160px",
+              width: activeCard === card.id ? "80%" : "170px",
               margin: activeCard === card.id ? "0px" : "0px",
             }}
             onMouseEnter={() => handleCardHover(card.id)}

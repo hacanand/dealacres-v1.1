@@ -33,9 +33,9 @@ const NewOption = () => {
              className={`card ${activeCard === card.id ? "active" : ""} `}
             style={{
               flex: activeCard === card.id ? "0 0 260px" : "0 0 260px",
-              minWidth: activeCard === card.id ? "82%" : "260px",
+              minWidth: activeCard === card.id ? "100%" : "260px",
               height: activeCard === card.id ? "100%" : "220px",
-              width: activeCard === card.id ? "80%" : "200px",
+              width: activeCard === card.id ? "100%" : "230px",
               margin: activeCard === card.id ? "0px" : "0px",
               
             }}
@@ -61,7 +61,7 @@ const NewOption = () => {
                 style={{ backgroundImage: `url(${card.imageUrl})` ,height: activeCard== card.id ?'100%':'75%'}}
               />
               {activeCard === card.id && (
-                <div className="md:ml-5 lg:ml-10">
+                <div className="md:ml-5 lg:ml-8">
                   <ul className="py-2 text-sm grid grid-cols-3 text-white gap-2">
                     {card.links.map((link, index) => (
                       <li key={index} className="mr-3 hover:text-black">
