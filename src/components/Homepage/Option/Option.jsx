@@ -48,14 +48,14 @@ const NewOption = () => {
                 background: activeCard === card.id ? "blue" : "none",
               }}
             >
-              {activeCard === card.id && (
+              {/* {activeCard === card.id && (
                 <button
                   className="close-button"
                   onClick={(event) => handleCloseButtonClick(event, card.id)}
                 >
                  <IoMdCloseCircleOutline color='white' className="w-6 h-6 cursor-pointer" />
                 </button>
-              )}
+              )} */}
               <div
                 className="img"
                 style={{ backgroundImage: `url(${card.imageUrl})` ,height: activeCard== card.id ?'100%':'75%'}}

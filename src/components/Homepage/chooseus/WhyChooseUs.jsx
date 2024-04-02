@@ -4,18 +4,18 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const Card = ({ imageUrl, description }) => {
-
   return (
-    <div className=" p-3 mx-auto bg-white rounded-sm overflow-hidden flex flex-col items-center shadow-xl h-[240px] w-[200px] ">
-      <Image
-        src={imageUrl}
-        alt="Card Image"
-       width={100}
-       height={100}
-      />
+    <div className="p-3 mx-auto bg-white rounded-sm overflow-hidden flex flex-col items-center shadow-xl h-[240px] w-[200px]">
+      <div className="relative overflow-hidden transition-transform duration-300 transform hover:scale-110 cursor-pointer">
+        <Image
+          src={imageUrl}
+          alt="Card Image"
+       width={100} height={100}
+        />
+      </div>
 
       <div className="mt-4">
-        <p className="text-black  font-medium text-[12px]">
+        <p className="text-black font-medium text-[12px]">
           {description}
         </p>
       </div>
