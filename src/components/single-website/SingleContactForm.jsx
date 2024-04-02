@@ -58,9 +58,9 @@ const SingleContactForm = () => {
                     <ClipLoader color={'#D8E6FE'} size={100}/>
                 </div>
             }
-      <div className='max-w-screen-lg mx-auto  px-4 flex flex-col items-start gap-8 py-8'>
+      <div className='max-w-screen-lg mx-auto  px-4 flex flex-col items-start gap-4 md:gap-8 py-4 md:py-8'>
             <div className='self-center'>
-                <h2 className='text-6xl font-bold text-white py-6 '>
+                <h2 className='text-3xl md:text-6xl font-bold text-white py-2 md:py-6 '>
                     Contact Us
                 </h2>
             </div>

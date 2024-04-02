@@ -33,7 +33,7 @@ const WelcomeSection = ({
                             </p>
                             <br/>
                           
-                           { showFull && <p className="hidden md:block">
+                           { showFull && <p className="">
                             We are considered to be the Top Real Estate consultant in Delhi NCR. Geetanjali Homestate is not just a name but a pure brand in Gurgaon Region. We have successfully upgraded our position as one of the top Real Estate Consultants in Gurgaon. We strive to offer the best possible deals because we care for investor’s hard-earned capital. For the best people, the best services are to be given and Geetanjali Hometate is where your search for “best real estate broker in Gurgaon” ends.
                             </p>}
 
@@ -48,7 +48,7 @@ const WelcomeSection = ({
 
                 
           
-                    <div className={` mx-auto  w-full   md:w-1/2 -order-1  `}>
+                    <div className={` mx-auto  w-full   md:w-1/2 -order-1 hidden md:block  `}>
                         <Image
                             src={houseInHand}
                             className='object-cover w-full h-full'
