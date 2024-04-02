@@ -37,9 +37,9 @@ const Explore = () => {
             className={`card ${activeCard === card.id ? "active" : ""}`}
             style={{
               flex: activeCard === card.id ? "0 0 160px" : "0 0 160px",
-              minWidth: activeCard === card.id ? "100%" : "160px",
+              minWidth: activeCard === card.id ? "80%" : "160px",
               height: activeCard === card.id ? "100%" : "230px",
-              width: activeCard === card.id ? "100%" : "160px",
+              width: activeCard === card.id ? "80%" : "160px",
               margin: activeCard === card.id ? "0px" : "0px",
             }}
             onMouseEnter={() => handleCardHover(card.id)}

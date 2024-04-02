@@ -6,8 +6,8 @@ import React, { useState } from 'react';
 
 const Card = ({ index, imageUrl, heading }) => {
     return (
-        <div key={index} className="w-28 flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
-            <p className='font-bold text-center'>{heading}</p>
+        <div key={index} className="w-28 lg:w-[90px] xl:w-28 flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
+            <p className='font-bold text-center lg:text-xs xl:text-base'>{heading}</p>
             <Image src={imageUrl} width={40} height={60} alt={heading} />
         </div>
     );
@@ -63,10 +63,10 @@ const ExploreServices = () => {
    
 
     return (
-        <div className='bg-[#e3f4f4] p-10'>
+        <div className='bg-[#e3f4f4] p-10 '>
             <h2 className='text-center font-semibold text-lg md:text-2xl mb-10'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
             <div className='flex justify-center'>
-                <div className='mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-6 cursor-pointer'>
+                <div className='grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-6  cursor-pointer'>
                     {cardData.map((card, index) => (
                         <Card key={index} imageUrl={card.imageUrl} heading={card.heading} />
                     ))}

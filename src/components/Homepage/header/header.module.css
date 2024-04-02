@@ -133,6 +133,42 @@
     }
   }
 
+@media screen and (max-width:1300px) and (min-width:1100px){
+    .HeaderContentInput{
+        display: flex;
+        width: 75%;
+        background-color: white;
+        padding: 8px;
+        border-radius: 10px;
+       
+    }
+    .headerContent h1{
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @apply text-white
+        font-[Poppins]
+    }
+    .HeaderContentInput button{
+        min-height:50px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 25px;
+        padding: 0 0.5rem;
+    
+    }
+    .LocationDropdown {
+        display: flex;
+        flex: 2.4;
+        
+    }
+    .LocationDropdown select {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 0.25rem; 
+    }
+} 
+
 @media screen and (max-width:1050px){
     .TextWrap{
         width: 70%;

@@ -25,9 +25,9 @@ export default function Home() {
     <div className=" overflow-hidden">
       <Header />
       <ExploreServices />
-
+      <Explore />
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">
-        <Explore />
+  
         <div style={{ position: "relative" }}>
           <Postercard
             title="Find Better Places to Live Work and Wonder..."
@@ -41,14 +41,14 @@ export default function Home() {
           <div className="toparticles-container">
             <Toparticles />
           </div>
-        </div>
+        </div> 
       </div>
 
 
-
-      <div className="mt-10 xl:mt-[20rem] w-full">
+ 
+      <div className="mt-10 lg:mt-[24rem] xl:mt-[20rem] w-full">
         <NewOption />
-      </div>
+      </div> 
        
 
       <div className="lg:ml-32 lg:mr-32 md:mr-20 md:ml-20 mr-5 ml-5">

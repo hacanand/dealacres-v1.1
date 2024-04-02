@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { testimonialData } from "./tdata";
 import Image from "next/image";
-// import NextArrow from "@/components/faq/NextArrow";
 import './Testimonial.css'
 import NextArrow from "./NextArrow";
 
@@ -50,7 +49,7 @@ const Testimonial = () => {
   const settings = {
     infinite: true,
     speed: 200,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
     rows: 1,
@@ -65,7 +64,7 @@ const Testimonial = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
       
         }
@@ -90,7 +89,7 @@ const Testimonial = () => {
 
   return (
     <div className="relative py-10 bg-indigo-50 mb-24">
-      <div className="max-w-full mx-auto px-10 xl:flex xl:justify-center  ">
+      <div className="max-w-full mx-auto px-10 testimonial-container">
         <div className="flex flex-col items-start justify-center">
           <h2 className="text-3xl font-bold font-[Poppins] mb-4 uppercase text-blue-900">
             Testimonials
@@ -102,11 +101,11 @@ const Testimonial = () => {
             Hear from our satisfied buyers, tenants, owners and dealers
           </p>
         </div>
-        <div className=" max-w-screen-lg -mb-24 pt-5 lg:pt-10  ">
+        <div className=" max-w-screen-lg xl:max-w-[1080px] -mb-24 pt-5 xl:pt-10  ">
           <Slider {...settings} prevArrow={null} >
             {testimonialData.map((testimonial) => (
               <div key={testimonial.id}>
-                <div className="bg-white shadow-blue-800 shadow-sm rounded-lg p-6 mx-4 mt-3 mb-2 pb-3">
+                <div className="bg-white shadow-blue-800 shadow-sm rounded-lg p-3 mx-4 mt-3 mb-2 pb-3">
                   <div className="flex items-center mb-4">
                     <Image
                       src={testimonial.avatar}
@@ -116,15 +115,15 @@ const Testimonial = () => {
                       height={56}
                     />
                     <div className="testimonial-info">
-                      <h3 className="text-xl font-bold mt-3 mb-2">
+                      <h3 className="text-md font-bold mt-3 mb-2">
                         {testimonial.name}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm">
                         {testimonial.designation}
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-800 text-base mb-4">
+                  <p className="text-gray-800 text-sm mb-4">
                     {testimonial.testimonial}
                   </p>
                 </div>

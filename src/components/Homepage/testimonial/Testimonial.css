@@ -8,3 +8,9 @@
   right: 8px !important;
  
 }
+@media screen and (min-width: 1300px) {
+  .testimonial-container {
+    display: flex; 
+    justify-content: center;
+  }
+} 
