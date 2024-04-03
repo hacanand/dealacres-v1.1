@@ -144,11 +144,17 @@ const Navbar = () => {
           />
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
-        <select value={selectedLocation} onChange={handleLocationChange} className="text-white bg-blue-600 py-2  px-1 rounded-md font-bold hidden md:block nav-drop">
-          <option className="text-black bg-white" value="Gurugaon">Gurugaon</option>
-          <option className="text-black bg-white" value="Delhi">Delhi</option>
-          <option className="text-black bg-white" value="Mumbai">Mumbai</option>
-        </select>
+       
+  <select
+    value={selectedLocation}
+    onChange={handleLocationChange}
+    className="text-white bg-transparent font-bold hidden md:block nav-drop"
+  >
+    <option className="text-black bg-white" value="Gurugaon">Gurugaon</option>
+    <option className="text-black bg-white" value="Delhi">Delhi</option>
+    <option className="text-black bg-white" value="Mumbai">Mumbai</option>
+  </select>
+ 
         <div className="navbar-links__container">
           <Menu
             setMenuPosition={setMenuPosition}

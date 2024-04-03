@@ -10,7 +10,7 @@ const Card = ({ imageUrl, description }) => {
         <Image
           src={imageUrl}
           alt="Card Image"
-       width={100} height={100}
+       width={80} height={80}
         />
       </div>
 

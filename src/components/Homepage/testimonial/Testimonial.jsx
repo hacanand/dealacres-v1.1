@@ -64,7 +64,7 @@ const Testimonial = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
       
         }
@@ -91,21 +91,21 @@ const Testimonial = () => {
     <div className="relative py-10 bg-indigo-50 mb-24">
       <div className="max-w-full mx-auto px-10 testimonial-container">
         <div className="flex flex-col items-start justify-center">
-          <h2 className="text-3xl font-bold font-[Poppins] mb-4 uppercase text-blue-900">
+          <h2 className="text-3xl heading font-bold font-[Poppins] mb-4 uppercase text-blue-900">
             Testimonials
           </h2>
-          <p className="text-2xl font-bold mb-5">
+          <p className="text-2xl paragraph font-bold mb-5">
             What our customers are saying about Deal Acres
           </p>
-          <p className="text-md font-light text-gray-400">
+          <p className="text-md font-light description text-gray-400">
             Hear from our satisfied buyers, tenants, owners and dealers
           </p>
         </div>
-        <div className=" max-w-screen-lg xl:max-w-[1080px] -mb-24 pt-5 xl:pt-10  ">
+        <div className=" max-w-[890px] xl:max-w-[1080px] -mb-24 pt-5 xl:pt-10  ">
           <Slider {...settings} prevArrow={null} >
             {testimonialData.map((testimonial) => (
               <div key={testimonial.id}>
-                <div className="bg-white shadow-blue-800 shadow-sm rounded-lg p-3 mx-4 mt-3 mb-2 pb-3">
+                <div className="bg-white shadow-blue-800 h-[14rem] xl:h-[12rem] shadow-sm rounded-lg p-3 mx-3 mt-3 mb-2 pb-3">
                   <div className="flex items-center mb-4">
                     <Image
                       src={testimonial.avatar}
