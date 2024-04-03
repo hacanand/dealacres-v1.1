@@ -18,11 +18,12 @@ const GuidesSlider = ({
 
 
     const settings = {
-        className: "slider",
+        className: "slider variable-width",
         dots: false,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
+        variableWidth: true,
         nextArrow: <GuidesCustomArrow icon={AiOutlineRight} isNext/>,
         responsive: [
             {
@@ -33,7 +34,7 @@ const GuidesSlider = ({
                 rows:1,
                 arrows:false,
                 dots: true,
-                
+                variableWidth: true,
                 infinite: true,
 
               }
@@ -48,7 +49,7 @@ const GuidesSlider = ({
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='w-[100px] h-[250px] mr-2' onClick={() => handleTabChange(index)}>
+                            <div key={index} className='mr-[2.3rem] ' onClick={() => handleTabChange(index)}>
 
 
                                 <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />

@@ -186,7 +186,32 @@
     display: none;
 }
 
-
+.custom-select-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    @apply pr-6
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0; 
+    transform: translateY(-50%);
+    width: 15px; 
+    height: auto; 
+  }
+  
 
 
 @media screen and (max-width:1155px) {

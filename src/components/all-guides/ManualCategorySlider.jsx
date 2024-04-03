@@ -73,7 +73,7 @@ const ManualCategorySlider = ({
 
 
             {/* Tab Content  */}
-            {/* <div className='py-8'>
+             <div className='py-8'>
                 <div className='flex flex-col items-center md:grid md:grid-cols-12 gap-8 '>
                     <div className='w-[180px] h-[250px] 
                     md:col-span-3
@@ -94,7 +94,7 @@ const ManualCategorySlider = ({
                         {guide.content}
                     </p>
                 </div>
-            </div> */}
+            </div> 
         </div>
     )
 }

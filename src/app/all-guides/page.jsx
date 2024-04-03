@@ -99,7 +99,7 @@ const AllGuidesPage = () => {
       <AllGuidesBanner />
 
       {/* Guides Slider */}
-      <div className='max-w-[1060px]  mx-auto my-6'>
+      <div className='max-w-[1060px]   mx-auto my-6'>
 
         <GuidesSlider allGuides={allGuidesData} handleTabChange={handleTabChange} />
       </div>
@@ -177,7 +177,7 @@ const AllGuidesPage = () => {
 
       {/* tabular posts */}
 
-      <div className='py-4 max-w-[1060px] mx-auto'>
+      <div className='py-4 mb-6 max-w-[1060px] mx-auto'>
 
         <Tabularposts
           posts={allPostsData}

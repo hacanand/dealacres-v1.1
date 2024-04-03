@@ -16,8 +16,8 @@
 @media screen and (min-width: 1000px) {
 
     .guideCard {
-        height: 18rem;
-        width: 12rem;
+        height: 14rem;
+        width: 10rem;
     }
 }
 @media screen and (min-width: 1280px) {
@@ -33,10 +33,10 @@
     }
     
     .guideCard {
-        width: 15rem;
+        width: 10rem;
         /* align-self: stretch; */
         justify-content: center;
-        height: 18rem;
+        height: 14rem;
       
     }
 }

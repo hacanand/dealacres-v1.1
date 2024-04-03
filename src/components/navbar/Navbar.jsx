@@ -9,7 +9,7 @@ import FlyoutMenuSections from "./FlyoutMenuSections";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
-  
+
 
   const handleMouseEnter = (menu, event) => {
     setHoveredMenu(menu);
@@ -144,17 +144,20 @@ const Navbar = () => {
           />
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
-       
-  <select
-    value={selectedLocation}
-    onChange={handleLocationChange}
-    className="text-white bg-transparent font-bold hidden md:block nav-drop"
-  >
-    <option className="text-black bg-white" value="Gurugaon">Gurugaon</option>
-    <option className="text-black bg-white" value="Delhi">Delhi</option>
-    <option className="text-black bg-white" value="Mumbai">Mumbai</option>
-  </select>
- 
+
+        <div class="custom-select-container">
+          <select
+            value={selectedLocation}
+            onChange={handleLocationChange}
+            className="text-white bg-transparent font-bold hidden md:block nav-drop custom-select"
+          >
+            <option className="text-black bg-white" value="Gurugaon">Gurugaon</option>
+            <option className="text-black bg-white" value="Delhi">Delhi</option>
+            <option className="text-black bg-white" value="Mumbai">Mumbai</option>
+          </select>
+          <img src="dropdown arrow.png" alt="Dropdown arrow" class="custom-arrow"/>
+        </div>
+
         <div className="navbar-links__container">
           <Menu
             setMenuPosition={setMenuPosition}
@@ -219,7 +222,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      
+
       {hoveredMenu && (
         <div
           className="flyout-menu-container mt-6"
