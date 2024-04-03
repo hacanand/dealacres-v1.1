@@ -22,8 +22,6 @@ const Item = ({ Links, title, isSocial }) => {
           </Link>
         </li>
       ))}
-     </div>
-     </div>
     </ul>
   );
 };
