@@ -25,7 +25,7 @@ function Locality(props) {
                 </div>
                 <div className={styles.localityContentData}>
                     <div className={styles.localityContentDataProCon}>
-                        <h2><FaThumbsUp style={{display: 'inline', marginRight: '0.5rem' }} color='#33cc33' /> Pro&apos;s</h2>
+                        <h2><FaThumbsUp style={{ display: 'inline', marginRight: '0.5rem' }} color='#33cc33' /> Pro&apos;s</h2>
                         <ul>
                             {props.localityData.Pros.map((dt, index) => (
                                 <li key={index}><PiThumbsUp style={{ marginRight: '0.5rem', display: 'inline' }} color='#33cc33' />{dt}</li>
@@ -33,7 +33,7 @@ function Locality(props) {
                         </ul>
                     </div>
                     <div className={styles.localityContentDataProCon}>
-                        <h2><FaThumbsDown style={{ display: 'inline' , marginRight: '0.5rem',}} color='red' /> Con&apos;s</h2>
+                        <h2><FaThumbsDown style={{ display: 'inline', marginRight: '0.5rem', }} color='red' /> Con&apos;s</h2>
                         <ul>
                             {props.localityData.Cons.map((dt, index) => (
                                 <li key={index} >

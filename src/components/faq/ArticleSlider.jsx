@@ -61,6 +61,7 @@ const ArticleSlider = () => {
               
               }
             },
+ 
             {
               breakpoint: 768,
               settings: {
@@ -72,7 +73,7 @@ const ArticleSlider = () => {
               }
             },
             {
-              breakpoint: 600,
+              breakpoint: 400,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

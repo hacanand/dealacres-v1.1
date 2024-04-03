@@ -13,7 +13,7 @@ const FAQ = ({ question, answer, isOpen, toggleFaq }) => {
         ) : (
           <BiSolidRightArrow className="w-4 text-black" />
         )}
-        <p className="text-lg font-bold max-sm:text-sm">{question}</p>
+        <p className="text-lg font-bold max-md:text-sm">{question}</p>
       </div>
       {isOpen && (
         <div className="p-3">

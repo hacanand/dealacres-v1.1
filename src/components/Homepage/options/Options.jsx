@@ -34,7 +34,7 @@ const Options = () => {
 
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1300 },
       items: 5,
       slidesToSlide: 0, 
     },
@@ -73,11 +73,13 @@ const Options = () => {
         deviceType={deviceType}
         focusOnSelect={true}
         dotListClass="custom-dot-list-style"
-        itemClass="px-0 mt-2"
+        itemClass="px-0 flex items-center  justify-center "
+
+
         className="gap-2 sm:gap-0 sm:pl-2"
       >
         {options.map((src) => (
-          <div key={src.name} className="gap-0">
+          <div key={src.name} className="h-full max-[640px]:w-[80%]">
             <Card imgsrc={src.link} service={src.name} />
           </div>
         ))}

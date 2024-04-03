@@ -12,22 +12,22 @@ const AgentContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const onSubmit = async (data) => {
 
-        setIsLoading(true) 
-      
-       
+        setIsLoading(true)
+
+
 
         setTimeout(() => {
             console.log(data);
-            
-          
+
+
             alert("You message has been successfully sent to the agent!")
             setIsLoading(false)
 
         }, 3000)
 
-       
 
-      
+
+
 
     }
     const {
@@ -38,24 +38,25 @@ const AgentContactForm = () => {
         <div className="relative">
             {
                 isLoading && <div className='w-full h-full absolute opacity-50 bg-black flex justify-center items-center'>
-                    <ClipLoader color={'#D8E6FE'} size={100}/>
+                    <ClipLoader color={'#D8E6FE'} size={100} />
                 </div>
             }
-            <h2 className='font-bold text-2xl uppercase'>
+            <h2 className='font-bold text-xl md:text-2xl uppercase'>
                 Ask sanya a question
             </h2>
 
-           <div className='w-full'>
-           <FormGroup
-                labelValue="Name"
-                id="name"
-                register={register}
-                required errors={errors}
-                requiredMessage={"Please Enter Your Name"}
-            />
-           </div>
-            <div className='w-full flex gap-2'>
-                <div className='w-1/2'>
+            <div className='w-full '>
+                <FormGroup
+                    labelValue="Name"
+                    
+                    id="name"
+                    register={register}
+                    required errors={errors}
+                    requiredMessage={"Please Enter Your Name"}
+                />
+            </div>
+            <div className='w-full gap-2 flex flex-col md:flex-row'>
+                <div className='w-full md:w-1/2'>
                     <FormGroup
                         labelValue="Last Name"
                         id="lastName"
@@ -64,7 +65,7 @@ const AgentContactForm = () => {
                         requiredMessage={"Please Enter Your Last Name"}
                     />
                 </div>
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <FormGroup
                         labelValue="Phone No"
                         id="phoneNo"
@@ -75,23 +76,23 @@ const AgentContactForm = () => {
                 </div>
             </div>
             <div className='w-full'>
-            <label htmlFor='contactMessage' className='text-lg'>
-                What can we do for you?
-            </label>
+                <label htmlFor='contactMessage' className='text-lg'>
+                    What can we do for you?
+                </label>
                 <textarea
-                
-                {...register('contactMessage', {required: "Please Enter your message"})} id="contactMessage" className='py-2 w-full px-4 bg-[#D8E6FE] hover:outline-blue-600'/>
 
-                
-             {
-                errors['contactMessage'] && <div className='w-full border border-rose-600 py-2 text-sm text-rose-600  px-4 rounded shadow'>
-                    {errors['contactMessage'].message}
-               </div>
-             }
+                    {...register('contactMessage', { required: "Please Enter your message" })} id="contactMessage" className='py-2 w-full px-4 bg-[#D8E6FE] hover:outline-blue-600' />
+
+
+                {
+                    errors['contactMessage'] && <div className='w-full border border-rose-600 py-2 text-sm text-rose-600  px-4 rounded shadow'>
+                        {errors['contactMessage'].message}
+                    </div>
+                }
             </div>
-                    <button
-                    disabled={isLoading}
-                    onClick={handleSubmit(onSubmit)} className='py-2 rounded shadow my-4 flex justify-center items-center bg-blue-600 text-white font-bold text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
+            <button
+                disabled={isLoading}
+                onClick={handleSubmit(onSubmit)} className='py-2 rounded shadow my-4 flex justify-center items-center bg-blue-600 text-white font-bold text-base md:text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
 
                 Send Message
             </button>

@@ -13,14 +13,14 @@ const AboutEthics = () => {
 
       {/* tabs */}
 
-      <div className='flex flex-wrap sm:flex-nowrap  py-4 font-bold text-sm sm:text-base min-w-full text-center mx-auto  sm:gap-0 justify-center sm:justify-normal '>
-        <span className='border bg-white border-black py-2 px-6 sm:px-12  sm:max-w-full  cursor-pointer sm:flex-[0_0_33%] transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('mission')}>
+      <div className='flex  flex-nowrap  py-4 font-bold max-[400px]:text-xs text-sm sm:text-base min-w-full text-center mx-auto  sm:gap-0 justify-center sm:justify-normal sm:mb-2 '>
+        <span className='border bg-white border-black py-2 px-6 sm:px-12  max-w-full  cursor-pointer flex-[0_0_33%] transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('mission')}>
           Mission
         </span>
-        <span className='border bg-white sm:flex-[0_0_33%] border-black py-2 px-6 sm:px-12  sm:max-w-full  cursor-pointer sm:border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('vision')}>
+        <span className='border bg-white flex-[0_0_33%] border-black py-2 px-6 sm:px-12  max-w-full  cursor-pointer sm:border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('vision')}>
           Vision
         </span>
-        <span className='border bg-white  sm:flex-[0_0_34%] border-black py-2 px-6 sm:px-12  sm:max-w-full  cursor-pointer sm:border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('values')}>
+        <span className='border bg-white  flex-[0_0_34%] border-black py-2 px-6 sm:px-12  max-w-full  cursor-pointer sm:border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('values')}>
           Values
         </span>
       </div>

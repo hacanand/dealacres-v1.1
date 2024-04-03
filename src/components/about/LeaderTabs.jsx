@@ -15,11 +15,11 @@ const Leaders = () => {
 
       {/* tabs */}
 
-      <div className='flex justify-center py-4 font-bold text-sm sm:text-base'>
-        <span className='border text-center border-black py-2 px-12 cursor-pointer transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('founder')}>
+      <div className='flex justify-center py-4 font-bold text-xs sm:text-base'>
+        <span className='border text-center border-black py-2 px-2 cursor-pointer transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('founder')}>
           Meet Our Founder
         </span>
-        <span className='border text-center border-black py-2 px-12 cursor-pointer border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('cofounder')}>
+        <span className='border text-center border-black py-2 px-2 cursor-pointer border-l-0 transition-all hover:bg-blue-500 hover:text-white' onClick={() => setTab('cofounder')}>
           Meet Our Co-Founder
         </span>
       </div>

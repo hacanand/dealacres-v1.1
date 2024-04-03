@@ -11,7 +11,7 @@ const SimilarProject = () => {
 
     return (
         <div>
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold pt-2 pb-5 px-4">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold pt-2 pb-5 ">
                 Similar Project
             </h2>
            
@@ -21,12 +21,22 @@ const SimilarProject = () => {
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 breakpoints={{
-                    640: {
+                    300: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    400: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 20,
+                    },
+                    560: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
-                    798: {
-                        slidesPerView: 1.5,
+                    
+
+                    768: {
+                        slidesPerView: 2.5,
                         spaceBetween: 20,
                     },
                     1024: {

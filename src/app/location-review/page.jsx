@@ -4,17 +4,23 @@ import React, { useState } from "react";
 import { GoLocation } from "react-icons/go";
 import RateLocation from "@/components/location-review/RateLocation";
 import RoleTag from "@/components/location-review/RoleTag";
-
+import './locationOverview.css'
 const roles = ["Owner", "Tenant", "Real Estate Agent", "Formal Residence"];
 
 const LocationReview = () => {
   const [serviceRatings, setServiceRatings] = useState([
+    { facility: "Commuting", rating: 0 },
     { facility: "Public Transport", rating: 0 },
-    { facility: "Education", rating: 0 },
-    { facility: "Healthcare", rating: 0 },
-    { facility: "Shopping", rating: 0 },
-    { facility: "Entertainment", rating: 0 },
+    { facility: "Parking", rating: 0 },
+    { facility: "Connectivity", rating: 0 },
+    { facility: "Traffic", rating: 0 },
+    { facility: "Places of Interest", rating: 0 },
+    { facility: "Schools", rating: 0 },
+    { facility: "Restaurants", rating: 0 },
+    { facility: "Hospital", rating: 0 },
+    { facility: "Market", rating: 0 },
   ]);
+  
 
   const [currentRole, setCurrentRole] = useState("");
 
@@ -64,17 +70,17 @@ const LocationReview = () => {
 
   return (
     <div className="w-full py-5 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] mt-10 mb-10">
-      <div className="flex flex-col items-start border-2 border-blue-300 p-6">
-        <h2 className="block text-center text-2xl md:text-3xl font-bold w-full">
-          Write Your Reviews ✍
+      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 py-8">
+        <h2 className="block text-left md:text-center text-2xl sm:text-3xl md:text-4xl font-bold w-full">
+          Write Your Reviews <span className="penIcon"></span>
         </h2>
 
         <div className="w-full md:w-auto">
-          <div className="space-y-4 md:space-y-2 mt-8">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className="space-y-4 md:space-y-2 md:mt-8">
+            <p className="text-lg md:text-xl font-semibold hidden md:block">
               What describes you the best?
             </p>
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
               {roles.map((role, index) => (
                 <RoleTag
                   key={index}
@@ -92,7 +98,7 @@ const LocationReview = () => {
             </p>
             <div className="relative">
               <input
-                className="py-2 md:py-1 border-2 border-blue-300 w-full rounded-md pl-10 md:pl-7 focus:outline-none focus:border-blue-400"
+                className="py-1 border-2 border-blue-300 w-full rounded-[12px] pl-10 md:pl-7 focus:outline-none focus:border-blue-400"
                 value={locationInput}
                 onChange={handleLocationInputChange}
               />
@@ -111,7 +117,7 @@ const LocationReview = () => {
             </div>
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-md md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-md md:text-md py-1  px-4 md:px-4 rounded-[10px] text-center text-white mt-8">
             Write Review
           </button>
 
@@ -139,6 +145,7 @@ const LocationReview = () => {
             <p className="text-lg md:text-xl font-semibold">
               Rate This - What you Thought
             </p>
+            <div className="flex flex-col gap-1">
             {serviceRatings.map((service, index) => (
               <RateLocation
                 key={index}
@@ -146,9 +153,10 @@ const LocationReview = () => {
                 onRate={handleRate}
               />
             ))}
+            </div>
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-md md:text-md py-3 px-6 md:px-4 rounded-md text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-md md:text-md py-1 px-4 md:px-4 rounded-[10px] text-center text-white mt-8">
             Post Review
           </button>
         </div>

@@ -39,10 +39,10 @@ const TopBar = () => {
           </label>
         </div>
 
-        <div className="join px-8 rounded-xl">
-          <button className="btn join-item px-8">Buy</button>
-          <button className="btn join-item px-8">Sell</button>
-          <button className="btn join-item px-8">Rent</button>
+        <div className="join min-[768px]:px-8 rounded-xl">
+          <button className="btn join-item px-4 min-[768px]:px-8">Buy</button>
+          <button className="btn join-item px-4 min-[768px]:px-8">Sell</button>
+          <button className="btn join-item px-4 min-[768px]:px-8">Rent</button>
         </div>
       </div>
     </div>

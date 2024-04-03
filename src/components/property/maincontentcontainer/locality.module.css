@@ -40,6 +40,7 @@
 .localityContentHead{
     width: 100%;
     padding-bottom: 2rem;
+    text-align: justify;
     
 }
 
@@ -94,3 +95,123 @@
 
     }
 }
+@media screen and  (max-width: 768px){
+    .localityOverviewContainer{
+        width: 100%;
+    }
+    
+    .localityHead{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .localityHeadMain h2{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    
+    .localityHeadMain h5{
+        font-weight: 400;
+    }
+    
+    .localityHead button{
+        background-color: #0061df;
+        color: white;
+        padding: 6px;
+        font-weight: 700;
+        min-height: 30px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    
+    .localityContent{
+        width: 100%;
+        border: 2px solid rgba(63, 62, 62, 0.5);
+        border-radius: 20px;
+        padding: 15px;
+    }
+    
+    
+    
+    .localityContentHead{
+        width: 100%;
+        padding-bottom: 2rem;
+        
+    }
+    
+    .localityContentHead h3{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    
+    .localityContentHead h6{
+        color: #0061df;
+        cursor: pointer;
+    }
+    
+    .localityContentData{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 250px 250px;
+        overflow-x: auto;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .localityContentDataProCon{
+        width: 100%;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        gap: 8px;
+        max-width: 250px;
+    }
+    
+    .localityContentDataProCon h2{
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+    
+    .localityContentDataProCon li{
+        font-size: 16px;
+        padding: 8px 0;
+   
+    }
+}
+
+/* @media  screen and (max-width: 480px) {
+  
+
+    .localityContentDataProCon{
+        gap: 0px;
+    }
+
+    .localityContentData {
+        margin-bottom: 0px;
+        gap: 4px;
+    }
+    .localityContentDataProCon h2{
+        font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .localityContentDataProCon li{
+        font-size: 16px;
+        padding:  0;
+   
+    }
+
+    .localityContent{
+        width: 100%;
+        border: 2px solid rgba(63, 62, 62, 0.5);
+        border-radius: 20px;
+        padding: 10px;
+    }
+} */

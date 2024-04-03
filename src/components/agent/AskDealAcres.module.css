@@ -98,3 +98,50 @@
     }
     
 } 
+
+
+@media only screen and (max-width: 768px) {
+    .AskDealAcres{
+        background: url('../../../public/Agent/AskDealAcres.webp');
+        object-fit: cover;
+        position: static;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ContactForm{
+        width: unset;
+        margin-left: unset;
+        padding: 10px;
+        background-color: rgba(24, 24, 24, 0.7);
+    }
+    
+
+    .TitleInfo h2{
+
+        font-weight: bold;
+        font-size: 24px;
+        /* margin-left: 15px; */
+        color: white;
+        text-align: center;
+    }
+    
+    .TitleInfo p{
+        /* font-weight: bold; */
+        font-size: 18px;
+        color: white;
+        text-align: center;
+    }
+
+    .ContactForm input, .ContactForm select{
+        display: block;
+        padding: 8px;
+        /* margin: 0px 10px; */
+        width: 100%;
+        border: 1px solid rgb(0, 0, 0, 0.15); 
+        /* border-radius: 10px; */
+    }
+
+} 

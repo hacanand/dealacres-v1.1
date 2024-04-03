@@ -20,3 +20,20 @@
 .faqcardContainer h6{
     color: rgb(135,145,163);
 }
+
+@media screen and (max-width: 768px){
+
+    .faqcardContainer {
+        padding: 14px;
+    }
+    .faqcardContainer h5{
+        font-size: 14px !important;
+
+    }
+    
+    .faqcardContainer h6{
+
+        font-size: 12px !important;
+    }
+    
+}
