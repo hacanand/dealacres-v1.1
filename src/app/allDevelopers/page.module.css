@@ -30,16 +30,29 @@
     width: calc(100% - 280px);
 }
 
-@media only screen and (max-width: 990px){
+@media only screen and (max-width: 1064px){
     .Layout{
         margin:auto;
-        margin-left: 40px;
+        margin-left: 0px;
         display: block;
     }
     
     .title{
         margin: 0rem 1.5rem;
         display: block;
+    }
+
+    .mainContainer {
+        width: 100%;
+    }
+    .Sidebar {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .heading {
+        margin: 0.5rem 1.5rem;
     }
 }
 
@@ -52,5 +65,27 @@
     }
     .Sidebar{
         width: 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .Layout{
+        margin: unset;
+    }
+    .mainContainer{
+        width: calc(100% - 0px);
+    }
+    .Sidebar{
+        width: 100%;
+    }
+
+
+    .heading {
+        margin: unset;
+        padding: 4px 0;
+    }
+
+    .title {
+        margin: unset;
+        font-size: 1.5rem;
     }
 }

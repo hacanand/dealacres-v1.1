@@ -34,25 +34,25 @@ const Menu = () => {
   return (
     <>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#Overview">Overview</Link>
+      <Link  onClick={handleNavLinkClick} href="#overview">Overview</Link>
     </p>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#seller">Specification</Link>
+      <Link  onClick={handleNavLinkClick} href="#seller">Specification</Link>
     </p>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#Amenities">Amenities</Link>
+      <Link  onClick={handleNavLinkClick} href="#amenities">Amenities</Link>
     </p>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#MortgageCalculator">Mortgage Calculator</Link>
+      <Link  onClick={handleNavLinkClick} href="#mortgageCalculator">Mortgage Calculator</Link>
     </p>
     <p>
-      <Link onClick={handleNavLinkClick} href="#About Builder">About Builder</Link>
+      <Link onClick={handleNavLinkClick} href="#aboutBuilder">About Builder</Link>
     </p>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#Locality Overview">Locality Overview</Link>
+      <Link  onClick={handleNavLinkClick} href="#loalityOverview">Locality Overview</Link>
     </p>
     <p>
-      <Link  onClick={handleNavLinkClick}href="#Properties By Builder">Properties By Builder</Link>
+      <Link  onClick={handleNavLinkClick} href="#propertiesByBuilder">Properties By Builder</Link>
     </p>
   </>
   )
