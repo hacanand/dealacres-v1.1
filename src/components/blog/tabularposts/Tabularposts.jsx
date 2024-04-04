@@ -15,7 +15,7 @@ const Tabularposts = ({
     <div className='my-4 bg-[#edf6f7]'>
 
       {/* <Heading heading='Read More' /> */}
-      <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full overflow-x-auto max-h-[500px] overflow-y-auto'>
+      <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full  max-h-[800px]'>
         <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           <div>
 

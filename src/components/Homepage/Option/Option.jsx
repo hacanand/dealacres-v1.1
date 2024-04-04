@@ -45,7 +45,7 @@ const NewOption = () => {
             <div
               className="contents"
               style={{
-                background: activeCard === card.id ? "blue" : "none",
+                background: activeCard === card.id ? "#40A2D8" : "none",
               }}
             >
               {/* {activeCard === card.id && (

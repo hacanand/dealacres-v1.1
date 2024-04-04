@@ -206,7 +206,7 @@
   .custom-arrow {
     position: absolute;
     top: 50%;
-    right: 0; 
+    right: 0;  
     transform: translateY(-50%);
     width: 15px; 
     height: auto; 
