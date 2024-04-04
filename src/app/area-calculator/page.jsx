@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import ReadMore from "@/components/propertyListing/ReadMore/ReadMore";
 
 const indianStates = [
   { value: "Andhra Pradesh", label: "Andhra Pradesh" },
@@ -277,8 +278,8 @@ const AreaCalculator = () => {
       </div>
 
       <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
-        <div className="p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
-          <h2 className="text-2xl font-bold">Area Converter</h2>
+        <div className="p-2 sm:p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
+          <h2 className="text-xl md:text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">
             <Select
               options={indianStates}
@@ -321,7 +322,7 @@ const AreaCalculator = () => {
         </div>
       </div>
 
-      <div className="px-[5rem] mb-3 max-sm:px-[2rem]">
+      <div className="px-[5rem] mb-3 max-sm:px-[1rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
         <div className="flex flex-wrap gap-4 mt-3">
           <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
@@ -345,12 +346,12 @@ const AreaCalculator = () => {
         </div>
       </div>
 
-      <div className="px-[5rem] mb-3 mt-10 max-sm:px-[2rem]">
+      <div className="px-[5rem] mb-3 mt-10 max-sm:px-[1rem]">
         <h2 className="text-3xl font-bold max-sm:text-xl;">
           All About Land Measurment
         </h2>
 
-        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm max-sm:mt-5">
+        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-base max-sm:mt-5">
           <div className="space-y-3">
             <p>
               Land measurement in India has always been done using various local
@@ -374,7 +375,7 @@ const AreaCalculator = () => {
           <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473790/engineer_camera_ijgzj5.jpg')]"></div>
         </div>
 
-        <div className="max-md:flex max-md:flex-col grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm">
+        <div className="max-md:flex max-md:flex-col grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-base">
           <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473980/man_on_land_ijehan.jpg')]"></div>
           <div>
             <h2 className="font-semibold">
@@ -398,7 +399,7 @@ const AreaCalculator = () => {
           </div>
         </div>
 
-        <div className="max-md:flex max-md:flex-col-reverse grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm">
+        <div className="max-md:flex max-md:flex-col-reverse grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-base">
           <div>
             <h2 className="font-semibold">
               Land area measurement units used in East India
@@ -454,9 +455,9 @@ const AreaCalculator = () => {
 </div>
 
 
-      <div className="mt-10 px-[5rem] mb-10 max-sm:px-[1rem]">
+      {/* <div className="mt-10 px-[5rem] mb-10 max-sm:px-[1rem]">
         <div className="flex flex-row items-center justify-between">
-          <p className="text-2xl font-bold max-sm:text-sm">Interesting Reads</p>
+          <p className="text-2xl font-bold max-sm:text-base">Interesting Reads</p>
           <p className="text-lg font-bold text-blue-500 max-sm:text-xs">
             Read news, guides and article
           </p>
@@ -500,7 +501,11 @@ const AreaCalculator = () => {
             </div>
           </Swiper>
         </div>
-      </div>
+      </div> */}
+
+     <div className="px-[1rem] sm:px-[2rem] ">
+     <ReadMore isFullScreen={true} subheader={"Read realty news guides and articles"}/>
+     </div>
     </div>
   );
 };

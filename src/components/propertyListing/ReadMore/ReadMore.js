@@ -12,7 +12,7 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 // import ArticleCard from ";
 
 const ReadMore = ({
-  isFullScreen, header
+  isFullScreen, header, subheader
 }) => {
   const newsData = [
     {
@@ -61,8 +61,10 @@ const ReadMore = ({
 
   return (
     <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 mt-10 py-5'}} relative`}>
-      <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold py-4">
+      <h2 className="text-xl min-[440px]:text-2xl sm:text-4xl lg:text-3xl font-bold py-4 flex justify-between items-center">
         {header ? header : 'Interesting Readings'}
+
+        {subheader && <span className="text-sm min-[440px]:text-base text-blue-500 font-bold">{subheader}</span>}
       </h2>
       <Swiper
         wrapperClass="pb-1 sm:pb-2 md:pb-8 relative "
@@ -93,7 +95,7 @@ const ReadMore = ({
             navigation: false
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 15,
           },
         }}
