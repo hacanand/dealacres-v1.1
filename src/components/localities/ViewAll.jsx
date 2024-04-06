@@ -82,9 +82,9 @@ const ViewAll = () => {
   </div>
 
 
+      <div className="max-w-[1100px] mx-auto mb-14"><Explore />
+</div>
       
-      <Explore />
-
       <LocalityResidentialZone />
 
       <LocalityCommercialZone />
