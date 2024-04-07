@@ -43,7 +43,7 @@ const Hero = () => {
     };
     
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto mt-10 overflow-auto'>
+        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto md:mt-10 overflow-auto'>
             <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero'>
                 <h1 className="font-heading my-2">
                     Post Your Property for free
@@ -118,21 +118,21 @@ const Hero = () => {
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Start Now</button>
                 </Link>
             </div>
-            <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                <div className='flex flex-row gap-2 mt-20 mb-10'>
-                    <h1 className="text-lg mt-2 font-semibold mb-6">
-                        Post property Ad to <br />
+            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1 relative max-md:after:content-[""] after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:gap-4 max-md:py-2'>
+                <div className='flex flex-row gap-2 md:mt-20 md:mb-10'>
+                    <h1 className="text-lg md:mt-2 font-semibold md:mb-6">
+                        Post property Ad to <br className='hidden md:block' />
                         sell or rent online for</h1>
-                    <h1 className='text-7xl font-bold italic uppercase '>Free</h1>
+                    <h1 className='hidden md:block text-7xl font-bold italic uppercase '>Free</h1>
                 </div>
 
-                <ul className="list-disc pl-5 text-xl">
+                <ul className="list-disc pl-5 text-sm md:text-xl ">
                     <li className="mb-2">Advertise For FREE</li>
                     <li className="mb-2">Sell 10 X faster</li>
                     <li className="mb-2">Connect with genuine buyers</li>
                     <li className="mb-2">Get unlimited enquiries</li>
                 </ul>
-                <Image src={FREE} alt='free' height={280} width={280} className='mt-20' />
+                <Image src={FREE} alt='free' height={280} width={280} className='md:mt-20 -order-1 md:order-2 max-md:max-w-[200px] max-md:max-h-[200px]' />
             </div>
         </section>
     )
