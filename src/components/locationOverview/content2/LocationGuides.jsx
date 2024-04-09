@@ -33,7 +33,7 @@ const LocationGuides = ({
                             sm:w-[10rem]
                             md:w-[11rem]
                             min-[920px]:w-[calc(100%/5-16px)]
-                            min-[920px]:max-w-[10rem]
+                            min-[920px]:max-w-[160px]
 
                             '>
 
