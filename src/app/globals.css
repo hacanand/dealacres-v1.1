@@ -35,7 +35,7 @@
   @apply border-4 border-[#cde6f7]
 }
 .custom-border-hero{
-  @apply border-t-8 border-l-8 border-b-2 border-[#c7e3f6]
+  @apply md:border-t-8 md:border-l-8 md:border-b-2 md:border-[#c7e3f6]
 }
 .input-checkbox {
   height: 1.40rem; 

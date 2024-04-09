@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import RoundedDiv from '@/components/propertyListing/RoundedDiv';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
+import Button from '@/components/propertyListing/Button/Button';
 const Page = () => {
 
     const [formData, setFormData] = useState({
@@ -25,11 +28,11 @@ const Page = () => {
 
 
     return (
-        <section className='mt-12 container mx-auto lg:w-4/5'>
+        <section className='md:mt-12 container mx-auto lg:w-4/5'>
             <Navigation />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 lg:gap-20 container mx-auto md:my-10 overflow-auto'>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
+                <div className='h-full w-[90%] md:max-w-[50%] max-md:mx-auto md:w-[450px]  rounded-xl p-5 custom-border max-md:border-none'>
                     <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
                         Now, tell us about your property
                     </h1>
@@ -41,7 +44,7 @@ const Page = () => {
                         name="propertyDescription"
                         rows={10}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
+                        className='my-6 custom-border-2 rounded-md w-full'
                         onChange={handleInputChange}
                     />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
@@ -59,40 +62,32 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Other Rooms
                     </h1>
-                    <div className='w-[70%] grid grid-cols-2 gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-md'>
-                            Pooja Room
-                        </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-md'>
-                            Study Room
-                        </div>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-md'>
-                            Servent Room
-                        </div>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-md'>
-                            Store Room
-                        </div>
+                    <div className='w-full grid grid-cols-2 gap-2 my-2'>
+
+                        <Button heading={"Pooja Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Study Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Servent Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Store Room"} variant={"secondary"} size={"small"} />
+
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
                     </h1>
-                    <div className='w-[70%] flex flex-row gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Fully Furnished
-                        </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Unfurnished
-                        </div>
+                    <div className='w-full flex flex-row gap-2 my-2 overflow-x-auto'>
+                        <Button heading={"Fully Furnished"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Unfurnished"} variant={"secondary"} size={"small"} />
+
+
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Reserve Parking <span className='text-sm font-light'>(optional)</span>
                     </h1>
                     <div className='flex flex-col'>
-                        <div className='flex flex-row items-center gap-10'>
+                        <div className='grid grid-cols-2 items-center py-2 gap-4'>
                             <p className='text-md'>Covered Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
-                        <div className='flex flex-row items-center gap-14'>
+                        <div className='grid grid-cols-2 items-center py-2 gap-4'>
                             <p className='text-md'>Open Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
@@ -117,22 +112,22 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Ready To Move
-                        </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Under Construction
-                        </div>
+                    <div className='w-[100%] flex flex-row gap-2 my-2 overflow-x-auto'>
+                        <Button heading={"Ready To Move"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Under Construction"} variant={"secondary"} size={"small"} />
+
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-3">
                         Age of Property
                     </h1>
-                    <div className='flex flex-row  gap-2 mt-2'>
-                        <button className='custom-border h-full px-2 rounded-lg'>0-1 years</button>
-                        <button className='custom-border h-full px-2 rounded-lg'>1-5 years</button>
-                        <button className='custom-border h-full px-2 rounded-lg'>5-10 years</button>
-                        <button className='custom-border h-full px-2 rounded-lg'>10+ years</button>
+                    <div className='flex flex-row  gap-2 mt-2 overflow-x-auto'>
+                        <Button heading={"0-1 years"}  size={"small"} />
+                        <Button heading={"1-5 years"}  size={"small"} />
+                        <Button heading={"5-10 years"}  size={"small"} />
+                        <Button heading={"10+ years"}  size={"small"} />
+
+
+
                     </div>
 
 
@@ -146,20 +141,12 @@ const Page = () => {
                         </button>
                     </Link>
                 </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center mt-20">
-                            Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/house.png'} alt='home' height={200} width={200} className='mt-3 mb-10' />
-                        <h1 className='font-bold text-xl'>Need Help?</h1>
-                        <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-                    </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
-                    </div>
-                </div>
+
+
+                <BannerLayout bannerText={" Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others."} imgSrc={"/propertyListing/assets/aboutPropertyBanner.webp"} showContact startWithPic showSmiley />
+               
+
+                <HelpDetails showOnMobile />
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ const Hero = () => {
     const [isResedentialClicked, setIsResedentialClicked] = useState(false);
     const [isCommercialClicked, setCommercialClicked] = useState(false);
     const [isFiveClicked, setIsFiveClicked] = useState(false);
-    const [propertyType, setPropertyType] = useState('');
+    const [propertyType, setPropertyType] = useState('#');
     const [subType, setSubType] = useState('');
 
     const handleFive = () => {
@@ -34,7 +34,11 @@ const Hero = () => {
         setSubType(subtype.toLowerCase());
     };
     const generateDynamicPath = () => {
+
+       
         let path = `propertylisting/${propertyType}`;
+
+        if(propertyType === '#') return path;
         if (subType) {
           path += `/${subType}`;
         }
@@ -43,9 +47,9 @@ const Hero = () => {
     };
     
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto md:mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero'>
-                <h1 className="font-heading my-2">
+        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-4 md:gap-10 container mx-auto md:mt-10 overflow-auto'>
+            <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero max-md:mx-auto '>
+                <h1 className="font-heading my-2 ">
                     Post Your Property for free
                 </h1>
                 <p>
@@ -114,13 +118,13 @@ const Hero = () => {
                 
                 <input className='custom-border-2 px-4 py-2 rounded-xl' />
                 <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
-                <Link href={generateDynamicPath()}>
-                    <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Start Now</button>
+                <Link href={generateDynamicPath()} disabled={!isResedentialClicked && !isCommercialClicked} scroll={false}>
+                    <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
                 </Link>
             </div>
             <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1 relative max-md:after:content-[""] after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:gap-4 max-md:py-2'>
                 <div className='flex flex-row gap-2 md:mt-20 md:mb-10'>
-                    <h1 className="text-lg md:mt-2 font-semibold md:mb-6">
+                    <h1 className="text-lg md:mt-2 font-semibold md:mb-6 max-sm:text-center">
                         Post property Ad to <br className='hidden md:block' />
                         sell or rent online for</h1>
                     <h1 className='hidden md:block text-7xl font-bold italic uppercase '>Free</h1>

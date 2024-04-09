@@ -7,6 +7,9 @@ import RoundedDiv from '@/components/propertyListing/RoundedDiv';
 import { useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
+import Button from '@/components/propertyListing/Button/Button';
 
 const Page = () => {
 
@@ -28,6 +31,10 @@ const Page = () => {
         'January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
+
+    const otherRooms = [
+        "Pooja Room", "Study Room", "Store Room", "Servant Room"
+    ]
 
     const years = Array.from({ length: 10 }, (_, index) => currentYear + index);
 
@@ -54,8 +61,8 @@ const Page = () => {
         setIsContinueDisabled(
             !propertyDescription ||
             !carpetArea ||
-            !entranceWidth 
-    
+            !entranceWidth
+
         );
     };
     const handleInputChange = (setter, value) => {
@@ -65,23 +72,23 @@ const Page = () => {
 
 
     return (
-        <section className='mt-12 container mx-auto lg:w-4/5'>
+        <section className='md:mt-12 container mx-auto lg:w-4/5'>
             <NavigationCOwner />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 lg:gap-20 container mx-auto md:my-10 overflow-auto'>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
+                <div className='h-full w-[90%] max-md:mx-auto md:w-[50%] rounded-xl p-5 custom-border max-md:border-none'>
+                    <h1 className="font-bold md:text-2xl text-xl mt-2 ">
                         Now, tell us about your property
                     </h1>
-                    <p className='font-medium md:text-lg text-md ' >Describe Your Property</p>
-                    <p className='w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
+                    <p className='font-medium md:text-lg text-md mt-2 ' >Describe Your Property</p>
+                    <p className='pt-2 md:w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
 
                     <textarea
                         id="myTextArea"
                         name="myTextArea"
                         rows={10}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
+                        className='my-6 custom-border-2 rounded-md w-full'
                         value={propertyDescription}
                         onChange={(e) => handleInputChange(setPropertyDescription, e.target.value)}
                     />
@@ -94,19 +101,15 @@ const Page = () => {
                     </h1>
                     <RoundedDiv width={35} height={35} size={5} />
 
+                 
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
                     </h1>
-                    <div className='w-[70%] flex flex-wrap gap-2 my-2'>
-                        <div className='h-full custom-border py-1 px-3 rounded-xl'>
-                            Fully Furnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Unfurnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Semifurnished
-                        </div>
+                    <div className='md:w-[70%] flex flex-wrap gap-2 my-2'>
+                        <Button heading={"Fully Furnished"} size={"small"}  />
+                        <Button heading={"Unfurnished"} size={"small"}  />
+                        <Button heading={"Semifurnished"} size={"small"}  />
+
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
@@ -223,28 +226,18 @@ const Page = () => {
                     <input type="text" className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2" placeholder="Price per Sq.Yd" />
 
                     <Link href={'photos'}>
-                    <button
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
-                    disabled={isContinueDisabled}
-                >
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                            disabled={isContinueDisabled}
+                        >
                             Continue
                         </button>
                     </Link>
                 </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#cee8f8] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center px-4 mt-20">
-                            Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />
-                        <h1 className='font-bold text-xl'>Need Help?</h1>
-                        <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-                    </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
-                    </div>
-                </div>
+
+                <BannerLayout startWithPic showContact bannerText={' Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.'} imgSrc={'/propertyListing/assets/aboutPropertyBanner.webp'} showSmiley/>
+
+                <HelpDetails showOnMobile />
             </div>
         </section>
     );

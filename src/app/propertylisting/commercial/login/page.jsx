@@ -5,6 +5,8 @@ import Image from 'next/image'
 
 import { TiPencil } from "react-icons/ti";
 import Link from 'next/link';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 
 const Login = () => {
@@ -22,20 +24,12 @@ const Login = () => {
     };
 
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
-            <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                <div className='flex flex-row items-center gap-2 mt-20 mb-5'>
-                    <Image src={'/propertyListing/assets/thumbsup.png'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />
-                    <h1 className="text-lg mb-4">
-                        Your Phone number gives<br /> access to your account.</h1>
-                </div>
-                <Image src={'/propertyListing/assets/authentication.png'} alt='authentication' height={280} width={280} className='mt-3 mb-10' />
-                <h1 className='font-bold text-xl'>Need Help?</h1>
-                <p className='text-lg'>You Can Email Us</p>
-                <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-            </div>
-            <div className='h-full md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
-                <h1 className="font-medium md:font-bold md:text-2xl text-xl  mt-2">
+        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto md:my-10 overflow-auto'>
+         
+
+            <BannerLayout showContact showThumps bannerText={"   Your Phone number gives access to your account."} imgSrc={'/propertyListing/assets/authentication.png'} bgColor={"bg-['#eaf6ff']"} />
+            <div className='h-full w-[80%] max-md:mx-auto md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
+                <h1 className="font-bold md:text-2xl text-xl  mt-2">
                     Welcome back,</h1>
                 <p className='text-xl font-medium '>
                     your number is registered with us.
@@ -47,7 +41,7 @@ const Login = () => {
                     <p>+91-xxxxxxxxxx</p>
                     <TiPencil size={30} color='blue' />
                 </div>
-                <p className='text-3xl font-light pb-2'>
+                <p className='text-2xl md:text-3xl font-light pb-2'>
                     Enter Your OTP
                 </p>
                 <div className="flex ">
@@ -72,6 +66,8 @@ const Login = () => {
                     <button className='w-full bg-white rounded-xl px-8 py-3 font-bold border-4 border-blue-600 text-blue-600 mb-4  hover:border-none'>Login via - E-mail</button>
                 </Link>
             </div>
+
+            <HelpDetails showOnMobile/>
         </section>
     )
 }

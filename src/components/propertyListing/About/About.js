@@ -39,9 +39,9 @@ const About = () => {
           alt="Why Choose Us?"
         />
       </div>
-      <div className=" bg-white w-full max-w-screen-xl text-center why-choose-us">
-      <div className="p-5 space-y-10 border-4 border-blue-200">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+      <div className="  w-full max-w-screen-xl text-justify why-choose-us">
+      <div className="bg-white p-5 space-y-10 border-4 border-blue-200 text-base">
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-center">
           Why Choose Deal Acres?
         </h2>
         <p>
@@ -68,8 +68,8 @@ const About = () => {
       </span>
 
         </div>
-        <div className="text-center">
-        <button className="mt-5 font-bold text-white text-center  py-3 bg-[#0061DF] px-6 rounded-lg">
+        <div className="flex justify-center max-w-[440px] mx-auto">
+        <button className="mt-5 font-bold text-white text-center  py-3 bg-[#0061DF] px-6 rounded-lg w-full">
           List Your Property for FREE NOW!
         </button>
         </div>
