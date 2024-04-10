@@ -16,7 +16,7 @@ const Tabularposts = ({
 
       {/* <Heading heading='Read More' /> */}
       <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full overflow-x-auto max-h-[500px] overflow-y-auto'>
-        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
+        <div className='max-md:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           <div>
 
             <TableHeader header='Popular Posts' />
@@ -33,7 +33,7 @@ const Tabularposts = ({
 
         </div>
 
-        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
+        <div className='max-md:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           {/* Latest Posts do some validation for grabing latest posts through date. */}
 
           <TableHeader header='Latest Posts' />
@@ -48,7 +48,7 @@ const Tabularposts = ({
           </div>
         </div>
 
-        <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
+        <div className='max-md:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           {/* Relevant Articles. */}
 
 

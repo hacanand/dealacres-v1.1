@@ -43,13 +43,19 @@ const GuidesSlider = ({
           ],
 
     };
+
+    function handleGuideClick(index) {
+        if(handleTabChange){
+            handleTabChange(index)
+        }
+    }
     return (
         <div className=''>
             <Slider {...settings}>
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='mr-2 ' onClick={() => handleTabChange(index)}>
+                            <div key={index} className='mr-2 ' onClick={handleGuideClick}>
 
 
                                 <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />

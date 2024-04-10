@@ -12,11 +12,12 @@ const BannerLayout = ({
     showSmiley,
     lists
 }) => {
+
+    // relative max-md:after:content-[""] after:absolute after:bg-[#c9e0ee] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
     return (
-        <div className={`w-full md:w-[45%]  ${startWithPic && '-order-1 md:order-2'}`}>
-            <div className={`h-full  w-full rounded-xl bg-[#c9e0ee] p-4 flex flex-row gap-2  md:flex-col items-center  ${bgColor && bgColor}
-    
-    relative max-md:after:content-[""] after:absolute after:bg-[#c9e0ee] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:pb-0 pt-8 sm:pt-16 md:pt-0 `}>
+        <div className={`w-full md:w-[45%]  ${startWithPic && '-order-1 md:order-2' }   bg-[#c9e0ee] rounded-b-[1rem] md:rounded-xl  `}>
+            <div className={`h-full  w-full   p-4 flex flex-row gap-2  md:flex-col items-center  ${bgColor && bgColor}
+ max-md:pb-0 pt-8 sm:pt-16 md:pt-0 `}>
                 {showThumps && <Image src={'/propertyListing/assets/thumbsup.png'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />}
 
                 {bannerText && <h1 className="text-base sm:text-xl md:mb-4 text-center md:mt-20 pt-8 pb-16 ">

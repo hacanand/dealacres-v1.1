@@ -10,80 +10,83 @@ import Tabularposts from "@/components/blog/tabularposts/Tabularposts";
 import Guides from "@/components/blog/guides/Guides";
 import EstateService from "@/components/rentagreement/EstateService";
 import AgentLinks from "@/components/blog/AgentLinks/AgentLinks";
+import GuidesSlider from "@/components/all-guides/GuidesSlider";
+import { allGuidesData } from "@/app/all-guides/allGuidesData";
+import NewTabularPosts from "@/components/blog/tabularposts/NewTabularPosts";
 
 
 const topicsData = [
   "RENTAL",
-  
+
   "Delhi NCR",
-  
+
   "HOME Decor",
-  
+
   "HELP GUIDE",
-  
+
   "construction",
-  
+
   "LifeSTYLE",
-  
+
   "TRends",
-  
+
   "CO-workation",
-  
+
   "legal and taxation",
-  
+
   "packers and movers",
-  
+
   "Retail and Hospitality"
-  ]
+]
 
 const allPostsData = [
   {
-      "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
-      "img": "article-thumb-1.jpg"
+    "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
+    "img": "article-thumb-1.jpg"
   }
   ,
   {
-      "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
-      "img": "article-thumb-2.webp"
+    "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
+    "img": "article-thumb-2.webp"
   }
   ,
   {
-      "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
-      "img": "article-thumb-1.jpg"
+    "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
+    "img": "article-thumb-1.jpg"
   }
   ,
   {
-      "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
-      "img": "article-thumb-2.webp"
+    "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
+    "img": "article-thumb-2.webp"
   }
   ,
   {
-      "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
-      "img": "article-thumb-1.jpg"
+    "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
+    "img": "article-thumb-1.jpg"
   }
   ,
   {
-      "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
-      "img": "article-thumb-2.webp"
+    "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
+    "img": "article-thumb-2.webp"
   }
 ]
 
 const articlesData = [
   {
-      "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-      "img": "solar-panels.webp"
+    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
+    "img": "solar-panels.webp"
   },
   {
-      "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-      "img": "solar-panels.webp"
+    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
+    "img": "solar-panels.webp"
   },
   {
-      "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-      "img": "solar-panels.webp"
+    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
+    "img": "solar-panels.webp"
   },
   {
-      "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-      "img": "solar-panels.webp"
+    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
+    "img": "solar-panels.webp"
   }
 ]
 
@@ -137,27 +140,36 @@ export default function SingleBlogPage() {
 
   return (
     <div className="max-w-screen-xl mx-auto ">
-      <div className='flex flex-col min-h-screen min-[960px]:grid min-[960px]:grid-cols-6'>
+      <div className='flex flex-col min-h-screen xmd:grid xmd:grid-cols-6'>
 
-        <div className="min-[960px]:col-span-4 px-2 py-2">
+        <div className="xmd:col-span-4 px-2 py-2">
           {/* Post Section */}
-          <BlogPost postData={postData} />
+          <BlogPost postData={postData} topicsData={topicsData} />
         </div>
 
-        <div className="min-[960px]:col-span-2 px-2 py-4">
+        <div className="xmd:col-span-2 px-2 py-4 hidden md:block">
           {/* Feeds section */}
           <BlogSideBar allPosts={allPostsData} topics={topicsData} />
         </div>
-        
-    </div>
 
-    <Tabularposts 
-    posts={allPostsData} 
-    articles = {articlesData} />
+      </div>
 
-    <Guides showHeading guides={guidesData}  align="center"/>
-<EstateService />
- <AgentLinks />
+      <Tabularposts
+        posts={allPostsData}
+        articles={articlesData} />
+      {/* <NewTabularPosts
+        posts={allPostsData}
+        articles={articlesData} /> */}
+
+      <div className="hidden md:block">
+        <Guides showHeading guides={guidesData} align="center" />
+      </div>
+
+      <div className="px-2 py-4 md:hidden">
+        <GuidesSlider allGuides={allGuidesData}/>
+      </div>
+      {/* <EstateService /> */}
+      <AgentLinks />
     </div>
   )
 }

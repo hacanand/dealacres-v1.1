@@ -27,7 +27,7 @@ const GuideCard = ({
                 borderLeftColor: borderColor
             }}
         >
-            <div className='font-bold text-3xl 2xl:text-4xl py-2 '>
+            <div className='font-bold text-3xl 2xl:text-4xl py-2 max-md:whitespace-nowrap'>
                 {
                     title.split(' ').map((word, index) => {
                         if (index == noOfWordsInTitle - 1) {

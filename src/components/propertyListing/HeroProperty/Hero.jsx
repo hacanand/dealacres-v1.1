@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import Link from 'next/link';
 import FREE from '../../../../public/propertyListing/assets/free.png'
+import BannerLayout from '../BannerLayout';
 
 
 const Hero = () => {
@@ -122,7 +123,7 @@ const Hero = () => {
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
                 </Link>
             </div>
-            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1 relative max-md:after:content-[""] after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:gap-4 max-md:py-2'>
+            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-2'>
                 <div className='flex flex-row gap-2 md:mt-20 md:mb-10'>
                     <h1 className="text-lg md:mt-2 font-semibold md:mb-6 max-sm:text-center">
                         Post property Ad to <br className='hidden md:block' />
@@ -138,6 +139,7 @@ const Hero = () => {
                 </ul>
                 <Image src={FREE} alt='free' height={280} width={280} className='md:mt-20 -order-1 md:order-2 max-md:max-w-[200px] max-md:max-h-[200px]' />
             </div>
+
         </section>
     )
 }

@@ -13,18 +13,18 @@ const PostHeader = ({
     let textStyle = ''
     switch(style){
         case 'italic':
-            textStyle = 'italic underline'
+            textStyle = 'italic underline font-bold'
             break;
         default:
             textStyle = 'not-italic';
             break;
     }
   return (
-    <div className={` py-4 font-medium
+    <div className={` py-4 
         ${align === 'center' ? 'text-center' : 'text-left'}
         ${size === 'small' && 'text-lg'}
-        ${size === 'medium' && 'text-3xl'}
-        ${size === 'large' && 'text-4xl'}
+        ${size === 'medium' && 'text-xl md:text-3xl font-[400]'}
+        ${size === 'large' && 'text-lg xs:text-xl sm:text-2xl md:text-4xl font-bold'}
         ${textStyle}
     `}>
         {heading}
