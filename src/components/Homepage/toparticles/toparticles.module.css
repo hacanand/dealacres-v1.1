@@ -135,11 +135,41 @@
     }
 }
 
-@media screen and (max-width:590px){
+
+@media screen and (max-width:767px){
+
+    .toparticlesContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: white;
+        border-radius: 0%;
+        padding:0;
+        box-shadow: none;
+        margin-top: 15px
+    }
+    .toparticlesContainer h3{
+    @apply  text-lg font-bold text-left px-0 mx-0;
+  
+    
+    }
+    .subtitle{
+   @apply text-xs text-gray-500 text-left
+    }
     .subtopics{
         width: 100%;
-        font-size: 10px;
+        font-weight: bold;
+        align-items: start;
+        justify-content: flex-start;
+        margin-top: 10px;
+        gap:15px
     }
+
+    .contentBlock{
+        min-width: 350px;
+    }
+
 
     .content h6{
         font-size: 12px;
@@ -148,5 +178,6 @@
     .content p{
         font-size: 10px;
     }
+   
 
 }

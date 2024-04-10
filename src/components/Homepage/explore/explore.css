@@ -3,28 +3,23 @@
   @apply pl-2 pr-2
 }
 
-
 .cards-container {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   position: relative;
-  @apply compact pl-2 
+  @apply compact pl-2 overflow-x-auto;
 }
 
-.cards-container-responsive{
-  display: none;
-}
 
-/* .card {
+ /* .card {
   height: 160px;
   background-color: #fdfcfc;
-  transition: width 0.3s, transform 0.3s
+  transition: width 0.3s, transform 0.3s;
   flex-shrink: 0;
   position: relative;
   border-radius: 8px;
-  overflow: hidden;
-} */
+ 
+}  */
 
 .card-content {
   position: absolute;
@@ -90,19 +85,27 @@
   @apply 
 } */
 
-@media screen and (max-width: 1100px) {
+ @media screen and (max-width: 1100px) {
   .cards-container  {
-    display: none;
+    gap: 1rem;
   }
 
-  .cards-container-responsive{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    column-gap: 1rem;
-    overflow: hidden;
-    justify-content: space-between;
-    position: relative;
-    @apply compact
+} 
+@media screen and (min-width: 1100px) {
+  .cards-container  {
+
+@apply overflow-x-hidden
+  }
+  .card.active .card-image {
+    flex: 0 0 180px; 
+  }
+
+} 
+@media screen and (max-width: 767px) {
+  .card.card.active {
+ display: none;
+    transform: none;
+    box-shadow: none;
+    cursor: initial;
   }
 }

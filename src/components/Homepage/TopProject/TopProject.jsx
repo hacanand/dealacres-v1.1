@@ -43,7 +43,6 @@ const TopProject = () => {
     setSelectedCity(city);
   };
 
-  // const imageUrl = '/topProject2.jpg';
 
   return (
     <div >
@@ -53,9 +52,8 @@ const TopProject = () => {
       >
 
 
-        {/* <div className="absolute inset-0 bg-blue-700 opacity-60"></div> */}
 
-        <div className='xl:ml-60 lg:ml-40 ml-10 mt-5 mb-5 relative '> {/* Content with higher z-index */}
+        <div className='xl:ml-60 lg:ml-40 ml-10 mt-5 mb-5 relative '> 
           <h2 className="font-bold mb-4 text-yellow-300 text-4xl">Top Projects</h2>
           <p className='text-xl text-white'>Explore the top projects in top cities</p>
         </div>

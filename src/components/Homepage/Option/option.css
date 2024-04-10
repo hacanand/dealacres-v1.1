@@ -60,7 +60,8 @@
 
 @media screen and (max-width: 768px) {
   .card-box {
-    flex-direction: column; 
+    flex-direction: row; 
+    @apply compact pl-2 overflow-x-auto;
   }
 } 
 

@@ -66,28 +66,6 @@ const Explore = () => {
           </div>
         ))}
       </div>
-      <div className="cards-container-responsive">
-        {carddata.map((card) => (
-          <div
-            key={card}
-            className="card"
-            style={{
-              flex: "0 0 110px",
-              minWidth: "110px",
-              height: "130px",
-              width: "110px",
-              margin: "0px",
-            }}
-          >
-            <div className="card-content">
-              <div
-                className="card-image"
-                style={{ backgroundImage: `url(${card})`, objectFit: "cover" }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
       {showBudgetCalculation && <BudgetCalculation onClose={handleBudgetCalculationClose} />}
     </div>
   );
