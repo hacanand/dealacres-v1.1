@@ -7,7 +7,7 @@ const Insights = () => {
       <h1 className='text-2xl font-bold mb-5'>Insights about New Gurgaon</h1>
     <div className='flex flex-col lg:flex-row items-start justify-between gap-8 '>
       <Image 
-        src='https://media.canva.com/1/image-resize/1/700_405_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS8tbDZDRS9NQUZxMTEtbDZDRS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAANCE-SmAudxInRtNTsUuDDkZHwlVlAuqXJ-5TkqPbHmf&amp;exp=1710773108&amp;x-canva-quality=screen&amp;csig=AAAAAAAAAAAAAAAAAAAAAAqsVc3VNAPsp1Dl1_5SJAZ9ONCVQD-58AZRMdYau2dw' 
+        src='/gurgaonInsights.webp' 
         alt='insights gurugaon' 
         className='rounded-2xl' 
       width={500}

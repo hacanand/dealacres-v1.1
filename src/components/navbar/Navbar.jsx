@@ -6,6 +6,7 @@ import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import Image from "next/image";
 import FlyoutMenuSections from "./FlyoutMenuSections";
+import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
@@ -155,7 +156,7 @@ const Navbar = () => {
             <option className="text-black bg-white" value="Delhi">Delhi</option>
             <option className="text-black bg-white" value="Mumbai">Mumbai</option>
           </select>
-          <img src="dropdown arrow.png" alt="Dropdown arrow" class="custom-arrow"/>
+          <BsFillArrowDownSquareFill color="blue" class="custom-arrow"/>
         </div>
 
         <div className="navbar-links__container">
