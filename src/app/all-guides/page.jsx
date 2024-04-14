@@ -101,7 +101,7 @@ const AllGuidesPage = () => {
       {/* Guides Slider */}
       <div className='max-w-screen-xl mx-auto px-8 py-8 my-6'>
 
-        <GuidesSlider allGuides={allGuidesData} handleTabChange={handleTabChange} />
+        <GuidesSlider allGuides={allGuidesData}  />
       </div>
 
       {/* Real Estate Made easy.... */}

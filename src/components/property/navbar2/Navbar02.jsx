@@ -33,25 +33,25 @@ const Menu = () => {
   }
   return (
     <>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#overview">Overview</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#seller">Specification</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#amenities">Amenities</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#mortgageCalculator">Mortgage Calculator</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link onClick={handleNavLinkClick} href="#aboutBuilder">About Builder</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#loalityOverview">Locality Overview</Link>
     </p>
-    <p>
+    <p className="whitespace-nowrap" >
       <Link  onClick={handleNavLinkClick} href="#propertiesByBuilder">Properties By Builder</Link>
     </p>
   </>

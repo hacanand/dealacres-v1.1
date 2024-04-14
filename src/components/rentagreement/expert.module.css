@@ -237,7 +237,7 @@
     display: block;
     /* width: fit-content; */
     height: auto;
-
+    white-space: nowrap;
     /* background-color: black; */
   }
 
@@ -356,5 +356,9 @@
     border-radius: 10px;
     color: white;
     font-size: 12px;
+  }
+
+  .ExpertInfo h3 {
+    font-size: 16;
   }
 }

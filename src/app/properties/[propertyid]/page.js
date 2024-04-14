@@ -50,7 +50,7 @@ async function Property(params) {
           <h1>Leave a review</h1>
           <LeaveReview />
         </div>
-        <p className='text-sm'>The material and information contained herein is for general informational purposes only, and does not constitute an endorsement/warranty/ representation/offer from Dealacres.com.<br />
+        <p className='text-xs text-justify'>The material and information contained herein is for general informational purposes only, and does not constitute an endorsement/warranty/ representation/offer from Dealacres.com.<br />
           Sources of Information {`:`} Project details presented on this page are collected from public sources including State RERA websites {`(`}wherever applicable{`)`}, project websites created by builder and authorized channel partners and official documentation shared by these authorized advertisers {`(`}project brochure, price list, payment plans{`)`}.</p>
       </div>
     </>

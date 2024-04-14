@@ -10,17 +10,17 @@ const ServiceBanner = () => {
             <span className={styles.Protect}> 100% Protection from </span>  <br />
             Legal Disputes</p>
 
-         <div className="flex gap-4 w-full">
-         <select>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Uttar Pradesh">Madhya Pradesh</option>
-          </select>
+          <div className="flex gap-4 w-full">
+            <select className="text-sm sm:text-base px-2">
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Uttar Pradesh">Madhya Pradesh</option>
+            </select>
 
-          <select>
-            <option value="Ujjain">Ujjain</option>
-            <option value="Indore">Indore</option>
-          </select>
-         </div>
+            <select className="text-sm sm:text-base px-2">
+              <option value="Ujjain">Ujjain</option>
+              <option value="Indore">Indore</option>
+            </select>
+          </div>
 
         </div>
       </div>
