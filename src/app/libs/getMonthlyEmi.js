@@ -9,7 +9,8 @@ export const getMonthlyEmi = (amount, roi, tenure) => {
     if (isNaN(emi)) {
         return;
     }
-    const intPay = Math.round(amount * roi * 100 * 12 * tenure) / 100;
+    // const intPay = Math.round(amount * roi * 100 * 12 * tenure) / 100;
+    const intPay = emi * 12 * tenure - amount;
     const total = intPay + amount;
 
     return [Math.round(emi), intPay, total];

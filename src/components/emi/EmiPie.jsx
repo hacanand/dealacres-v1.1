@@ -18,6 +18,7 @@ export function EmiPie({
     const [pieData, setPieData] = useState({
         labels: ['Interest Amount', 'Principle Amount'],
         
+        
         datasets: [
           {
             label: 'Amount: ',
@@ -31,6 +32,21 @@ export function EmiPie({
         ],
       }
 )
+
+const options = {
+  plugins: {
+    legend: {
+      display: true,
+      position: 'bottom',
+      align: (window.innerWidth <= 480 ? 'center' : 'start'),
+      labels: {
+        font: {
+          size: 12
+        }
+      }
+    }
+  },
+};
 
       useEffect(() => {
         setPieData((prev) => ({
@@ -49,5 +65,5 @@ export function EmiPie({
 
 
 
-  return <Pie data={pieData}  />;
+  return <Pie data={pieData} options={options} />;
 }
