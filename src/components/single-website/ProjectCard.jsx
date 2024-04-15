@@ -22,7 +22,7 @@ const ProjectCard = ({
                     alt={title} width={300} height={660} />
             </div>
 
-            <div className='max-h-1/4 px-4
+            <div className='max-h-1/4 px-1 xs:px-4
         border-b border-b-black py-4'>
                 <h3 className='font-bold text-xl'>
                     {title}
@@ -32,7 +32,7 @@ const ProjectCard = ({
                 </p>
             </div>
 
-            <div className='max-h-1/4 grid grid-cols-2 w-full sm:w-[70%] md:w-full  md:flex py-2 md:py-4 gap-2 items-start  text-sm px-2  overflow-x-auto '>
+            <div className='max-h-1/4 grid grid-cols-2 w-full sm:w-[70%] md:w-full  md:flex py-1 xs:py-2 md:py-4 gap-2 items-start  text-xs xs:text-sm px-1 xs:px-2  overflow-x-auto '>
                 <div className='flex flex-col gap-2  '>
                     <span className='self-start font-bold'>
                         Bedrooms
