@@ -99,13 +99,13 @@ const AllGuidesPage = () => {
       <AllGuidesBanner />
 
       {/* Guides Slider */}
-      <div className='max-w-screen-xl mx-auto px-8 py-8 my-6'>
+      <div className='max-w-[1060px]   mx-auto my-6'>
 
         <GuidesSlider allGuides={allGuidesData} handleTabChange={handleTabChange} />
       </div>
 
       {/* Real Estate Made easy.... */}
-      <div className='px-4 max-w-screen-xl mx-auto'>
+      <div className='px-4 max-w-[1060px] mx-auto'>
         <h2 className='text-3xl font-bold py-2'>
           Real Estate Made Easy: Your Comprehensive Manual
         </h2>
@@ -115,7 +115,7 @@ const AllGuidesPage = () => {
         </p>
       </div>
 
-      <div className='max-w-screen-lg mx-auto my-4 px-4'>
+      <div className='max-w-[1060px] mx-auto my-4 '>
         <ManualCategorySlider allGuides={allGuidesData}
           handleTabChange={handleTabChange}  tab={tab} />
       </div>
@@ -123,7 +123,7 @@ const AllGuidesPage = () => {
 
 
 
-      <div className='max-w-screen-xl md:mx-auto px-8 my-6 flex flex-col md:flex-row justify-between gap-12'>
+      <div className='max-w-[1060px] md:mx-auto  my-6 flex flex-col md:flex-row justify-between gap-12'>
         <div className='w-full md:w-[30%]'>
           <CheckList DropIcon={RiArrowDropDownLine} data={allGuidesData} tab={tab}  />
         </div>
@@ -177,15 +177,16 @@ const AllGuidesPage = () => {
 
       {/* tabular posts */}
 
-      <div className='py-4 w-[90%] mx-auto'>
+      <div className='py-4 mb-6 max-w-[1060px] mx-auto'>
 
         <Tabularposts
           posts={allPostsData}
           articles={articlesData} />
+          <Explore />
       </div>
 
 
-      <Explore />
+      
 
 
     </div>

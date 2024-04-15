@@ -16,7 +16,7 @@ const FeatureCard = ({
                 height={1800}
               />
             </div>
-            <div className="flex  justify-center text-center text-base lg:text-lg font-bold   py-4 px-1 shadow border border-t-0 border-gray-400 ">
+            <div className="flex  justify-center text-center text-base  font-bold   py-2 px-1 shadow border border-t-0 border-gray-400 ">
               {text}
             </div>
           </div>

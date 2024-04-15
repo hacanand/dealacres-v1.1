@@ -1,242 +1,186 @@
-'use client'
+'use client';
 
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useState } from 'react';
 import { Button, Checkbox, Grid, InputAdornment, OutlinedInput, Stack, TextField, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
-import { useLayoutEffect } from 'react';
 import DoughNut from './DoughNut';
+import { ClipLoader } from 'react-spinners';
 
-import {ClipLoader} from 'react-spinners'
+const MortgageCalculator = () => {
+  const defaultValues = {
+    amount: 250000, 
+    downpayment: 50000, 
+    insurance: 25000, 
+    pTax: 10000, 
+    roi: 6.0, 
+    tenure: 10, 
+    pmi: 15000 
+};
 
+    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+        defaultValues,
+    });
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-export default function MortgageCalculator({
-  
-}) {
+    const [mortgage, setMortgage] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [valuesFilled, setValuesFilled] = useState(true);
 
-  const params = useSearchParams()
- 
-  
+    const onSubmit = (data) => {
+        console.log(data);
+    };
 
-  const [mortgage, setMortgage] = useState()
-  const [valuesFilled, setValuesFilled] = useState(false)
+    const amount = watch('amount', defaultValues.amount);
+    const downpayment = watch('downpayment', defaultValues.downpayment);
+    const insurance = watch('insurance', defaultValues.insurance);
+    const pTax = watch('pTax', defaultValues.pTax);
+    const roi = watch('roi', defaultValues.roi);
+    const tenure = watch('tenure', defaultValues.tenure);
+    const pmi = watch('pmi', defaultValues.pmi);
 
-  
-
-  const { control, register, handleSubmit,setValue, getValues, watch, formState: { errors, dirtyFields } } = useForm();
-
-  const [isLoading, setIsLoading] = useState(true)
-  const onSubmit = (data) => {
-    console.log(data);
-   
-  }
-
-  console.log(mortgage)
-  const amount = watch('amount', '')
-  const downpayment = watch('downpayment', '')
-  const insurance = watch('insurance', '')
-  const pTax = watch('pTax', '')
-  const r  = watch('roi', '')
-  const n  = watch('tenure', '')
-  const pmi  = watch('pmi', '')
-  
- 
-
-  useEffect(() => {
-    if (amount && downpayment && insurance && pTax && r && n && pmi) {
-      // Convert input values to numbers
-      console.log("all values")
-      const amountNum = Number(amount);
-      const downpaymentNum = Number(downpayment);
-      const insuranceNum = Number(insurance);
-      const pTaxNum = Number(pTax);
-      const rNum = Number(r);
-      const nNum = Number(n);
-      const pmiNum = Number(pmi);
-  
-      // Validate input values
-      if (!isNaN(amountNum) && !isNaN(downpaymentNum) && !isNaN(insuranceNum) && !isNaN(pTaxNum) && !isNaN(rNum) && !isNaN(nNum) && !isNaN(pmiNum)) {
-
-        setValuesFilled(true);
-        let rMonthly = ( rNum / 100 )/12;
-        let nInMonths = nNum * 12;
-        const mortgageValue =
-          (amountNum - downpaymentNum + insuranceNum + pTaxNum + pmiNum) *
-          ((rMonthly * (1 + rMonthly) ** nInMonths) / ((1 + rMonthly) ** nInMonths - 1));
-  
-        // Round the result to two decimal places (adjust as needed)
-        const roundedMortgageValue = parseFloat(mortgageValue.toFixed(2));
-  
-        setMortgage(roundedMortgageValue);
-      } else {
-        // Handle invalid input values
-        console.error("Invalid input values");
-        setMortgage(null); // or setMortgage(0) or any other appropriate default value
-      }
-    }
-  }, [amount, downpayment, insurance, pTax, r, n]);
-
-  const dProps = {
-    amount,
-    downpayment,
-    r,
-    n,
-    pTax,
-    insurance,
-    pmi
-  }
-  
-  
-
- 
-  
-
- 
-  return (
-
-    <div className='border border-black rounded-xl shadow p-4 relative'>
-
-      {isLoading && <div className="absolute inset-0 bg-black/20 z-10 flex items-center justify-center">
-          <ClipLoader size={100}/>
-        </div>}
-
-        <div className={`py-4 border-b border-b-gray-400`}>
-            <DoughNut setIsLoading={(value) => setIsLoading(value)} mortgage={mortgage} dProps={dProps}/>
-        </div>
-
-   
-      <form className='py-4' >
-
-
-        <Stack justifyContent={"center"} alignItems={"center"} >
-          <Grid container spacing={2} >
-
-            <Grid item md={4} xs={12} sm={6} >
-              <FormControl fullWidth>
-              <InputLabel htmlFor="amount">Total Amount</InputLabel>
-                <OutlinedInput
-                  {...register('amount', { required: "Please fill this field." })}
-                  id="amount"
-                  type="number"
-                  startAdornment={<InputAdornment position="start"><span className="font-bold text-lg" > ₹ </span></InputAdornment>}
-                  label="Total Amount"
-                  value={amount.toLocaleString('en-IN')}
-                  error={errors.amount && !!errors.amount}
-                  helperText={errors.amount && errors.amount.message}
-                />
-              </FormControl>
-            </Grid>
+    useEffect(() => {
+        if (valuesFilled) {
+            let rMonthly = (roi / 100) / 12;
+            let nInMonths = tenure * 12;
+            const mortgageValue = (amount - downpayment + insurance + pTax + pmi) * ((rMonthly * (1 + rMonthly) ** nInMonths) / ((1 + rMonthly) ** nInMonths - 1));
             
-       
-          
-            <Grid item md={4} xs={12} sm={6} >
-            <FormControl fullWidth>
-              <InputLabel htmlFor="downpayment">Down Payment</InputLabel>
-                <OutlinedInput
-                  {...register('downpayment', { required: "Please fill this field." })}
-                  id="downpayment"
-                  startAdornment={<InputAdornment position="start"><span className="font-bold text-lg" > ₹ </span></InputAdornment>}
-                  label="Down Payment"
-                  error={errors.downpayment && !!errors.downpayment}
-                  helperText={errors.downpayment && errors.downpayment.message}
-                />
-              </FormControl>
-            </Grid>
-           
-            <Grid item md={4} xs={12} sm={6} >
-            <FormControl fullWidth>
-              <InputLabel htmlFor="roi">Interest Rate</InputLabel>
-                <OutlinedInput
-                  {...register('roi', { required: "Please fill this field." })}
-                  id="roi"
-                  type="number"
-                  startAdornment={<InputAdornment position="start"><span className="font-bold text-lg" > ₹ </span></InputAdornment>}
-                  label="Loan roi"
-                  error={errors.roi && !!errors.roi}
-                  helperText={errors.roi && errors.roi.message}
-                />
-              </FormControl>
-            </Grid>
-         
-            <Grid item md={4} xs={12} sm={6} >
-              <FormControl fullWidth>
-                <TextField
-                  {...register('tenure', { required: "Please fill this field." })}
-                  type="number"
-                  label="Loan Terms(Years)"
-                  error={errors.tenure && !!errors.tenure}
-                  helperText={errors.tenure && errors.tenure.message}
-                />
-              </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} >
-              <FormControl fullWidth>
+            const roundedMortgageValue = parseFloat(mortgageValue.toFixed(2));
+            setMortgage(roundedMortgageValue);
+            setIsLoading(false);
+        }
+    }, [amount, downpayment, insurance, pTax, roi, tenure, pmi]);
 
-                <TextField
-                  {...register('pTax', {
-                    required: 'Please enter a valid property tax.'
-                    
-                  })}
+    return (
+        <div className='border border-black rounded-xl shadow p-4 relative'>
+            {isLoading && (
+                <div className="absolute inset-0 bg-black/20 z-10 flex items-center justify-center">
+                    <ClipLoader size={100} />
+                </div>
+            )}
 
-                  label="Property Tax"
-                  error={errors.pTax && !!errors.pTax}
-                  helperText={errors.pTax && errors.pTax.message}
-                />
-              </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} >
-              <FormControl fullWidth>
+            <div className={`py-4 border-b border-b-gray-400`}>
+                <DoughNut mortgage={mortgage} setIsLoading={setIsLoading} dProps={{ amount, downpayment, roi, tenure, pTax, insurance, pmi }} />
+            </div>
 
-                <TextField
-                  {...register('insurance', {
-                    required: "Please fill this field.",
-                   
-                  })}
+            <form className='py-4'>
+                <Stack justifyContent={"center"} alignItems={"center"}>
+                    <Grid container spacing={2}>
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <InputLabel htmlFor="amount">Total Amount</InputLabel>
+                                <OutlinedInput
+                                    {...register('amount', { required: "Please fill this field." })}
+                                    id="amount"
+                                    type="number"
+                                    startAdornment={<InputAdornment position="start"><span className="font-bold text-lg">₹</span></InputAdornment>}
+                                    label="Total Amount"
+                                    value={amount}
+                                    error={errors.amount && !!errors.amount}
+                                    helperText={errors.amount && errors.amount.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-                  label="Insurance"
-                  error={errors.insurance && !!errors.insurance}
-                  helperText={errors.insurance && errors.insurance.message}
-                />
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <InputLabel htmlFor="downpayment">Down Payment</InputLabel>
+                                <OutlinedInput
+                                    {...register('downpayment', { required: "Please fill this field." })}
+                                    id="downpayment"
+                                    type="number"
+                                    startAdornment={<InputAdornment position="start"><span className="font-bold text-lg">₹</span></InputAdornment>}
+                                    label="Down Payment"
+                                    value={downpayment}
+                                    error={errors.downpayment && !!errors.downpayment}
+                                    helperText={errors.downpayment && errors.downpayment.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-              </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} >
-              <FormControl fullWidth>
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <InputLabel htmlFor="roi">Interest Rate</InputLabel>
+                                <OutlinedInput
+                                    {...register('roi', { required: "Please fill this field." })}
+                                    id="roi"
+                                    type="number"
+                                    startAdornment={<InputAdornment position="start"><span className="font-bold text-lg">₹</span></InputAdornment>}
+                                    label="Loan roi"
+                                    value={roi}
+                                    error={errors.roi && !!errors.roi}
+                                    helperText={errors.roi && errors.roi.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-                <TextField
-                  {...register('pmi', {
-                    required: "Please fill this field.",
-                   
-                  })}
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <TextField
+                                    {...register('tenure', { required: "Please fill this field." })}
+                                    type="number"
+                                    label="Loan Terms (Years)"
+                                    value={tenure}
+                                    error={errors.tenure && !!errors.tenure}
+                                    helperText={errors.tenure && errors.tenure.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-                  label="PMI"
-                  error={errors.pmi && !!errors.pmi}
-                  helperText={errors.pmi && errors.pmi.message}
-                />
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <TextField
+                                    {...register('pTax', { required: "Please fill this field." })}
+                                    type="number"
+                                    label="Property Tax"
+                                    value={pTax}
+                                    error={errors.pTax && !!errors.pTax}
+                                    helperText={errors.pTax && errors.pTax.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-              </FormControl>
-            </Grid>
-          </Grid>
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <TextField
+                                    {...register('insurance', { required: "Please fill this field." })}
+                                    type="number"
+                                    label="Insurance"
+                                    value={insurance}
+                                    error={errors.insurance && !!errors.insurance}
+                                    helperText={errors.insurance && errors.insurance.message}
+                                />
+                            </FormControl>
+                        </Grid>
 
-          
+                        <Grid item md={4} xs={12} sm={6}>
+                            <FormControl fullWidth>
+                                <TextField
+                                    {...register('pmi', { required: "Please fill this field." })}
+                                    type="number"
+                                    label="PMI"
+                                    value={pmi}
+                                    error={errors.pmi && !!errors.pmi}
+                                    helperText={errors.pmi && errors.pmi.message}
+                                />
+                            </FormControl>
+                        </Grid>
+                    </Grid>
 
-          <button className="bg-blue-500 text-white text-lg py-2 px-8 inline-flex items-center justify-center rounded shadow   disabled:bg-blue-300 self-start my-4 "
-            onClick={handleSubmit(onSubmit)} >
-            Submit Details
-          </button>
+                    <Button
+                        className="bg-blue-500 text-white text-lg py-2 px-8 inline-flex items-center justify-center rounded shadow disabled:bg-blue-300 self-start my-4"
+                        onClick={handleSubmit(onSubmit)}
+                    >
+                        Submit Details
+                    </Button>
+                </Stack>
+            </form>
+        </div>
+    );
+};
 
-        </Stack>
-
-      </form>
-
-
-    </div>
-  );
-}
+export default MortgageCalculator;

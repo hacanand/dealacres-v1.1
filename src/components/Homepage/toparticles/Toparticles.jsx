@@ -8,7 +8,7 @@ import {data} from './data'
 
 const Toparticles = () => {
 
-  const [category,setCategory] = useState('News')
+  const [category,setCategory] = useState('Flats')
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
@@ -24,32 +24,34 @@ const Toparticles = () => {
     };
   }, []);
 
-  const filteredData = screenWidth < 900 ? data[category].slice(0, 4) : data[category];
+  const filteredData =  data[category];
 
   return (
     <div className={styles.toparticlesContainer}>
-        <h3>Top articles on home buying</h3>
-        <p className={styles.subtitle}> Read from Beginners check-list to Pro Tips</p>
+        <h3>Explore All Residential Projects</h3>
+        <p className={styles.subtitle}>
+
+Discover various residential projects catering to diverse preferences and needs.</p>
         <div className={styles.subtopics}>
             <p
-            onClick={()=>setCategory('News')} 
-            className={category==='News'?styles.selected:''}>
-                News
+            onClick={()=>setCategory('Flats')} 
+            className={category==='Flats'?styles.selected:''}>
+               Flats
             </p>
             <p
-            onClick={()=>setCategory('Taxlegal')} 
-            className={category==='Taxlegal'?styles.selected:''}>
-                Tax & Legal
+            onClick={()=>setCategory('Independent Floors')} 
+            className={category==='Independent Floors'?styles.selected:''}>
+                Independent Floors
             </p>
             <p
-            onClick={()=>setCategory('Helpguides')} 
-            className={category==='Helpguides'?styles.selected:''}>
-                Help Guides
+            onClick={()=>setCategory('Villas')} 
+            className={category==='Villas'?styles.selected:''}>
+               Villas
             </p>
             <p
-            onClick={()=>setCategory('Investment')} 
-            className={category==='Investment'?styles.selected:''}>
-                Investment
+            onClick={()=>setCategory('Plot/Land')} 
+            className={category==='Plot/Land'?styles.selected:''}>
+                Plot/Land
             </p>
         </div>
         <div className={styles.line}></div>
@@ -65,7 +67,8 @@ const Toparticles = () => {
                     </div>
                     <div className={`${styles.texts} ${index < 3 ? styles.withLine : ''}`}>
                         <h6>{dt.title}</h6>
-                        <p>{dt.date}</p>
+                        <p>{dt.desc}</p>
+                        <h2>{dt.price}</h2>
                     </div>
                 </div>
             ))}
