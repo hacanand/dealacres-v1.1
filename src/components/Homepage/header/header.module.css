@@ -60,7 +60,11 @@
 
 .HeaderContentInput{
     display: flex;
-    width: 50%;
+    width: 80%;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+   
 }
 
 .HeaderContentInput input{
@@ -74,6 +78,7 @@
     padding: 0 1rem;
     border-radius: 5px 0 0 5px;
 }
+
 
 .HeaderContentInput button{
     @apply 
@@ -92,6 +97,22 @@
     outline: none;
     padding: 0 1rem;
 
+}
+.LocationDropdown {
+    display: flex;
+    flex: 2;
+    
+}
+  
+.LocationDropdown select {
+    width: 100%;
+    min-height: 50px;
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+    outline: none;
+    padding: 0 0.5rem;
+    border-radius: 5px;
 }
 
 .cta{
@@ -112,6 +133,42 @@
     }
   }
 
+@media screen and (max-width:1300px) and (min-width:1100px){
+    .HeaderContentInput{
+        display: flex;
+        width: 75%;
+        background-color: white;
+        padding: 8px;
+        border-radius: 10px;
+       
+    }
+    .headerContent h1{
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @apply text-white
+        font-[Poppins]
+    }
+    .HeaderContentInput button{
+        min-height:50px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 25px;
+        padding: 0 0.5rem;
+    
+    }
+    .LocationDropdown {
+        display: flex;
+        flex: 2.4;
+        
+    }
+    .LocationDropdown select {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 0.25rem; 
+    }
+} 
+
 @media screen and (max-width:1050px){
     .TextWrap{
         width: 70%;
@@ -119,6 +176,7 @@
 
     .HeaderContentInput{
         width: 85%;
+        border-right: none;
     }
     
 }

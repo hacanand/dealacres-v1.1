@@ -11,8 +11,8 @@
 
 .fdiv_text
 {
-    @apply text-3xl
-    lg:text-5xl
+    @apply text-2xl
+    lg:text-3xl
     md:mb-0
     mb-6
     font-semibold
@@ -70,7 +70,7 @@
     lg:grid-cols-4 
     sm:first-line:gap-6 
     sm:px-8 
-    pb-8
+    pb-8 
 
 }
 

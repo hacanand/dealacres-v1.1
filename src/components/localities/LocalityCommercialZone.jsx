@@ -4,32 +4,32 @@ const delhiCities = [
   {
     name: "Mohan Corporative Area, Delhi",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/800_450_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9sZkY4SS9NQUZzNkZsZkY4SS8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAABZ7kt3DQR8Us1C8H8nPSWMI8f_Nir6wuyeh5MU9pZpZ&exp=1696506634&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAALLG8qvSQmX_izm_rSdQ0xm0R4SjNB5Z2pWxlmRbNleP",
+      "/mohan.webp",
   },
   {
     name: "Connaught Place, Delhi",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/1000_667_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS92Zk00dy9NQUZzNkp2Zk00dy8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAD32L6YMMEkC52MK1P0ipHKTZvPjxZg6v7EtrS7WYBud&exp=1696508283&x-canva-quality=screen_2x&csig=AAAAAAAAAAAAAAAAAAAAAElyTqmh3ZDanHh_KC22m3JUk7SG5czy-2lAU9fHVZ9i",
+      "/connaught.webp",
   },
   {
     name: "Khan Market",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/600_337_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9aa3J6US9NQUZzNklaa3J6US8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAM5MdHJCd2Ed7bnnZe6PqsTp410-hNYxvVY0mT5zoHKu&exp=1696507657&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAGERRlHR8jWUp0jBIzshKIRxD80TD8nuXQNo3-E4PX4j",
+      "/khanmarket.jpg",
   },
   {
     name: "Nehru Place, Delhi",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/550_300_100_PNG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9ZRkV1VS9NQUZzNkhZRkV1VS8xL3AucG5n?osig=AAAAAAAAAAAAAAAAAAAAAPjudndc2RE8WCMz6q0AY80gO_0M8_XiA8AyuzIL-0RX&exp=1696505053&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAANqrFZqGMTQy5ajSokiPhKX02lKcuEoeWz3flVxV_lrJ",
+      "/nehruplace.webp",
   },
   {
     name: "Sarojini Nagar, Delhi",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/800_450_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9PLU4xOC9NQUZzNktPLU4xOC8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAIH0O8VSyD_aeQDzd6gB09oAZzpq5vQMuZQxB7z4ZE1V&exp=1696508475&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAHUc827M74mvTA6X7MXam0uoW1Fz4yeGLKizuk-gXfIx",
+      "/sarojini.jpg",
   },
   {
     name: "Karol Bhag, Delhi",
     imageUrl:
-      "https://media.canva.com/1/image-resize/1/750_400_92_JPG_F/czM6Ly9tZWRpYS1wcml2YXRlLmNhbnZhLmNvbS9hc2tnay9NQUZzNkthc2tnay8xL3AuanBn?osig=AAAAAAAAAAAAAAAAAAAAAKj91V-DTSEuDQjKT_sAAVXvEtP_zAzQi7SYt40VUNjU&exp=1696506141&x-canva-quality=screen&csig=AAAAAAAAAAAAAAAAAAAAAMG7XaLbzaTRmo-ncjudeQQEAb2KJr0WF31b_vaOtEGx",
+      "/karolbagh.jpg",
   },
 ];
 

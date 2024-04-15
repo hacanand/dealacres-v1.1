@@ -1,40 +1,36 @@
 import source from '../../../../public/toparticles/thumbnail-1.jpg'
 
 export const data={
-    'News':[
-        {id:1,src: source,title:'News news news news',date:'07 Dec 2022'},
-        {id:2,src: source,title:'News news news news',date:'07 Dec 2022'},
-        {id:3,src: source,title:'News news news news',date:'07 Dec 2022'},
-        {id:4,src: source,title:'News news news news',date:'07 Dec 2022'},
-        {id:5,src: source,title:'News news news news',date:'07 Dec 2022'},
-        {id:6,src: source,title:'News news news news',date:'07 Dec 2022'},
+    'Flats':[
+        {id:1,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:2,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:3,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:4,src: source,title:'DLF The Arbour Flats',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
-    'Taxlegal':[
-        {id:1,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
-        {id:2,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
-        {id:3,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
-        {id:4,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
-        {id:5,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
-        {id:6,src: source,title:'Tax and legal tax and',date:'07 Dec 2022'},
+    'Independent Floors':[
+        {id:1,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:2,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:3,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:4,src: source,title:'DLF The Arbour Floors',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
-    'Helpguides':[
-        {id:1,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
-        {id:2,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
-        {id:3,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
-        {id:4,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
-        {id:5,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
-        {id:6,src: source,title:'Help guides help guides',date:'07 Dec 2022'},
+    'Villas':[
+        {id:1,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:2,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:3,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:4,src: source,title:'DLF The Arbour Villas',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+       
     ],
 
-    'Investment':[
-        {id:1,src: source,title:'Investment Investment',date:'07 Dec 2022'},
-        {id:2,src: source,title:'Investment Investment',date:'07 Dec 2022'},
-        {id:3,src: source,title:'Investment Investment',date:'07 Dec 2022'},
-        {id:4,src: source,title:'Investment Investment',date:'07 Dec 2022'},
-        {id:5,src: source,title:'Investment Investment',date:'07 Dec 2022'},
-        {id:6,src: source,title:'Investment Investment',date:'07 Dec 2022'},
+    'Plot/Land':[
+        {id:1,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:2,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:3,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        {id:4,src: source,title:'DLF The Arbour Plot/Land',desc:'3/4 BHK Apartment, Sector 57, Gurgaon',price:'₹ 1.46 Cr *'},
+        
     ],
     
 }

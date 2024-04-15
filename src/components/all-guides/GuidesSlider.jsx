@@ -21,7 +21,7 @@ const GuidesSlider = ({
         className: "slider variable-width",
         dots: false,
         infinite: true,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         variableWidth: true,
         nextArrow: <GuidesCustomArrow icon={AiOutlineRight} isNext/>,
