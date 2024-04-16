@@ -5,7 +5,7 @@ import "./about.css";
 
 
 const About = () => {
-  const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   // Function to toggle content visibility
   const toggleContent = () => {

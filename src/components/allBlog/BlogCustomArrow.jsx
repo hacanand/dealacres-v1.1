@@ -20,13 +20,13 @@ const BlogCustomArrow = ({
             style={{ ...style }}
             onClick={onClick}
         >
-            <span className={`  text-black w-[35px] bg-white/30 border-4 border-black h-[35px] rounded-full inline-flex items-center justify-center   absolute
+            <span className={`  text-black w-[20px] bg-white/50 border border-black h-[20px] rounded-full inline-flex items-center justify-center   absolute
             transition-all hover:bg-black hover:text-white
             hover:shadow-2xl
-            hover:scale-110
-            top-1/2 -translate-y-1/2 ${isNext ? 'right-8' : '-right-12'} z-20  `}>
+            hover:scale-110  font-bold 
+            top-[40%] -translate-y-[40%] ${isNext ? 'right-8' : '-right-12'} z-20  `}>
 
-                <Icon size={30}/>
+                <Icon size={15}/>
             </span>   
         
          </div>

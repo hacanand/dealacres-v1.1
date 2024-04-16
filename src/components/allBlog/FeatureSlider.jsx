@@ -36,15 +36,18 @@ const FeatureSlider = ({
             <Slider {...settings}>
                 {
                     [...Array(4)].map((_, index) => (
-                        <div key={index} className='h-full max-h-full'>
+                        <div key={index} className='h-full max-h-full !flex flex-col '>
                             <Image className=' 
-                            w-full h-[80%] max-h-full
+                            w-full h-full
                             object-cover' src={img} alt={"Slider Image"} width={500} height={200}/>
 
                             <div className='
-                            h-[20%]
+                        
                             w-full
-                            flex  justify-center text-center text-sm sm:text-base lg:text-lg font-bold   py-4 px-2 shadow-lg border border-t-0 border-gray-400'>
+                            text-[10px]
+                            xs:text-sm
+                            p-0 text-center
+                            sm:text-base lg:text-lg font-bold   sm:py-4 sm:px-2 shadow-lg border border-t-0 border-gray-400'>
                                 {title}
                             </div>
                         </div>

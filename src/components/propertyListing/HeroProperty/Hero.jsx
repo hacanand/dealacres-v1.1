@@ -48,8 +48,8 @@ const Hero = () => {
     };
     
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-4 md:gap-10 container mx-auto md:mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero max-md:mx-auto '>
+        <section className='flex flex-col md:flex-row  items-start justify-center gap-4 md:gap-10 md:container mx-auto md:mt-10 overflow-auto'>
+            <div className='h-full md:mt-20 rounded-xl py-4 px-6 custom-border-hero max-md:mx-auto max-md:w-[90%] '>
                 <h1 className="font-heading my-2 ">
                     Post Your Property for free
                 </h1>
@@ -123,7 +123,7 @@ const Hero = () => {
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
                 </Link>
             </div>
-            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-2'>
+            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-2 rounded-b-[2rem]'>
                 <div className='flex flex-row gap-2 md:mt-20 md:mb-10'>
                     <h1 className="text-lg md:mt-2 font-semibold md:mb-6 max-sm:text-center">
                         Post property Ad to <br className='hidden md:block' />

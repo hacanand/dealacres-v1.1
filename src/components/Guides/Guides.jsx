@@ -4,8 +4,8 @@ import Image from "next/image";
 const Guides = () => {
   return (
     <div className="my-10  ">
-      <div className="flex gap-8 flex-wrap justify-center ">
-        <div className="relative w-52 h-96 overflow-hidden group">
+      <div className="flex gap-4 md:gap-8 overflow-x-auto md:flex-wrap md:justify-center ">
+        <div className="relative min-w-[13rem] w-52 h-96 overflow-hidden group">
           <Image
             src="/all blog/flat1.jpg"
             alt="Your Image"
@@ -22,7 +22,7 @@ const Guides = () => {
             </p>
           </div>
         </div>
-        <div className="relative w-52 h-96 overflow-hidden group">
+        <div className="relative min-w-[13rem] w-52 h-96 overflow-hidden group">
           <Image
             src="/all blog/flat1.jpg"
             alt="Your Image"
@@ -39,7 +39,7 @@ const Guides = () => {
             </p>
           </div>
         </div>
-        <div className="relative w-52 h-96 overflow-hidden group">
+        <div className="relative min-w-[13rem] w-52 h-96 overflow-hidden group">
           <Image
             src="/all blog/flat1.jpg"
             alt="Your Image"
@@ -56,7 +56,7 @@ const Guides = () => {
             </p>
           </div>
         </div>
-        <div className="relative w-52 h-96 overflow-hidden group">
+        <div className="relative min-w-[13rem] w-52 h-96 overflow-hidden group">
           <Image
             src="/all blog/flat1.jpg"
             alt="Your Image"
