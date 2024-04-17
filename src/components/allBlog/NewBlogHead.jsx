@@ -13,7 +13,7 @@ const NewBlogHead = () => {
   ];
 
   return (
-    <div className='h-[787.5px] overflow-hidden md:h-[675px] lg:max-h-[88vh] w-screen max-w-full relative after:absolute after:bg-black/50 after:w-full after:h-full after:left-0 text-white after:z-[7]'>
+    <div className='min-h-[710px] xs:min-h-[100vh] md:min-h-[80vh]  overflow-hidden   w-screen max-w-full relative after:absolute after:bg-black/50 after:w-full after:h-full after:left-0 text-white after:z-[7]'>
       <div className='absolute w-full h-full z-[5] '>
         <Image src={img} alt={'Luxurious House'} className='w-full h-full object-cover' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
@@ -26,15 +26,15 @@ const NewBlogHead = () => {
         </div>
 
         <div className='flex justify-center self-stretch w-full'>
-          <input type="text" placeholder='Search...' className='border border-white bg-transparent text-lg sm:text-xl p-1 sm:p-2 md:w-2/4 placeholder:text-white max-sm:placeholder:font-semibold placeholder:font-bold  max-sm:w-full ' />
+          <input type="text" placeholder='Search...' className='border border-white bg-transparent text-lg sm:text-xl p-1 sm:p-2  placeholder:text-white max-sm:placeholder:font-semibold placeholder:font-bold  max-md:w-full ' />
 
         </div>
 
-        <div className='text-lg xs:text-xl md:text-4xl max-sm:font-bold font-medium py-4 text-justify xs:text-center md:w-2/3 mx-auto max-sm:whitespace-break-spaces'>
+        <div className='text-lg xs:text-xl md:text-2xl font-bold  py-4 text-justify xs:text-center lg:w-2/3 mx-auto max-sm:whitespace-break-spaces lg:max-w-screen-lg lg:mx-auto'>
           Deal Acres is your ultimate destination for valuable insights and knowledge in the ever-evolving world of real estate. <FaArrowCircleRight size={20} color='white' style={{display: 'inline'}} />
         </div>
 
-        <div className=' md:text-4xl flex xs:justify-center flex-wrap lg:flex-nowrap  gap-4 py-4  md:w-2/3 md:mx-auto overflow-scroll sm:overflow-hidden'>
+        <div className=' md:text-4xl flex xs:grid grid-cols-2 sm:grid-cols-4 xs:justify-center flex-wrap lg:flex-nowrap  gap-4 md:gap-x-8 py-4  lg:max-w-screen-lg lg:mx-auto overflow-scroll sm:overflow-hidden'>
           {
             [...Array(4)].map((_, index) => (<div className='w-[45%] xs:w-[150px] md:w-[200px]' key={index}>
               <BlogHeadCard title='Infocus Rera'

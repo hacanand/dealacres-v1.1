@@ -77,10 +77,10 @@ const Page = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <section className='md:mt-12 container mx-auto lg:w-4/5'>
+      <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
 
         <Navigation />
-        <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto md:my-10 overflow-auto'>
+        <div className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
 
           <div className='h-full w-[90%] max-md:mx-auto md:w-[50%] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
             <h1 className="font-medium md:font-bold md:text-2xl text-xl">

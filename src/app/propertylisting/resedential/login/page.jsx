@@ -22,10 +22,10 @@ const Login = () => {
     };
 
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto md:my-10 overflow-auto'>
+        <section className='flex flex-col md:flex-row items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
             <div className='h-full w-full md:w-[400px] rounded-xl bg-[#D3E3F9] md:bg-[#e9f6fe] p-4 flex flex-row md:flex-col items-center 
             
-            relative max-md:after:content-[""] after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
+            relative  after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
             
             max-md:pb-0 max-md:pt-[3rem] max-md:justify-center
             '>

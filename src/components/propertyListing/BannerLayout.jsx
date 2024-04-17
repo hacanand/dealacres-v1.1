@@ -15,7 +15,7 @@ const BannerLayout = ({
 
     // relative max-md:after:content-[""] after:absolute after:bg-[#c9e0ee] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
     return (
-        <div className={`w-full md:w-[45%]  ${startWithPic && '-order-1 md:order-2' }   bg-[#c9e0ee] rounded-b-[1rem] md:rounded-xl  `}>
+        <div className={`w-full md:w-[45%]  ${startWithPic && '-order-1 md:order-2' }   bg-[#c9e0ee] rounded-b-[1rem] md:rounded-xl overflow-hidden  `}>
             <div className={`h-full  w-full   p-4 flex flex-row gap-2  md:flex-col items-center  ${bgColor && bgColor}
  max-md:pb-0 pt-8 sm:pt-16 md:pt-0 `}>
                 {showThumps && <Image src={'/propertyListing/assets/thumbsup.png'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />}
@@ -26,7 +26,7 @@ const BannerLayout = ({
 
                 </h1>}
 
-                {lists && <ul className="list-disc pl-12 text-lg sm:text-xl md:mt-16">
+                {lists && <ul className="list-disc pl-12 text-base xs:text-lg sm:text-xl md:mt-16">
                     {
                         lists.map((list, i) => <li className='mb-2' key={i}>{list}</li>)
                     }

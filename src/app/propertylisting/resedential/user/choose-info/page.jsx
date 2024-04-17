@@ -27,7 +27,7 @@ const Info = () => {
   };
 
   return (
-    <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto md:my-10 overflow-auto'>
+    <section className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
 
       <div className='h-full w-full  md:w-[450px] md:mt-20  p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none max-md:w-[80%] mx-auto flex flex-col max-md:gap-4 '>
         <h1 className="font-medium md:font-bold md:text-2xl text-xl md:mt-16">
@@ -45,8 +45,8 @@ const Info = () => {
       </div>
 
       <div className='h-full w-full md:w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-row md:flex-col items-center -order-1 md:order-2
-      
-      relative max-md:after:content-[""] after:absolute after:bg-[#c9e0ee] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:pb-0 pt-8 sm:pt-16 md:pt-0 '>
+      overflow-hidden
+       rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:pb-0 pt-8 sm:pt-16 md:pt-0 '>
         <h1 className="text-base sm:text-xl md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
           This information creates a transparency and build trust with buyers/tenants</h1>
         <Image src={'/propertyListing/assets/agent.png'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 max-w-[200px] max-h-[200px] min-w-[120px] min-h-[120px] w-1/2 max-md:self-end' />

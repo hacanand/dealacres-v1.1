@@ -72,9 +72,9 @@ const Page = () => {
 
 
     return (
-        <section className='md:mt-12 container mx-auto lg:w-4/5'>
+        <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
             <NavigationCOwner />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 lg:gap-20 container mx-auto md:my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 lg:gap-20 md:container mx-auto md:my-10 overflow-auto'>
 
                 <div className='h-full w-[90%] max-md:mx-auto md:w-[50%] rounded-xl p-5 custom-border max-md:border-none'>
                     <h1 className="font-bold md:text-2xl text-xl mt-2 ">
