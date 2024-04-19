@@ -113,6 +113,8 @@ const Navbar = () => {
 
 
   const handleScroll = () => {
+    if(typeof window === 'undefined') return;
+    
     if (window.scrollY > 0) {
       setScrolled(true);
     } else {
