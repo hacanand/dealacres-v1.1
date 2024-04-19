@@ -14,7 +14,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export function EmiPie({
   data
 }) {
-  if(typeof window === 'undefined') return null;
+
   
     const [pieData, setPieData] = useState({
         labels: ['Interest Amount', 'Principle Amount'],
@@ -39,7 +39,7 @@ const options = {
     legend: {
       display: true,
       position: 'bottom',
-      align: (window.innerWidth <= 480 ? 'center' : 'start'),
+      align: typeof window !== 'undefined' ? (window.innerWidth <= 480 ? 'center' : 'start') : 'center',
       labels: {
         font: {
           size: 12
