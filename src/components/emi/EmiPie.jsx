@@ -14,7 +14,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export function EmiPie({
   data
 }) {
-  if(typeof window === 'undefined') return <></>;
+  if(typeof window === 'undefined') return null;
   
     const [pieData, setPieData] = useState({
         labels: ['Interest Amount', 'Principle Amount'],
