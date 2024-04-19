@@ -13,6 +13,7 @@ const About = () => {
     };
     
     useEffect(() => {
+      if(typeof window === 'undefined') return;
       const mediaQuery = window.matchMedia("(max-width: 800px)");
         const handleMediaQueryChange = (event) => {
         if (event.matches) {

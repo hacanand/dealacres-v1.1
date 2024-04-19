@@ -18,7 +18,7 @@ const AgentPage = () => {
     const handleScroll = () => {
       setScrollCount(scrollCount + 1);
     };
-
+    if(typeof window === 'undefined') return;
     window.addEventListener("scroll", handleScroll);
 
     return () => {

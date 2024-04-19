@@ -87,6 +87,7 @@ const ExploreBuilder = () => {
 
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
     if(window.innerWidth <= 768){
       setPagesToShow((prev) => ({
         ...prev,

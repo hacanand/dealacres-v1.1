@@ -25,6 +25,7 @@ const ServiceExplore = () => {
 
       setDeviceType(newDeviceType);
     };
+    if(typeof window === 'undefined') return;
 
     handleResize();
 

@@ -63,7 +63,7 @@ const options = {
 
     console.log(data, pieData.datasets[0].data)
 
-
+  if(typeof window === 'undefined') return <></>;
 
   return <Pie data={pieData} options={options} />;
 }
