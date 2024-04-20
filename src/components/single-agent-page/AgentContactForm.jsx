@@ -41,7 +41,7 @@ const AgentContactForm = () => {
                     <ClipLoader color={'#D8E6FE'} size={100} />
                 </div>
             }
-            <h2 className='font-bold text-xl md:text-2xl uppercase'>
+            <h2 className='font-bold text-lg xs:text-xl md:text-2xl uppercase'>
                 Ask sanya a question
             </h2>
 

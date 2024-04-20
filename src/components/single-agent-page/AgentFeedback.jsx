@@ -29,8 +29,8 @@ const AgentFeedback = () => {
         handleSubmit,
         formState: { errors } } = useForm()
     return (
-        <div className='w-full' >
-            <h2 className='font-bold text-xl py-2'>
+        <div className='w-full text-sm sm:text-base' >
+            <h2 className='font-bold text-lg sm:text-xl py-2'>
                 Leave a Feedback - As your words matter to us
             </h2>
 

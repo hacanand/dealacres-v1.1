@@ -12,8 +12,8 @@ const ListingCard = ({
         <div className='w-[30%]'>
             <Image src={`/single-agent/${img}`} className='rounded-xl' alt={title} width={300} height={100}/>
         </div>
-        <div className='w-[70%] px-4 text-gray-500'>
-            <h3 className='font-bold text-lg text-black'>
+        <div className='w-[70%] px-4 text-gray-500 text-xs xs:text-sm sm:text-base'>
+            <h3 className='font-bold text-sm xs:text-base sm:text-lg text-black'>
                 {title}
             </h3>
             <p>

@@ -30,7 +30,7 @@ const AgentHeroSection = ({
   }
 
   return (
-    <div className='w-full md:w-[85%] mx-auto grid grid-cols-4 md:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
+    <div className='w-full md:w-[85%] mx-auto grid grid-cols-4 sm:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
 
       <div className='text-white  col-span-2'>
         <div className='py-8 px-2 md:px-6 flex flex-col md:justify-between h-full gap-2 md:gap-8'>
@@ -85,8 +85,8 @@ const AgentHeroSection = ({
 
       </div>
 
-      <div className='md:order-2 sm:relative rounded-3xl h-[100%] w-full sm:h-[95%] col-span-2 md:col-span-1 md:after:absolute after:w-[100%] after:h-[101%] after:bg-white after:right-2 after:rounded-3xl after:top-1 py-4 md:py-0 '>
-        <Image src={`/about-us/${img}`} className='rounded-3xl mx-auto sm:mx-0 h-[400px]  w-auto sm:w-full sm:h-full  object-cover sm:absolute  z-10' width={300} height={300} />
+      <div className='md:order-2 relative rounded-3xl h-[100%] w-full sm:h-[95%] col-span-2 sm:col-span-1 after:absolute after:w-[100%] after:h-[100%] after:bg-white after:right-1 after:rounded-3xl after:top-1 py-4 md:py-0 '>
+        <Image src={`/about-us/${img}`} className='rounded-3xl mx-auto sm:mx-0 h-[400px]  w-auto sm:w-full sm:h-full  object-cover absolute  z-10' width={300} height={300} />
       </div>
     </div>
   )
