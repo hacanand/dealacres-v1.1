@@ -41,7 +41,7 @@ const AgentContactForm = () => {
                     <ClipLoader color={'#D8E6FE'} size={100} />
                 </div>
             }
-            <h2 className='font-bold text-lg xs:text-xl md:text-2xl uppercase'>
+            <h2 className='font-bold text-sm xs:text-base sm:text-lg md:text-2xl uppercase'>
                 Ask sanya a question
             </h2>
 
@@ -76,7 +76,7 @@ const AgentContactForm = () => {
                 </div>
             </div>
             <div className='w-full'>
-                <label htmlFor='contactMessage' className='text-lg'>
+                <label htmlFor='contactMessage' className='text-sm sm:text-base md:text-lg'>
                     What can we do for you?
                 </label>
                 <textarea
