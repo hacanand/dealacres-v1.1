@@ -11,7 +11,7 @@ const biz = BIZ_UDGothic({
 
 const Banner = () => {
   return (
-    <div  className={`relative h-[200px] md:h-[350px] flex items-center justify-end   ${styles.Banner}`} >
+    <div  className={`relative !h-[170px] md:!h-[240px] lg:!h-[300px] flex items-center justify-end   ${styles.Banner}`} >
       <Image 
       src={testimony}
       width={400}

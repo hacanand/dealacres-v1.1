@@ -56,6 +56,7 @@
     color: white;
     padding: 5px 25px;
     border-radius: 15px;
+    margin-bottom: 3rem;
 }
 
 
@@ -84,6 +85,14 @@
         margin-bottom: 180px;
         height: 215vh;
     } */
+    .reviewBlock {
+        border: 4px solid rgb(0, 0, 0, 0.1);
+    }
+    .MoreReviews {
+        margin-bottom: unset;
+        margin: 1rem 0;
+        font-size: 13px;
+    }
 }
 
 @media only screen and (max-width:640px){
@@ -91,15 +100,27 @@
 
         margin: 0em 0;
         padding: 12px;
-        border: 7px solid rgb(0, 0, 0, 0.1);
+        border: 4px solid rgb(0, 0, 0, 0.1);
         border-radius: 15px;
         margin-bottom: 8px;
         background-color: rgb(255, 255, 255) !important;
         text-align: justify;
+        font-size: 12px;
     }
 
     .ReviewLayout {
         margin-top: 0;
+    }
+
+    .UserInfo {
+        font-size: 11px;
+    }
+
+    .UserImg {
+        min-width: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        min-height: 40px;
     }
 
     
