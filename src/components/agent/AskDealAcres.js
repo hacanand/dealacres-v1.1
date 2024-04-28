@@ -72,7 +72,7 @@ const AskDealAcres = () => {
           }}
         >
           {" "}
-          Submit
+          Send
         </button>
       </form>
 

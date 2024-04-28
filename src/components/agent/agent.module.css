@@ -188,8 +188,16 @@
 
   }
 }
-@media screen and (min-width: 768px){
+@media only screen and (max-width: 640px) {
+  .Explore {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {
+  .Explore {
+    font-size: 18px;
+  }
  
-
-
 }

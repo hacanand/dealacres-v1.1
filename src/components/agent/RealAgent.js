@@ -9,7 +9,7 @@ const RealAgent = () => {
   return (
     <div className={styles.RealAgent}>
       <div>
-        <h2>Why choose a Hisar Real Agent?</h2>
+        <h2 className="max-xs:!text-[20px]">Why choose a Hisar Real Agent?</h2>
         <div className={styles.ReasonsBlock}>
           <div className={styles.Reasons}>
             <Image src={Network} alt="Strong Local Network" />
