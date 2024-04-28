@@ -69,7 +69,7 @@ const SafetyGuide = () => {
         </div>
 
 
-        <div className='py-8'>
+        <div className='py-4 md:py-8'>
 
           <SafetyInro title={safetyData.intro.title} content={safetyData.intro.content} />
         </div>
@@ -90,12 +90,12 @@ const SafetyGuide = () => {
         </div>
 
       <div className='flex flex-col gap-3 md:hidden font-bold  py-2'>
-        <h3 className='text-2xl'>Need to Get in Touch?</h3>
-        <div>
+        <h3 className=' font-bold text-lg xs:text-xl sm:text-2xl md:text-3xl'>Need to Get in Touch?</h3>
+        <div className="text-sm xs:text-base sm:text-lg md:text-xl ">
           <p>CONTACT US</p>
           <p>7015963201, 8307757571</p>
         </div>
-        <div>
+        <div className="text-sm xs:text-base sm:text-lg md:text-xl ">
           <p>WRITE TO US AT,</p>
           <p>contactus@dealacres.com</p>
         </div>
