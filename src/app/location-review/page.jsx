@@ -69,15 +69,15 @@ const LocationReview = () => {
   };
 
   return (
-    <div className="w-full py-5 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] mt-10 mb-10">
-      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 py-8">
-        <h2 className="block text-left md:text-center text-2xl sm:text-3xl md:text-4xl font-bold w-full">
+    <div className="w-full py-2 sm:py-4 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] md:mt-10 md:mb-10">
+      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 pt-4 pb-16 md:py-8">
+        <h2 className="block text-left md:text-center text-2xl sm:text-3xl md:text-4xl font-bold w-full py-2">
           Write Your Reviews <span className="penIcon"></span>
         </h2>
 
         <div className="w-full md:w-auto">
-          <div className="space-y-4 md:space-y-2 md:mt-8">
-            <p className="text-lg md:text-xl font-semibold hidden md:block">
+          <div className=" md:space-y-2 mt-2">
+            <p className="py-2 text-sm xs:text-base sm:text-lg md:text-xl font-semibold hidden md:block">
               What describes you the best?
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
@@ -92,8 +92,8 @@ const LocationReview = () => {
             </div>
           </div>
 
-          <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className=" md:space-y-2 mt-4 md:mt-8 w-full">
+            <p className="py-2 text-sm xs:text-base sm:text-lg md:text-xl font-semibold">
               Select your locality / society to Review
             </p>
             <div className="relative">
@@ -117,12 +117,12 @@ const LocationReview = () => {
             </div>
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-md md:text-md py-1  px-4 md:px-4 rounded-[10px] text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-sm sm:text-base py-1  px-4 md:px-4 rounded-[10px] text-center text-white mt-4 md:mt-8">
             Write Review
           </button>
 
-          <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className=" md:space-y-2 mt-4 md:mt-8 w-full">
+            <p className="py-2 text-sm xs:text-base sm:text-lg md:text-xl font-semibold">
               What do you like about the locality?
             </p>
             <textarea
@@ -131,8 +131,8 @@ const LocationReview = () => {
             ></textarea>
           </div>
 
-          <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className=" md:space-y-2 mt-4 md:mt-8 w-full">
+            <p className="py-2 text-sm xs:text-base sm:text-lg md:text-xl font-semibold">
               What do you Dislike about the locality?
             </p>
             <textarea
@@ -141,8 +141,8 @@ const LocationReview = () => {
             ></textarea>
           </div>
 
-          <div className="space-y-4 mt-10 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className=" mt-4 md:mt-10  w-[70%] xs:w-[60%]  sm:w-full">
+            <p className="py-2 text-sm  sm:text-lg md:text-xl font-semibold">
               Rate This - What you Thought
             </p>
             <div className="flex flex-col gap-1">
@@ -156,7 +156,7 @@ const LocationReview = () => {
             </div>
           </div>
 
-          <button className="bg-[#0061DF] font-bold text-md md:text-md py-1 px-4 md:px-4 rounded-[10px] text-center text-white mt-8">
+          <button className="bg-[#0061DF] font-bold text-sm sm:text-base py-1 px-4 md:px-4 rounded-[10px] text-center text-white mt-4 md:mt-8">
             Post Review
           </button>
         </div>

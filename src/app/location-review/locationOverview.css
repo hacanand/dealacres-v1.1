@@ -8,7 +8,7 @@
 	position: absolute;
 	content: "";
 	left: 0;
-	background-image: url(/_next/static/media/pad.497747e5.webp);
+	background-image: url('../../../public/locationReview/pad.webp');
 	/* inset: 0; */
 	background-size: 24px, 24px;
 	width: 24px;
@@ -19,7 +19,7 @@
 .penIcon::after {
 	position: absolute;
 	content: "";
-	background-image: url(/_next/static/media/pen.67a5f694.png);
+	background-image: url('../../../public/locationReview/pen.png');
 	/* inset: 0; */
 	background-size: 24px, 24px;
 	top: 18px;

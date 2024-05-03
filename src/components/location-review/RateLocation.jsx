@@ -14,8 +14,8 @@ const RateLocation = ({ facility, onRate }) => {
   };
 
   return (
-    <div className="flex items-center justify-between">
-      <p className="text-md max-sm:text-md">{facility}</p>
+    <div className="inline-flex items-center justify-between">
+      <p className="text-sm xs:text-base ">{facility}</p>
       <div className="flex ">
      <Rating sx={{
       fontWeight: 'bold'
