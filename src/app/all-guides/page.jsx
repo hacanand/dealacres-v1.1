@@ -62,11 +62,8 @@ const articlesData = [
   {
     "title": "Solar Panels for Apartments: The Complete Guide for Renters",
     "img": "solar-panels.webp"
-  },
-  {
-    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-    "img": "solar-panels.webp"
   }
+
 ]
 
 const AllGuidesPage = () => {
@@ -106,11 +103,11 @@ const AllGuidesPage = () => {
 
       {/* Real Estate Made easy.... */}
       <div className='px-4 max-w-[1060px] mx-auto'>
-        <h2 className='text-3xl font-bold py-2'>
+        <h2 className='text-xl xs:text-2xl sm:text-3xl font-bold py-2'>
           Real Estate Made Easy: Your Comprehensive Manual
         </h2>
 
-        <p className='text-justify text-lg py-4'>
+        <p className='text-justify text-base sm:text-lg py-4'>
           Our real estate manuals are like helpful guides for buying and selling homes. They explain everything step by step, from finding the perfect property to signing the paperwork. These manuals are easy to understand, with clear explanations and tips to make real estate transactions smooth and simple.
         </p>
       </div>

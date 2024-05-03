@@ -83,10 +83,6 @@ const articlesData = [
   {
     "title": "Solar Panels for Apartments: The Complete Guide for Renters",
     "img": "solar-panels.webp"
-  },
-  {
-    "title": "Solar Panels for Apartments: The Complete Guide for Renters",
-    "img": "solar-panels.webp"
   }
 ]
 

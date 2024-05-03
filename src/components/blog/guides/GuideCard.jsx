@@ -21,14 +21,14 @@ const GuideCard = ({
 
 
     return (
-        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center shadow-lg bg-${bgColor} border-l-[14px] border-l-${borderColor} py-2 px-3`}
+        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center justify-center shadow-lg bg-${bgColor} border-l-[14px] border-l-${borderColor} py-2 px-3`}
             style={{
                 backgroundColor: bgColor,
                 borderLeftColor: borderColor
             }}  
         >
     
-            <div className='font-bold text-xl 2xl:text-2xl py-1 max-md:whitespace-nowrap'>
+            <div className='font-bold text-2xl py-1 max-md:whitespace-nowrap'>
                 {
                     title.split(' ').map((word, index) => {
                         if (index == noOfWordsInTitle - 1) {

@@ -73,28 +73,7 @@ const ManualCategorySlider = ({
 
 
             {/* Tab Content  */}
-             <div className='py-8'>
-                <div className='flex flex-col items-center md:grid md:grid-cols-12 gap-8 '>
-                    <div className='w-[180px] h-[250px] 
-                    md:col-span-3
-                    justify-self-end
-                    '>
-
-                    <GuideCard
-                    variableWidth
-                    title={guide.title}
-                    img={guide.img}
-                    bgColor={guide.bgColor}
-                    borderColor={guide.borderColor}
-                    textColor={guide.textColor}
-                    />
-                    </div>
-
-                    <p className='md:col-span-8 text-lg p-4 text-justify'>
-                        {guide.content}
-                    </p>
-                </div>
-            </div> 
+          
         </div>
     )
 }

@@ -39,6 +39,19 @@ const GuidesSlider = ({
 
               }
             },
+            {
+              breakpoint: 350,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                rows:1,
+                arrows:false,
+                dots: true,
+                variableWidth: true,
+                infinite: true,
+
+              }
+            },
             
           ],
 
@@ -50,14 +63,14 @@ const GuidesSlider = ({
         }
     }
     return (
-        <div className=''>
+        <div className='mb-8'>
             <Slider {...settings}>
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='mr-[2.3rem] ' onClick={() => handleTabChange(index)}>
+                            <div key={index} className='md:mr-[2.3rem] w-full h-full' onClick={() => handleTabChange(index)}>
 
-                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />
+                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img}  />
                             </div>
                         )
                     })

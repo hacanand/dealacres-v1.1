@@ -67,3 +67,12 @@
 .cardContainer:hover {
     transform: translate(10px, -8px); 
 }
+
+@media screen and (max-width: 768px) {
+    .checkListContainer {
+        box-shadow: none;
+    }
+    .checkList::before {
+        width: 40px;    
+    }
+}

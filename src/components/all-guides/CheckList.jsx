@@ -49,21 +49,21 @@ const CheckList = ({ tab, data, DropIcon }) => {
               onClick={() => handleGuideClick(index)}
             >
               <span className='w-[50px] inline-flex'>{index + 1} </span>
-              <div className={`ml-2 py-2 min-[920px]:py-4 flex justify-between w-full`}  onClick={() => {
-                  if(selectedTopic === index){
-                    setSelectedTopic(-1)
-                  }else{
-                    setSelectedTopic(index)
-                  }
-                }}>
+              <div className={`ml-2 py-2 min-[920px]:py-4 flex justify-between w-full`} onClick={() => {
+                if (selectedTopic === index) {
+                  setSelectedTopic(-1)
+                } else {
+                  setSelectedTopic(index)
+                }
+              }}>
                 {item}
                 <DropIcon size={30} />
               </div>
 
-              
+
             </li>
 
-            <div id="manualCards" className={` flex-row flex-nowrap overflow-x-auto gap-4 md:gap-16 py-4  ${selectedTopic === index ? 'flex' : 'hidden'} md:hidden`}>
+            <div id="manualCards" className={` flex-col gap-4  py-4  ${selectedTopic === index ? 'flex' : 'hidden'} md:hidden`}>
               {[...Array(10).keys()].map((key) => {
 
 
@@ -77,7 +77,7 @@ const CheckList = ({ tab, data, DropIcon }) => {
               )}
             </div>
 
-          
+
           </div>
 
 
