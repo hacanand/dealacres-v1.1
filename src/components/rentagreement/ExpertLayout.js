@@ -22,7 +22,9 @@ const ExpertLayout = (props) => {
                         </div>
 
                         <div className={styles.ExpertInfo}>
-                            <h3 className={styles.ExpertName}>{props.dt.name}</h3>
+                            <h3 className={styles.ExpertName} style={{
+                                alignSelf: props.featured ? 'center' : 'flex-start'
+                            }}>{props.dt.name}</h3>
                             <Rating size='small' value={props.dt.rating} />
                             <p className={styles.ExpertPosition}>{props.dt.location}</p>
                             <div className={styles.ExpertStatus}>
@@ -36,7 +38,7 @@ const ExpertLayout = (props) => {
                                 <button>Send Enquiry</button>
                             </div>
                             <div className={styles.featured}>
-                                {(props.dt.featured) ? <button>Featured</button> : <button style={{ visibility: "hidden" }}>Featured</button>}
+                                {(props.featured) ? <button>Featured</button> : <button style={{ visibility: "hidden" }}>Featured</button>}
                                 <span onClick={() => {
                                     setFvt(!fvt);
                                 }}>

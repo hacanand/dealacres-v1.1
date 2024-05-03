@@ -5,6 +5,8 @@
     border-radius: 20px;
     gap: 1rem;
     justify-content: center;
+    max-width: 1024px;
+    margin: 1rem auto;
 }
 /* 
 .InsightImgBox{
@@ -56,14 +58,40 @@
     
     }
 }
-@media only screen and (max-width: 540px) {
-
+@media only screen and (max-width: 640px) {
+    .InsightBox {
+        width: 96%;
+        margin: 1rem auto;
+    }
     .InsightImg{
-        /* width: 80px; */
+        width: 80px;
         margin: 0px;
     }
     .ReviewBox h2{
         font-size: 16px;
+        letter-spacing: 0px;
+    }
+    .ReviewBox button{
 
+        font-size: 14px;
+
+    
+    }
+}
+@media only screen and (max-width: 420px) {
+
+    .InsightImg{
+        width: 60px;
+        margin: 0px;
+    }
+    .ReviewBox h2{
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .ReviewBox button{
+
+        font-size: 12px;
+
+    
     }
 }

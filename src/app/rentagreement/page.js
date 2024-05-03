@@ -120,7 +120,7 @@ const Page = () => {
 
 
       <InsightReview />
-      <div className=" mt-10 mb-3 px-[12rem] py-[1rem] max-md:px-[1rem] max-md:py-[2rem]">
+      <div className=" md:mt-10 md:mb-3 px-[12rem] md:py-[1rem] max-md:px-[1rem] max-md:pt-[1rem]  ">
         <EstateService />
       </div>
 

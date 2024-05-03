@@ -34,7 +34,7 @@
 @media only screen and (max-width: 768px) {
 
     .RentalManual {
-        background: #FAF7F3;
+        background:  rgb(246, 239, 229);
         display: flex;
         flex-wrap: nowrap;
         gap: 1rem;
@@ -58,7 +58,7 @@
 
     .ManualImg h3 {
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 500;
         color: #593d34;
         text-align: center;
         margin-bottom: unset;
@@ -70,4 +70,23 @@
         flex-basis: unset;
     }
 
+}
+
+@media only screen and (max-width: 640px){
+    .ManualImg h3 {
+        font-size: 20px;
+    }
+    .ManualImg img {
+        min-width: 130px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .ManualImg h3 {
+        font-size: 18px;
+    }
+    .ManualImg img {
+        min-width: 105px;
+    }
+   
 }

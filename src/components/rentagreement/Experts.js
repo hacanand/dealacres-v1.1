@@ -31,6 +31,7 @@ const Experts = () => {
                 dt={dt}
                 filteredData={filteredData}
                 limit={limit}
+                featured={false}
               />
             ))}
             <div className="text-center">
