@@ -15,7 +15,7 @@ function BuilderSpeak() {
     const [showMore,setShowMore] =  useState(false)
 
     return (
-      <div className={styles.builderSpeakContainer}>
+      <div className={`${styles.builderSpeakContainer} container_box_shadow !border-none`}>
         <div className={styles.subCategories}>
             <p
             onClick={()=>setBuilderInfo('Chairman Message')} 

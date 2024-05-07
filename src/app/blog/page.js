@@ -21,15 +21,15 @@ const Blog = () => {
         </div>
         <Blogcards />
         <Blogcards />
-        <div style={{ position: 'relative', width: '100%', height: '20vh', marginBottom: "30px" }}>
+        <div style={{ position: 'relative', width: '100%', marginBottom: "30px" }} className='min-h-[56px] md:min-h-[100px]'>
           <Image src='/all blog/SellerManual.png' alt='seller manual' layout='fill'
-            objectFit='cover' />
+          style={{width: '100%', height: '100%'}}/>
         </div>
         <Blogcards />
         <Blogcards />
-        <div style={{ position: 'relative', width: '100%', height: '20vh', marginBottom: "30px" }}>
+        <div style={{ position: 'relative', width: '100%', marginBottom: "30px" }} className='min-h-[56px] md:min-h-[100px]'>
           <Image src='/all blog/SellerManual.png' alt='seller manual' layout='fill'
-            objectFit='cover' />
+            style={{width: '100%', height: '100%'}} />
         </div>
         <Blogcards />
         <Guides />

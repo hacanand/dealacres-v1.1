@@ -11,8 +11,8 @@ function NewHeader() {
                 src={background}
                 alt='background'
                 className={`h-full w-full`}
-                width={400}
-                height={250}
+                width={800}
+                height={400}
             />
         </div>
         <div className={`w-full  `}>
@@ -21,8 +21,8 @@ function NewHeader() {
                     <Image
                         src='/singleDeveloper/devLogo.webp'
                         alt='developer Logo'
-                        width={50}
-                        height={50}
+                        width={500}
+                        height={500}
                         className=' rounded-[100%] bottom-1/2 
                         border-2 border-blue-500
                         absolute min-w-[150px] min-h-[150px] sm:min-w-[180px] sm:min-h-[180px] md:min-w-[200px] md:min-h-[200px]'

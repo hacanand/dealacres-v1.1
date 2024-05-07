@@ -25,13 +25,13 @@ function SideContentContainer(props) {
   return (
     <div
       style={lato.style}
-      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4 my-4 md:my-0 self-start`}
+      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4 my-4 md:my-0 self-start container_box_shadow !border-none`}
     >
       <form
         className="my-4 sm:my-8 md:my-0 flex flex-col  sm:gap-2"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h4> Looking for a Property in {props.title}</h4>
+        <h4 className="max-xs:!text-base xs:max-md:!text-lg"> Looking for a Property in {props.title}</h4>
         <TextField
           fullWidth
           margin="dense"

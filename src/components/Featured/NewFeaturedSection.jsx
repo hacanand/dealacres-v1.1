@@ -27,7 +27,7 @@ const NewFeaturedSection = () => {
                         </h2>
                     </div>
                     <div className="overflow-auto h-full flex flex-col gap-1 sm:gap-y-4 ">
-                        <div className="grid grid-cols-[repeat(2,130px)] sm:grid-cols-2 gap-2 sm:gap-8 md:h-full  overflow-x-auto h-[50%]">
+                        <div className="grid grid-cols-[repeat(2,90%)] sm:grid-cols-[repeat(2,75%)] md:grid-cols-2 gap-2 sm:gap-8 md:h-full  overflow-x-auto h-[50%]">
                             <NewFeatureCard img={background} text={'Top Coworking Space On Rent in Modle Town Hisar'} variant={"small"} />
                             <NewFeatureCard img={background} text={'Top Coworking Space On Rent in Modle Town Hisar'} variant={"small"} />
 
@@ -35,7 +35,7 @@ const NewFeaturedSection = () => {
 
                             {/* Repeat the above structure for the other New Updates items */}
                         </div>
-                        <div className="grid grid-cols-[repeat(2,130px)] sm:grid-cols-2 gap-2 sm:gap-8 md:h-full  overflow-x-scroll h-[50%]">
+                        <div className="grid grid-cols-[repeat(2,90%)] sm:grid-cols-[repeat(2,75%)] md:grid-cols-2 gap-2 md:gap-8 md:h-full  overflow-x-scroll h-[50%]">
                             <NewFeatureCard img={background} text={'Top Coworking Space On Rent in Modle Town Hisar'} variant={"small"} />
                             <NewFeatureCard img={background} text={'Top Coworking Space On Rent in Modle Town Hisar'} variant={"small"} />
 

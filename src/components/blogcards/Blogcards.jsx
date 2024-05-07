@@ -11,9 +11,9 @@ import FeatureCard from "../Featured/FeatureCard";
 
 const Blogcards = () => {
   return (
-    <div className="my-12 md:my-8">
+    <div className="mb-4">
       <div className="flex  gap-1  py-4 mb-4 w-full   text-black bg-white items-start">
-        <div className=" md:min-w-0 max-w-[30%] min-w-[120px]">
+        <div className="whitespace-nowrap">
           <h2 className=" inline-flex flex-col
           text-lg xs:text-xl md:text-2xl lg:text-3xl font-[Poppins] w-full">Loan Assistance
           <span className="self-end text-base font-normal">
@@ -23,8 +23,8 @@ const Blogcards = () => {
           
         </div>
         <div className=" inline self-center  border-t-4 border-black w-full "></div>
-        <h2 className="self-center md:max-w-[12%] text-right inline-table w-full min-w-[65px] max-w-[115px] ">
-          <Link className="text-blue-600 font-bold break-keep  text-xs xs:text-sm sm:text-base md:text-lg block w-full lg:text-xl" href="/">
+        <h2 className="self-center whitespace-nowrap ">
+          <Link className="text-blue-600 font-bold break-keep  text-xs   xs:text-sm sm:text-base md:text-lg block w-full lg:text-xl" href="/">
             Read More
           </Link>
         </h2>
