@@ -8,8 +8,8 @@ function Devcard(props) {
             <Image
                 src={props.imgSrc}
                 alt="developer"
-                layout="fill"
-                style={{objectFit:"cover"}}
+                width={100} height={100}
+ 
             />
         </div>
         <div className={styles.devcardTextContainer}>

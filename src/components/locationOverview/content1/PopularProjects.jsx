@@ -2,21 +2,12 @@ import PopularProjectCard from './PopularProjectCard'
 import Link from 'next/link'
 import { FaAngleDown, FaExternalLinkAlt } from 'react-icons/fa'
 
-const popularProjectContentStyle = {
-  width:'100%',
-  display:'flex',
-  flexWrap:'wrap',
-  gap: '20px',
-  alignItems:'center',
- margin:''
-  
-  
-}
+
 
 function PopularProjects() {
   return (
     <div style={{width:'100%',marginBottom:'1rem'}}>
-      <div className="md:justify-normal flex-nowrap md:flex-wrap overflow-x-auto w-full flex gap-5 items-center" >
+      <div className="md:justify-normal flex-nowrap md:flex-wrap overflow-x-auto w-full flex gap-5 md:gap-2 items-center" >
         <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>

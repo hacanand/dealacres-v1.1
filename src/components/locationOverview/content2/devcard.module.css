@@ -3,22 +3,22 @@
     border-radius: 30px;
     border: 1px solid black;
     cursor: pointer;
-    width: calc(100% / 4 - 8px);
-    min-width: 150px;
-    max-width: 200px;
+    width: 100%;
+
  
 }
-@media screen and (min-width: 600px) and (max-width: 768px){
-    .content2DevcardContainer {
-        min-width: 200px;
-    }
-}
+
 
 .devcardImgContainer{
     width: 100%;
-    height: 100px;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .devcardTextContainer{
@@ -31,10 +31,75 @@
 }
 
 .devcardTextContainer h4{
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 900;
 }
 
 .devcardTextContainer h6{
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.devcardImgContainer img {
+    min-width: 150px;
+}
+
+@media screen and (max-width: 960px){
+    .devcardTextContainer {
+        padding: 6px 12px;
+    }
+
+    .devcardTextContainer h4{
+        font-size: 20px;
+
+    }
+    
+    .devcardTextContainer h6{
+        font-size: 12px;
+    }
+
+    
+    .devcardImgContainer {
+        height: 100px;
+    }
+}
+@media screen and (max-width: 640px){
+    .devcardTextContainer {
+        padding: 4px 8px;
+    }
+
+    .devcardTextContainer h4{
+        font-size: 16px;
+
+    }
+    
+    .devcardTextContainer h6{
+        font-size: 10px;
+    }
+
+    
+    .devcardImgContainer {
+        height: 90px;
+    }
+
+    .devcardImgContainer img {
+        min-width: 100px;
+    }
+}
+@media screen and (max-width: 420px){
+    .devcardTextContainer {
+        padding: 4px;
+    }
+
+    .devcardTextContainer h4{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .devcardTextContainer h6{
+        font-size: 10px;
+    }
+
+    .devcardImgContainer {
+        height: 75px;
+    }
 }
