@@ -10,11 +10,11 @@ function Maincontent() {
     <div className = {`${styles.singleDevMainContainer} `}>
         <AboutDev/>
         <div>
-            <h5 className='mb-5'>Ongoing projects by M3M India Pvt. Ltd.</h5>
+            <h5 className='mb-5 heading'>Ongoing projects by M3M India Pvt. Ltd.</h5>
             <PopularProjects/>
         </div>
         <div>
-            <h5 className='mb-5'>Delivered projects by M3M India Pvt. Ltd.</h5>
+            <h5 className='mb-5 heading'>Delivered projects by M3M India Pvt. Ltd.</h5>
             <PopularProjects/>
         </div>
         <div>

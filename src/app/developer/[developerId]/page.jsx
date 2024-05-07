@@ -8,6 +8,9 @@ import IntrestingReading from '@/components/locationOverview/content2/Intresting
 import FAQ from '@/components/property/maincontentcontainer/FAQ'
 import NewHeader from '@/components/singleDeveloper/NewHeader'
 import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
+import './singledevpage.css'
+import Link from 'next/link'
+import { GoLinkExternal } from "react-icons/go";
 
 const lato = Lato({
     subsets: ['latin'],
@@ -49,13 +52,14 @@ function page() {
                 <div>
                     <h5>Other Developers</h5>
                     <Topdev/>
+                    <Link className='inline-flex flex-row gap-1 items-center text-base md:text-lg lg:text-xl text-blue-500 underline font-bold py-2 sm:py-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
                 </div>
                 <div>
                     
                     {/* <IntrestingReading/> */}
                     <ReadMore isFullScreen={true}/>
                 </div>
-                <div>
+                <div className='my-2'>
                     <h5>Frequently Asked Questions</h5>
                     <FAQ  faqdata = {FaqData} />
                 </div>

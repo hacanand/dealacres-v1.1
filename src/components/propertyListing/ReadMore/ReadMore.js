@@ -10,6 +10,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 import { useRef, useState } from "react";
+import './slider.css'
 // import ArticleCard from ";
 
 const newsData = [
@@ -66,7 +67,7 @@ const ReadMore = ({
   console.log(curSlide)
   return (
     <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 md:space-y-8 md:mt-10 py-2 md:py-5'}} relative`}>
-      <h2 className="text-xl min-[440px]:text-2xl sm:text-4xl lg:text-3xl font-bold py-4 flex justify-between gap-2 items-center">
+      <h2 className="singleDevHeading py-4 flex justify-between gap-2 items-center">
         {header ? header : 'Interesting Readings'}
 
         {subheader && <span className="text-xs min-[440px]:text-base text-blue-500 font-bold max-w-[40%]">{subheader}</span>}
