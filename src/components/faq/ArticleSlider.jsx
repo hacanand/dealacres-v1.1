@@ -47,8 +47,6 @@ const ArticleSlider = () => {
         slidesToShow: 3,
         autoplay: false,
         rows: 1,
-        centerMode: true,
-        centerPadding: '0px',
         className: '',
         nextArrow: <NextArrow />,
         arrows: true,
@@ -65,7 +63,7 @@ const ArticleSlider = () => {
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 rows:1,
                 arrows:false,
@@ -75,7 +73,7 @@ const ArticleSlider = () => {
             {
               breakpoint: 400,
               settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 rows:1,
                 arrows:false,

@@ -7,8 +7,8 @@ const InvestmentOptionsCard = ({
     bgColor
 }) => {
   return (
-    <div className={`flex  flex-col p-2 rounded-xl overflow-hidden  mx-0  h-[140px] shadow ${bgColor} cursor-pointer transition-all justify-between hover:shadow-lg hover:scale-[1.1]`}>
-      <p className='font-bold text-base min-[440px]:text-lg pt-1'>
+    <div className={`flex  flex-col p-2 rounded-xl overflow-hidden  mx-0   shadow ${bgColor} cursor-pointer transition-all justify-between hover:shadow-lg hover:scale-[1.1] xs:min-w-[170px] xs:max-w-[170px] sm:max-w-full h-[100px] sm:h-[130px]`}>
+      <p className='font-bold text-xs xs:text-sm sm:text-base md:text-lg pt-1 '>
         {title}
       </p>
       <div className='flex  justify-end'>

@@ -1,23 +1,23 @@
 'use client'
 
 import React from 'react'
-import img  from '../../../public/faq/placeholder_article.png';
+import img from '../../../public/faq/placeholder_article.png';
 import Image from 'next/image';
 import { useEffect } from 'react';
 const ArticleCard = ({
-    date,
-    title,
-    index
+  date,
+  title,
+  index
 }) => {
-   useEffect(() => {
-   
-   }, [])
+  useEffect(() => {
+
+  }, [])
   return (
-    <div className=' relative  w-full h-full self-stretch min-h-[250px]'>
-      <Image src={img} alt='artcle cover' className='w-full'/>
-      <div className='py-2'>
-      <p className='font-semibold text-black'>{title}</p>
-      <p className='text-neutral-500 text-sm font-medium '>{date}</p>
+    <div className=' relative  w-full h-full self-stretch '>
+      <Image src={img} alt='artcle cover' className='w-full' />
+      <div className='py-1 md:py-2'>
+        <p className='font-semibold text-black text-xs md:text-base'>{title}</p>
+        <p className='text-neutral-500 text-xs sm:text-sm font-medium '>{date}</p>
       </div>
     </div>
   )
