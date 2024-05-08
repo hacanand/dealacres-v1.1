@@ -67,16 +67,14 @@ export default function InstantLoanForm({
           We just need a few details to match you with right home loan product.
         </p>
         <Stack spacing={2} justifyContent={"center"} alignItems={"center"} >
-          <Grid container spacing={2} >
 
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+          
 
 
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
-                <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
-
-
+                <TextField size="medium" 
                   {...register('amount', { required: "Please fill this field." })}
                   id="outlined-adornment-amount"
                   type="number"
@@ -87,8 +85,8 @@ export default function InstantLoanForm({
                 />
 
               </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+     
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -111,8 +109,8 @@ export default function InstantLoanForm({
 
                 </TextField>
               </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -135,8 +133,8 @@ export default function InstantLoanForm({
 
                 </TextField>
               </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+  
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -156,8 +154,8 @@ export default function InstantLoanForm({
                 </TextField>
               </FormControl>
 
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -178,8 +176,8 @@ export default function InstantLoanForm({
                 </TextField>
               </FormControl>
 
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+
 
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
@@ -197,8 +195,8 @@ export default function InstantLoanForm({
 
               </FormControl>
 
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+
 
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
@@ -218,8 +216,7 @@ export default function InstantLoanForm({
                 </TextField>
               </FormControl>
 
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+ 
 
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
@@ -238,8 +235,8 @@ export default function InstantLoanForm({
               </FormControl>
 
 
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+    
 
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
@@ -261,9 +258,7 @@ export default function InstantLoanForm({
 
               </FormControl>
 
-          
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+  
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
                   {...register('fullName', { required: "Please fill this field." })}
@@ -273,8 +268,8 @@ export default function InstantLoanForm({
                   helperText={errors.fullName && errors.fullName.message}
                 />
               </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+  
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -288,8 +283,8 @@ export default function InstantLoanForm({
                   helperText={errors.email && errors.email.message}
                 />
               </FormControl>
-            </Grid>
-            <Grid item md={4} xs={12} sm={6} lg={3}>
+
+       
               <FormControl fullWidth sx={{paddingLeft: "0px",  paddingTop: "0px"}}>
 
                 <TextField size="medium" sx={{paddingLeft: "0px",  paddingTop: "0px"}}
@@ -307,8 +302,7 @@ export default function InstantLoanForm({
                 />
 
               </FormControl>
-            </Grid>
-          </Grid>
+
 
           <div className='flex w-full items-start md:items-center md:w-[80%] mx-auto'>
             <Checkbox {...label}
@@ -329,7 +323,7 @@ export default function InstantLoanForm({
 
       </form>
 
-      <p className="text-sm font-thin text-center text-gray-400">
+      <p className="text-xs font-thin text-center text-gray-400">
       *Please note that our privacy policy does not goven the use of your data by financial institutions once it is shared, For more information, please refer the privacy policy of related concerned bank.
       </p>
 

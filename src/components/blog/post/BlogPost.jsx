@@ -19,13 +19,14 @@ const BlogPost = ({
 
   return (
 
-    <div className='px-2 xs:px-4 py-2 flex flex-col font-light  '>
+    <div className='px-2 xs:px-4 flex flex-col font-light  '>
       <PostHeader heading={heading} align='left' size='large' />
       <div className='flex flex-row md:hidden overflow-x-auto pb-2 gap-4'>
         {topicsData.map((topic, index) => {
+
           return (
-            <span className='text-sm whitespace-nowrap capitalize ' key={index}>
-              #{topic}
+            <span className='text-sm whitespace-nowrap capitalize font-[500] ' key={index}>
+              {topic.toLowerCase()}
             </span>
           )
         })}
@@ -34,7 +35,7 @@ const BlogPost = ({
 
       <div className="text-justify text-sm md:text-base" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
 
-      <div className='py-4'>
+      <div className='py-2 md:py-4'>
         <Image src={`/blog/${img}`} alt='post cover' width={200} height={100} className='w-full max-w-full' />
       </div>
 

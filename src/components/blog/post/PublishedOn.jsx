@@ -6,7 +6,7 @@ const PublishedOn = ({
     align
 }) => {
   return (
-    <div className={`text-neutral-500 py-3 
+    <div className={`text-neutral-500 pb-3 text-xs xs:text-sm sm:text-base
     ${align === 'center'? 'text-center': 'text-left'}`}>
         Published On {date}
       </div>

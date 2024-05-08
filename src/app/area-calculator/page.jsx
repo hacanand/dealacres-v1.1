@@ -325,29 +325,29 @@ const AreaCalculator = () => {
       <div className="px-[5rem] mb-3 max-sm:px-[1rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
         <div className="flex flex-wrap gap-4 mt-3">
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Hectare to Acre
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Acre to Hectare
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Square Feet to Cent
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Square Feet to Square Meter
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Square Feet to Square Yard
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs sm:text-sm md:text-base">
             Square Feet to Gaj
           </div>
         </div>
       </div>
 
       <div className="px-[5rem] mb-3 mt-10 max-sm:px-[1rem]">
-        <h2 className="text-3xl font-bold max-sm:text-xl;">
+        <h2 className="text-2xl sm:text-3xl font-bold max-sm:text-xl;">
           All About Land Measurment
         </h2>
 

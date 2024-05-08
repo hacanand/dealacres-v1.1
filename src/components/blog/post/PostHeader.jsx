@@ -20,7 +20,7 @@ const PostHeader = ({
             break;
     }
   return (
-    <div className={` py-4 
+    <div className={` py-2 sm:py-4
         ${align === 'center' ? 'text-center' : 'text-left'}
         ${size === 'small' && 'text-lg'}
         ${size === 'medium' && 'text-xl md:text-3xl font-[400]'}

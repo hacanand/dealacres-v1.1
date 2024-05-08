@@ -12,10 +12,10 @@ const Tabularposts = ({
   articles
 }) => {
   return (
-    <div className='my-4 bg-[#edf6f7] overflow-x-auto'>
+    <div className='my-4  overflow-x-auto'>
 
       {/* <Heading heading='Read More' /> */}
-      <div className="grid grid-cols-[repeat(3,90%)] md:grid-cols-3">
+      <div className="grid grid-cols-[repeat(3,65%)] md:grid-cols-[repeat(3,50%)]">
             <TableHeader header='Popular Posts' />
             <TableHeader header='Latest Posts' />
             <TableHeader header='Relevant Articles' />
@@ -23,8 +23,8 @@ const Tabularposts = ({
       </div>
 
       
-      <div className='  grid grid-cols-3 max-md:w-[270%]    max-h-[550px] overflow-y-auto   '>
-        <div className='max-md:min-w-[90%] my-2  md:col-span-1 '>
+      <div className='mt-2 md:mt-4 bg-[#edf6f7] grid grid-cols-3 w-[195%] md:w-[150%]     overflow-y-auto   '>
+        <div className='min-w-[65%] md:min-w-[50%] my-2  '>
           {/* <div>
 
             <TableHeader header='Popular Posts' />
@@ -33,7 +33,7 @@ const Tabularposts = ({
             {
               posts.map((post, index) => {
                 return (
-                  <PostCard key={index} title={post.title} img={post.img} />
+                  <PostCard key={index} title={post.title} img={post.img} isTabPosts />
                 )
               })
             }
@@ -41,7 +41,7 @@ const Tabularposts = ({
 
         </div>
 
-        <div className='max-md:min-w-[90%] my-2  md:col-span-1 '>
+        <div className='min-w-[65%] md:min-w-[50%] my-2   '>
           {/* Latest Posts do some validation for grabing latest posts through date. */}
 
           {/* <TableHeader header='Latest Posts' /> */}
@@ -49,14 +49,14 @@ const Tabularposts = ({
             {
               posts.map((post, index) => {
                 return (
-                  <PostCard key={index} title={post.title} img={post.img} />
+                  <PostCard key={index} title={post.title} img={post.img} isTabPosts />
                 )
               })
             }
           </div>
         </div>
 
-        <div className='max-md:min-w-[90%] my-2  md:col-span-1 '>
+        <div className='min-w-[65%] md:min-w-[50%] my-2  '>
           {/* Relevant Articles. */}
 
 

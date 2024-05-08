@@ -16,35 +16,37 @@ const PostSection = ({
 }) => {
 
 
-  return (
-    <div className='py-4'>
-        { img && <div className={`relative ${styles.imgContainer}`}>
-    
+    return (
+        <div className='pt-2 sm:pt-4 '>
+            {img && <div className={`relative ${styles.imgContainer}`}>
 
-            <Image src={`/blog/${img}`} 
-            fill
-            className={`w-full ${styles.img}`}
-            alt='section image '/>
-        </div>
-        }
-        <PostHeader size='medium' heading={title} align='left' style={isItalic ? 'italic': ''}/>
-        <div className='text-sm sm:text-base text-justify'>
-            {content}
-        </div>
-        <ul className='py-2'>
-        {
-            isList && 
-                lists?.map((list, index) => {
-                return (
+
+                <Image src={`/blog/${img}`}
+                    width={800} height={500}
+                    className={`w-full ${styles.img}`}
+                    alt='section image ' />
+            </div>
+            }
+            <PostHeader size='medium' heading={title} align='left' style={isItalic ? 'italic' : ''} />
+            <div className='text-sm sm:text-base text-justify py-2'>
+                {content}
+            </div>
+
+
                 
-                <SectionList title={list.title} content={list.content} key={index} />
-                )
-            })
-        }
-        </ul>
+                   { isList && (<ul className='py-2'>
+                {lists?.map((list, index) => {
+                return (
+
+                    <SectionList title={list.title} content={list.content} key={index} />
+                    )
+            })} </ul>)}
+
       
-    </div>
-  )
+
+
+        </div>
+    )
 }
 
 export default PostSection
