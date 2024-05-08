@@ -70,7 +70,7 @@ const ReadMore = ({
       <h2 className="singleDevHeading py-4 flex justify-between gap-2 items-center">
         {header ? header : 'Interesting Readings'}
 
-        {subheader && <span className="text-xs min-[440px]:text-base text-blue-500 font-bold max-w-[40%]">{subheader}</span>}
+        {subheader && <span className="text-[10px] leading-normal sm:text-sm text-blue-500 font-bold max-w-[40%]">{subheader}</span>}
       </h2>
 
 
