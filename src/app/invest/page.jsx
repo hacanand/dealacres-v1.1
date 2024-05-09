@@ -66,7 +66,7 @@ const InvestWithDealAcres = () => {
           </p>
 
 
-          <div className='grid grid-cols-[repeat(4,175px)] xs:grid-cols-[repeat(4,200px)]  overflow-x-auto    gap-2 md:gap-4  items-start md:justify-start py-8'>
+          <div className='grid grid-cols-[repeat(4,175px)] xs:grid-cols-[repeat(4,200px)]  overflow-x-auto    gap-2 md:gap-4  items-start md:justify-start py-8 pl-1'>
             <InvestmentGuideCard src={pic1} title={"Why to invest in commercial  Real Estate ?"} content={"Investing in a pre-leased asset may also be a good option as it can start generating revenue instantly."} />
 
             <InvestmentGuideCard src={pic2} title={"Why to invest in pre-lease property?"} content={"Investing in a pre-leased asset may also be a good option as it can start generating revenue instantly."} />

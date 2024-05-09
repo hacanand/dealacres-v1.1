@@ -37,6 +37,16 @@
     bottom: 0%;
 
 }
+.cloud:nth-of-type(5){
+    top: 20%;
+    left: 40%;
+
+}
+.cloud:nth-of-type(6){
+    bottom: 20%;
+    left: 50%;
+
+}
 
 
 
@@ -98,4 +108,10 @@
         opacity: 1;
     }
     
+}
+
+@media screen and (max-width: 640px){
+    .cloud {
+        width: 50px;
+    }
 }

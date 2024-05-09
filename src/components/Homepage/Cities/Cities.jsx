@@ -37,6 +37,7 @@ const Cities = (props) => {
     arrows:true,
     autoplay:true,
     rows: 2,
+    
   
     // arrows: false,
 

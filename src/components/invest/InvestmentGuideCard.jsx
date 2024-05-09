@@ -13,19 +13,19 @@ const InvestmentGuideCard = ({
   const handleClick = (e) => {
     e.stopPropagation()
     setIsClicked(prev => !prev)
-    console.log('clicked', isClicked)
+    // console.log('clicked', isClicked)
   }
 
   console.log(isClicked)
   return (
-    <div className={`${styles.investmentGuideCard}  flex flex-col items-center justify-center w-full max-w-[200px] shadow-[0px_0px_5px_rgba(0,0,0,0.3)]   h-[300px] ${isClicked && ' h-[370px] before:!bg-[rgb(44,118,214)]'} md:h-[300px] px-2 py-4 rounded-[2.5rem] border border-black gap-2  sm:gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white border-none`} onClick={() => setIsClicked(false)}>
+    <div className={`${styles.investmentGuideCard}  flex flex-col items-center justify-center w-full max-w-[200px] shadow-[0px_0px_5px_rgba(0,0,0,0.3)]   h-[250px] md:h-[250px] px-2 py-4 rounded-[2.5rem] border border-black gap-2  sm:gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white border-none   ${isClicked && '!h-[370px] before:!bg-[rgb(44,118,214)]'}`} >
 
       <div className=' rounded-full transition-all'>
         <Image src={src} alt={title} className='rounded-full h-[100px] 
       hover:scale-[1.3] transition-all w-[100px] border border-blue-300 shadow' />
 
       </div>
-      <div className='font-bold text-base sm:text-lg text-center peer py-4 hover:cursor-pointer' onClick={handleClick} onMouseOut={() => setIsClicked(false)} >
+      <div className='font-bold text-base sm:text-lg text-center peer py-4 hover:cursor-pointer' onClick={handleClick} >
         {title}
       </div>
       { <p className={`hidden opacity-0 transition-opacity delay-100 ease-in-out duration-500 content-shown md:peer-hover:block md:peer-hover:opacity-100 text-sm sm:text-base text-center ${isClicked && 'max-md:opacity-100 max-md:block'}`}>
