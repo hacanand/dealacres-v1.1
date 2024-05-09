@@ -7,6 +7,7 @@ import PropertyCard from './PropertyCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import './projectswiper.css'
 const SimilarProject = () => {
 
     return (
@@ -46,7 +47,7 @@ const SimilarProject = () => {
                 }}
             >
                 {similarProject.map((property) => (
-                    <SwiperSlide className="pb-12" key={property.id}>
+                    <SwiperSlide className="md:pb-12" key={property.id}>
                         <PropertyCard
                             title={property.title}
                             description={property.description}

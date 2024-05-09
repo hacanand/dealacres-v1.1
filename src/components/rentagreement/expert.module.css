@@ -58,9 +58,16 @@
 .ExpertStatus span {
   border: 1px solid black;
   font-size: 12px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   border-radius: 12px;
   margin-right: 5px;
+
+  display: inline;
+  white-space: nowrap;
+  min-width: unset;
+  padding-left: 4px;
+  padding-right: 4px;
+
 }
 
 .ExpertContact button {
@@ -176,6 +183,11 @@
 
   }
 
+  .MoreExperts {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
   .ExpertStatus {
     display: flex;
     flex-wrap: nowrap;
@@ -192,11 +204,11 @@
   }
 
   .ExpertStatus span {
-    min-width: clamp(142px, 150px, 60%);
+    min-width: unset;
 
 
     margin-right: unset;
-    padding: 4px;
+    /* padding: 4px; */
   }
 
   .ExpertContact button {
@@ -246,7 +258,7 @@
     text-align: center;
   }
   .MostSearched  {
-
+    margin-top: 0px;
     padding: 12px 6px;
   }
 
@@ -302,9 +314,9 @@
   }
 
   .ExpertStatus span {
-    min-width: 150px;
+    min-width: unset;
     margin-right: unset;
-    padding: 0px 2px;
+    /* padding: 0px 2px; */
     font-size: 10px;
   }
 
@@ -383,7 +395,7 @@
   }
   .ExpertStatus span {
     font-size: 8px;
-    padding: 0px 3px;
+    /* padding: 0px 3px; */
   }
 
   .ExpertTime {

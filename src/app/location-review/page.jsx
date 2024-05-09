@@ -70,7 +70,7 @@ const LocationReview = () => {
 
   return (
     <div className="w-full py-2 sm:py-4 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] md:mt-10 md:mb-10">
-      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 pt-4 pb-16 md:py-8">
+      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 pt-[1px] md:pt-4 pb-[14px] md:pb-16 md:py-8 ">
         <h2 className="block text-left md:text-center text-2xl sm:text-3xl md:text-4xl font-bold w-full py-2">
           Write Your Reviews <span className="penIcon"></span>
         </h2>

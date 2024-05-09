@@ -56,7 +56,7 @@ const MortgageCalculator = () => {
     }, [amount, downpayment, insurance, pTax, roi, tenure, pmi]);
 
     return (
-        <div className='border border-black rounded-xl shadow p-4 relative'>
+        <div className=' rounded-xl shadow p-4 relative container_box_shadow'>
             {isLoading && (
                 <div className="absolute inset-0 bg-black/20 z-10 flex items-center justify-center">
                     <ClipLoader size={100} />

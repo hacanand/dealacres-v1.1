@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 
 import {propertyData }from './main';
 import PropertyCard from './PropertyCard';
+import './projectswiper.css';
 
 const PropertyBuilder = () => {
     const [selectedTab, setSelectedTab] = useState('ongoing');
@@ -29,25 +30,25 @@ const PropertyBuilder = () => {
     const filteredPropertyData = filterPropertyData();
 
     return (
-        <div className="pt-5">
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pt-2 pb-5">
+        <div className="md:pt-5">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pt-2 pb-2 md:pb-5">
                 Projects by DLF Builders
             </h2>
-            <div className="flex space-x-4 pb-4 pl-4 overflow-x-auto">
+            <div className="flex space-x-4 pb-4 md:pl-4 overflow-x-auto">
                 <button
-                    className={`rounded-full px-4 py-2 border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'ongoing' ? 'bg-blue-100' : ''}`}
+                    className={`rounded-full px-4 py-1 sm:py-2 text-sm sm:text-base border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'ongoing' ? 'bg-blue-100' : ''}`}
                     onClick={() => handleTabClick('ongoing')}
                 >
                     Ongoing
                 </button>
                 <button
-                    className={`rounded-full px-4 py-2 border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'upcoming' ? 'bg-blue-100' : ''}`}
+                    className={`rounded-full px-4 py-1 sm:py-2 text-sm sm:text-base border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'upcoming' ? 'bg-blue-100' : ''}`}
                     onClick={() => handleTabClick('upcoming')}
                 >
                     Upcoming
                 </button>
                 <button
-                    className={`rounded-full px-4 py-2 border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'delivered' ? 'bg-blue-100' : ''}`}
+                    className={`rounded-full px-4 py-1 sm:py-2 text-sm sm:text-base border text-blue-500 cursor-pointer transition duration-300 ease-in-out ${selectedTab === 'delivered' ? 'bg-blue-100' : ''}`}
                     onClick={() => handleTabClick('delivered')}
                 >
                     Delivered
@@ -84,7 +85,7 @@ const PropertyBuilder = () => {
                 }}
             >
                 {filteredPropertyData.map((property) => (
-                    <SwiperSlide className="pb-12" key={property.id}>
+                    <SwiperSlide className="md:pb-12" key={property.id}>
                         <PropertyCard
                             title={property.title}
                             description={property.description}

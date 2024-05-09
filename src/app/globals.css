@@ -47,7 +47,7 @@
 }
 
 .singleDevHeading {
-  @apply !text-lg xs:!text-xl sm:!text-2xl lg:!text-3xl  !font-black;
+  @apply !text-lg xs:!text-xl sm:!text-2xl lg:!text-3xl  !font-bold;
 }
 
 .container_box_shadow {

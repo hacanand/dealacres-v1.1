@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border: 2px solid rgba(63, 62, 62, 0.5);
+    /* border: 2px solid rgba(63, 62, 62, 0.5); */
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
     border-radius: 20px;
 
 }
@@ -27,4 +28,15 @@
     cursor: pointer;
     margin-top: 2px;
     color: #0061df;
+}
+
+@media screen and (max-width: 640px) {
+    .developerInfoContentContainer{
+  
+        font-weight: 500;
+        font-size: 12px;
+        line-height: normal;
+
+    }
+    
 }

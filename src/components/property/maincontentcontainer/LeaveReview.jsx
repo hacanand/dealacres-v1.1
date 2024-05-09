@@ -1,6 +1,6 @@
 'use client'
 import styles from './leavereview.module.css'
-import {TextField} from '@mui/material'
+import {Rating, TextField} from '@mui/material'
 import { useForm } from 'react-hook-form'
 
 const LeaveReview = () => {
@@ -28,7 +28,8 @@ const LeaveReview = () => {
                 {...register('Email',{required:'Email is required',pattern:{value:/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,message:'Enter a valid email'}})}
               />
             </div>
-            <div className={styles.leaveReviewFieldContainer}>
+            <div className={`${styles.leaveReviewFieldContainer} flex gap-2`}>
+              <div>
               <label>Title</label>
               <TextField
                 fullWidth
@@ -39,6 +40,23 @@ const LeaveReview = () => {
                 size='small'
                 {...register('Title',{required:'Title is required'})}
               />
+              </div>
+
+              <div className='flex flex-col'>
+              <label>Rating</label>
+              <Rating size="small" sx={{
+                '&': {
+                  marginTop: '8px',
+                  marginBottom: '4px'
+                },
+                '& .MuiRating-icon': {
+                  color: '#c4c4c4'
+                },
+                '& .MuiRating-iconFilled, & .MuiRating-iconHover': {
+                  color: '#faaf00'
+                }
+              }} />
+              </div>
             </div>
             <div className={styles.leaveReviewFieldContainer}>
               <label>Review</label>

@@ -73,10 +73,12 @@
 @media screen and (max-width: 768px) {
     .propertyContainer {
         padding: 1.5rem;
+        padding-bottom: 0rem;
     }
 
     .bottomContainer {
         padding: 2rem;
+        padding-top: 0rem;
     }
 
     .contentContainer {

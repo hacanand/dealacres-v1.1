@@ -9,7 +9,7 @@ import {IoIosShareAlt} from 'react-icons/io'
 
 function Mainoverview(props) {
     return (
-      <div className={styles.mainOverviewContainer}>
+      <div className={`${styles.mainOverviewContainer} `}>
         <div className={styles.overviewContent}>   
             <div className={styles.overviewData}>
                 <BiArea size={25} style={{marginTop:'10px'}}/>

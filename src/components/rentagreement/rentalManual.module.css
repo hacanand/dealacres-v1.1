@@ -38,6 +38,8 @@
         display: flex;
         flex-wrap: nowrap;
         gap: 1rem;
+        max-height: 250px;
+        height: 250px;
     }
 
 

@@ -40,7 +40,7 @@ async function Property(params) {
           <SimilarProject />
         </div>
         <div>
-          <h1>Frequently Asked questions</h1>
+          <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pt-2 pb-2 md:pb-5">Frequently Asked questions</h2>
           <FAQ faqdata={data.mainContent.FaqData} />
         </div>
         <ReadMore isFullScreen={true}/>
