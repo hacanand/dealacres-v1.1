@@ -16,7 +16,7 @@ const SingleAgentPage = () => {
   const { name, img, contacts, languages, address, agentInfo, services, forSaleListings, forRentListings } = singleAgentData;
   return (
     <div>
-      <div className='max-w-screen-lg xs:px-2 sm:px-6 mx-auto py-4 '>
+      <div className='max-w-screen-lg px-2 sm:px-6 mx-auto py-4 '>
         <AgentHeroSection img={img} name={name} contacts={contacts} languages={languages} address={address} />
       </div>
 
@@ -48,7 +48,7 @@ const SingleAgentPage = () => {
         <FeaturedService />
       </div>
 
-      <div className='max-w-screen-md  px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0.3)]'>
+      <div className='max-w-screen-md mx-2 px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0.3)]'>
 
         <div className='w-[55%]'>
           <AgentContactForm />
@@ -65,10 +65,10 @@ const SingleAgentPage = () => {
           Leave a Feedback - As your words matter to us
         </h2>
         <div className='flex flex-row gap-4 items-center'>
-          <div className='w-[60%]'>
+          <div className='w-[50%] sm:w-[60%]'>
             <AgentFeedback />
           </div>
-          <div className='h-1/2 order-2  w-[40%] mx-auto md:mx-0 '>
+          <div className='sm:h-1/2 order-2  w-[50%] sm:w-[40%] mx-auto md:mx-0 '>
             <Image src={feedbackBg} alt='feedback' className='w-full h-full' />
           </div>
         </div>

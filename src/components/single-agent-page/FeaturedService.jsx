@@ -14,12 +14,12 @@ const FeaturedService = () => {
                 <h3 className='font-bold text-lg sm:text-xl pb-2'>
                     The highest level of service from Featured Agents
                 </h3>
-                <p>
+                <p className='text-sm sm:text-base'>
                     Deal Acres Premier agents are local luxury experts with years of experience buying and selling high-end homes. Only our best agents qualify to become Deal Acres Premiem agents.
 
                 </p>
                 <br/>
-                <p>
+                <p className='text-sm sm:text-base'>
 
                     When you're ready to buy, your agent will know what it takes to write a winning offer for the most highly sought-after homes. And when it's time to sell, they will know how to price, prepare, and market your home, so it attracts qualified buyers and sells for more.
                 </p>
