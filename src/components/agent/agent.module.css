@@ -187,6 +187,10 @@
     margin-top: unset;
 
   }
+
+  .MostSearched {
+    margin-top: unset;
+  }
 }
 @media only screen and (max-width: 640px) {
   .Explore {
