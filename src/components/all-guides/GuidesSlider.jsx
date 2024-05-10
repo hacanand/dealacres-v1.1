@@ -34,7 +34,7 @@ const GuidesSlider = ({
                 rows:1,
                 arrows:false,
                 dots: true,
-                variableWidth: true,
+
                 infinite: true,
 
               }
@@ -47,7 +47,7 @@ const GuidesSlider = ({
                 rows:1,
                 arrows:false,
                 dots: true,
-                variableWidth: true,
+
                 infinite: true,
 
               }
@@ -63,14 +63,14 @@ const GuidesSlider = ({
         }
     }
     return (
-        <div className='mb-8'>
-            <Slider {...settings}>
+        <div className='mb-8 px-1 py-1'>
+            <Slider {...settings} className='px-1'>
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='md:mr-[2.3rem] w-full h-full' onClick={() => handleTabChange(index)}>
+                            <div key={index} className=' w-full h-full' onClick={() => handleTabChange(index)}>
 
-                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img}  />
+                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} variableWidth={true} isAllGuide={true}  />
                             </div>
                         )
                     })

@@ -75,4 +75,10 @@
     .checkList::before {
         width: 40px;    
     }
+
+    .cardContainer {
+        border-radius: 0px;
+        box-shadow: none;
+        transition: transform 0.3s ease-in-out;
+    }
 }

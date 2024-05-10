@@ -9,7 +9,8 @@ const GuideCard = ({
     borderColor,
     img,
     textColor,
-    variableWidth
+    variableWidth,
+    isAllGuide
 }) => {
 
 
@@ -21,14 +22,14 @@ const GuideCard = ({
 
 
     return (
-        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center justify-center shadow-lg bg-${bgColor} border-l-[14px] border-l-${borderColor} py-2 px-3`}
+        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center justify-center shadow-lg bg-${bgColor} border-l-[7px] border-l-${borderColor} py-2 px-3 ${isAllGuide && '!h-[150px] md:!h-[200px] !gap-[2px] md:!gap-[4px] !w-[100px] md:!w-[150px]'}`}
             style={{
                 backgroundColor: bgColor,
                 borderLeftColor: borderColor
             }}  
         >
     
-            <div className='font-bold text-2xl py-1 max-md:whitespace-nowrap'>
+            <div className='font-bold text-lg leading-normal md:text-2xl py-1 max-md:whitespace-nowrap'>
                 {
                     title.split(' ').map((word, index) => {
                         if (index == noOfWordsInTitle - 1) {
@@ -49,7 +50,7 @@ const GuideCard = ({
                 </span>
             </div>
 
-            <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='w-[100px] ' />
+            <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='w-[50px] h-[50px] md:!w-[100px] md:!h-[100px] ' />
         </div>
     )
 }

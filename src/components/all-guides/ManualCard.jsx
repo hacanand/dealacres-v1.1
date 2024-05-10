@@ -32,16 +32,13 @@ const ManualCard = () => {
                 </div>
             </div>
 
-            <div className={`flex md:hidden flex-col bg-white md:flex-row gap-2  md:gap-8 z-10  p-4 ${styles.cardContainer}`}>
+            <div className={`flex md:hidden flex-col bg-white md:flex-row gap-2  md:gap-8 z-10  py-2 ${styles.cardContainer}`}>
          
                 <div>
-                    <h4 className='pb-2 font-bold text-lg md:text-xl'> Under Construction Property vs Ready to Move Property.</h4>
+                    <h4 className='pb-2 font-bold text-sm md:text-lg '> Under Construction Property vs Ready to Move Property.</h4>
 
-                    <p className='text-justify text-sm md:text-base'>
-                        {showFull ? content : content.slice(0, 200)}
-                        <span className='cursor-pointer font-bold text-blue-500' onClick={() => setShowFull(prev => !prev)}>
-                            {showFull ? ' Read Less' : ' Read More'}
-                        </span>
+                    <p className=' text-xs md:text-sm font-[400]  text-left'>
+                        Published on April 24, 2024
                     </p>
                 </div>
             </div>
