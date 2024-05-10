@@ -14,7 +14,7 @@ const WelcomeSection = ({
         <div>
             <h1 className='py-4 text-2xl font-medium'>
                Welcome to
-               <div className='text-rose-800 font-bold text-6xl  '>
+               <div className='text-rose-800 font-bold text-4xl md:text-6xl  '>
                 Deal Acres
                </div>
             </h1>
@@ -25,7 +25,7 @@ const WelcomeSection = ({
             md:flex-row  gap-8  `}>
               
                     <div className={`md:w-1/2`}>
-                        <div className='text-justify text-lg'>
+                        <div className='text-justify text-sm md:text-base'>
                             <p>
                             Deal Acres is a Real Estate Consulting and Solutions supplier that offers differentiated administrations that truly aims in providing the best services. Deal Acres holds 10 years of experience in real estate business and investment advisory focusing in all regions of India, especially in the Delhi NCR region. Deal Acres is centered majorly around Real Estate Consulting in Delhi NCR. Through our fair practice and proficiency in giving way to put or in organizing accounts for investors to make the efficient use of their capitals. We likewise encourage booking in bulk and pre-leased properties and furthermore make conceivable joint endeavor recommendations, where speculators security and benefits perspective is constantly kept up.
 

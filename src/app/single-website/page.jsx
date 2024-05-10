@@ -23,7 +23,7 @@ const SingleWebsite = () => {
         <HeroSection />
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 pt-12 pb-16'>
+      <div className='max-w-screen-lg mx-auto px-4 max-md:py-4 md:pt-12 md:pb-16'>
         <WelcomeSection />
       </div>
 
@@ -36,11 +36,11 @@ const SingleWebsite = () => {
       </div>
 
       <div className='max-w-screen-lg mx-auto px-4 py-4'>
-        <div className='text-center py-16'>
-          <h2 className='font-bold text-4xl md:text-6xl p-4'>
+        <div className='text-center py-4 md:py-16'>
+          <h2 className='font-bold text-2xl xs:text-3xl  md:text-4xl px-4 py-2'>
             Recommended Project
           </h2>
-          <p className='text-lg'>
+          <p className='text-sm sm:text-base md:text-lg'>
             On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.
           </p>
         </div>
@@ -50,6 +50,7 @@ const SingleWebsite = () => {
       <FindHome img={src2} />
 
       <div className='max-w-screen-lg mx-auto px-4'>
+        <h3 className='text-lg xs:text-xl md:text-2xl font-bold py-2 '>Blog & News</h3>
         <BlogsAndNews />
       </div>
 

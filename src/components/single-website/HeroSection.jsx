@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const HeroSection = () => {
     return (
-        <div className={`max-w-screen min-w-screen flex justify-end items-center pr-[2.5rem]  h-[400px] relative  `}>
+        <div className={`max-w-screen min-w-screen flex justify-end items-center pr-[2.5rem]  h-[250px] md:h-[400px] relative  `}>
             <div className='w-full h-full absolute inset-0'>
                 <Image src={housebg} className='absolute w-full h-full object-cover ' alt={"House Image"} />
 

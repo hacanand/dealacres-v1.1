@@ -15,8 +15,8 @@ const BlogsAndNews = () => {
         tags: 'Business, Luxury, Real Estate'
     }
     return (
-        <div className='py-8'>
-            <div className='flex flex-nowrap md:grid  grid-cols-2 overflow-x-auto lg:grid-cols-3 gap-8 py-4 md:items-center'>
+        <div className=''>
+            <div className='flex flex-nowrap md:grid  grid-cols-2 overflow-x-auto lg:grid-cols-3 gap-8 py-2 md:py-4 md:items-center'>
            
            
             {

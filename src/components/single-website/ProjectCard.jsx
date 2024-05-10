@@ -19,15 +19,15 @@ const ProjectCard = ({
             <div className='min-h-1/2 w-full relative  ' >
                 <Image src={img}
                     className='w-full max-h-full min-h-full   '
-                    alt={title} width={300} height={660} />
+                    alt={title} width={400} height={800} />
             </div>
 
-            <div className='max-h-1/4 px-1 xs:px-4
-        border-b border-b-black py-4'>
-                <h3 className='font-bold text-xl'>
+            <div className='max-h-1/4 px-1 md:px-4
+        border-b border-b-black py-1 md:py-4'>
+                <h3 className='font-bold text-base sm:text-lg md:text-xl'>
                     {title}
                 </h3>
-                <p>
+                <p className='text-[10px] xs:text-xs sm:text-sm md:text-base'>
                     {address}
                 </p>
             </div>
@@ -44,7 +44,7 @@ const ProjectCard = ({
                                     return (<span
                                         key={index}
                                         className='col-span-1'>
-                                        <MdOutlineBedroomParent size={30} />
+                                        <MdOutlineBedroomParent size={20} />
                                     </span>)
                                 }
                                 if (index === 3) {
@@ -67,7 +67,7 @@ const ProjectCard = ({
                     <span className='grid grid-cols-2 '>
                         {
                             [...Array(bathroomCount)].map((_, index) => (<span key={index} className='col-span-1'>
-                                <MdOutlineBathroom size={30} />
+                                <MdOutlineBathroom size={20} />
                             </span>))
                         }
                     </span>
@@ -80,7 +80,7 @@ const ProjectCard = ({
                     <span>
                         {
                             [...Array(bathroomCount)].map((_, index) => (<span key={index}>
-                                <PiGarageDuotone size={30} />
+                                <PiGarageDuotone size={20} />
                             </span>))
                         }
                     </span>
