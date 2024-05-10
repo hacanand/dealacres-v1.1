@@ -19,7 +19,7 @@ const page = () => {
         <div className={styles.mainContainer}>
           <ExploreBuilder />
         </div>
-        <div className={styles.Sidebar}>
+        <div className={`${styles.Sidebar} hidden md:block`}>
           <SideContentContainer Addbox={true} />
           <Sidebar />
         </div>

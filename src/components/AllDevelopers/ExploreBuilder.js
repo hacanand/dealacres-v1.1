@@ -101,7 +101,7 @@ const ExploreBuilder = () => {
   return (
     <div className={styles.ExploreBuilder}>
       {filteredData.map((dt, index) => (
-        <div className="mt-12" key={index}>
+        <div className="mt-8 md:mt-12" key={index}>
           <div className={styles.TopBuilders}>
             <div className={styles.Logo}>
               <Image
@@ -125,7 +125,9 @@ const ExploreBuilder = () => {
             <div className={styles.Category}>
               <span onClick={() => {
                 setProject("Residential")
-              }} style={{
+              }} 
+              className="text-xs xs:text-sm sm:text-base"
+              style={{
                 marginRight: 'unset',
                 padding: '2px 6px',
                 transition: 'border-bottom 0.1s ease-in',
@@ -135,6 +137,7 @@ const ExploreBuilder = () => {
               <span onClick={() => {
                 setProject("Commercial")
               }} 
+              className="text-xs xs:text-sm sm:text-base"
               style={{
                 marginRight: 'unset',
                 padding: '2px 6px',

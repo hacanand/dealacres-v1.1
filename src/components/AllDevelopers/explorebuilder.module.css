@@ -11,6 +11,7 @@
     border: 1px solid rgba(0,0,0,0.4);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
     padding: 20px;
     width: 70%;
     margin-top: 50px;
@@ -26,15 +27,23 @@
 .TopBuilders div {
     align-self: center;
 }
+.TopBuilderContent p {
+    text-align: left;
+}
 
 .Logo {
     width: 650px;
     border: 1px solid black;
     margin-right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ProjectCategory {
     border: 1px solid rgba(0,0,0,0.4);;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
     padding: 20px;
     border-radius: 15px;
 }
@@ -220,14 +229,23 @@
         width: 100%;
         margin: unset;
         padding: unset;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Logo img {
+        height: unset;
+
     }
 
     .TopBuilderContent {
         grid-column: 5/11;
     }
     .TopBuilderContent p  {
-        font-size: 12px;
-        text-align: justify;
+        font-size: 14px;
+        text-align: left;
     }
     
     .ProjectCategory {
@@ -281,4 +299,17 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 640px){
+    .TopBuilderContent p  {
+        font-size: 12px;
+        text-align: left;
+    }
+}
+@media screen and (max-width: 420px){
+    .TopBuilderContent p  {
+        font-size: 10px;
+        text-align: left;
+    }
 }
