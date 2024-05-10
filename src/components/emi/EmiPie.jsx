@@ -39,7 +39,8 @@ const options = {
     legend: {
       display: true,
       position: 'bottom',
-      align: typeof window !== 'undefined' ? (window.innerWidth <= 480 ? 'center' : 'start') : 'center',
+      // align: typeof window !== 'undefined' ? (window.innerWidth <= 480 ? 'center' : 'start') : 'center',
+      align: 'start',
       labels: {
         font: {
           size: 12

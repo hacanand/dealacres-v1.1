@@ -38,7 +38,7 @@ const MeetAttendeForm = ({
             {...register('name', {required: "Please Enter Your Name"})}
             error={errors.name && !!errors.name}
             helperText={errors.name && errors.name.message}
-            
+   
             id="name" label="Your Name" variant="outlined" />
             
 

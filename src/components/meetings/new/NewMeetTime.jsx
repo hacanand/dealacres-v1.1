@@ -25,7 +25,7 @@ const NewMeetTime = ({
     };
     return (
         <div className=' self-start'>
-            <div className='font-bold text-base md:text-lg'>
+            <div className='font-bold text-sm sm:text-base md:text-lg'>
                 {selectedDate}
             </div>
             <div className='py-2 flex flex-col md:flex-col gap-4'>

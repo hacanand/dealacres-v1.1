@@ -16,7 +16,7 @@ const AgentServices = ({
 
     
     <div className='w-full md:w-[85%] mx-auto'>
-      <h2 className='font-bold text-2xl md:text-4xl inline-flex flex-col py-4 '>
+      <h2 className='font-bold text-2xl md:text-4xl inline-flex flex-col pb-4 '>
           Services
           <HeadingBorder />
         </h2>

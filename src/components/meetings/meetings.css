@@ -58,9 +58,11 @@
 
 @media screen and (max-width: 768px) {
 	.react-calendar {
-		width: 80% !important;
-		max-width: 350px;
+		/* width: 80% !important; */
+		max-width: 250px;
+		width: 100%;
 		margin: 0 auto;
+
 	}
 	.react-calendar__tile {
 		/* max-width: 100%; */
@@ -90,8 +92,14 @@
 	}
 	
 	.react-calendar__month-view__weekdays__weekday {
-		font-size: 8px;
+		font-size: 12px;
 	}
 	
 
+}
+
+@media screen and (max-width: 420px){
+	.react-calendar {
+		max-width: 200px;
+	}
 }

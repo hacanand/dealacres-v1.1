@@ -66,12 +66,7 @@ export const hisar = [
     { name: "Real Estate Agent in Fatehabad", link: "#" },
     { name: "Real Estate Agent in Panchkula", link: "#" },
     { name: "Real Estate Agent in Charkhi Dadri", link: "#" },
-    { name: "Real Estate Agent in Palwal", link: "#" },
-    { name: "Real Estate Agent in Karnal", link: "#" },
-    { name: "Real Estate Agent in Rohtak", link: "#" },
-    { name: "Real Estate Agent in Fatehabad", link: "#" },
-    { name: "Real Estate Agent in Panchkula", link: "#" },
-    { name: "Real Estate Agent in Charkhi Dadri", link: "#" },
+  
 
   ]
 
