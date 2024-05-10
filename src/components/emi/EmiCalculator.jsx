@@ -35,20 +35,25 @@ const EmiCalculator = () => {
             <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center my-1'>
 
             <TextField
-                     className='border border-gray-400 py-2 px-4 rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
+                     className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
                      placeholder='Loan Amount'
                      type='number'
                      label="Amount"
                      step='0.01'
                      id='amt'
                      {...register('amt', { required: "Please enter a valid loan amount" })}
+                     sx={{
+                        '&': {
+                            padding: '0px'
+                        }
+                     }}
                 />
                 
             </div>
             <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center my-1'>
                 <TextField
                      type='number'
-                     className='border border-gray-400 py-2 px-4 rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
+                     className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
                      placeholder='Loan Tenure'
                      label="Tenure"
                      id='tenure'
@@ -64,7 +69,7 @@ const EmiCalculator = () => {
 
                 <TextField
                     type='number'
-                    className='border border-gray-400 py-2 px-4 rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
+                    className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
                     placeholder='Rate Of Interest'
                     label="ROI"
                     id='roi'

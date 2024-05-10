@@ -7,15 +7,15 @@ const EmiFeatureListItem = ({
     img
 }) => {
   return (
-    <div className='w-full h-full flex gap-4 items-center'>
+    <div className='w-full h-full flex gap-2 md:gap-4 items-center'>
       <div className='min-w-[150px] min-h-[150px] max-h-full w-[150px] h-[150px]  self-start'>
-        <Image width={150} height={150} src={`/emi/${img}`} alt={label} className='w-full  h-full max-h-full max-w-full '/>
+        <Image width={600} height={600} src={`/emi/${img}`} alt={label} className='w-full  h-full max-h-full max-w-full '/>
       </div>
-      <div className='text-base xs:text-lg text-justify'>
+      <div className=' text-xs sm:text-sm md:text-base  '>
         <h3 className='inline font-bold '>
             {label}{": "}
         </h3>
-        <p className='inline  '>
+        <p className='inline text-xs sm:text-sm md:text-base  '>
             {text}
         </p>
       </div>

@@ -15,18 +15,18 @@ const page = () => {
 
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
-                <h2 className='text-2xl md:text-3xl font-bold py-4'>
+                <h2 className='text-2xl md:text-3xl font-bold pb-2'>
                     About EMI Calculator
                 </h2>
 
-                <p className='text-base md:text-lg text-justify pb-2'>
+                <p className='text-sm md:text-base  pb-2'>
                     A home loan EMI calculator helps compute the monthly installments that a borrower needs to pay against the total amount availed. Such a tool assists you in making an informed decision about the outflow towards the home loan every month.
                 </p>
-                <p className='py-2 text-base md:text-lg'>
+                <p className='text-sm md:text-base pb-2'>
                     To identify your home loan EMI, you need to fill in the following
                 </p>
 
-                <ul className='list-disc text-base md:text-lg px-8 flex flex-col gap-1 text-justify'>
+                <ul className='list-disc text-sm md:text-base px-8 flex flex-col gap-1 '>
 
                     {
                         ["Loan Amount: The total amount that you need to avail for your property.",
@@ -39,10 +39,10 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
                 <div className='py-4'>
-                    <h2 className='font-bold text-3xl md:text-4xl py-2 '>
+                    <h2 className='text-2xl md:text-3xl font-bold pb-2 '>
                         Benefits of Using a Home Loan Affordability Calculator
                     </h2>
-                    <h4 className=''>
+                    <h4 className='text-sm md:text-base'>
                         Affordability calculators come with several benefits. Some of them have been listed below:
                     </h4>
                 </div>
@@ -62,10 +62,10 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 flex flex-col gap-4 '>
                 <div className='py-4'>
-                    <h2 className='font-bold text-3xl md:text-4xl py-2 '>
+                    <h2 className='text-2xl md:text-3xl font-bold pb-2 '>
                         Factors that Affect Home Loan Affordability
                     </h2>
-                    <h4 className='font-bold text-base md:text-lg py-2'>
+                    <h4 className='text-sm md:text-base py-2'>
                         There is a specific reason why affordability calculators ask for information related to your finances. It is simply because all those things impact your affordability.
                     </h4>
                 </div>
@@ -83,7 +83,7 @@ const page = () => {
                 </div>
 
 
-                <p className='font-bold text-base md:text-lg py-4'>
+                <p className='font-bold text-sm md:text-base py-2'>
                     Certain other factors also affect an individual’s affordability. The calculator does not consider these things, but they play an important role in getting a home loan approval. They affect your affordability, and thus, it’s important to be aware of them.
                 </p>
 
