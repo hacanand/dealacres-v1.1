@@ -6,7 +6,7 @@ import ExternalAd from './ExternalAd'
 
 function SideContent1() {
   return (
-    <div className={styles.sideContentContainer1}>
+    <div className={`${styles.sideContentContainer1} max-md:!hidden`}>
       
       <SideUtilityBox/>
       <ExternalAd/>

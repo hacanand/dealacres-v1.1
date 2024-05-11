@@ -13,7 +13,8 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 const GuidesSlider = ({
     allGuides,
-    handleTabChange
+    handleTabChange,
+    isAllGuides
 }) => {
 
 
@@ -63,7 +64,7 @@ const GuidesSlider = ({
         }
     }
     return (
-        <div className='mb-8 px-1 py-1'>
+        <div className={`${isAllGuides && 'mb-8 px-1 py-1'}`}>
             <Slider {...settings} className='px-1'>
                 {
                     allGuides.map((guide, index) => {

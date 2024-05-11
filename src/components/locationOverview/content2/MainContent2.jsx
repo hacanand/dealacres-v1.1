@@ -17,6 +17,7 @@ import ArticleSlider from '@/components/faq/ArticleSlider'
 import GuidesSlider from '@/components/all-guides/GuidesSlider'
 import { allGuidesData } from '@/app/all-guides/allGuidesData'
 import AgentLinks from './AgentLinks/AgentLinks'
+import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
 
 const lato = Lato({
   subsets: ['latin'],
@@ -72,18 +73,18 @@ function MainContent2() {
         <h5>Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div> */}
-        <div className='w-[80%]'>
+        <div className='w-full md:w-[80%]' id="SimilarLocalities">
             <h5>Explore nearby localities</h5>
             <Cities/>
         </div>
-        <div className='w-[80%]'>
+        <div className='w-full md:w-[80%]'>
         <InsightReview/>
         </div>
-        <div className='w-[80%]'>
+        <div className='w-full md:w-[80%]'>
             <h5>Hotspots in Gurgaon</h5>
             <Hotspots/>
         </div>
-        {/* <div className='w-[80%]'>
+        {/* <div className='w-full md:w-[80%]'>
             <h5>Photos</h5>
             <Photos/>
         </div> */}
@@ -91,24 +92,25 @@ function MainContent2() {
             <h5>Top Developers in Sector 37D</h5>
             <Topdev/>
         </div>
-        <div className='py-4 w-[80%]'>
+        <div className='md:py-4 w-full md:w-[80%]'>
+            <div className="py-2">
             <h5 className='!mb-0'>Start with these guides</h5>
-            <p className='text-gray-400 text-lg py-2'>Know all that you need to know before you start.</p>
+            <p className='text-gray-400 text-sm sm:text-base md:text-lg '>Know all that you need to know before you start.</p>
+            </div>
             {/* <LocationGuides guides={guidesData}/> */}
 
-            <GuidesSlider allGuides={allGuidesData} handleTabChange={(value) => value}/>
+            <GuidesSlider allGuides={allGuidesData} handleTabChange={(value) => value} isAllGuides={false}/>
            
         </div>
         <div className='my-4'>
-            <h5>Interesting Readings</h5>
-            {/* <IntrestingReading /> */}
-            <ArticleSlider/>
+  
+            <ReadMore isFullScreen/>
         </div>
         <div>
             <h5>Frequently Asked Questions</h5>
             <FAQ  faqdata = {data.mainContent.FaqData} />
         </div>
-        <div>
+        <div className="hidden md:block">
           <AgentLinks />
         </div>
     </div>

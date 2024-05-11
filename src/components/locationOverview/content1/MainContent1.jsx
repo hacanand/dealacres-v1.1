@@ -11,6 +11,9 @@ const lato = Lato({
   weight: ['300','400','700','900']
 })
 
+const listItems = ["St. Michaels Sr. Sec. School",
+"govt sec school",
+"Dronacharya Government College"]
 function MainContent1() {
 
   const [showFull,setShowFull] = useState(false)
@@ -29,10 +32,17 @@ function MainContent1() {
       </div>
       <div className = {styles.mainContainerLine}></div>
       <div className={styles.mainContainerContent}>
-        <h5>About Locality</h5>
+        <h5 id="About">About Locality</h5>
         <p className="text-justify">{showFull? about : about.split(' ').slice(0, (about.split(' ').length / 2)).join(' ')}</p>
         <h6 onClick={()=>setShowFull(prev => !prev)}>{showFull? 'Show Less':'Show More'}</h6>
       </div>
+
+      <div className=" py-2" id="Explore">
+        <h5>Explore Neighbourhood</h5>
+
+        <ExploreNeighbour title="School & College" listItems={listItems}/>
+      </div>
+      
       <div>
         {/* <h5> Explore Neighbourhood </h5>
         <ExploreNeighbour/> */}
@@ -42,7 +52,7 @@ function MainContent1() {
         <Locality desc = {false} localityData={locality}/>
       </div>
       <div>
-        <h5>Popular Projects in Sector 37D</h5>
+        <h5 id="Projects">Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div>
     </div>

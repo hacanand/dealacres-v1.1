@@ -18,12 +18,12 @@ function Locality(props) {
                 <button> View {props.localityData.title} Overview</button>
             </div>}
             <div className={styles.localityContent}>
-                <div className={styles.localityContentHead}>
+               {props.hasLocalityIntro && <div className={styles.localityContentHead}>
                     <h3>Locality Introduction</h3>
                     <p>{showFull ? props.localityData.introduction : `${props.localityData.introduction.substring(0, 200)}`}</p>
                     <h6 onClick={() => setShowFull(!showFull)}>{showFull ? 'Read Less' : 'Read More'}</h6>
-                </div>
-                <div className={styles.localityContentData}>
+                </div>}
+                <div className={`${styles.localityContentData} ${!props.hasLocalityIntro && '!mb-0'}`}>
                     <div className={styles.localityContentDataProCon}>
                         <h2><FaThumbsUp style={{ display: 'inline', marginRight: '0.5rem' }} color='#33cc33' /> Pro&apos;s</h2>
                         <ul>

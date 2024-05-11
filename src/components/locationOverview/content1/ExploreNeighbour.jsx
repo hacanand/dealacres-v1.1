@@ -1,9 +1,10 @@
 import ExploreNeighbourCard from './ExploreNeighbourCard'
 import { Swiper, SwiperSlide} from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import "swiper/css/pagination";
-
+import "swiper/css/navigation";
+import './exploreslider.css'
 function ExploreNeighbour() {
 
   const ExploreData = [
@@ -16,17 +17,57 @@ function ExploreNeighbour() {
   ];
 
   return (
-    <div>
+    <div className="">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={5}
           spaceBetween={30}
-          loop ={true}
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          className="mySwiper"
+
+          modules={[Pagination, Navigation]}
+          pagination={{ enabled: false }}
+          navigation={{
+            enabled: false
+          }}
+          className="py-2"
+
+          breakpoints={
+            {
+
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+                pagination: {
+                  enabled: true
+                },
+                
+              },
+              480: {
+                slidesPerView: 3,
+                spaceBetween: 12
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                pagination: {
+                  enabled: false
+                },
+                navigation: {
+                  enabled: true
+                }
+                
+              },
+              960: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }
+          
+          }
+
         >
-          {ExploreData.map((dt, index) => (<SwiperSlide key={index} className="pb-12">{dt}</SwiperSlide>))}
+          {ExploreData.map((dt, index) => (<SwiperSlide key={index} className="">{dt}</SwiperSlide>))}
         </Swiper>
+
+
     </div>
   )
 }
