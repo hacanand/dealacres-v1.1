@@ -26,10 +26,10 @@ const page = () => {
       </div>
 
 
-      <div >
-        <ReadMore />
+      <div  className='py-4' >
+        <ReadMore isFullScreen={true} />
 
-        <Explore />
+        <Explore isFullScreen={true} />
       </div>
 
     </div>

@@ -77,7 +77,7 @@ const EmiCalculator = () => {
                 />
 
             </div>
-            <div className='row-start-3 row-span-3 col-span-1 h-full w-full flex justify-center'>
+            <div className='row-start-3 row-span-3 col-span-1 h-full w-full flex justify-center relative'>
                 <div className={`w-full md:w-2/3 rounded-lg shadow py-2 px-4 border-gray-400 border text-center h-full transition-all ${!!monthlyEmi ? 'flex visible scale-100' : 'invisible scale-0'} flex-col justify-around gap-y-2 `}>
                     <p className='font-bold text-sm md:text-base'>Monthly EMI</p>
 
@@ -89,6 +89,13 @@ const EmiCalculator = () => {
                         Get Instant Loan
                     </Link>
                 </div>
+
+                 <div className={`absolute inset-0 bg-white border border-gray-400 text-black rounded-lg flex jusitfy-center items-center text-lg font-bold ${!monthlyEmi ? 'visible flex scale-100' : 'invisible scale-0'} transition-all duration-300 text-center`} >
+                        <p>Please Fill All the fields</p>
+                    </div>
+                
+
+                
             </div>
 
         </div>

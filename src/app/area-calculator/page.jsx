@@ -5,12 +5,12 @@ import Image from "next/image";
 import Select from "react-select";
 
 import { FaExchangeAlt } from "react-icons/fa";
-
-import headerImage from "../../../public/areaCalculator/header.png";
+import calculatorImg from "../../../public/areaCalculator/bg.png";
 import girlQuestion from "../../../public/areaCalculator/girl_with_question.webp";
 
 import BlogCard from "@/components/areaCalculator/BlogCard";
 import FAQ from "@/components/areaCalculator/FAQ";
+import styles from './page.module.css'
 
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -224,20 +224,37 @@ const AreaCalculator = () => {
 
   return (
     <div>
-      <div className="relative p-5 mb-10 max-lg:hidden">
+      <div className={`relative p-5 rounded-xl mb-[200px] min-h-[225px] md:mb-[100px] `}>
         <Image
-          src={headerImage}
-          className="h-full w-full"
+          src={calculatorImg}
+          className=" relative  w-full z-[9] h-[200px] md:h-[300px] xl:h-[450px] "
           alt="area calculator"
+          width={800} height={800}
         />
 
-        <div className="p-4 absolute top-[8rem] left-20 w-1/3 bg-white border-4 rounded-lg border-blue-400 h-auto max-xl:top-[5rem] max-lg:top-1">
+        <div className="p-4  absolute 
+        top-[20%] 
+        left-[10%] 
+      bg-white border-4 rounded-lg border-blue-400 
+        max-md:w-[80%] 
+        mx-auto 
+        max-md:left-[10%] 
+        max-md:top-[70%] 
+        max-md:border-none 
+        max-md:rounded-[2rem] 
+        max-md:shadow-[0px_0px_5px_rgba(13,99,141,0.5)] z-10">
           <h2 className="text-2xl font-bold">Area Converter</h2>
-          <div className="space-y-4 mt-5">
+          <div className="space-y-1 xs:space-y-2 md:space-y-4 mt-5">
             <Select
               options={indianStates}
               placeholder="State"
               onChange={(value) => setSelectedState(value.value)}
+              classNames={{
+                control: () => `
+                 border-2  text-xs md:text-lg`,
+                input: () => 'text-sm md:text-lg',
+                option: () => 'text-xs md:text-sm p-0'
+              }}
             />
 
             <input
@@ -247,7 +264,7 @@ const AreaCalculator = () => {
               min="0"
               value={totalUnits}
               onChange={(e) => setTotalUnits(e.target.value)}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-xs md:text-lg placeholder:text-xs text-gray-500"
             />
 
             {inputError && <p className="text-red-600">{inputError}</p>}
@@ -258,6 +275,12 @@ const AreaCalculator = () => {
                 options={options}
                 className="w-full focus:outline-blue-600 rounded-md text-gray-500"
                 onChange={(value) => setFromValue(value.value)}
+                classNames={{
+                  control: () => `
+                   border-2  text-xs md:text-lg`,
+                  input: () => 'text-sm md:text-lg',
+                  option: () => 'text-xs md:text-sm p-0'
+                }}
               />
               <FaExchangeAlt className="h-10 w-10" />
               <Select
@@ -265,19 +288,25 @@ const AreaCalculator = () => {
                 options={options}
                 className="w-full focus:outline-blue-600 rounded-md text-gray-500"
                 onChange={(value) => setToValue(value.value)}
+                classNames={{
+                  control: () => `
+                   border-2  text-xs md:text-lg`,
+                  input: () => 'text-sm md:text-lg',
+                  option: () => 'text-xs md:text-sm p-0'
+                }}
               />
             </div>
 
             <input
               disabled={isLastInputDisabled}
               value={result}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500 text-xs md:text-lg placeholder:text-xs"
             />
           </div>
         </div>
       </div>
 
-      <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
+      {/* <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
         <div className="p-2 sm:p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
           <h2 className="text-xl md:text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">
@@ -320,7 +349,7 @@ const AreaCalculator = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="px-[5rem] mb-3 max-sm:px-[1rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
@@ -503,7 +532,7 @@ const AreaCalculator = () => {
         </div>
       </div> */}
 
-     <div className="px-[1rem] sm:px-[2rem] ">
+     <div className="px-[1rem] sm:px-[2rem] py-4">
      <ReadMore isFullScreen={true} subheader={"Read realty news guides and articles"}/>
      </div>
     </div>

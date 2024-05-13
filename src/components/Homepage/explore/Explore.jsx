@@ -4,7 +4,9 @@ import "./explore.css";
 import BudgetCalculation from "@/components/budgetCalculation/BudgetCalculation";
 import { cardData, carddata } from "./data";
 
-const Explore = () => {
+const Explore = ({
+  isFullScreen
+}) => {
   const [activeCard, setActiveCard] = useState(null);
   const [showBudgetCalculation, setShowBudgetCalculation] = useState(false);
 
@@ -23,14 +25,15 @@ const Explore = () => {
   };
 
   return (
-    <div className="cards-wrapper">
+    <div className={`${isFullScreen ? 'pl-0 pr-0 justify-center' : 'cards-wrapper'}`}>
       <div>
         <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
           {" "}
           Explore! <span className="text-blue-500">Insights and tools</span>
         </h2>
       </div>
-      <div className="cards-container cursor-pointer">
+      {/* ; */}
+      <div className={`cards-container cursor-pointer overflow-x-auto compact ${!isFullScreen ? 'pl-2 ' : 'ol-0'  }`}>
         {cardData.map((card) => (
           <div
             key={card.id}

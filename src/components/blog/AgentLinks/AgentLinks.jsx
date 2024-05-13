@@ -10,9 +10,9 @@ const AgentLinks = () => {
         <h2 className='font-bold text-lg sm:text-xl py-3 uppercase'>Search for homes by city </h2>
         <LinkSection data={hariyana} />
 
-        <div className='flex items-center justify-center mt-2 md:mt-4'>
+        <div className='flex items-center justify-center mt-4'>
         <button
-          className='bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-bold xs:text-base'
+          className='bg-blue-500 text-white px-2 xs:px-4 py-1 xs:py-2  rounded-xl text-sm font-bold sm:text-base'
         
         >
           View More Cities
@@ -23,9 +23,9 @@ const AgentLinks = () => {
         <h2 className='font-bold text-lg sm:text-xl py-3 uppercase'>Seach for home by districts</h2>
         <LinkSection data={gurugaon} />
 
-        <div className='flex items-center justify-center mt-2 md:mt-4'>
+        <div className='flex items-center justify-center my-4'>
         <button
-          className='bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-bold xs:text-base'
+          className='bg-blue-500 text-white px-2 xs:px-4 py-1 xs:py-2  rounded-xl text-sm font-bold sm:text-base'
         
         >
           View More Cities

@@ -9,8 +9,8 @@ const NewFeaturedSection = () => {
     return (
         <div className="md:px-4  flex flex-col gap-8 md:gap-16 ">
             <div className="grid grid-cols-2 grid-rows-[repeat(1,400px)] md:grid-rows-[repeat(1,600px)]  gap-2 xs:gap-4 md:gap-12  ">
-                <div className="col-span-1 py-4 max-h-[400px] md:max-h-[600px] flex flex-col   ">
-                    <div className="flex justify-start my-2 ">
+                <div className="col-span-1 pb-4 max-h-[400px] md:max-h-[600px] flex flex-col   ">
+                    <div className="flex justify-start mb-2 ">
                         <h2 className="text-2xl sm:text-4xl border-b border-b-black font-[Poppins]">
                             Featured
                         </h2>
@@ -20,8 +20,8 @@ const NewFeaturedSection = () => {
                     </div>
 
                 </div>
-                <div className="col-span-1 py-4 max-md:h-[400px]  max-md:overflow-auto flex flex-col  ">
-                    <div className="flex justify-start my-2">
+                <div className="col-span-1 pb-4 max-md:h-[400px]  max-md:overflow-auto flex flex-col  ">
+                    <div className="flex justify-start mb-2">
                         <h2 className="text-2xl sm:text-4xl border-b border-b-black font-[Poppins]">
                             New Updates
                         </h2>

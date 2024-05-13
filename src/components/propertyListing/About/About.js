@@ -41,7 +41,7 @@ const About = () => {
           />
         </div>
         <div className="  w-[90%] xs:w-[80%] mx-auto pt-16 max-w-screen-xl text-justify ">
-          <div className="bg-white p-5 md:space-y-10 border-t-4 border-b-[6px]  border-blue-200  shadow-blue-200 text-sm sm:text-base rounded-xl">
+          <div className="bg-white p-5 md:space-y-10 border-t-4 border-b-[6px] shadow-[3px_4px_10px_#bfdbfe,-3px_0x_10px_#bfdbfe] text-sm sm:text-base rounded-xl" style={{boxShadow: "3px 4px 10px #bfdbfe, -3px 0px 10px #bfdbfe"}}>
             <h2 className="text-xl xs:text-2xl sm:text-4xl lg:text-5xl font-bold text-center">
               Why Choose Deal Acres?
             </h2>
@@ -73,7 +73,7 @@ const About = () => {
         </div>
 
         <div className="w-[90%] xs:w-[80%] mx-auto my-4 ">
-          <div className="text-xl md:text-2xl ">
+          <div className="text-xl md:text-2xl py-2">
             <h3>Everything you need to know about</h3>
             <h2 className="text-blue-600 font-bold">Deal Acres <span className="text-yellow-300">FREE</span> Property Listing</h2>
           </div>

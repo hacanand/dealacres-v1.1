@@ -30,9 +30,9 @@ const Page = () => {
     return (
         <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
             <Navigation />
-            <div className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 lg:gap-20 md:container mx-auto md:my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row md:px-4 items-start justify-center md:gap-10 lg:gap-20 md:container mx-auto md:my-10 overflow-auto'>
 
-                <div className='h-full w-[90%] md:max-w-[50%] max-md:mx-auto md:w-[450px]  rounded-xl p-5 custom-border max-md:border-none'>
+                <div className='h-full w-[80%] md:max-w-[50%] max-md:mx-auto md:w-[450px]  rounded-xl p-5 custom-border max-md:border-none'>
                     <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
                         Now, tell us about your property
                     </h1>
@@ -50,15 +50,15 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Add Room Details
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={35} height={35} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Bathrooms
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={35} height={35} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Balconies
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={35} height={35} size={8} />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Other Rooms
                     </h1>

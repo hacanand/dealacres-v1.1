@@ -61,7 +61,7 @@ const MeetingScheduler = () => {
         {<div className={`relative col-span-3  transition-all `}>
           <div className={` px-2 md:px-4 transition-all  origin-left  duration-300
           
-          ${time ? 'scale-x-0 invisible absolute left-0 ' : 'scale-x-100 visible static'} max-h-[400px] overflow-y-auto`} >
+          ${time ? 'scale-x-0 invisible absolute left-0 ' : 'scale-x-100 visible static'} max-h-[300px] md:max-h-[400px] overflow-y-auto`} >
             <NewMeetTime selectedDate={selectedDate && selectedDate.split(' ').slice(0, 4).join(' ')}
               triggerTimeSelected={handleTimeChange}
             />

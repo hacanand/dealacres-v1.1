@@ -44,12 +44,12 @@ const Info = () => {
         </Link>
       </div>
 
-      <div className='h-full w-full md:w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-row md:flex-col items-center -order-1 md:order-2
+      <div className='h-full w-full md:w-[400px] rounded-xl bg-[#f1f6fd] p-4 flex flex-row md:flex-col items-center -order-1 md:order-2
       overflow-hidden
        rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm max-md:pb-0 pt-8 sm:pt-16 md:pt-0 '>
-        <h1 className="text-base sm:text-xl md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
+        <h1 className="text-base xs:text-xl  md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
           This information creates a transparency and build trust with buyers/tenants</h1>
-        <Image src={'/propertyListing/assets/agent.png'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 max-w-[200px] max-h-[200px] min-w-[120px] min-h-[120px] w-1/2 max-md:self-end' />
+        <Image src={'/propertyListing/assets/agent.webp'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 max-w-[200px] max-h-[200px] min-w-[120px] min-h-[120px] w-1/2 max-md:self-end' />
         <div className='hidden md:block'>
           <h1 className='font-bold text-xl'>Need Help?</h1>
           <p className='text-lg'>You Can Email Us</p>

@@ -30,9 +30,7 @@ const NewMeetTime = ({
             </div>
             <div className='py-2 flex flex-col md:flex-col gap-4'>
                 {[...Array(24)].map((_, time) => {
-                    if (count === 4 && !showFull) {
-                        return null;
-                    }
+       
                     if (time + 1 >= availStart && time + 1 <= availEnd) {
                         count += 1; //keep track of no of buttons*2 displayed
                         const index = time * 2;
@@ -66,11 +64,7 @@ const NewMeetTime = ({
                     return null;
                 })}
             </div>
-                <div className='w-full text-center '>
-                    <span className='font-bold text-blue-500 text-xs md:text-lg cursor-pointer' onClick={() => setShowFull(prev => !prev)}>
-                        View {showFull ? 'Less' : 'More'} Timings
-                    </span>
-                </div>
+       
         </div>
     )
 }

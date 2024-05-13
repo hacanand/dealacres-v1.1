@@ -103,11 +103,13 @@ const ExploreBuilder = () => {
       {filteredData.map((dt, index) => (
         <div className="mt-8 md:mt-12" key={index}>
           <div className={styles.TopBuilders}>
+
             <div className={styles.Logo}>
               <Image
                 src={dt.builderLogo}
                 alt={dt.builderName}
               />
+
             </div>
             <div className={styles.TopBuilderContent}>
 
@@ -196,13 +198,13 @@ const ExploreBuilder = () => {
                 el.scrollIntoView({behavior: 'smooth', block: 'end'})
               }
               setCurrentPage(number)}}
-            className='w-[30px] h-[30px]'
+            className='w-[15px] h-[15px]'
             style={{
               cursor: "pointer",
               fontWeight: currentPage === number ? "bold" : "normal",
               border: "1px solid #0061fd",
               borderRadius: "50%",
-              padding: "1% 0.5%",  
+              padding: '10px',
               display: "flex",
               alignItems: "center",
               justifyContent: "center",

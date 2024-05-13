@@ -80,9 +80,9 @@ const Page = () => {
       <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
 
         <Navigation />
-        <div className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
+        <div className='flex flex-col md:flex-row md:px-4 items-start justify-center md:gap-10  md:container mx-auto md:my-10 overflow-auto'>
 
-          <div className='h-full w-[90%] max-md:mx-auto md:w-[50%] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
+          <div className='h-full w-[80%] max-md:mx-auto md:w-[50%] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
             <h1 className="font-medium md:font-bold md:text-2xl text-xl">
               Price Details
             </h1>
@@ -155,9 +155,9 @@ const Page = () => {
 
 
           <BannerLayout lists={["Mention attractive amenities and appealing details of your property.",
-            "Add property proximity to transit Shopping, Market Areas, and more..."]} imgSrc={"/propertyListing/assets/amenities.png"} showContact startWithPic />
+            "Add property proximity to transit Shopping, Market Areas, and more..."]} imgSrc={"/propertyListing/assets/amenities.webp"} showContact startWithPic />
         </div>
-        <div className="w-[90%] md:w-full max-md:mx-auto md:px-24">
+        <div className="w-[80%] md:w-full max-md:mx-auto p-5 md:px-24">
           <h1 className=" font-heading mb-2">GDPR Agreement *</h1>
           <div className="flex flex-row justify-center my-2 gap-2 items-center">
             <input
@@ -166,9 +166,9 @@ const Page = () => {
               checked={isGDPRChecked}
               onChange={handleGDPRCheckboxChange}
             />
-            <p className="text-lg md:text-xl">I agree to this website &quot;Deal Acres&quot; storing my submitted information; see more details below.</p>
+            <p className="text-sm sm:text-base md:text-xl">I agree to this website &quot;Deal Acres&quot; storing my submitted information; see more details below.</p>
           </div>
-          <div className="bg-[#e1dff8] p-2  text-sm md:text-base rounded-lg md:mb-8">
+          <div className="bg-[#f3f3f3] p-2  text-sm md:text-base rounded-lg md:mb-8">
             <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
           </div>
           <button

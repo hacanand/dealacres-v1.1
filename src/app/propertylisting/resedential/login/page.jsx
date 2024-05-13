@@ -23,14 +23,14 @@ const Login = () => {
 
     return (
         <section className='flex flex-col md:flex-row items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
-            <div className='h-full w-full md:w-[400px] rounded-xl bg-[#D3E3F9] md:bg-[#e9f6fe] p-4 flex flex-row md:flex-col items-center 
+            <div className='h-full w-full md:w-[400px] rounded-xl bg-[#f1f6fd] md:bg-[#e9f6fe] p-4 flex flex-row md:flex-col items-center 
             
-            relative  after:absolute after:bg-[#D3E3F9] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
+            relative   rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
             
             max-md:pb-0 max-md:pt-[3rem] max-md:justify-center
             '>
                 <div className='flex flex-row items-center gap-2 mt-20 mb-5 max-md:m-0'>
-                    <Image src={'/propertyListing/assets/thumbsup.png'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />
+                    <Image src={'/propertyListing/assets/thumbsup.svg'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />
                     <h1 className=" whitespace-nowrap text-sm sm:text-lg mb-4">
                         Your Phone number gives<br /> access to your account.</h1>
                 </div>
@@ -43,7 +43,7 @@ const Login = () => {
                 </div>
             </div>
             <div className='h-full w-full md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none flex flex-col justify-end '>
-                <div className='inline mx-auto'>
+                <div className='w-[80%] mx-auto'>
                     <h1 className="font-bold md:font-bold md:text-2xl text-xl  mt-2">
                         Welcome back,</h1>
                     <p className='text-xl font-medium '>
