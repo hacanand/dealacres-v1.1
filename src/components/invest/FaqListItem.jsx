@@ -13,7 +13,7 @@ const FaqListItem = ({
   const [showAnswer, setShowAnswer] = useState(false)
   return (
     <li className={`border border-blue-200 py-2   ${!isLast && 'border-b-0'} list-none overflow-hidden `}>
-      <div className='font-medium text-xs xs:text-sm sm:text-lg flex items-center gap-2'>
+      <div className='font-medium text-[10px] xs:text-xs sm:text-sm md:text-lg flex items-center gap-2'>
         <span className='' onClick={() => setShowAnswer(prev => !prev)}>
     {   !showAnswer ?   <GrFormAdd size={25} /> : <GrFormSubtract size={25} /> }
         </span>

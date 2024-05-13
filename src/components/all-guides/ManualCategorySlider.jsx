@@ -37,7 +37,7 @@ const ManualCategorySlider = ({
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,
-        nextArrow: <GuidesCustomArrow transparent icon={AiOutlineRight} isNext />
+        nextArrow: <GuidesCustomArrow transparent icon={AiOutlineRight} isNext isManualSlider={true} />
 
     };
 

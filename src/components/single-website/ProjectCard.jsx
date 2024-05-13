@@ -15,7 +15,7 @@ const ProjectCard = ({
     hasGarage
 }) => {
     return (
-        <div className='flex flex-col col-span-1 shadow-lg '>
+        <div className='flex flex-col col-span-1 shadow-lg bg-white '>
             <div className='min-h-1/2 w-full relative  ' >
                 <Image src={img}
                     className='w-full max-h-full min-h-full   '

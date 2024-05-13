@@ -48,9 +48,9 @@ const CallingTimeSelector = ({
         onChange = {(value) => onChange(value)}
         classNames={{
           control: () => `${errors[id] ? '!border-rose-500' : '!border-slate-300'}
-          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2 text-lg py-1`,
-          input: () => 'text-lg',
-          option: () => 'text-lg'
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-slate-600'} border-2 text-sm md:text-lg `,
+          input: () => 'text-sm md:text-lg',
+          option: () => 'text-xs'
         }}
       
       />

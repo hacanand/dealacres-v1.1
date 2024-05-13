@@ -7,11 +7,15 @@ import { IoCameraOutline, IoLocationOutline } from 'react-icons/io5';
 import ImageCarasouel from './ImageCarasouel';
 import styles from './imagecontainer.module.css';
 import LocationModal from './LocationModal';
+import { useParams, usePathname } from 'next/navigation';
 
 function ImageContainer(props) {
 
   const [Carasouel, setCarasouel] = useState(false);
   const [locationModal,setLocationModal] = useState(false);
+
+  const path = usePathname();
+  // console.log(path.split('/')[1])
 
   return (
     <div className={styles.container}>
@@ -46,7 +50,7 @@ function ImageContainer(props) {
 
       <div className="absolute bottom-4 right-4 flex md:hidden  gap-1">
         <button className={`${styles.viewImagesButton} ${styles[props.imageButtonPosition]} !static`} onClick={() => { setCarasouel(true) }}><IoCameraOutline style={{ display: 'inline' }} /> View Images</button>
-        <button className={`${styles.viewImagesButton} ${styles[props.imageButtonPosition]} !static`} onClick={() => { setLocationModal(true) }}> <IoLocationOutline size={20} /></button>
+        {path.split('/')[1] === 'location' && <button className={`${styles.viewImagesButton} ${styles[props.imageButtonPosition]} !static`} onClick={() => { setLocationModal(true) }}> <IoLocationOutline size={20} /></button>}
       </div>
       {Carasouel &&
         <div className={styles.imageCarasouelContainer}>

@@ -4,7 +4,7 @@ import { IoShareSocialOutline } from "react-icons/io5";
 
 function NewsCard({ title, text, imageSrc, date, handleShare }) {
   return (
-    <div className="bg-white max-w-[250px] lg:max-w-[100%] rounded-lg overflow-hidden shadow-lg w-full  md:h-[300px]  grid grid-rows-[_repeat(10,1fr)]  md:min-h-[230px] min-w-[210px] md:min-w-[250px] h-[unset] min-h-[unset] max-h-full">
+    <div className="bg-white lg:max-w-[100%] rounded-lg overflow-hidden shadow-lg w-full  md:h-[300px]  grid grid-rows-[_repeat(10,1fr)]  md:min-h-[230px] min-w-[210px] md:min-w-[250px] h-[unset] min-h-[unset] max-h-full">
       <div className="row-span-4">
         <img
           src={imageSrc}

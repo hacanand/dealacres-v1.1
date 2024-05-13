@@ -92,7 +92,7 @@ const AgentHeroSection = ({
 
             <div>
               <p className='text-xs sm:text-sm flex gap-2 items-start sm:items-center  whitespace-nowrap font-bold flex-col sm:flex-row justify-start'>Follow Us -
-                <ul className='inline-flex gap-1 items-center justify-center'>
+                <ul className='inline-flex gap-2 items-center justify-center '>
                   <CiFacebook size={20} className='bg-white text-black rounded-full' />
                   <FaInstagram size={20} className='bg-white text-black rounded-full' />
                   <FaYoutube size={20} className='bg-white text-black rounded-full' />

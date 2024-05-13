@@ -49,17 +49,17 @@ function page() {
                     <Maincontent/>
                     <SideContentContainer title='M3M India Pvt. Ltd'/>
                 </div>
-                <div>
+                <div className="mt-4">
                     <h5>Other Developers</h5>
                     <Topdev/>
-                    <Link className='inline-flex flex-row gap-1 items-center text-base md:text-lg lg:text-xl text-blue-500 underline font-bold py-2 sm:py-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
+                    <Link className='inline-flex flex-row gap-1 items-center text-base md:text-lg lg:text-xl text-blue-500 underline font-bold py-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
                 </div>
                 <div>
                     
                     {/* <IntrestingReading/> */}
                     <ReadMore isFullScreen={true}/>
                 </div>
-                <div className='my-2'>
+                <div className='my-4'>
                     <h5>Frequently Asked Questions</h5>
                     <FAQ  faqdata = {FaqData} />
                 </div>

@@ -25,7 +25,7 @@ const InvestmentGuideCard = ({
       hover:scale-[1.3] transition-all w-[100px] border border-blue-300 shadow' />
 
       </div>
-      <div className='font-bold text-base sm:text-lg text-center peer py-4 hover:cursor-pointer' onClick={handleClick} >
+      <div className='font-bold text-xs xs:text-sm sm:text-base md:text-lg text-center peer py-4 hover:cursor-pointer' onClick={handleClick} >
         {title}
       </div>
       { <p className={`hidden opacity-0 transition-opacity delay-100 ease-in-out duration-500 content-shown md:peer-hover:block md:peer-hover:opacity-100 text-sm sm:text-base text-center ${isClicked && 'max-md:opacity-100 max-md:block'}`}>

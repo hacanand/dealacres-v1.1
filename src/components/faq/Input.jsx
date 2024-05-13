@@ -19,7 +19,7 @@ const Input = ({
   
   
   return (
-    <div className="w-full relative">
+    <div className="w-full relative h-full">
            
             <input
                 id={id}
@@ -35,9 +35,9 @@ const Input = ({
                 className={`
         peer
         w-full
-        px-4
-        py-2
-
+        px-2 md:px-4
+        py-1 md:py-2
+        placeholder:text-sm
         font-light 
         bg-white 
         border-2

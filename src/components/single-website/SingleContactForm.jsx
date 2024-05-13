@@ -51,7 +51,7 @@ const SingleContactForm = () => {
     console.log(errors['name'])
   }, [getValues('email'), getValues('name')])
   return (
-    <div className='bg-[#1C2956] '>
+    <div className='bg-[#1C2956] rounded-[0.5rem] md:rounded-none '>
 
       {
         isLoading && <div className='w-full h-full absolute opacity-50 bg-black flex justify-center items-center'>

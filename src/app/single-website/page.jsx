@@ -35,7 +35,7 @@ const SingleWebsite = () => {
       <MobileFindHome img={src1}/>
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 py-4'>
+      <div className='max-w-screen-lg mx-auto px-4 pt-4 pb-6 bg-[#f6f6f6]'>
         <div className='text-center py-4 md:py-16'>
           <h2 className='font-bold text-2xl xs:text-3xl  md:text-4xl px-4 py-2'>
             Recommended Project
@@ -49,7 +49,7 @@ const SingleWebsite = () => {
 
       <FindHome img={src2} />
 
-      <div className='max-w-screen-lg mx-auto px-4'>
+      <div className='max-w-screen-lg mx-auto px-4 my-4'>
         <h3 className='text-lg xs:text-xl md:text-2xl font-bold py-2 '>Blog & News</h3>
         <BlogsAndNews />
       </div>

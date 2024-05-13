@@ -20,9 +20,9 @@ const SingleAgentPage = () => {
         <AgentHeroSection img={img} name={name} contacts={contacts} languages={languages} address={address} />
       </div>
 
-      <div className='max-w-screen-lg   mx-auto px-2 sm:px-6 '>
+      <div className='max-w-screen-lg   mx-auto px-4 sm:px-6 '>
         <div className='w-full md:w-[85%] mx-auto'>
-          <h2 className='font-bold text-2xl inline-flex flex-col py-4'>
+          <h2 className='font-bold text-2xl inline-flex flex-col py-2 md:py-4'>
             About Agent
             <HeadingBorder />
           </h2>
@@ -32,14 +32,14 @@ const SingleAgentPage = () => {
         </div>
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-2 sm:px-6 py-4 '>
+      <div className='max-w-screen-lg mx-auto px-4 sm:px-6 py-4 '>
         <AgentListings forRentListings={forRentListings} forSaleListings={forSaleListings} />
 
       </div>
 
 
       {/* services */}
-      <div className='max-w-screen-lg mx-auto px-2 sm:px-6 mb-3'>
+      <div className='max-w-screen-lg mx-auto px-4 sm:px-6 mb-3'>
         <AgentServices services={services} />
 
       </div>
@@ -48,7 +48,7 @@ const SingleAgentPage = () => {
         <FeaturedService />
       </div>
 
-      <div className='max-w-screen-md mx-2 px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0.3)]'>
+      <div className='max-w-screen-md mx-4 px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0.3)]'>
 
         <div className='w-[55%]'>
           <AgentContactForm />
@@ -60,7 +60,7 @@ const SingleAgentPage = () => {
 
       </div>
 
-      <div className='max-w-screen-md mx-auto px-2 sm:px-6  py-4 my-4  '>
+      <div className='max-w-screen-md mx-auto px-4 sm:px-6  py-4 my-4  '>
         <h2 className='font-bold text-[17px] sm:text-xl py-1 sm:py-2'>
           Leave a Feedback - As your words matter to us
         </h2>

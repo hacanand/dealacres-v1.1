@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const FeaturedService = () => {
     return (
-        <div className={`w-screen relative after:absolute after:content-[''] after:bg-black after:opacity-[0.3] after:inset-0  flex justify-center items-center min-h-[600px]`}>
+        <div className={`w-screen relative after:absolute after:content-[''] after:bg-black after:opacity-[0.3] after:inset-0  flex justify-center items-center md:min-h-[600px]`}>
             <div className='w-full h-full absolute'>
                 <Image src={housebg} className='w-full h-full object-cover' />
 
@@ -24,7 +24,7 @@ const FeaturedService = () => {
                     When you're ready to buy, your agent will know what it takes to write a winning offer for the most highly sought-after homes. And when it's time to sell, they will know how to price, prepare, and market your home, so it attracts qualified buyers and sells for more.
                 </p>
 
-                <Link className='bg-blue-600 text-white font-bold text-xl py-2 px-4 my-2 inline-flex' href="#"> Learn More</Link>
+                <Link className='bg-blue-600 text-white font-bold text-base md:text-xl py-2 px-4 my-2 inline-flex' href="#"> Learn More</Link>
 
             </div>
         </div>

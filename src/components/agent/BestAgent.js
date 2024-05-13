@@ -22,7 +22,7 @@ const Agent = (props) => {
         <SideContentContainer Addbox={true} />
 
         <div className="max-[768px]:w-full max-[768px]:flex max-[768px]:justify-center">  
-        <div className={styles.MostSearched}>
+        <div className={`${styles.MostSearched} container_box_shadow`}>
           {data["MostSearched"].map((Cate, index) => (
             <SearchCategories
               key={index}

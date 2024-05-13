@@ -85,4 +85,8 @@
         max-height: 180px;
         object-fit: unset;
     }
+
+    .MainLayout p, .MainLayout li {
+        font-size: 14px;
+    }
 }

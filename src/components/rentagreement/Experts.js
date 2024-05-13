@@ -47,7 +47,7 @@ const Experts = () => {
 
 
 
-        <div className={` ${styles.MostSearched} max-[768px]:!w-full justify-center  `}>
+        <div className={` ${styles.MostSearched} max-[768px]:!w-full justify-center container_box_shadow `}>
           {data["MostSearched"].map((Cate, index) => (
             <SearchCategories key={index} city={Cate.Location} category={Cate.Categories} />
           ))}

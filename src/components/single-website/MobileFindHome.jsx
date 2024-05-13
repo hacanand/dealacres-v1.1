@@ -7,7 +7,7 @@ const MobileFindHome = ({
     img
 }) => {
     return (
-        <div className={`max-w-screen min-w-screen relative  flex flex-col justify-end items-end min-h-[450px] !overflow-x-hidden`}>
+        <div className={`max-w-screen min-w-screen relative  flex flex-col justify-end items-end min-h-unset !overflow-x-hidden`}>
 
             <Image src={img} className='max-w-full min-w-full h-full object-cover  absolute' alt='House / Interior Image.' />
 

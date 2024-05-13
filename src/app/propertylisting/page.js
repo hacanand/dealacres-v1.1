@@ -16,11 +16,12 @@ const page = () => {
       <Guide />
       </div>
       <About />
+      
       <div>
         
       </div>
-      <div className='px-4 sm:px-8 md:px-16 lg:px-32 space-y-8  py-5'>
-        <h2 class="text-3xl font-bold">Frequently Asked Questions</h2><br />
+      <div className='w-[90%] xs:w-[80%] md:w-full mx-auto my-4  md:px-16 lg:px-32   md:py-5'>
+        <h2 class="singleDevHeading">Frequently Asked Questions</h2>
         <FAQ faqdata={data.mainContent.FaqData} />
       </div>
       <ReadMore subheader={"Read realty, news, guides & articles."} />

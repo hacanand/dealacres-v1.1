@@ -85,7 +85,7 @@ const InvestWithDealAcres = () => {
 
           <Cities />
         </div>
-        <div className="my-4">
+        <div className="pt-4 md:pt-0 my-4">
 
           {/* <IntrestingReading/> */}
           {/* <ArticleSlider /> */}

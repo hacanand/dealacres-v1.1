@@ -39,7 +39,7 @@ const page = () => {
 
 
 
-        <div className='px-4 lg:px-0'>
+        <div className=' lg:px-0'>
 
 
           <div className={`${styles.generalHeading} font-medium text-2xl sm:text-4xl py-4 inline-flex items-center  border-b-[4px] border-black gap-4  `}>
@@ -71,7 +71,7 @@ const page = () => {
             {/* Form container */}
             <div className='relative mx-auto md:mx-0  lg:ml-auto  lg:px-4 py-2 w-full max-w-[640px]'>
               <div className='w-full'>
-                <p className='font-light text-3xl py-3 lg:py-0 lg:pb-3'>
+                <p className='font-light text-lg xs:text-xl md:text-3xl py-3 lg:py-0 lg:pb-3'>
                   We &apos; ll get in touch with you.
                 </p>
                 <FaqForm />
@@ -85,19 +85,19 @@ const page = () => {
 
       {/* How deal acres help you */}
 
-      <div className='bg-blue-600'>
-        <div className=' max-w-screen-xl  py-8  text-white mx-auto '>
+      <div className='mt-2 bg-blue-600'>
+        <div className=' max-w-screen-xl  py-8  text-white mx-auto px-4 '>
 
-          <h3 className='font-bold text-3xl md:text-4xl text-center py-4'>How Deal Acres Help You? </h3>
-          <p className='font-medium text-justify text-lg px-8'>Welcome to the Deal Acres FAQ (Frequently Asked Questions) page, where buyers and owners can find answers to their questions related to login or registration, property search, property advertisement posting, account management and other related topics. Start your search by simply entering keywords in the search bar, located at the top of the page or you can browse through questions under the categories given below. Alternatively, you can also reach out to us at  7015963201, 8307757571 (Monday to Saturday, 9 AM to 9 PM) to talk to our customer support executive. Additionally, you can also explore the Articles section below, for the latest real estate news and updates.</p>
+          <h3 className='font-bold text-2xl xs:text-3xl md:text-4xl text-center py-4'>How Deal Acres Help You? </h3>
+          <p className='font-medium text-justify text-sm sm:text-base '>Welcome to the Deal Acres FAQ (Frequently Asked Questions) page, where buyers and owners can find answers to their questions related to login or registration, property search, property advertisement posting, account management and other related topics. Start your search by simply entering keywords in the search bar, located at the top of the page or you can browse through questions under the categories given below. Alternatively, you can also reach out to us at  7015963201, 8307757571 (Monday to Saturday, 9 AM to 9 PM) to talk to our customer support executive. Additionally, you can also explore the Articles section below, for the latest real estate news and updates.</p>
         </div>
       </div>
 
       {/* Explore questions by Topic */}
 
-      <div className='bg-[#addbf1] py-4 lg:py-6'>
-        <h3 className='text-center uppercase py-2 lg:py-4 text-2xl lg:text-3xl font-bold'> Explore Questions by Topics</h3>
-        <div className=' max-w-screen-xl px-4 md:py-4 lg:py-8 mx-auto  lg:grid lg:grid-cols-3 items-start'>
+      <div className='bg-[#addbf1] py-4 px-4 lg:py-6'>
+        <h3 className='text-center uppercase py-2 lg:py-4 text-xl xs:text-2xl lg:text-3xl font-bold'> Explore Questions by Topics</h3>
+        <div className=' max-w-screen-xl  md:py-4 lg:py-8 mx-auto  lg:grid lg:grid-cols-3 items-start'>
           {questionByTopic.map((item, index) => {
             return (
               <FaqTopicList isGrid key={index} hasBorder={index !== 2} title={item.title} lists={item.lists} />
@@ -109,17 +109,17 @@ const page = () => {
       </div>
       <div className='bg-blue-600 flex flex-row items-center justify-center gap-2 min-[440px]:gap-4 sm:gap-6 p-5'>
         <div className='uppercase'>
-          <h1 className='text-xs md:text-lg text-white font-bold'> BUY OUR REAL ESTATE SERVICES AND SMOOTH YOUR <br />
-            <span className='text-2xl md:text-5xl text-yellow-400 font-bold'>REAL ESTATE JOURNEY</span></h1>
+          <h1 className='text-[9px] xs:text-[10px] sm:text-sm md:text-lg text-white font-bold'> BUY OUR REAL ESTATE SERVICES AND SMOOTH YOUR <br />
+            <span className='text-lg xs:text-2xl md:text-5xl text-yellow-400 font-bold'>REAL ESTATE JOURNEY</span></h1>
         </div>
         <div>
-          <button className='rounded-xl min-w-[90px] bg-white px-2 text-sm sm:text-base sm:px-6 py-2 text-blue-500 font-semibold'>Click Here</button>
+          <button className='rounded-xl min-w-[90px] bg-white px-2 text-xs xs:text-sm sm:text-base sm:px-6 py-1 xs:py-2 text-blue-500 font-semibold'>Click Here</button>
         </div>
       </div>
 
       {/* Article Slider */}
 
-      <div className='max-w-screen-xl mx-auto px-4 my-8'>
+      <div className='max-w-screen-xl mx-auto px-4 pb-2 '>
 
 
         {/* <ArticleSlider /> */}

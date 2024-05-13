@@ -32,7 +32,7 @@ const ManualCard = () => {
                 </div>
             </div>
 
-            <div className={`flex md:hidden flex-col bg-white md:flex-row gap-2  md:gap-8 z-10  py-2 ${styles.cardContainer}`}>
+            <div className={`flex md:hidden flex-col bg-white md:flex-row gap-2  md:gap-8 z-10  py-2 border-b border-b-black ${styles.cardContainer}`}>
          
                 <div>
                     <h4 className='pb-2 font-bold text-sm md:text-lg '> Under Construction Property vs Ready to Move Property.</h4>

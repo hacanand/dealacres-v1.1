@@ -18,7 +18,7 @@ const FindHome = ({
                 <Image src={img} className='max-w-full min-w-full h-full object-cover  absolute' alt='House / Interior Image.' />
 
         
-            <div className={`bg-transparent text-white text-lg relative top-[10%]  z-10  after:md:rounded-2xl    py-12 px-8  max-w-screen-lg w-[80%] mx-auto md:mx-8 my-0 md:my-4 sm:my-0 after:content-[''] after:absolute after:bg-black after:inset-0 after:-z-10 after:opacity-[0.7] shadow-xl rounded 
+            <div className={`bg-transparent text-white text-lg relative top-[10%]  z-10  after:md:rounded-2xl    py-4 sm:py-12 px-8  max-w-screen-lg w-[80%] mx-auto md:mx-8 my-0 md:my-4 sm:my-0 after:content-[''] after:absolute after:bg-black after:inset-0 after:-z-10 after:opacity-[0.7] shadow-xl rounded 
             flex text-center gap-4 flex-col  items-center justify-center
             `}>
 

@@ -52,7 +52,7 @@ const AgentListings = (
 
             </div>
 
-            <div className='col-span-5 max-h-[350px] overflow-y-scroll py-2'>
+            <div className='col-span-5 max-h-[350px] overflow-y-auto py-2'>
                 {
                     selectedTab === 'sale' ? forSaleListings.map((listing, index) => (
                         <span key={index}>

@@ -80,28 +80,38 @@
     
     .TandCContent p{
         margin-bottom: 10px;
+        font-size: 14px;
     }
     
     .TandCContent li{
         list-style-position: inside;
         margin-bottom: 10px;
         margin-left: 20px;
+        font-size: 14px;
     }
     
     .TandCContent div ol li{
         list-style-type: decimal;
+        font-size: 14px;
+
     }
     
     .TandCContent ul li, .TandCContent ol ul li{
         list-style-type: disc;
+        font-size: 14px;
+
     }
     
     .TandCContent ol ul li{
         margin-left: 60px;
+        font-size: 14px;
+
     }
     
     .TandCContent ul ul li{
         margin-left: 100px;
+        font-size: 14px;
+
     }
     
     .h3Highlighted{
