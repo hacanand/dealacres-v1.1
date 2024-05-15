@@ -176,7 +176,7 @@ const ExploreBuilder = () => {
 
             </div>
 
-            <div className='block  text-center text-blue-500 underline font-bold'>
+            <div className='block  text-sm sm:text-base text-center text-blue-500 underline font-bold'>
                 <button onClick={toggleProjects}> {(projectLimit <= 4) ? " View All " + project + " Projects" : "View Less"}</button></div>
           </div>
 

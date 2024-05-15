@@ -52,25 +52,25 @@ const AgentHeroSection = ({
 
               </div>
             </h2>
-            <p className='text-sm sm:text-base md:text-lg'>
+            <p className='text-sm xs:text-sm sm:text-base md:text-lg'>
               {contacts.map((contact, index) => (<span key={index}>{contact}</span>))}
             </p>
-            <p className='font-bold text-sm sm:text-base md:text-lg'>
+            <p className='font-bold text-sm xs:text-sm sm:text-base md:text-lg'>
               {languages.map((language, index) => (<span key={index}>
                 {language + ' '}</span>))}
             </p>
 
-            <p className='text-sm sm:text-base md:text-lg py-1 sm:py-4'>
+            <p className='text-sm xs:text-sm sm:text-base md:text-lg py-1 sm:py-4'>
               {address}
             </p>
           </div>
 
           <div className='flex flex-col gap-4 items-start '>
             <div>
-              <p className='text-base md:text-lg font-bold'>
+              <p className='text-sm xs:text-base md:text-lg font-bold'>
                 Meet with Sanya Bansal
               </p>
-              <div className='flex flex-row gap-4 md:gap-8 accent-green-500 text-xs md:text-base'>
+              <div className='flex flex-row gap-4 md:gap-8 accent-green-500 text-[10px] sm:text-xs md:text-base'>
                 <div className='flex flex-row gap-2'>
                   <input type="radio" id='inperson' name='mode' value={'inPerson'} onClick={() => handleContactClick('inPerson')} />
                   <label htmlFor="inperson">
@@ -86,7 +86,7 @@ const AgentHeroSection = ({
                 </div>
               </div>
             </div>
-            <span className='w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
+            <span className='w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-sm xs:text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
               Get In Touch
             </span>
 

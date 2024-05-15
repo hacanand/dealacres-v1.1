@@ -5,10 +5,14 @@ import { getMonthlyEmi } from '@/app/libs/getMonthlyEmi';
 import { EmiPie } from './EmiPie';
 import Link from 'next/link';
 import { TextField } from '@mui/material';
+import { useDeviceType } from '@/hooks/useDeviceType';
 
 const EmiCalculator = () => {
     const [monthlyEmi, setMonthlyEmi] = useState(null);
     const [pieData, setPieData] = useState([100, 0]); // Initial pie data
+    const [dType, setDType] = useState('desktop');
+    const { deviceType } = useDeviceType()
+    console.log(deviceType)
 
     const {
         register,
@@ -22,7 +26,11 @@ const EmiCalculator = () => {
     const tenure = watch('tenure', '');
 
     useEffect(() => {
+        setDType(deviceType);
+    }, [])
+    useEffect(() => {
         const loanData = getMonthlyEmi(amt, roi, tenure);
+
         if (loanData) {
             console.log(loanData)
             setMonthlyEmi(loanData[0]);
@@ -31,50 +39,50 @@ const EmiCalculator = () => {
     }, [amt, roi, tenure]);
 
     return (
-        <div className='grid grid-cols-2 gap-x-4 grid-rows-5 place-items-center border rounded-lg shadow border-gray-400 px-2 sm:px-8 py-4 max-w-[500px] md:max-w-none mx-auto md:mx-0 '>
-            <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center my-1'>
+        <div className='grid grid-cols-2 gap-x-4 grid-rows-4 xs:grid-rows-5 place-items-center border rounded-lg shadow border-gray-400 px-2 sm:px-8 py-2 xs:py-4 max-w-[500px] md:max-w-none mx-auto md:mx-0  max-xs:max-h-[250px] '>
+            <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center xs:my-1'>
 
-            <TextField
-                     className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
-                     placeholder='Loan Amount'
-                     type='number'
-                     label="Amount"
-                     step='0.01'
-                     id='amt'
-                     {...register('amt', { required: "Please enter a valid loan amount" })}
-                     sx={{
-                        '&': {
-                            padding: '0px'
-                        }
-                     }}
-                />
-                
-            </div>
-            <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center my-1'>
                 <TextField
-                     type='number'
-                     className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
-                     placeholder='Loan Tenure'
-                     label="Tenure"
-                     id='tenure'
-                     {...register('tenure', { required: "Please enter a valid loan tenure." })}
+                    className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
+                    placeholder='Loan Amount'
+                    type='number'
+                    label="Amount"
+                    step='0.01'
+                    id='amt'
+                    {...register('amt', { required: "Please enter a valid loan amount" })}
+                    size={dType == 'smallphone' ? 'small' : 'medium'}
                 />
-           
+
+            </div>
+            <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center xs:my-1'>
+                <TextField
+                    type='number' 
+                    className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
+                    placeholder='Loan Tenure'
+                    label="Tenure"
+                    id='tenure'
+                    size={dType == 'smallphone' ? 'small' : 'medium'}
+                    {...register('tenure', { required: "Please enter a valid loan tenure." })}
+                />
+
             </div>
 
-            <div className='row-start-2 row-span-4 col-start-1  col-span-1 flex justify-center md:h-full md:w-[300px]  max-w-[200px] sm:max-w-none max-h-[300px] md:max-h-[600px]'>
+            <div className='row-start-2 row-span-4 col-start-1  col-span-1 flex justify-center md:h-full md:w-[300px] max-w-full xs:max-w-[200px] md:max-w-none max-h-[300px] md:max-h-[600px]'>
                 <EmiPie data={pieData} />
             </div>
-            <div className='row-start-2 row-span-1 col-span-1 w-full flex justify-center my-1'>
+            <div className='row-start-2 row-span-1 col-span-1 w-full flex justify-center xs:my-1'>
 
                 <TextField
                     type='number'
+                
                     className='border border-gray-400  rounded-lg w-full md:w-2/3 shadow text-sm sm:text-base md:text-lg'
                     placeholder='Rate Of Interest'
                     label="ROI"
                     id='roi'
+                    size={dType == 'smallphone' ? 'small' : 'medium'}
                     {...register('roi', { required: "Please enter a valid loan interest." })}
                 />
+
 
             </div>
             <div className='row-start-3 row-span-3 col-span-1 h-full w-full flex justify-center relative'>
@@ -90,12 +98,12 @@ const EmiCalculator = () => {
                     </Link>
                 </div>
 
-                 <div className={`absolute inset-0 bg-white border border-gray-400 text-black rounded-lg flex jusitfy-center items-center text-lg font-bold ${!monthlyEmi ? 'visible flex scale-100' : 'invisible scale-0'} transition-all duration-300 text-center`} >
-                        <p>Please Fill All the fields</p>
-                    </div>
-                
+                <div className={`absolute w-full h-full md:w-2/3  bg-white border border-gray-400 text-black rounded-lg flex jusitfy-center items-center text-lg font-bold ${!monthlyEmi ? 'visible flex scale-100' : 'invisible scale-0'} transition-all duration-300 text-center justify-center items-center`} >
+                    <p className='text-sm md:text-base'>Please Fill All the fields</p>
+                </div>
 
-                
+
+
             </div>
 
         </div>

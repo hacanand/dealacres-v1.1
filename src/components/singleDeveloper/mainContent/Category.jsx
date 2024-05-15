@@ -4,7 +4,7 @@ import Image from 'next/image'
 function Category() {
     return (
         <div className={styles.categoryContainer}>
-            <h1>Explore Magnificent Project By <span className='flex flex-col'> <span className={styles.brandName}>M3M</span> <span> India Pvt. Ltd </span></span></h1>
+            <h1 style={{lineHeight: 'normal'}}>Explore Magnificent Project By <span className='flex flex-col'> <span className={styles.brandName}>M3M</span> <span> India Pvt. Ltd </span></span></h1>
             <div className={styles.categoryImagesWrapper}>
                 <div className={styles.categoryContentContainer}>
                     <div className={styles.categoryImgContainer}>

@@ -34,6 +34,16 @@ export function EmiPie({
       }
 )
 
+const [labelSize, setLabelsSize] = useState(12);
+
+useEffect(() => {
+  if(typeof window !== 'undefined') {
+    if(window.innerWidth <= 420) {
+      setLabelsSize(10)
+    }
+  }
+}, [])
+
 const options = {
   plugins: {
     legend: {
@@ -43,7 +53,7 @@ const options = {
       align: 'start',
       labels: {
         font: {
-          size: 12
+          size: labelSize
         }
       }
     }

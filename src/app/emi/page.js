@@ -15,7 +15,7 @@ const page = () => {
 
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
-                <h2 className='text-2xl md:text-3xl font-bold pb-2'>
+                <h2 className='text-xl xs:text-2xl md:text-3xl font-bold pb-2'>
                     About EMI Calculator
                 </h2>
 
@@ -39,7 +39,7 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
                 <div className='py-4'>
-                    <h2 className='text-2xl md:text-3xl font-bold pb-2 '>
+                    <h2 className='text-xl xs:text-2xl md:text-3xl font-bold pb-2 '>
                         Benefits of Using a Home Loan Affordability Calculator
                     </h2>
                     <h4 className='text-sm md:text-base'>
@@ -62,7 +62,7 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 flex flex-col gap-4 '>
                 <div className='py-4'>
-                    <h2 className='text-2xl md:text-3xl font-bold pb-2 '>
+                    <h2 className='text-xl xs:text-2xl md:text-3xl font-bold pb-2 '>
                         Factors that Affect Home Loan Affordability
                     </h2>
                     <h4 className='text-sm md:text-base py-2'>

@@ -22,14 +22,14 @@ const GuideCard = ({
 
 
     return (
-        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center justify-center shadow-lg bg-${bgColor} border-l-[7px] border-l-${borderColor} py-2 px-3 ${isAllGuide && '!h-[150px] md:!h-[200px] !gap-[2px] md:!gap-[4px] !w-[100px] md:!w-[150px]'}`}
+        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center justify-center shadow-lg bg-${bgColor} border-l-[7px] border-l-${borderColor} py-2 px-3 ${isAllGuide && '!h-[120px] xs:!h-[150px] md:!h-[200px] !gap-[2px] md:!gap-[4px] !w-[80px] xs:!w-[100px] md:!w-[150px] min-w-[80px] xs:min-w-[100px] md:min-w-[150px] min-h-[120px] xs:min-h-[150px] md:min-h-[200px] '}`}
             style={{
                 backgroundColor: bgColor,
                 borderLeftColor: borderColor
             }}  
         >
     
-            <div className='font-bold text-lg leading-normal md:text-2xl py-1 max-md:whitespace-nowrap'>
+            <div className='font-bold text-base xs:text-[18px]  leading-[16px] xs:leading-[18px] sm:leading-none md:text-2xl py-1 max-md:whitespace-nowrap'>
                 {
                     title.split(' ').map((word, index) => {
                         if (index == noOfWordsInTitle - 1) {

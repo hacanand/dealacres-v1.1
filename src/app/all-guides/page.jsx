@@ -98,7 +98,7 @@ const AllGuidesPage = () => {
       {/* Guides Slider */}
       <div className='max-w-[1060px]   mx-auto my-6'>
 
-        <GuidesSlider allGuides={allGuidesData}  />
+        <GuidesSlider allGuides={allGuidesData} isAllGuides={true}  />
       </div>
 
       {/* Real Estate Made easy.... */}
@@ -107,7 +107,7 @@ const AllGuidesPage = () => {
           Real Estate Made Easy: Your Comprehensive Manual
         </h2>
 
-        <p className='text-justify text-base sm:text-lg py-4'>
+        <p className='text-justify normal-paragraph '>
           Our real estate manuals are like helpful guides for buying and selling homes. They explain everything step by step, from finding the perfect property to signing the paperwork. These manuals are easy to understand, with clear explanations and tips to make real estate transactions smooth and simple.
         </p>
       </div>
@@ -120,7 +120,7 @@ const AllGuidesPage = () => {
 
 
 
-      <div className='max-w-[1060px] md:mx-auto  my-6 flex flex-col md:flex-row justify-between gap-12'>
+      <div className='max-w-[1060px] md:mx-auto  mt-6 flex flex-col md:flex-row justify-between gap-12'>
         <div className='w-full md:w-[30%]'>
           <CheckList DropIcon={RiArrowDropDownLine} data={allGuidesData} tab={tab}  />
         </div>

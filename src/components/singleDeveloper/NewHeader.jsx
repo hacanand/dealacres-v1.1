@@ -17,7 +17,7 @@ function NewHeader() {
             </div>
             <div className={`w-full  `}>
                 <div className={`flex gap-4 sm:gap-8 justify-center md:justify-normal px-4 sm:px-8 max-w-screen-lg mx-auto`}>
-                    <div className={`min-w-[150px] min-h-[150px] sm:min-w-[180px] sm:min-h-[180px] md:min-w-[200px] md:min-h-[200px] rounded-[100%] relative `}>
+                    <div className={`min-w-[120px] min-h-[120px] xs:min-w-[150px] xs:min-h-[150px] sm:min-w-[180px] sm:min-h-[180px] md:min-w-[200px] md:min-h-[200px] rounded-[100%] relative `}>
                         <Image
                             src='/singleDeveloper/devLogo.webp'
                             alt='developer Logo'
@@ -25,7 +25,7 @@ function NewHeader() {
                             height={500}
                             className=' rounded-[100%] bottom-[30%] 
                         border-2 border-blue-500
-                        absolute min-w-[150px] min-h-[150px] sm:min-w-[180px] sm:min-h-[180px] md:min-w-[200px] md:min-h-[200px]'
+                        absolute min-w-[120px] min-h-[120px] xs:min-w-[150px] xs:min-h-[150px] sm:min-w-[180px] sm:min-h-[180px] md:min-w-[200px] md:min-h-[200px]'
                         />
                     </div>
                     <div className={`py-2 text-xs sm:text-sm min-[500]:text-base md:text-lg `}>

@@ -10,7 +10,7 @@ function AboutDev() {
     return (
       <div className={`${styles.aboutDevContent} container_box_shadow !border-none`}>
           <h5>About M3M</h5>
-          <p>{showFull?aboutText:`${aboutText.substring(0,400)}`}</p>
+          <p className="normal-paragraph">{showFull?aboutText:`${aboutText.substring(0,400)}`}</p>
           <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6>
       </div>
     )
