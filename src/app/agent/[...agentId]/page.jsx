@@ -53,7 +53,7 @@ const SingleAgentPage = () => {
         <div className='w-[55%]'>
           <AgentContactForm />
         </div>
-        <div className='order-2 w-[45%]  sm:my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[1px] min-h-[350px] sm:h-[400px] '>
+        <div className='order-2 w-[45%]  sm:my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[1px] min-h-[250px] xs:min-h-[350px] sm:h-[400px] '>
           <Image src={`/about-us/${img}`} alt='abot-agent' className='rounded-[2rem] w-full h-full object-cover sm:self-start ' width={300} height={300} />
         </div>
 
@@ -61,7 +61,7 @@ const SingleAgentPage = () => {
       </div>
 
       <div className='max-w-screen-md mx-auto px-4 sm:px-6  py-4 my-4  '>
-        <h2 className='font-bold text-[17px] sm:text-xl py-1 sm:py-2'>
+        <h2 className='font-bold text-sm xs:text-base sm:text-xl py-1 sm:py-2'>
           Leave a Feedback - As your words matter to us
         </h2>
         <div className='flex flex-row gap-4 items-center'>

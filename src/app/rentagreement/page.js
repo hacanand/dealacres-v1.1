@@ -82,7 +82,7 @@ const Page = () => {
       <ServiceBanner />
       <Experts />
       <AboutRentAgreement />
-      <div className="bg-[#EDE4FF] mt-10 mb-3 px-[12rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]">
+      <div className="bg-[#EDE4FF] mt-4 md:mt-10 mb-3 px-[12rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]">
         <div className="grid grid-cols-2 items-center max-lg:grid-cols-1">
           <div>
             <h2 className="text-3xl font-bold max-sm:text-xl">
@@ -120,11 +120,13 @@ const Page = () => {
 
 
       <InsightReview />
-      <div className=" md:mt-10 md:mb-3 px-[12rem] md:py-[1rem] max-md:px-[1rem] max-md:pt-[1rem]  ">
+      <div className=" md:mt-10 md:mb-3 px-[12rem] md:py-[1rem] max-md:px-[1rem]   ">
         <EstateService />
       </div>
 
-      <ReadMore />
+              <div className='px-4 pb-4'>
+              <ReadMore isFullScreen={true}/>
+              </div>
       {/* <ArticleSlider /> */}
 
     </div>

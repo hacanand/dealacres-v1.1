@@ -41,7 +41,7 @@ const AgentContactForm = () => {
                     <ClipLoader color={'#D8E6FE'} size={100} />
                 </div>
             }
-            <h2 className='font-bold text-sm xs:text-base sm:text-lg md:text-2xl uppercase'>
+            <h2 className='font-bold text-xs xs:text-base sm:text-lg md:text-2xl uppercase'>
                 Ask sanya a question
             </h2>
 
@@ -55,8 +55,8 @@ const AgentContactForm = () => {
                     requiredMessage={"Please Enter Your Name"}
                 />
             </div>
-            <div className='w-full gap-2 flex flex-col md:flex-row'>
-                <div className='w-full md:w-1/2'>
+            <div className='w-full gap-2 flex flex-row'>
+                <div className='w-1/2'>
                     <FormGroup
                         labelValue="Last Name"
                         id="lastName"
@@ -65,7 +65,7 @@ const AgentContactForm = () => {
                         requiredMessage={"Please Enter Your Last Name"}
                     />
                 </div>
-                <div className='w-full md:w-1/2'>
+                <div className='w-1/2'>
                     <FormGroup
                         labelValue="Phone No"
                         id="phoneNo"
@@ -92,7 +92,7 @@ const AgentContactForm = () => {
             </div>
             <button
                 disabled={isLoading}
-                onClick={handleSubmit(onSubmit)} className='py-2 rounded shadow my-4 flex justify-center items-center bg-blue-600 text-white font-bold text-base md:text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
+                onClick={handleSubmit(onSubmit)} className='py-1 xs:py-2 rounded shadow my-2 xs:my-4 flex justify-center items-center bg-blue-600 text-white font-bold text-sm xs:text-base md:text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
 
                 Send Message
             </button>

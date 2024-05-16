@@ -52,7 +52,7 @@ function page() {
                 <div className="mt-4">
                     <h5>Other Developers</h5>
                     <Topdev/>
-                    <Link className='inline-flex flex-row gap-1 items-center text-sm sm:text-base md:text-lg lg:text-xl text-blue-500 underline font-bold py-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
+                    <Link className='inline-flex flex-row gap-1 items-center text-sm sm:text-base md:text-lg lg:text-xl text-blue-500 underline font-bold pt-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
                 </div>
                 <div>
                     

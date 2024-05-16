@@ -18,7 +18,7 @@ const InvestmentGuideCard = ({
 
   console.log(isClicked)
   return (
-    <div className={`${styles.investmentGuideCard}  flex flex-col items-center justify-center w-full max-w-[200px] shadow-[0px_0px_5px_rgba(0,0,0,0.3)]   h-[250px] md:h-[250px] px-2 py-4 rounded-[2.5rem] border border-black gap-2  sm:gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white border-none   ${isClicked && '!h-[370px] before:!bg-[rgb(44,118,214)]'}`} >
+    <div className={`${styles.investmentGuideCard}  flex flex-col items-center justify-center w-full max-w-[200px] shadow-[0px_0px_5px_rgba(0,0,0,0.3)]   h-[215px] sm:h-[250px] px-2 py-4 rounded-[2.5rem] border border-black gap-2  sm:gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white border-none   ${isClicked && '!h-[370px] before:!bg-[rgb(44,118,214)]'}`} >
 
       <div className=' rounded-full transition-all'>
         <Image src={src} alt={title} className='rounded-full h-[100px] 

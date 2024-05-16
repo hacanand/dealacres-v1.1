@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Image from 'next/image'
 import Button from '@/components/propertyListing/Button/Button';
 import Link from 'next/link';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
 
 
 const Info = () => {
@@ -27,22 +29,31 @@ const Info = () => {
   };
 
   return (
-    <section className='flex flex-col md:flex-row md:px-4 items-start justify-center gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
-
-      <div className='h-full w-full  md:w-[450px] md:mt-20  p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none max-md:w-[80%] mx-auto flex flex-col max-md:gap-4 '>
+    
+    <OuterWrapper>
+      <InnerWrapper>
         <h1 className="font-medium md:font-bold md:text-2xl text-xl md:mt-16">
           To Continue Please let us Know what you are?
         </h1>
-        <div className='flex flex-row items-center justify-between md:my-10 overflow-x-auto'>
-          <Button heading={'An Owner'} onClick={() => handleOptionSelect('owner')} hashClick={true} size={"small"}> </Button>
-          <Button heading={'A Agent'} onClick={() => handleOptionSelect('agent')} hashClick={true} size={"small"}> </Button>
-          <Button heading={'A Builder'} onClick={() => handleOptionSelect('builder')} hashClick={true} size={"small"}> </Button>
+        <div className='flex gap-1 xs:gap-2 sm:gap-4  flex-row items-center justify-between md:my-10 overflow-x-auto pb-3 sm:pb-4'>
+          <div className='w-1/3 xs:w-full'>
+            <Button heading={'An Owner'} onClick={() => handleOptionSelect('owner')} hashClick={true} size={"extrasmall"}> </Button>
+
+          </div>
+          <div className='w-1/3 xs:w-full'>
+            <Button heading={'A Builder'} onClick={() => handleOptionSelect('builder')} hashClick={true} size={"extrasmall"}> </Button>
+
+          </div>
+          <div className='w-1/3 xs:w-full'>
+            <Button heading={'A Agent'} onClick={() => handleOptionSelect('agent')} hashClick={true} size={"extrasmall"}> </Button>
+
+          </div>
         </div>
-        <p className='w-[85%] text-lg md:text-xl md:mb-10'>Please choose correctly, if you want to change in the future, it done through profile section</p>
+        <p className='md:w-[85%] text-sm sm:text-base md:text-xl md:mb-10 pb-3 sm:pb-4'>Please choose correctly, if you want to change in the future, it done through profile section</p>
         <Link href={getDynamicLink()} scroll={false}>
           <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white md:mb-16  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600' >Continue</button>
         </Link>
-      </div>
+      </InnerWrapper>
 
       <div className='h-full w-full md:w-[400px] rounded-xl bg-[#f1f6fd] p-4 flex flex-row md:flex-col items-center -order-1 md:order-2
       overflow-hidden
@@ -57,12 +68,12 @@ const Info = () => {
         </div>
       </div>
 
-      <div className='block md:hidden text-center w-full'>
-          <h1 className='font-bold text-xl'>Need Help?</h1>
-          <p className='text-lg'>You Can Email Us</p>
-          <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-        </div>
-    </section>
+      <div className='block md:hidden text-center w-full max-md:py-4'>
+        <h1 className='font-bold text-xl'>Need Help?</h1>
+        <p className='text-lg'>You Can Email Us</p>
+        <p className='text-lg text-blue-600 md:mb-20'>Contact@dealacres.com</p>
+      </div>
+    </OuterWrapper>
   )
 }
 

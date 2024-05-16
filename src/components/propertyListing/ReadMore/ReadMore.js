@@ -66,7 +66,7 @@ const ReadMore = ({
   const [curSlide, setCurSlide] = useState(1);
   console.log(curSlide)
   return (
-    <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 md:space-y-8 md:mt-10 py-2 md:py-5'}} relative`}>
+    <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 md:space-y-8 md:mt-10 py-2 md:py-5'} relative`}>
       <h2 className="singleDevHeading py-4 flex justify-between gap-2 items-center">
         {header ? header : 'Interesting Readings'}
 

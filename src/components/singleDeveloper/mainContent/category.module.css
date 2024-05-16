@@ -187,4 +187,7 @@
     .categoryImagesWrapper {
         max-height: 150px;
     }
+    .categoryContainer {
+        min-height: 180px;
+    }
 }

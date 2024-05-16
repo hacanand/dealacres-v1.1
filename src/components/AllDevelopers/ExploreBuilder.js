@@ -4,6 +4,7 @@ import styles from "./explorebuilder.module.css"
 import Image from 'next/image'
 
 import data from "./dummyData.js"
+import { useDeviceType } from '@/hooks/useDeviceType'
 
 const ExploreBuilder = () => {
   const [limit, setLimit] = useState(8);
@@ -42,6 +43,9 @@ const ExploreBuilder = () => {
     start: 0,
     end: 10
   });
+
+  const {deviceType} = useDeviceType();
+  const [isMobile, setIsMobile] = useState(false);
 
   const nextPage = () => {
     if (currentPage < Math.ceil(data["Property"].length / cardsPerPage)) {
@@ -88,7 +92,9 @@ const ExploreBuilder = () => {
 
   useEffect(() => {
     if(typeof window === 'undefined') return;
-    if(window.innerWidth <= 768){
+
+    
+    if(window.innerWidth <= 480){
       setPagesToShow((prev) => ({
         ...prev,
         end: 5
@@ -101,7 +107,7 @@ const ExploreBuilder = () => {
   return (
     <div className={styles.ExploreBuilder}>
       {filteredData.map((dt, index) => (
-        <div className="mt-8 md:mt-12" key={index}>
+        <div className={`${index > 0 ? 'mt-8' : 'mt-0'} md:mt-12`} key={index}>
           <div className={styles.TopBuilders}>
 
             <div className={styles.Logo}>
@@ -115,7 +121,7 @@ const ExploreBuilder = () => {
 
               <h3>{dt.builderName}</h3>
 
-              <p>{isTruncated ? (dt.description.slice(0, 210)) : (dt.description)}
+              <p>{isTruncated ? (dt.description.slice(0, (deviceType === 'smallphone' ? 150 : 210))) : (dt.description)}
 
                 <span className={styles.SeeMore} onClick={toggleTruncate} >{isTruncated ? " Read More" : " Read Less"}</span>
               </p>
@@ -189,6 +195,7 @@ const ExploreBuilder = () => {
 
         <span onClick={prevPage}> {"<"} Previous</span>
 
+        <div className="flex justify-evenly gap-1 md:gap-2">
         {pageNumbers.slice(pagesToShow.start, pagesToShow.end).map((number) => (
           <span
             key={number}
@@ -198,16 +205,17 @@ const ExploreBuilder = () => {
                 el.scrollIntoView({behavior: 'smooth', block: 'end'})
               }
               setCurrentPage(number)}}
-            className='w-[15px] h-[15px]'
+            className='w-[20px] h-[20px]'
             style={{
               cursor: "pointer",
               fontWeight: currentPage === number ? "bold" : "normal",
               border: "1px solid #0061fd",
               borderRadius: "50%",
-              padding: '10px',
+              padding: '5px',
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              fontSize: (deviceType === 'smallphone' ? '12px' : deviceType === 'phone' ? '14px' : '16px')
            
               
             }}
@@ -215,6 +223,7 @@ const ExploreBuilder = () => {
             {number}
           </span>
         ))}
+        </div>
 
         <span onClick={nextPage}>Next {">"}</span>
       </div>

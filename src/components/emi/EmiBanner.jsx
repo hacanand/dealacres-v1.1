@@ -8,7 +8,7 @@ const EmiBanner = () => {
         <Image src={bg} alt='Emi calculator' className='w-full h-full object-cover'/>
       </div>
       <div className='absolute inset-0 flex items-center justify-end pr-8'>
-       <h1 className='font-bold text-[2rem] md:text-6xl'>
+       <h1 className='font-bold text-[28px] xs:text-[2rem] md:text-6xl'>
        EMI Calculator
        </h1>
       </div>

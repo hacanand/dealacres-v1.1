@@ -21,7 +21,7 @@ const Experts = () => {
     // <div className="container flex">
     <div className={`${styles.MainLayout}  `}>
       <div className="max-[768px]:!px-4">
-        <h2 className={`${styles.Explore} max-[768px]:!text-2xl max-[768px]:!py-4`}>Explore our Rent Agreement Experts</h2>
+        <h2 className={`${styles.Explore} max-md:!text-xl max-md:xs:!text-2xl max-md:!pb-4`}>Explore our Rent Agreement Experts</h2>
         <div>
           <div className="max-[768px]:!gap-8">
 

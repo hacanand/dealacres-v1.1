@@ -7,7 +7,7 @@ import { FaAngleDown, FaExternalLinkAlt } from 'react-icons/fa'
 function PopularProjects() {
   return (
     <div style={{width:'100%'}}>
-      <div className="md:justify-normal flex-nowrap md:flex-wrap overflow-x-auto w-full flex gap-5 md:gap-2 items-center" >
+      <div className="md:justify-normal flex-nowrap md:flex-wrap overflow-x-auto w-full flex gap-5 md:gap-2 items-center p-1" >
         <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>

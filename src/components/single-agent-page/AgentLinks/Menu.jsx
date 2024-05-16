@@ -1,7 +1,7 @@
 export const hisar = [
-    { name: "PPLA Hisar ", link: "#" },
-    { name: "Azad Nagar Hisar", link: "#" },
-    { name: "Urban Estate Hisar", link: "#" },
+    { name: "Property Dealer In PPLA Hisar ", link: "#" },
+    { name: "Property Dealer In Azad Nagar Hisar", link: "#" },
+    { name: "Property Dealer In Urban Estate Hisar", link: "#" },
     { name: "Property Dealer In Model Town Hisar", link: "#" },
     { name: "Property Dealer In Camry Road Hisar", link: "#" },
     { name: "Property Dealer In Sector - 13 Hisar", link: "#" },

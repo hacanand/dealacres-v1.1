@@ -51,4 +51,12 @@
     font-size: 16px;
 
 }
+
+.subContent { 
+    padding: 1rem;
+}
+
+.subContent p {
+    font-size: 14px;
+}
 }

@@ -38,16 +38,18 @@ const LeaveReview = () => {
                 helperText = {errors.Title?.message}
                 label = 'Title'
                 size='small'
+                
                 {...register('Title',{required:'Title is required'})}
               />
               </div>
 
-              <div className='flex flex-col'>
-              <label>Rating</label>
+              <div className='flex flex-col justify-center'>
+              <label className="h-full">Rating</label>
               <Rating size="small" sx={{
                 '&': {
                   marginTop: '8px',
-                  marginBottom: '4px'
+                  marginBottom: '4px',
+                  height: '100%'
                 },
                 '& .MuiRating-icon': {
                   color: '#c4c4c4'

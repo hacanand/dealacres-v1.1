@@ -16,12 +16,12 @@ const RoundedDiv = ({ size, width, height, onClick }) => {
         <button
           key={index + 1}
           style={{
-            width: `${width}px`,
+            minWidth: `${width}px`,
             height: `${height}px`,
             backgroundColor: selectedButton === index ? '#3498db' : 'white',
             color: selectedButton === index ? 'white' : '#3498db',
           }}
-          className="rounded-full flex items-center justify-center font-bold border border-blue-700"
+          className="rounded-[100%] flex items-center justify-center font-bold border border-blue-700 text-sm xs:text-base"
           onClick={() => handleButtonClick(index)}
         >
           {index + 1}

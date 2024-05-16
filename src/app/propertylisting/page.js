@@ -8,6 +8,8 @@ import React, { Fragment } from "react";
 import ReadMore from "@/components/propertyListing/ReadMore/ReadMore";
 import Hero from "@/components/propertyListing/HeroProperty/Hero";
 
+import './listingpage.css'
+
 const page = () => {
   return (
     <Fragment>

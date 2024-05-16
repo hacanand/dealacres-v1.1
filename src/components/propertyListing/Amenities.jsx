@@ -19,7 +19,7 @@ const AmenitiesList = () => {
   const secondColumn = amenities.slice(halfLength);
 
   return (
-    <div className="flex">
+    <div className="flex text-sm xs:text-base">
       
       <div className="flex flex-col mr-5">
         {firstColumn.map((amenity,idx) => (

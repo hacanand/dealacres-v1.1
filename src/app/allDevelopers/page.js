@@ -26,7 +26,7 @@ const page = () => {
       </div>
 
 
-      <div  className='py-4' >
+      <div  className='py-4 md:max-lg:max-w-screen-md md:mx-auto lg:mx-[8rem] ' >
         <ReadMore isFullScreen={true} />
 
         <Explore isFullScreen={true} />

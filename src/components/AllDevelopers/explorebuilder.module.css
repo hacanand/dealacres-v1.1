@@ -253,6 +253,7 @@
     
     .ProjectCategory {
         border: 1px solid rgba(0,0,0,0.2);
+        padding: 12px;
         
     }
     
@@ -263,7 +264,7 @@
         min-width: 200px;
         margin: unset;
         margin-bottom: unset;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
         display: flex;
         gap: 4px;
     }
@@ -314,5 +315,9 @@
     .TopBuilderContent p  {
         font-size: 10px;
         text-align: left;
+    }
+
+    .TopBuilders div {
+        align-self: unset;
     }
 }

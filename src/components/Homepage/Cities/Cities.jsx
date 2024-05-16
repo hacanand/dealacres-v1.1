@@ -65,6 +65,17 @@ const Cities = (props) => {
           autoplay: false
         }
       },
+      {
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          arrows:false,
+          autoplay: false
+        }
+      },
     ],
   };
 

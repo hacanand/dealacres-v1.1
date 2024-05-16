@@ -155,6 +155,7 @@
     .localityContentHead h6{
         color: #0061df;
         cursor: pointer;
+        font-size: 14px;
     }
     
     .localityContentData{
@@ -195,7 +196,7 @@
 @media screen and (max-width: 420px){
 
     .localityHeadMain h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .localityHead button {
@@ -205,10 +206,20 @@
     }
 
     .localityContent h5 {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .localityContentHead p {
         font-size: 14px;
+    }
+    
+    .localityContentData {
+        margin-bottom : 0rem;
+    }
+
+    .localityContentDataProCon li{
+        font-size: 12px;
+        padding: 4px 0;
+        margin-bottom: 4px;
     }
 }

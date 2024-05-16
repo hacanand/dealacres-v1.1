@@ -33,26 +33,28 @@ const Hero = () => {
     const typeAnimation = () => {
         const tagToType = tagText[tagIndex];
         // const totalTime = tagToType.length * 100; // Adjust the interval duration as needed
-    
+
         let currentIndex = 0;
         id = setInterval(() => {
             setIndex(currentIndex++);
-            if (currentIndex >= tagToType.length) {
-                clearInterval(id);
-                setTimeout(() => {
-                    if (tagIndex < tagText.length - 1) {
-                        setTagIndex(prev => prev + 1);
-                        setTag(tagText[tagIndex + 1])
-                    } else {
-                        setTagIndex(0); // Reset to the first tag if reached the end
-                        setTag(tagText[0])
-                    }
-                }, 1000); // Wait for 1 second before switching to the next tag
+            if (tagToType) {
+                if (currentIndex >= tagToType.length) {
+                    clearInterval(id);
+                    setTimeout(() => {
+                        if (tagIndex < tagText.length - 1) {
+                            setTagIndex(prev => prev + 1);
+                            setTag(tagText[tagIndex + 1])
+                        } else {
+                            setTagIndex(0); // Reset to the first tag if reached the end
+                            setTag(tagText[0])
+                        }
+                    }, 1000); // Wait for 1 second before switching to the next tag
+                }
             }
         }, 100); // Interval duration set to 100 milliseconds
     };
-    
-    
+
+
 
     console.log(tagIndex, "tagINdex")
     console.log(index, "index")
@@ -61,9 +63,9 @@ const Hero = () => {
 
     useEffect(() => {
 
-        
 
-            typeAnimation();
+
+        typeAnimation();
 
 
     }, [tagIndex])
@@ -101,13 +103,15 @@ const Hero = () => {
 
     return (
         <section className='flex flex-col md:flex-row  items-start justify-center gap-4 md:gap-10 md:container mx-auto md:mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl py-4 md:px-6 custom-border-hero max-md:mx-auto w-[90%] xs:w-[80%]  '>
-                <h1 className="font-heading my-2 ">
-                    Post Your Property for free
-                </h1>
-                <p>
-                    Add Basic Details
-                </p>
+            <div className='h-full md:mt-20 rounded-xl md:py-4 md:px-6 custom-border-hero max-md:mx-auto w-[90%] md:w-[50%]  '>
+                <div className="hidden md:block">
+                    <h1 className="font-heading my-2 ">
+                        Post Your Property for free
+                    </h1>
+                    <p>
+                        Add Basic Details
+                    </p>
+                </div>
                 <p className='py-2 font-bold'>
                     Looking For..........
                 </p>
@@ -170,13 +174,13 @@ const Hero = () => {
                     Add Contact Details
                 </p>
 
-                <input className='custom-border-2 px-4 py-2 rounded-xl' />
+                <input className='custom-border-2 px-4 py-2 rounded-xl w-full' />
                 <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
                 <Link href={generateDynamicPath()} disabled={!isResedentialClicked && !isCommercialClicked} scroll={false}>
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
                 </Link>
             </div>
-            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-4 rounded-b-[2rem]'>
+            <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-4 max-md:rounded-b-[2rem] md:rounded-[1rem]'>
                 <div className='flex flex-row gap-2 md:mt-20 md:mb-10'>
                     <h1 className="text-base xs:text-lg md:mt-2 font-semibold md:mb-6 max-sm:text-center">
                         Post property Ad to <br className='hidden md:block' />

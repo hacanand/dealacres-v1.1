@@ -3,6 +3,7 @@ import NavigationBroker from '@/components/propertyListing/Navigation/Navigation
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import LocationInput from './LocationInput';
 
 const Page = () => {
 
@@ -45,13 +46,11 @@ const Page = () => {
           <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-2">
             Your Property Location?</h1>
           {['state', 'city', 'projectName', 'area', 'fullAddress'].map((fieldName) => (
-            <input
+            <LocationInput
               key={fieldName}
-              name={fieldName}
-              placeholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
-              type='text'
-              className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'
-              onChange={handleInputChange}
+              inputName={fieldName}
+              inputPlaceholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
+              onInputChange={handleInputChange}
             />
           ))}
           <Link href={isFormValid() ? 'property-profile' : '#'}>

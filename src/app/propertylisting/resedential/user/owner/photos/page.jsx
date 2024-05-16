@@ -8,6 +8,8 @@ import FileDropzone from '@/components/propertyListing/FileDropZone';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import BannerLayout from '@/components/propertyListing/BannerLayout';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 
 const Page = () => {
   const [droppedFiles, setDroppedFiles] = useState([]);
@@ -25,11 +27,12 @@ const Page = () => {
     <DndProvider backend={HTML5Backend}>
       <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
         <Navigation />
-        <div className='flex flex-col md:flex-row md:px-4 items-start justify-center md:gap-10 md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
+        <OuterWrapper>
 
           <BannerLayout bannerText={" Click Perfect pictures of your property so the renter or buyer can see the best images of your property."}
           imgSrc={"/propertyListing/assets/camera.webp"} showContact />
-          <div className='h-full w-[80%] max-md:mx-auto md:w-[50%]  md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
+          <InnerWrapper>
+
             <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-2">
               Add Media
             </h1>
@@ -44,8 +47,8 @@ const Page = () => {
                 Continue
               </button>
             </Link>
-          </div>
-        </div>
+          </InnerWrapper>
+        </OuterWrapper>
       </section>
     </DndProvider>
   );

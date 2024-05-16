@@ -3,6 +3,9 @@ import NavigationBroker from '@/components/propertyListing/Navigation/Navigation
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import LocationInput from '../../agent/location-details/LocationInput';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
 const Page = () => {
 
   const [formData, setFormData] = useState({
@@ -25,8 +28,7 @@ const Page = () => {
   return (
     <section className='mt-12 container mx-auto lg:w-4/5'>
 
-      <NavigationBroker/>
-
+      <NavigationBroker />
       <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
         <div className='h-full w-[400px] rounded-xl bg-[#c9e2f3] p-4 flex flex-col items-center'>
@@ -43,13 +45,11 @@ const Page = () => {
           <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-3">
             Your Property Location?</h1>
           {['state', 'city', 'projectName', 'area'].map((fieldName) => (
-            <input
+            <LocationInput
               key={fieldName}
-              name={fieldName}
-              placeholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
-              type='text'
-              className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4'
-              onChange={handleInputChange}
+              inputName={fieldName}
+              inputPlaceholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
+              onInputChange={handleInputChange}
             />
           ))}
 
@@ -62,9 +62,10 @@ const Page = () => {
               Continue
             </button>
           </Link>
-        </div>
+      
+          </div>
       </div>
-    </section>
+      </section>
   );
 };
 

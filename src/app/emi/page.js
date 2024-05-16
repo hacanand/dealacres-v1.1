@@ -38,7 +38,7 @@ const page = () => {
 
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
-                <div className='py-4'>
+                <div className='pb-4'>
                     <h2 className='text-xl xs:text-2xl md:text-3xl font-bold pb-2 '>
                         Benefits of Using a Home Loan Affordability Calculator
                     </h2>
@@ -61,7 +61,7 @@ const page = () => {
 
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 flex flex-col gap-4 '>
-                <div className='py-4'>
+                <div className=''>
                     <h2 className='text-xl xs:text-2xl md:text-3xl font-bold pb-2 '>
                         Factors that Affect Home Loan Affordability
                     </h2>
@@ -69,7 +69,7 @@ const page = () => {
                         There is a specific reason why affordability calculators ask for information related to your finances. It is simply because all those things impact your affordability.
                     </h4>
                 </div>
-                <div className='flex flex-col gap-4 py-2'>
+                <div className='flex flex-col gap-4 '>
                     {
                         emiData.factorsFeatures.slice(0, 3).map((feature, index) => {
                             return (
@@ -103,7 +103,7 @@ const page = () => {
 
 
             </div>
-            <div className='max-w-screen-lg mx-auto py-4 px-4 '>
+            <div className='max-w-screen-lg mx-auto pb-4 px-4 '>
 
                 {/* <FNQ/> */}
           

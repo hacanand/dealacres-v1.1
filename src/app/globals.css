@@ -75,4 +75,9 @@
   }
 }
 
+/* free property listing */
+.bannerHeading {
+  @apply text-sm xs:text-lg;
+}
+
 

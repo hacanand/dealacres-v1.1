@@ -1,7 +1,10 @@
 'use client';
+import LocationInput from '@/app/propertylisting/commercial/user/agent/location-details/LocationInput';
 import BannerLayout from '@/components/propertyListing/BannerLayout';
 import HelpDetails from '@/components/propertyListing/HelpDetails';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 import Navigation from '@/components/propertyListing/Navigation/Navigation';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
 
 import Link from 'next/link';
 
@@ -29,35 +32,34 @@ const Page = () => {
   return (
     <section className='md:mt-12 md:container mx-auto lg:w-4/5'>
       <Navigation />
-      <div className='flex flex-col md:flex-row md:px-4 items-start justify-center  md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
+      <OuterWrapper>
     
         <BannerLayout showContact bannerText={"An Accurate Location is the most essential as it helps you to connect the perfect buyer or tenant"} imgSrc={'/propertyListing/assets/location.png'}/>
 
-        <div className='h-full w-[90%] max-md:mx-auto md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none'>
+        <InnerWrapper>
           <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-2">Your Property Location?</h1>
           {['state', 'city', 'projectName', 'area', 'houseNo'].map((fieldName) => (
-            <input
-              key={fieldName}
-              name={fieldName}
-              placeholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
-              type='text'
-              className='py-4 px-2 rounded-lg w-full mb-2 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4 placeholder:font-normal placeholder:text-black'
-              onChange={handleInputChange}
-            />
+             <LocationInput
+             key={fieldName}
+             inputName={fieldName}
+             inputPlaceholder={fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
+             onInputChange={handleInputChange}
+           />
           ))}
           <Link href={isFormValid() ? 'property-profile' : '#'}>
             <button
               disabled={!isFormValid()}
-              className={`w-full rounded-md px-8 py-3 font-bold text-white my-3 hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 
+              className={`w-full rounded-md px-8 py-3 font-bold text-white max-md:mb-2 md:my-3 hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 
+              text-sm xs:text-base
       ${!isFormValid() ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600'}`}
             >
               Continue
             </button>
           </Link>
-        </div>
+        </InnerWrapper>
 
         <HelpDetails showOnMobile/>
-      </div>
+      </OuterWrapper>
     </section>
   );
 };

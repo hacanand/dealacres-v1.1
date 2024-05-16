@@ -20,15 +20,15 @@ const BannerLayout = ({
  max-md:pb-0 pt-8 sm:pt-16 md:pt-0 `}>
                 {showThumps && <Image src={'/propertyListing/assets/thumbsup.svg'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />}
 
-                {bannerText && <h1 className="text-base xs:text-xl  md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
+                {bannerText && <h1 className="bannerHeading  md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
                     {/* This information creates a transparency and build trust with buyers/tenants */}
                     {bannerText}
 
                 </h1>}
 
-                {lists && <ul className="list-disc pl-12  pb-16 text-base xs:text-xl  md:mt-16">
+                {lists && <ul className="list-disc pl-3 sm:pl-12  pb-16 text-base xs:text-xl  md:mt-16">
                     {
-                        lists.map((list, i) => <li className='mb-2' key={i}>{list}</li>)
+                        lists.map((list, i) => <li className='mb-2 leading-[normal]' key={i}>{list}</li>)
                     }
                 </ul>}
 

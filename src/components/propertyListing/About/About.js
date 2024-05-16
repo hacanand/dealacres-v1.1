@@ -30,7 +30,7 @@ const About = () => {
 
   return (
     <section style={{ height: "auto" }} className="">
-      <div className="relative mt-10">
+      <div className="relative md:mt-10">
         <div className="absolute h-full w-full">
           <Image
             src={bedroom}
@@ -73,14 +73,14 @@ const About = () => {
         </div>
 
         <div className="w-[90%] xs:w-[80%] mx-auto my-4 ">
-          <div className="text-xl md:text-2xl py-2">
+          <div className="text-lg xs:text-xl md:text-2xl py-2">
             <h3>Everything you need to know about</h3>
             <h2 className="text-blue-600 font-bold">Deal Acres <span className="text-yellow-300">FREE</span> Property Listing</h2>
           </div>
 
           <div className="flex flex-col gap-2 md:gap-4 py-2 md:py-4">
             <div className="">
-              <h3 className="text-lg md:text-xl font-bold">What is Free Property Listing</h3>
+              <h3 className="text-base xs:text-lg md:text-xl font-bold">What is Free Property Listing</h3>
               <p className="text-sm sm:text-base">It is a process where a builder, as owner or agent can list their property for free on this real estate portal. Through this, you can sell or rent your property effectively and efficiently. It is the perfect way to reach the audience who want to rent their home or buy their dream home. By doing property listing you save your time for selling or renting it.</p>
             </div>
 
