@@ -15,7 +15,8 @@ const BannerLayout = ({
 
     // relative max-md:after:content-[""] after:absolute after:bg-[#c9e0ee] after:w-screen after:-left-4 after:h-full after:-z-10 after:top-0 after:rounded-b-[2rem] rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
     return (
-        <div className={`w-full md:w-[45%]  ${startWithPic && '-order-1 md:order-2' }   bg-[#f1f6fd] rounded-b-[2rem] md:rounded-xl overflow-hidden  `}>
+       <div className={`md:w-[45%] ${startWithPic && '-order-1 md:order-2' } `}>
+         <div className={`w-full md:w-full     bg-[#f1f6fd] rounded-b-[2rem] md:rounded-xl overflow-hidden  `}>
             <div className={`h-full  w-full   p-4 flex flex-row gap-2  md:flex-col items-center  ${bgColor && bgColor}
  max-md:pb-0 pt-8 sm:pt-16 md:pt-0 `}>
                 {showThumps && <Image src={'/propertyListing/assets/thumbsup.svg'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />}
@@ -39,12 +40,14 @@ const BannerLayout = ({
 
             </div>
 
+        </div>
             {showSmiley &&
                 <div className='hidden h-full  mt-10 w-full max-w-full rounded-xl bg-[#c9e0ee] p-4 md:flex flex-col items-center'>
                     <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
                     <h1 className='text-2xl'>You are Almost There</h1>
                 </div>}
-        </div>
+
+       </div>
 
     )
 }

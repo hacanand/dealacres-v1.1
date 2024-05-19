@@ -5,6 +5,7 @@ import Button from '@/components/propertyListing/Button/Button';
 import Link from 'next/link';
 import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 import OuterWrapper from '@/components/propertyListing/OuterWrapper';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 
 const Info = () => {
@@ -61,11 +62,7 @@ const Info = () => {
         <h1 className="text-base xs:text-xl  md:mb-4 text-center md:mt-20 pt-8 pb-16 ">
           This information creates a transparency and build trust with buyers/tenants</h1>
         <Image src={'/propertyListing/assets/agent.webp'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 max-w-[200px] max-h-[200px] min-w-[120px] min-h-[120px] w-1/2 max-md:self-end' />
-        <div className='hidden md:block'>
-          <h1 className='font-bold text-xl'>Need Help?</h1>
-          <p className='text-lg'>You Can Email Us</p>
-          <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-        </div>
+        <HelpDetails showOnDesktop/>
       </div>
 
       <div className='block md:hidden text-center w-full max-md:py-4'>

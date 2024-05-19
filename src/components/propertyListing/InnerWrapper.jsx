@@ -7,7 +7,7 @@ const InnerWrapper = ({
     <div className='
     h-full
     w-[90%] xs:w-[80%] 
-    mx-auto md:mt-20 
+    mx-auto  
     md:w-[400px] 
     rounded-xl 
     p-5 

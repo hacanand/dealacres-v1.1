@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 import { TiPencil } from "react-icons/ti";
 import Link from 'next/link';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 
 const Login = () => {
@@ -34,13 +35,8 @@ const Login = () => {
                     <h1 className="bannerHeading whitespace-nowrap  mb-4">
                         Your Phone number gives<br /> access to your account.</h1>
                 </div>
-                <Image src={'/propertyListing/assets/authentication.png'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 w-1/2 max-w-[200px] max-h-[200px] min-w-[140px] min-h-[140px] self-end m-0' />
-                <div className='hidden md:block'>
-
-                    <h1 className='font-bold text-xl'>Need Help?</h1>
-                    <p className='text-lg'>You Can Email Us</p>
-                    <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-                </div>
+                <Image src={'/propertyListing/assets/authentication.png'} alt='authentication' height={280} width={280} className='md:mt-3 md:mb-10 w-1/2 max-w-[200px] max-h-[200px] min-w-[140px] min-h-[140px] max-md:self-end m-0' />
+                <HelpDetails  showOnDesktop />
             </div>
             <div className='h-full w-[90%] xs:w-[80%] mx-auto md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4 max-md:border-none flex flex-col justify-end '>
                 <div className=' mx-auto  '>
@@ -82,6 +78,8 @@ const Login = () => {
                         >Verify & Login</button>
                         <button className='w-full bg-white rounded-xl px-8 py-3 font-bold border-4 border-blue-600 text-blue-600 mb-4  hover:border-none'>Login via - E-mail</button>
                     </Link>
+
+                    <HelpDetails showOnMobile />
 
                 </div>
 

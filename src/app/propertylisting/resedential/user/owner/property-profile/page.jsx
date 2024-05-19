@@ -18,6 +18,7 @@ const Page = () => {
         propertyDescription: '',
         totalFloors: '',
         propertyOnFloor: '',
+        propertyTitle: ""
     });
 
     const handleInputChange = (e) => {
@@ -55,22 +56,30 @@ const Page = () => {
                         name="propertyDescription"
                         rows={10}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md w-full'
+                        className='max-md:mt-2 md:my-6 custom-border-2 rounded-md w-full max-md:max-h-[150px]'
                         onChange={handleInputChange}
                     />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
+                        Property Title
+                    </h1>
+                    <LocationInput
+                        key={"title"}
+                        inputName={"title"}
+                        onInputChange={handleInputChange}
+                    />
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl md:mt-4 ">
                         Add Room Details
                     </h1>
                     <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
-                    <h1 className="font-medium md:font-bold  text-xl mt-2">
+                    <h1 className="font-medium md:font-bold  text-lg xs:text-xl mt-3 sm:mt-4">
                         Number of Bathrooms
                     </h1>
                     <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
-                    <h1 className="font-medium md:font-bold  text-xl mt-2">
+                    <h1 className="font-medium md:font-bold  text-lg xs:text-xl mt-3 sm:mt-4">
                         Number of Balconies
                     </h1>
                     <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Other Rooms
                     </h1>
                     <div className='w-full grid grid-cols-2 gap-2 my-2'>
@@ -81,7 +90,7 @@ const Page = () => {
                         <Button heading={"Store Room"} variant={"secondary"} size={"small"} />
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Furnished
                     </h1>
                     <div className='w-full flex flex-row gap-2 my-2 overflow-x-auto'>
@@ -90,7 +99,7 @@ const Page = () => {
 
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Reserve Parking <span className='text-sm font-light'>(optional)</span>
                     </h1>
                     <div className='flex flex-col'>
@@ -104,25 +113,25 @@ const Page = () => {
                         </div>
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Flooring Details
                     </h1>
                     <p className='text-md'>Total No of Floor</p>
 
                     <div className='max-md:pt-2'>
-                    <LocationInput
-                        inputName='totalFloors'
-                        inputPlaceholder='Total Floors'
-                        onInputChange={handleInputChange}
-                    />
-                    <LocationInput
-                        inputName='propertyOnFloor'
-                        inputPlaceholder='Property on Floor'
-                        onInputChange={handleInputChange}
-                    />
+                        <LocationInput
+                            inputName='totalFloors'
+                            inputPlaceholder='Total Floors'
+                            onInputChange={handleInputChange}
+                        />
+                        <LocationInput
+                            inputName='propertyOnFloor'
+                            inputPlaceholder='Property on Floor'
+                            onInputChange={handleInputChange}
+                        />
                     </div>
 
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Availability Status
                     </h1>
                     <div className='w-[100%] flex flex-row gap-2 my-2 overflow-x-auto'>
@@ -130,7 +139,7 @@ const Page = () => {
                         <Button heading={"Under Construction"} variant={"secondary"} size={"small"} />
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-3">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Age of Property
                     </h1>
                     <div className='flex flex-row  gap-2 mt-2 overflow-x-auto'>

@@ -127,16 +127,16 @@ const Hero = () => {
                     <Button heading={'Commercial'} onClick={handleCommercial} hashClick={true} />
                 </div>
                 {isResedentialClicked && (
-                    <div className='flex flex-col'>
-                        <div className='flex flex-row w-[50%]'>
-                            <Button heading={'Flat/Apartment'} isOption={true} />
-                            <Button heading={'villa'} isOption={true} />
-                            <Button heading={'plot'} onClick={() => handleSubType('Plot')} hashClick={true} isOption={true} />
+                    <div className='flex flex-col gap-1 xs:gap-2'>
+                        <div className='flex flex-row gap-1 xs:gap-2 md:w-[50%]'>
+                            <Button heading={'Flat/Apartment'} isOption={true}  />
+                            <Button heading={'villa'} isOption={true}  />
+                            <Button heading={'plot'} onClick={() => handleSubType('Plot')} hashClick={true} isOption={true}  />
 
                         </div>
-                        <div>
-                            <Button heading={'Independent House'} isOption={true} />
-                            <Button heading={'Builder Floor'} isOption={true} />
+                        <div className='flex flex-row gap-1 xs:gap-2'>
+                            <Button heading={'Independent House'} isOption={true}  />
+                            <Button heading={'Builder Floor'} isOption={true}  />
                         </div>
                     </div>
                 )}

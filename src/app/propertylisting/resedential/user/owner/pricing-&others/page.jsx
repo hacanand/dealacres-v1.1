@@ -90,14 +90,14 @@ const Page = () => {
             </h1>
             <input
               type="text"
-              className="custom-border-2 px-2 py-3 rounded-xl  mt-2 w-full"
+              className="custom-border-2 px-2 py-3 rounded-xl  mt-2 w-[80%]"
               placeholder="Expected Price"
               value={expectedPrice}
               onChange={handleExpectedPriceChange}
             />
             <input
               type="text"
-              className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2"
+              className="custom-border-2 px-2 py-3 rounded-xl w-[50%] mt-2"
               placeholder="Price per Sq.Yd"
               value={pricePerSqYd}
               onChange={handlePricePerSqYdChange}
