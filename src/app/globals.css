@@ -77,7 +77,7 @@
 
 /* free property listing */
 .bannerHeading {
-  @apply text-sm xs:text-lg;
+  @apply text-base xs:text-lg;
 }
 
 

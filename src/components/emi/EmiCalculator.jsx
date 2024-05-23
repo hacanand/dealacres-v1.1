@@ -39,7 +39,7 @@ const EmiCalculator = () => {
     }, [amt, roi, tenure]);
 
     return (
-        <div className='grid grid-cols-2 gap-x-4 grid-rows-4 xs:grid-rows-5 place-items-center border rounded-lg shadow border-gray-400 px-2 sm:px-8 py-2 xs:py-4 max-w-[500px] md:max-w-none mx-auto md:mx-0  max-xs:max-h-[250px] '>
+        <div className='grid grid-cols-2 gap-x-4 grid-rows-5 place-items-center border rounded-lg shadow border-gray-400 px-2 sm:px-8 py-2 xs:py-4 max-w-[500px] md:max-w-none mx-auto md:mx-0  max-xs:max-h-[250px] '>
             <div className='row-start-1 row-span-1  col-span-1 w-full flex justify-center xs:my-1'>
 
                 <TextField
@@ -85,13 +85,13 @@ const EmiCalculator = () => {
 
 
             </div>
-            <div className='row-start-3 row-span-3 col-span-1 h-full w-full flex justify-center relative'>
-                <div className={`w-full md:w-2/3 rounded-lg shadow py-2 px-4 border-gray-400 border text-center h-full transition-all ${!!monthlyEmi ? 'flex visible scale-100' : 'invisible scale-0'} flex-col justify-around gap-y-2 `}>
-                    <p className='font-bold text-sm md:text-base'>Monthly EMI</p>
+            <div className='row-start-3 row-span-4 col-span-1 h-full w-full flex justify-center relative'>
+                <div className={`w-full md:w-2/3 rounded-lg shadow py-2 px-4 border-gray-400 border text-center h-full transition-all ${!!monthlyEmi ? 'flex visible scale-100' : 'invisible scale-0'} flex-col justify-around gap-y-1 xs:gap-y-2 `}>
+                    <p className='font-bold text-xs xs:text-sm md:text-base'>Monthly EMI</p>
 
-                    <p className='font-bold text-lg md:text-xl'>₹ {monthlyEmi && !isNaN(monthlyEmi) && monthlyEmi.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                    <p className='font-bold text-sm xs:text-lg md:text-xl'>₹ {monthlyEmi && !isNaN(monthlyEmi) && monthlyEmi.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
 
-                    <p className='text-sm md:text-base'>Total Payable Amount<br />₹ {(pieData[1] + pieData[0]).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                    <p className='text-xs xs:text-sm md:text-base'>Total Payable Amount<br />₹ {(pieData[1] + pieData[0]).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
 
                     <Link href={`/instant-loan?amount=${amt}&roi=${roi}&tenure=${tenure}`} className='bg-blue-600 text-xs xs:text-sm sm:text-base whitespace-nowrap text-white rounded shadow py-1 px-2 '>
                         Get Instant Loan

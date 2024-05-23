@@ -43,7 +43,7 @@ const page = () => {
 
 
           <div className={`${styles.generalHeading} font-medium text-2xl sm:text-4xl py-4 inline-flex items-center  border-b-[4px] border-black gap-4  `}>
-            <span className='h-[70px] w-[70px]'>
+            <span className='h-[35px] w-[35px]'>
               <Image src={qna} alt='question and answers image' />
             </span>
             <h2>
@@ -58,7 +58,7 @@ const page = () => {
           <div className='w-full flex flex-col  items-start md:items-stretch lg:flex-row '>
 
             <div className=''>
-              <ul className='list-disc py-2'>
+              <ul className='list-disc pt-2'>
 
 
                 <FaqTopicList lists={generalQuestions} />
@@ -69,9 +69,9 @@ const page = () => {
 
 
             {/* Form container */}
-            <div className='relative mx-auto md:mx-0  lg:ml-auto  lg:px-4 py-2 w-full max-w-[640px]'>
+            <div className='relative mx-auto md:mx-0  lg:ml-auto  lg:px-4 py-3 w-full max-w-[640px]'>
               <div className='w-full'>
-                <p className='font-light text-lg xs:text-xl md:text-3xl py-3 lg:py-0 lg:pb-3'>
+                <p className='font-light text-lg xs:text-xl md:text-3xl pb-2 lg:pb-3'>
                   We &apos; ll get in touch with you.
                 </p>
                 <FaqForm />
@@ -95,12 +95,12 @@ const page = () => {
 
       {/* Explore questions by Topic */}
 
-      <div className='bg-[#addbf1] py-4 px-4 lg:py-6'>
-        <h3 className='text-center uppercase py-2 lg:py-4 text-xl xs:text-2xl lg:text-3xl font-bold'> Explore Questions by Topics</h3>
+      <div className='bg-[#e4eefb] py-4 px-4 lg:py-6'>
+        <h3 className='text-center uppercase py-2 lg:py-4 text-lg xs:text-2xl lg:text-3xl font-bold'> Explore Questions by Topics</h3>
         <div className=' max-w-screen-xl  md:py-4 lg:py-8 mx-auto  lg:grid lg:grid-cols-3 items-start'>
           {questionByTopic.map((item, index) => {
             return (
-              <FaqTopicList isGrid key={index} hasBorder={index !== 2} title={item.title} lists={item.lists} />
+              <FaqTopicList isGrid key={index} hasBorder={index !== 2} title={item.title} lists={item.lists} index={index} />
             )
           })}
 

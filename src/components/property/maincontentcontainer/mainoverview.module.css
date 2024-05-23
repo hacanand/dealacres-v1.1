@@ -90,3 +90,22 @@
 }
     
 }
+
+@media screen and (max-width: 420px){
+    .mainOverviewContainer {
+        padding: 12px 6px;
+    }
+
+        
+    .overviewData h5{
+        color: #a6a6a6;
+        font-size: 10px;
+
+
+    }
+    
+    .overviewData h6{
+        font-size: 10px;
+    }
+
+}

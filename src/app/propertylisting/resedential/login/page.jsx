@@ -11,6 +11,8 @@ import HelpDetails from '@/components/propertyListing/HelpDetails';
 const Login = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [isEdit, setIsEdit] = useState(false);
+    const [phone, setPhone] = useState('8767608383');
 
     const handleChange = (index, value) => {
         const newOtp = [...otp];
@@ -46,13 +48,14 @@ const Login = () => {
                         <p className=''>
                             your number is registered with us.
                         </p>
-                    </div>
-                    <p className='pb-2 text-xl font-medium'>
+                    <p className='pb-2  '>
                         Please login to continue
                     </p>
-                    <div className='flex gap-2 items-center mb-2'>
-                        <p className='text-xs xs:text-sm md:text-base'>+91-xxxxxxxxxx</p>
-                        <TiPencil size={20} color='blue' />
+                    </div>
+                    <div className='gap-2 items-center mb-2 cursor-pointer inline-flex'>
+                        <input className='text-xs xs:text-sm md:text-base max-w-[50%]' disabled={!isEdit} value={isEdit ? phone : '+91-xxxxxxxxxx'} onChange={(e) => setPhone(e.target.value)} />
+                        {!isEdit && <TiPencil size={20} color='blue' onClick={() => setIsEdit(true)} />}
+                        {isEdit && <span onClick={() => setIsEdit(false)} className=' text-blue-500 font-bold rounded'>Save</span>}
                     </div>
                     <p className='text-2xl md:text-3xl font-light pb-2'>
                         Enter Your OTP

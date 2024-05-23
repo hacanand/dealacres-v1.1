@@ -21,8 +21,8 @@ const Button = ({ heading, onClick ,hashClick, size, variant, isOption, isSubOpt
       ${
         isClicked ? "border-blue-700" : "border-blue-200"
       } 
-      ${isOption && '!text-xs sm:!text-sm !px-2 xs:!px-3 sm:!px-6'}
-      ${size == "extrasmall" && '!px-2 xs:!px-3 sm:!px-4 !mx-0 !my-0 w-full'}
+      ${isOption && '!text-xs sm:!text-sm !px-2 xs:!px-3 sm:!px-6 !mb-1 !mr-1'}
+      ${size == "extrasmall" && '!px-2 xs:!px-3 sm:!px-4 !mx-0 !my-0 w-full !text-[10px] xs:!text-xs'}
       `}
     >
       {heading}

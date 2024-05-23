@@ -52,22 +52,22 @@ const AgentHeroSection = ({
 
               </div>
             </h2>
-            <p className='text-sm xs:text-sm sm:text-base md:text-lg'>
+            <p className='text-xs xs:text-sm sm:text-base md:text-lg'>
               {contacts.map((contact, index) => (<span key={index}>{contact}</span>))}
             </p>
-            <p className='font-bold text-sm xs:text-sm sm:text-base md:text-lg'>
+            <p className='font-bold text-xs xs:text-sm sm:text-base md:text-lg'>
               {languages.map((language, index) => (<span key={index}>
                 {language + ' '}</span>))}
             </p>
 
-            <p className='text-sm xs:text-sm sm:text-base md:text-lg py-1 sm:py-4'>
+            <p className='text-[10px] sm:text-xs md:text-base py-1 sm:py-4'>
               {address}
             </p>
           </div>
 
-          <div className='flex flex-col gap-4 items-start '>
+          <div className='flex flex-col gap-2 md:gap-8 items-start '>
             <div>
-              <p className='text-sm xs:text-base md:text-lg font-bold'>
+              <p className='text-xs xs:text-sm md:text-lg font-bold'>
                 Meet with Sanya Bansal
               </p>
               <div className='flex flex-row gap-4 md:gap-8 accent-green-500 text-[10px] sm:text-xs md:text-base'>
@@ -86,19 +86,19 @@ const AgentHeroSection = ({
                 </div>
               </div>
             </div>
-            <span className='w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-sm xs:text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
+            <span className='w-auto py-1 xs:py-2 px-2 xs:px-4 bg-blue-600 text-white text-center font-bold text-xs xs:text-sm  sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
               Get In Touch
             </span>
 
             <div>
               <p className='text-xs sm:text-sm flex gap-2 items-start sm:items-center  whitespace-nowrap font-bold flex-col sm:flex-row justify-start'>Follow Us -
                 <ul className='inline-flex gap-2 items-center justify-center '>
-                  <CiFacebook size={20} className='bg-white text-black rounded-full' />
-                  <FaInstagram size={20} className='bg-white text-black rounded-full' />
-                  <FaYoutube size={20} className='bg-white text-black rounded-full' />
-                  <Image src={twitterLogo} width={20} height={20} className='bg-white text-black rounded-full' />
-                  <CiLinkedin size={20} className='bg-white text-black rounded-full' />
-                  <IoGlobeOutline size={20} className='bg-white text-black rounded-full' />
+                  <CiFacebook size={14} className='bg-white text-black rounded-full' />
+                  <FaInstagram size={14} className='bg-white text-black rounded-full' />
+                  <FaYoutube size={14} className='bg-white text-black rounded-full' />
+                  <Image src={twitterLogo} width={14} height={14} className='bg-white text-black rounded-full' />
+                  <CiLinkedin size={14} className='bg-white text-black rounded-full' />
+                  <IoGlobeOutline size={14} className='bg-white text-black rounded-full' />
 
                 </ul></p>
             </div>

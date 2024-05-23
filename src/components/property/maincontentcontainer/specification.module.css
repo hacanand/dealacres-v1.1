@@ -37,6 +37,10 @@
     list-style-type: disc;
 }
 
+.specificationSubContainer li {
+    text-align: left;
+}
+
 
 @media screen and (max-width: 640px) {
     .specificationContainer{
@@ -82,7 +86,6 @@
     }
     .specificationSubContainer li{
         font-size: 12px;
-        text-align: justify;
     }
     
 }

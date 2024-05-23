@@ -102,7 +102,7 @@ const Hero = () => {
     };
 
     return (
-        <section className='flex flex-col md:flex-row  items-start justify-center gap-4 md:gap-10 md:container mx-auto md:mt-10 overflow-auto'>
+        <section className='flex flex-col md:flex-row  items-start justify-center md:gap-10 md:container mx-auto md:mt-10 overflow-auto'>
             <div className='h-full md:mt-20 rounded-xl md:py-4 md:px-6 custom-border-hero max-md:mx-auto w-[90%] md:w-[50%]  '>
                 <div className="hidden md:block">
                     <h1 className="font-heading my-2 ">
@@ -115,19 +115,19 @@ const Hero = () => {
                 <p className='py-2 font-bold'>
                     Looking For..........
                 </p>
-                <div className='flex gap-3 items-center mb-2'>
+                <div className='flex gap-3 items-center '>
                     <Button heading={'Sell'} />
                     <Button heading={'Rent'} />
                 </div>
                 <p className='py-2 font-bold'>
                     Property Type
                 </p>
-                <div className='flex gap-3 items-center mb-2'>
+                <div className='flex gap-3 items-center '>
                     <Button heading={'Residential'} onClick={handleResedential} hashClick={true} />
                     <Button heading={'Commercial'} onClick={handleCommercial} hashClick={true} />
-                </div>
+                </div> 
                 {isResedentialClicked && (
-                    <div className='flex flex-col gap-1 xs:gap-2'>
+                    <div className='flex flex-col gap-1 xs:gap-2 mt-2'>
                         <div className='flex flex-row gap-1 xs:gap-2 md:w-[50%]'>
                             <Button heading={'Flat/Apartment'} isOption={true}  />
                             <Button heading={'villa'} isOption={true}  />
@@ -141,13 +141,13 @@ const Hero = () => {
                     </div>
                 )}
                 {isCommercialClicked && (
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col mt-2'>
                         <div className='flex flex-row'>
                             <Button heading={'Commercial Shop'} isOption={true} />
                             <Button heading={'Commercial Office Space'} isOption={true} />
 
                         </div>
-                        <div className='flex flex-row items-center flex-wrap'>
+                        <div className='flex flex-row items-center flex-wrap '>
                             <Button heading={'Commercial Showroom'} isOption={true} />
                             <Button heading={'Commercial Land'} isOption={true} />
 
@@ -156,7 +156,7 @@ const Hero = () => {
                     </div>
                 )}
                 {isFiveClicked && (
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col '>
                         <div className='flex flex-row'>
                             <Button heading={'Warehouse/ Godown'} isOption={true} />
                             <Button heading={'Industrial Land'} isOption={true} />
@@ -175,9 +175,9 @@ const Hero = () => {
                 </p>
 
                 <input className='custom-border-2 px-4 py-2 rounded-xl w-full' />
-                <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
+                <p className='text-xs mt-2 md:mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
                 <Link href={generateDynamicPath()} disabled={!isResedentialClicked && !isCommercialClicked} scroll={false}>
-                    <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
+                    <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mb-4 md:mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 disabled:pointer-events-none disabled:bg-blue-600/40 disabled:hover:cursor-not-allowed' disabled={!isResedentialClicked && !isCommercialClicked}>Start Now</button>
                 </Link>
             </div>
             <div className='h-full w-full md:w-[400px] bg-[#D3E3F9] md:bg-[#F1F6FD] md:p-4 flex flex-col items-center -order-1 md:order-1  max-md:gap-4 max-md:py-4 max-md:rounded-b-[2rem] md:rounded-[1rem]'>

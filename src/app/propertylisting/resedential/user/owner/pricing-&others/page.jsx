@@ -90,43 +90,44 @@ const Page = () => {
             </h1>
             <input
               type="text"
-              className="custom-border-2 px-2 py-3 rounded-xl  mt-2 w-[80%]"
+              className='py-1 xs:py-2 sm:py-4 px-2 rounded-lg w-[80%] mt-2 custom-border-2'
               placeholder="Expected Price"
               value={expectedPrice}
               onChange={handleExpectedPriceChange}
             />
+            
             <input
               type="text"
-              className="custom-border-2 px-2 py-3 rounded-xl w-[50%] mt-2"
+              className='py-1 xs:py-2 sm:py-4 px-2 rounded-lg w-[50%] mt-2 custom-border-2'
               placeholder="Price per Sq.Yd"
               value={pricePerSqYd}
               onChange={handlePricePerSqYdChange}
             />
-            <div className='flex flex-wrap gap-2 md:gap-4 my-2 md:my-6 text-sm xs:text-base'>
+            <div className='flex flex-wrap gap-2 md:gap-4 mt-4  text-sm xs:text-base'>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>All Inclusive Price</p>
               </div>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>Price Negoiable</p>
               </div>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>Tax and Govt. Charges Excluded</p>
               </div>

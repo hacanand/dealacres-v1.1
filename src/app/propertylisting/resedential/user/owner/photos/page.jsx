@@ -10,6 +10,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import BannerLayout from '@/components/propertyListing/BannerLayout';
 import OuterWrapper from '@/components/propertyListing/OuterWrapper';
 import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 const Page = () => {
   const [droppedFiles, setDroppedFiles] = useState([]);
@@ -47,6 +48,8 @@ const Page = () => {
                 Continue
               </button>
             </Link>
+
+            <HelpDetails showOnMobile />
           </InnerWrapper>
         </OuterWrapper>
       </section>

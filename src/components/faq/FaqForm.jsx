@@ -66,7 +66,7 @@ const FaqForm = () => {
                 errors={errors}
                 required
                 requireMessage={"Please Enter the name."}
-                icon={<BsPerson size={30} />}
+                icon={<BsPerson size={20} />}
             />
 
             <div className='grid grid-cols-5 gap-4'>
@@ -96,7 +96,7 @@ const FaqForm = () => {
                         errors={errors}
                         required
                         requireMessage={"Please Enter Mobile Nubmer"}
-                        icon={<FiPhoneCall size={30} />}
+                        icon={<FiPhoneCall size={20} />}
                     />
 
                 </div>
@@ -113,7 +113,7 @@ const FaqForm = () => {
                 required
                 pattern={/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/}
                 requireMessage={'Enter valid email'}
-                icon={<AiOutlineMail size={30} />}
+                icon={<AiOutlineMail size={20} />}
             />
 
             <UserSelector

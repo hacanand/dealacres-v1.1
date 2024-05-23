@@ -16,7 +16,7 @@ const FeedbackModal = ({ isOpen, onClose }) => {
                 &times;
               </button>
               <div className='flex flex-col items-center gap-2 '>
-              <h1 className="text-2xl font-bold">How was your Experience?</h1>
+              <h1 className="text-xl md:text-2xl font-bold">How was your Experience?</h1>
               <Image src={'/propertyListing/assets/feedback.png'} alt='feedback' width={250} height={150} />
               <Link href={'/propertylisting'} >
                 <button

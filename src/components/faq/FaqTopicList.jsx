@@ -7,14 +7,15 @@ const FaqTopicList = ({
     title,
     lists,
     hasBorder,
-    isGrid
+    isGrid, 
+    index
 }) => {
    
 
     const [showFull, setShowFull] = useState(false)
   return (
     <div className={` ${hasBorder && 'border-b border-r-0 lg:border-r lg:border-b-0 border-black'}  ${isGrid && 'md:px-8' }
-    py-4 lg:py-0 lg:mb-4`}>
+    ${index !== 0 ? 'py-3' : 'pb-3'} lg:py-0 lg:mb-4`}>
       { title && <div className='font-bold text-xl sm:text-2xl py-2 md:pb-4 '>
         {title}
       </div>}

@@ -37,7 +37,7 @@ const Input = ({
         w-full
         px-2 md:px-4
         py-1 md:py-2
-        placeholder:text-sm
+        placeholder:text-xs md:placeholder:text-sm
         font-light 
         bg-white 
         border-2
@@ -59,7 +59,7 @@ const Input = ({
         transform 
         top-1/2
         left-4
-        text-lg
+        text-xs xs:text-sm md:text-base
         capitalize
         origin-[0] 
         pointer-events-none

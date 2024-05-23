@@ -33,7 +33,7 @@ const Info = () => {
     
     <OuterWrapper>
       <InnerWrapper>
-        <h1 className="font-medium md:font-bold md:text-2xl text-xl md:mt-16">
+        <h1 className="font-bold bannerHeading md:mt-16 pb-3 sm:pb-4">
           To Continue Please let us Know what you are?
         </h1>
         <div className='flex gap-1 xs:gap-2 sm:gap-4  flex-row items-center justify-between md:my-10 overflow-x-auto pb-3 sm:pb-4'>
