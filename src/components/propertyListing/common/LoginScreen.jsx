@@ -8,7 +8,7 @@ import Link from 'next/link';
 import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 
-const Login = () => {
+const LoginScreen = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isEdit, setIsEdit] = useState(false);
@@ -26,7 +26,7 @@ const Login = () => {
 
     return (
         <section className='flex flex-col md:flex-row items-start justify-center md:gap-20 md:container mx-auto md:my-10 overflow-auto'>
-            <div className='h-full w-full md:w-[400px] rounded-xl bg-[#f1f6fd]  p-4 flex flex-row md:flex-col items-center 
+            <div className='h-full w-full md:w-[400px] rounded-xl bg-[#f1f6fd] md:bg-[#e9f6fe] p-4 flex flex-row md:flex-col items-center 
             
             relative   rounded-b-[2rem] md:rounded-xl md:after:hidden after:max-w-screen-sm
             
@@ -91,4 +91,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginScreen

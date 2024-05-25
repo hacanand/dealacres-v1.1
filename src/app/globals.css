@@ -80,8 +80,25 @@
   @apply text-base xs:text-lg;
 }
 
+.fpSectionHeading {
+  @apply font-medium md:font-bold md:text-2xl text-xl;
+}
+
+.fpSectionLabel {
+  @apply font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4
+}
+
 
 .neighbourSwiperDots {
   bottom: -4px !important;
   position: relative !important;
+}
+
+.swiper-pagination-bullets.similarDotsClass{
+  bottom: 0px !important;
+  position: absolute !important;
+}
+.swiper-pagination-bullets.propertyBuilderDotsClass {
+  bottom: 0px !important;
+  position: absolute !important;
 }

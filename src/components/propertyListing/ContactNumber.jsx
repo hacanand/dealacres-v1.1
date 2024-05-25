@@ -13,12 +13,12 @@ const ContactNumber = ({ onContactNumberChange}) => {
 
     return (
         <div className='md:w-[87%]'>
-            <div className="flex items-center space-x-2 mb-2">
+            <div className="flex   mb-2">
 
                 <select
                     value={countryCode}
                     onChange={(e) => setCountryCode(e.target.value)}
-                    className="border rounded-md p-2"
+                    className="border rounded-md rounded-r-none p-2 bg-white text-xs md:text-sm"
                 >
                     <option value="+1">+1 (USA)</option>
                     <option value="+91">+91 (India)</option>
@@ -31,7 +31,7 @@ const ContactNumber = ({ onContactNumberChange}) => {
                         type="text"
                         placeholder="Enter your number"
                         onChange={handleContactNumberChange}
-                        className="border rounded-md p-2 w-full "
+                        className="border rounded-md rounded-l-none p-2 w-full "
                     />
                     <IoMdLock className="absolute top-1/2 right-1 transform -translate-y-1/2 text-xl md:text-2xl text-gray-600" />
 
@@ -41,28 +41,28 @@ const ContactNumber = ({ onContactNumberChange}) => {
                 type="text"
                 placeholder="Enter mobile number 2 (optional)"
                 
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleContactNumberChange}
                 className="border rounded-md p-2 w-full mb-2"
             />
             <input
                 type="text"
                 placeholder="Enter mobile number 3 (optional)"
                
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleContactNumberChange}
                 className="border rounded-md p-2 w-full mb-2"
             />
             <input
                 type="text"
                 placeholder="Enter Landline number 1 (optional)"
      
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleContactNumberChange}
                 className="border rounded-md p-2 w-full mb-2"
             />
             <input
                 type="text"
                 placeholder="Enter Landline number 2 (optional)"
           
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleContactNumberChange}
                 className="border rounded-md p-2 w-full mb-2"
             />
         </div>

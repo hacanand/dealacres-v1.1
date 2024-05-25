@@ -11,7 +11,7 @@ const RoundedDiv = ({ size, width, height, onClick }) => {
   };
 
   return (
-    <div className="flex justify-start gap-4 my-2">
+    <div className="flex justify-start gap-4 my-2 md:overflow-x-auto">
       {Array.from({ length: size }, (v, index) => (
         <button
           key={index + 1}

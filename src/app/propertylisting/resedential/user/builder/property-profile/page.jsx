@@ -4,9 +4,17 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 import RoundedDiv from '@/components/propertyListing/RoundedDiv';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RoomInfo from '@/components/propertyListing/RoomInfo';
 import OtherRoomButton from '@/components/propertyListing/Button/OtherRoomButton';
+import PageWrapper from '@/components/propertyListing/PageWrapper';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
+import { useDeviceType } from '@/hooks/useDeviceType';
+import LocationInput from '@/app/propertylisting/commercial/user/agent/location-details/LocationInput';
+import Button from '@/components/propertyListing/Button/Button';
 
 const Page = () => {
 
@@ -16,6 +24,30 @@ const Page = () => {
     const [bedroomCount, setBedroomCount] = useState(null);
     const [bathroomCount, setBathroomCount] = useState(null);
     const [balconieCount, setBalconieCount] = useState(null);
+
+    const [formData, setFormData] = useState({
+        propertyDescription: '',
+        totalFloors: '',
+        propertyOnFloor: '',
+        propertyTitle: "",
+        bathroomCount: '',
+        bedroomCount: '',
+        balconieCount: '',
+        availabiltiy: '',
+        propertyAge: ''
+    });
+
+    const isFormValid = () => {
+        const { propertyDescription, totalFloors, propertyOnFloor } = formData;
+        return propertyDescription && totalFloors && propertyOnFloor ;
+    };
+
+    const [deviceType, setDeviceType] = useState("desktop")
+    const { deviceType: devType } = useDeviceType();
+
+    useEffect(() => {
+        setDeviceType(devType)
+    }, [devType])
 
 
     const toggleVisibility = () => {
@@ -36,62 +68,90 @@ const Page = () => {
         property.trim() === '' ||
         (bedroomCount === null && bathroomCount === null && balconieCount === null);
 
-  
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
 
     return (
-        <section className='mt-12 container mx-auto lg:w-4/5'>
-            <NavigationBroker />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+        <PageWrapper>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
+            <div className="hidden md:block">
+                <NavigationBroker />
+            </div>
+            <OuterWrapper>
+
+                <InnerWrapper>
+                    <h1 className="font-bold md:text-2xl text-lg xs:text-xl  mt-2">
                         Now, tell us about your property
                     </h1>
-                    <p className='font-medium md:text-lg text-md ' >Describe Your Property</p>
-                    <p className='w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
+                    <p className='font-medium md:text-lg text-base  ' >Describe Your Property</p>
+                    <p className='md:w-[85%] mt-2 md:text-lg text-base '>Write Several Thing which can describe your propety appropriately </p>
+
+
 
                     <textarea
                         id="myTextArea"
-                        name="myTextArea"
+                        name="propertyDescription"
                         rows={10}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
+                        className='mt-3 sm:mt-4 md:my-6 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4 rounded-md w-full max-md:max-h-[150px]'
+                        onChange={handleInputChange}
+                    />
+
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
+                        Property Title
+                    </h1>
+                    <LocationInput
+                        key={"title"}
+                        inputName={"title"}
+                        onInputChange={handleInputChange}
                     />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Add Room Details
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} onClick={handleBedroomButtonClick} />
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35}
+                        height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} onClick={handleBedroomButtonClick} />
                     {bedroomCount !== null && <RoomInfo roomCount={bedroomCount} roomtype={'BedRoom'} />}
 
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Bathrooms
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} onClick={handleBathroomButtonClick} />
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35}
+                        height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} onClick={handleBathroomButtonClick} />
                     {bathroomCount !== null && <RoomInfo roomCount={bathroomCount} roomtype={'BathRoom'} />}
 
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Balconies
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} onClick={handleBalconieButtonClick} />
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35}
+                        height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} onClick={handleBalconieButtonClick} />
                     {balconieCount !== null && <RoomInfo roomCount={balconieCount} roomtype={'Balconie'} />}
-                    <h1 className="font-medium md:font-bold text-xl mt-3">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Other Rooms
                     </h1>
-                    <div className='w-full md:w-[85%] mt-2 mb-4'>
-                        <OtherRoomButton />
+                    <div className='w-full grid grid-cols-2 gap-1 md:gap-2 mt-2'>
+
+                        <Button heading={"Pooja Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Study Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Servent Room"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Store Room"} variant={"secondary"} size={"small"} />
+
                     </div>
 
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Area
                     </h1>
-                    <p className='text-md'>Provide either Carpet Area or Super Area</p>
+                    <p className=' md:text-lg text-base'>Provide either Carpet Area or Super Area</p>
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Carpet Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[10%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
+                        <p className='absolute text-[8px] leading-3 font-extralight top-[1.55rem]  right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
                         <div className="flex items-center space-x-2 mb-2 ">
                             <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white">
                                 <option value="+1">Sqft</option>
                                 <option value="+91">Sq-yrd</option>
                                 <option value="+91">Sq-m</option>
@@ -102,11 +162,11 @@ const Page = () => {
                     </div>
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Super Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[7%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Super area is the total usuable area  of your property under the roof</p>
+                        <p className='absolute text-[8px] leading-3 font-extralight top-[1.55rem]  right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Super area is the total usuable area  of your property under the roof</p>
                         <div className="flex items-center space-x-2 mb-2">
                             <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white">
                                 <option value="+1">Sqft</option>
                                 <option value="+91">Sq-yrd</option>
                                 <option value="+91">Sq-m</option>
@@ -121,117 +181,89 @@ const Page = () => {
 
 
 
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Furnished
                     </h1>
-                    <div className='w-[70%] flex flex-row gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Fully Furnished
-                        </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Unfurnished
-                        </div>
+                    <div className='w-full flex flex-row gap-2 mt-2 overflow-x-auto'>
+                        <Button heading={"Fully Furnished"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Unfurnished"} variant={"secondary"} size={"small"} />
+
+
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Reserve Parking <span className='text-sm font-light'>(optional)</span>
                     </h1>
                     <div className='flex flex-col'>
-                        <div className='flex flex-row items-center gap-10'>
+                        <div className='grid grid-cols-2 items-center  gap-x-4  '>
                             <p className='text-md'>Covered Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
-                        <div className='flex flex-row items-center gap-14'>
+                        <div className='grid grid-cols-2 items-center  gap-x-4  '>
                             <p className='text-md'>Open Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+
+
+                     <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Flooring Details
                     </h1>
                     <p className='text-md'>Total No of Floor</p>
-                    <div className='flex flex-col md:w-[50%]'>
-                        <select
-                            value={totalFloor}
-                            onChange={(e) => setTotalFloor(e.target.value)}
-                            className='custom-border py-4 px-2 my-2 rounded-xl'>
-                            <option value={""} disabled hidden className='text-xs'>Total Floors</option>
-                            <option>Lower Basement</option>
-                            <option>Upper Basement</option>
-                            <option>Ground</option>
-                        </select>
-                        <select
-                            value={property}
-                            onChange={(e) => setProperty(e.target.value)}
-                            className='custom-border py-4 px-2 mb-2 rounded-xl' >
-                            <option value="" disabled hidden className='text-xs'>
-                                Property on Floor
-                            </option>
-                            {Array.from({ length: 100 }, (_, index) => index + 1).map((number) => (
-                                <option key={number} value={number}>
-                                    {number}
-                                </option>
-                            ))}
-                        </select>
+
+                    <div className='max-md:pt-2'>
+                        <LocationInput
+                            inputName='totalFloors'
+                            inputPlaceholder='Total Floors'
+                            onInputChange={handleInputChange}
+                        />
+                        <LocationInput
+                            inputName='propertyOnFloor'
+                            inputPlaceholder='Property on Floor'
+                            onInputChange={handleInputChange}
+                        />
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+
+
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Ready To Move
-                        </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-lg'>
-                            Under Construction
-                        </div>
+                    <div className='w-[100%] flex flex-row gap-2 my-2 overflow-x-auto'>
+                        <Button heading={"Ready To Move"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Under Construction"} variant={"secondary"} size={"small"} />
+
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-3">
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Age of Property
                     </h1>
-                    <div className=' mt-2'>
-                        {[0, 1, 2].map((index) => (
-                            <button key={index} className='custom-border h-full px-2 rounded-lg mr-2 mb-2'>
-                                {index === 0 ? 'New Construction' : `${(index - 1) * 5}-${index * 5} years`}
-                            </button>
-                        ))}
+                    <div className='flex flex-row  gap-2 mt-2 overflow-x-auto'>
+                        <Button heading={"0-1 years"} size={"extrasmall"} />
+                        <Button heading={"1-5 years"} size={"extrasmall"} />
+                        <Button heading={"5-10 years"} size={"extrasmall"} />
+                        <Button heading={"10+ years"} size={"extrasmall"} />
 
-                        {isExpanded && [3, 4].map((index) => (
-                            <button key={index} className='custom-border h-full px-2 rounded-lg mr-2'>
-                                {`${(index - 1) * 5}-${index * 5} years`}
-                            </button>
-                        ))}
-                        <button className=' h-full rounded-lg' onClick={toggleVisibility}>
-                            {isExpanded ? '▲' : '▼'}
-                        </button>
+
+
                     </div>
 
                     <Link href={'photos'}>
-                    <button
-                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${
-                            isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
-                        }`}
-                        disabled={isContinueButtonDisabled}
-                    >
-                        Continue
-                    </button>
-                </Link>
-                </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center mt-20">
-                            Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/house.png'} alt='home' height={200} width={200} className='mt-3 mb-10' />
-                        <h1 className='font-bold text-xl'>Need Help?</h1>
-                        <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-                    </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${!isFormValid ? 'cursor-not-allowed bg-gray-400' : ''
+                                }`}
+                            disabled={!isFormValid}
+                        >
+                            Continue
+                        </button>
+                    </Link>
+
+                    <HelpDetails showOnMobile />
+                </InnerWrapper>
+
+
+                <BannerLayout bannerText={" Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others."} imgSrc={"/propertyListing/assets/aboutPropertyBanner.webp"} showContact startWithPic showSmiley />
+            </OuterWrapper>
+        </PageWrapper>
     );
 };
 

@@ -113,6 +113,7 @@ const Page = () => {
                         </div>
 
                     </div>
+                    
                     <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
                         Flooring Details
                     </h1>

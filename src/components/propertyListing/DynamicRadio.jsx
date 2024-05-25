@@ -26,8 +26,8 @@ const DynamicRadio = () => {
 
   return (
     <div>
-      <div className='flex flex-row gap-4 mt-3'>
-        <label className='text-md font-bold mb-2'>
+      <div className='flex flex-row gap-2 md:gap-4 mt-3'>
+        <label className='text-sm sm:text-base font-bold mb-2'>
           Currently Leased Out?
         </label>
         <input
@@ -50,27 +50,27 @@ const DynamicRadio = () => {
         <> <p className='text-xs'><span className='font-bold'>To whom has the property been leased</span>
 
         <br />Please specify whether your property has  be leased to a company or an individual</p>
-        <div className='flex flex-row gap-6 mt-5'>
+        <div className='flex flex-row gap-2 md:gap-4 mt-2 md:mt-4'>
            
-          <label className='text-sm text-gray-500 mb-2'>
+          <label className='text-sm text-gray-500 mb-2 w-full '>
             Monthly Rate:
             <input
               type="text"
               value={monthlyRate}
               onChange={(e) => setMonthlyRate(e.target.value)}
-              className='border-b-2'
+              className='border-b-2 w-full pt-1 md:pt-2 '
             />
           </label>
-          <label className='text-sm text-gray-500 mb-2'>
+          <label className='text-sm text-gray-500 mb-2 w-full '>
             Lease End Date:
-            <input type="date" />
+            <input type="date" className='pt-1 md:pt-2' />
           </label>
         </div>
         </>
       )}
 
-      <div className='flex flex-row gap-4 mt-3'>
-        <label className='text-md font-bold mb-2'>
+      <div className='flex flex-row gap-2 md:gap-4 mt-3'>
+        <label className='text-sm md:text-base font-bold mb-2'>
           Assured Returns
         </label>
         <input

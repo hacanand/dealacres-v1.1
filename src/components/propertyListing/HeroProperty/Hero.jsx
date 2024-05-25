@@ -103,7 +103,7 @@ const Hero = () => {
 
     return (
         <section className='flex flex-col md:flex-row  items-start justify-center md:gap-10 md:container mx-auto md:mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl md:py-4 md:px-6 custom-border-hero max-md:mx-auto w-[90%] md:w-[50%]  '>
+            <div className='h-full md:mt-8 rounded-xl md:py-4 md:px-6 custom-border-hero max-md:mx-auto max-md:w-[90%]   '>
                 <div className="hidden md:block">
                     <h1 className="font-heading my-2 ">
                         Post Your Property for free

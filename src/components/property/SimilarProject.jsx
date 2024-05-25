@@ -20,7 +20,8 @@ const SimilarProject = () => {
                 spaceBetween={46}
                 slidesPerView={1}
                 modules={[Pagination]}
-                pagination={{ clickable: true }}
+                pagination={{ clickable: true, horizontalClass: 'similarDotsClass' }}
+
                 breakpoints={{
                     300: {
                         slidesPerView: 1,

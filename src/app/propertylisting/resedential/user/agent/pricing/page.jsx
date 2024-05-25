@@ -5,12 +5,59 @@ import NavigationBroker from '@/components/propertyListing/Navigation/Navigation
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRupeeSign } from "react-icons/fa";
+import PageWrapper from '@/components/propertyListing/PageWrapper';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 const Page = () => {
 
+
+  const [brokenCharge, setBrokenCharge] = useState('');
+
+
+  const [isPostModalOpen, setIsPostModalOpen] = useState(false);
+  const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
   const [expectedPrice, setExpectedPrice] = useState('');
   const [pricePerSqYd, setPricePerSqYd] = useState('');
-  const [brokenCharge, setBrokenCharge] = useState('');
+
+
+
+
+  const handleExpectedPriceChange = (e) => {
+    setExpectedPrice(e.target.value);
+  };
+
+  const handlePricePerSqYdChange = (e) => {
+    setPricePerSqYd(e.target.value);
+  };
+
+  const openPostModal = () => {
+    setIsPostModalOpen(true);
+  };
+
+  const closePostModal = () => {
+    setIsPostModalOpen(false);
+  };
+
+  const handlePostSubmit = (e) => {
+    e.preventDefault();
+    openFeedbackModal();
+    closePostModal();
+  };
+
+  const openFeedbackModal = () => {
+    setIsFeedbackModalOpen(true);
+  };
+
+  const closeFeedbackModal = () => {
+    setIsFeedbackModalOpen(false);
+  };
+
+
+
+
 
   const isContinueButtonDisabled =
     expectedPrice.trim() === '' ||
@@ -18,75 +65,84 @@ const Page = () => {
     brokenCharge.trim() === '';
 
   return (
-    <section className='mt-12 container mx-auto lg:w-4/5'>
-      <NavigationBroker />
-      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+    <PageWrapper>
+      <div className='hidden md:block'>
+        <NavigationBroker />
 
-        <div className='h-full md:w-[450px] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
-          <h1 className="font-medium md:font-bold md:text-2xl text-xl">
+      </div>
+      <OuterWrapper>
+
+        <InnerWrapper>
+         <div className="space-y-4"> 
+         <h1 className="">
             Price Details
           </h1>
+          <div className='space-y-2'>
           <input
             type="text"
-            className="custom-border-2 px-2 py-3 rounded-xl w-[80%] mt-2"
+            className='py-1 xs:py-2 sm:py-4 px-2 rounded-lg w-[80%]  custom-border-2'
             placeholder="Expected Price"
             value={expectedPrice}
-            onChange={(e) => setExpectedPrice(e.target.value)} />
+            onChange={handleExpectedPriceChange}
+          />
 
           <input
             type="text"
-            className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2"
+            className='py-1 xs:py-2 sm:py-4 px-2 rounded-lg w-[50%]  custom-border-2'
             placeholder="Price per Sq.Yd"
             value={pricePerSqYd}
-            onChange={(e) => setPricePerSqYd(e.target.value)} />
+            onChange={handlePricePerSqYdChange}
+          />
+          </div>
 
-          <div className='flex flex-wrap gap-4 my-6'>
+          <div className='flex flex-wrap gap-2 md:gap-4   text-sm xs:text-base'>
             <div className='flex flex-row items-center gap-2'>
               <input
                 type="checkbox"
-                width={12}
-                height={24}
-                className='input-checkbox-2'
+                width={"unset"}
+                height={"unset"}
+                className=''
               />
               <p>All Inclusive Price</p>
             </div>
             <div className='flex flex-row items-center gap-2'>
               <input
                 type="checkbox"
-                width={12}
-                height={24}
-                className='input-checkbox-2'
+                width={"unset"}
+                height={"unset"}
+                className=''
               />
               <p>Price Negoiable</p>
             </div>
             <div className='flex flex-row items-center gap-2'>
               <input
                 type="checkbox"
-                width={12}
-                height={24}
-                className='input-checkbox-2'
+                width={"unset"}
+                height={"unset"}
+                className=''
               />
               <p>Tax and Govt. Charges Excluded</p>
             </div>
           </div>
-          <h1 className='text-lg font-bold'>Do You Charge Brokerage</h1>
-          <div className='flex flex-col gap-4 my-6'>
+          <div className='space-y-2'>
+          <h1 className=''>Do You Charge Brokerage</h1>
+          <div className='flex flex-wrap gap-2 md:gap-4   text-sm xs:text-base whitespace-nowrap'>
             <div className='flex flex-row gap-8'>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox-2'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>Yes</p>
               </div>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox-2'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>No</p>
               </div>
@@ -95,18 +151,18 @@ const Page = () => {
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox-2'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>Fixed Charges</p>
               </div>
               <div className='flex flex-row items-center gap-2'>
                 <input
                   type="checkbox"
-                  width={12}
-                  height={24}
-                  className='input-checkbox-2'
+                  width={"unset"}
+                  height={"unset"}
+                  className=''
                 />
                 <p>Percentage of Price</p>
               </div>
@@ -114,46 +170,48 @@ const Page = () => {
 
 
           </div>
+          </div>
+
           <div className="relative ">
             <input
               type="text"
-              className='custom-border-2 px-4 py-4 rounded-lg'
+              className='py-[14px] sm:py-4 pl-4 px-2 rounded-lg w-[80%]  custom-border-2'
               value={brokenCharge}
               onChange={(e) => setBrokenCharge(e.target.value)} />
             <label className='absolute text-xs top-[20%] left-2 transform -translate-y-1/2'>Enter Brokrage Charges</label>
             <FaRupeeSign className='absolute top-[60%] left-1 transform -translate-y-1/2 text-lg ' />
           </div>
-          <div className='my-6'>
-            <div className='flex flex-row items-center gap-2'>
+
+          <div className='py-4'>
+            <div className='flex flex-wrap gap-2 md:gap-4   text-sm xs:text-base'>
               <input
                 type="checkbox"
-                width={12}
-                height={24}
-                className='input-checkbox-2'
+                width={"unset"}
+                height={"unset"}
+                className=''
               />
               <p>Brokerage Negotiable</p>
             </div>
-          </div>
-          <Link href={'amenities'}>
+            <Link href={'amenities'}>
             <button
-              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white   hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${false ? 'cursor-not-allowed bg-gray-400' : ''
                 }`}
-              disabled={isContinueButtonDisabled}
+              disabled={false}
             >
               Continue
             </button>
           </Link>
-        </div>
+          </div>
+         
+         </div>
 
-        <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5 '>
-          <h1 className="text-xl mb-4 text-center mt-16">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
-          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={250} width={250} className='mt-3 mb-10' />
-          <h1 className='font-bold text-xl'>Need Help?</h1>
-          <p className='text-lg'>You Can Email Us</p>
-          <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-        </div>
-      </div>
-    </section>
+          <HelpDetails showOnMobile />
+        </InnerWrapper>
+
+        <BannerLayout bannerText={"Mention the Expected price of your property with your Brokerage Charges."} imgSrc={'/propertyListing/assets/home_coin.webp'} showContact startWithPic />
+
+      </OuterWrapper>
+    </PageWrapper>
   )
 }
 
