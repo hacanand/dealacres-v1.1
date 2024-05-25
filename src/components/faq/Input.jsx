@@ -13,7 +13,8 @@ const Input = ({
     icon: Icon,
     isEmail,
     requireMessage,
-    pattern
+    pattern,
+    isMobile
 }) => {
 
   
@@ -40,8 +41,9 @@ const Input = ({
         placeholder:text-xs md:placeholder:text-sm
         font-light 
         bg-white 
-        border-2
+        border
         rounded-md
+        ${isMobile ? 'rounded-l-none' : ''}
         outline-none
         transition
         disabled:opacity-70

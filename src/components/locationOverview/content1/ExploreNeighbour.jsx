@@ -23,7 +23,8 @@ function ExploreNeighbour() {
           spaceBetween={30}
 
           modules={[Pagination, Navigation]}
-          pagination={{ enabled: false }}
+          pagination={{ enabled: false, horizontalClass: 'neighbourSwiperDots'
+           }}
           navigation={{
             enabled: false
           }}

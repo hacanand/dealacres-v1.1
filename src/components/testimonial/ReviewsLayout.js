@@ -18,7 +18,7 @@ const ReviewsLayout = () => {
   };
 
   return (
-    <div className="relative overflow-visible after:content-[''] after:absolute after:h-[90%] after:w-[100%]  after:top-[7rem] after:rounded-[2rem] after:bg-[#e4eefe]  after:-z-10 flex flex-col gap-4 px-4 items-center justify-center">
+    <div className="relative overflow-visible after:content-[''] after:absolute after:h-[90%] after:w-[100%]  after:top-[7rem] after:rounded-[1rem] after:bg-[#e4eefe]  after:-z-10 flex flex-col gap-4 px-4 items-center justify-center">
       {filteredData.map((dt, index) => (
         <div key={dt.id} className={styles.reviewBlock}>
           {/* <div> */}
@@ -36,7 +36,7 @@ const ReviewsLayout = () => {
             </div>
           </div>
           <div>
-            <p>{dt.description}</p>
+            <p className="leading-[normal]">{dt.description}</p>
           </div>
         </div>
         // </div>

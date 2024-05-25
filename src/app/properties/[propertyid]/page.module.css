@@ -79,6 +79,7 @@
     .bottomContainer {
         padding: 1.5rem;
         padding-top: 0rem;
+        row-gap: 1rem;
     }
 
     .contentContainer {

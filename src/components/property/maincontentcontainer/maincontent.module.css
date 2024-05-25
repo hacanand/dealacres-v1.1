@@ -127,6 +127,10 @@
         font-size: 20px !important;
         font-weight: 700;
     }
+
+    .mainContainer {
+        row-gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -136,5 +140,16 @@
 
     .head {
         font-size: 20px;
+        line-height: normal;
+    }
+
+    .head p {
+        font-size: 10px;
+    }
+
+    
+    .headerComp h5{
+        font-size: 16px !important;
+        font-weight: 700;
     }
 }

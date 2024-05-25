@@ -10,10 +10,11 @@ const FaqBanner = ({
       w-full
       h-full
       absolute
+      max-sm:object-cover
       '/>
 
             <div className='md:absolute top-1/2 left-1/2 md:-translate-x-1/2 px-4 md:-translate-y-1/2 flex flex-col '>
-                <h1 className='z-10 text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-bold py-4'>Hey, how can we help?</h1>
+                <h1 className='z-10 text-lg xs:text-2xl sm:text-3xl lg:text-4xl font-bold py-2 text-center xs:text-left sm:py-4'>Hey, how can we help?</h1>
 
                 <div className='relative'>
                     <span className='absolute 

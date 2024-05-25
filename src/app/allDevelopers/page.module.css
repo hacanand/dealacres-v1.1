@@ -86,7 +86,7 @@
 
     .title {
         margin: unset;
-        margin-bottom: 1rem;
+        margin-bottom: 0px;
         font-size: 1.5rem;
     }
 }

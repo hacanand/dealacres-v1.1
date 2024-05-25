@@ -48,7 +48,7 @@ const SingleAgentPage = () => {
         <FeaturedService />
       </div>
 
-      <div className='max-w-screen-md mx-4 px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0.3)]'>
+      <div className='max-w-screen-md mx-4 px-4 sm:px-8 md:px-16 flex gap-2  sm:gap-4 md:gap-8 md:mx-auto overflow-hidden  py-4 my-4 rounded-[2rem]  shadow-[0px_0px_5px_rgba(0,0,0,0.2)]'>
 
         <div className='w-[55%]'>
           <AgentContactForm />

@@ -246,7 +246,7 @@ const AreaCalculator = () => {
       ...baseStyles,
       paddingTop: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
       paddingBottom: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
-      alignSelf: 'start'
+      alignSelf: `${dType === 'smallphone' || dType === 'phone' ? 'start' : 'centre'}`
     }),
     IndicatorContainer: (baseStyles, state) => ({
       ...baseStyles,
@@ -254,12 +254,19 @@ const AreaCalculator = () => {
     }),
     singleValue: (baseStyles, state) => ({
       ...baseStyles,
-      height: `${dType === 'smallphone' || dType === 'phone' ? '100%' : '100%'}`,
+      height: `${dType === 'smallphone' || dType === 'phone' ? '20px' : '100%'}`,
+      display: 'flex',
+      alignItems: "center",
+      position: "absolute",
+      top: "0px"
     }),
     placeholder: (baseStyles, state) => ({
       ...baseStyles,
-      height: `${dType === 'smallphone' || dType === 'phone' ? '100%' : '100%'}`,
-      alignSelf: 'start'
+      height: `${dType === 'smallphone' || dType === 'phone' ? '20px' : '100%'}`,
+      alignSelf: 'start',
+      display: "flex",
+      alignItems: "center",
+      color: "#a4aab5"
     })
   }
 
@@ -339,7 +346,7 @@ const AreaCalculator = () => {
                   control: () => `
                    border-2  text-xs md:text-lg`,
                   input: () => 'text-sm md:text-lg',
-                  option: () => 'text-xs md:text-sm p-0'
+                  option: () => 'text-xs md:text-sm p-0',
                 }}
                 styles={styles}
               />
@@ -401,7 +408,7 @@ const AreaCalculator = () => {
 
       <div className="px-[5rem] mb-3 max-md:px-[1rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
-        <div className="flex flex-wrap gap-4 mt-3">
+        <div className="flex flex-wrap gap-2 md:gap-4 mt-3">
           <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Hectare to Acre
           </div>
@@ -428,7 +435,7 @@ const AreaCalculator = () => {
           All About Land Measurment
         </h2>
 
-        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-md:text-base max-md:mt-5">
+        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-md:text-sm max-md:mt-5">
           <div className="space-y-3">
             <p>
               Land measurement in India has always been done using various local
@@ -580,7 +587,7 @@ const AreaCalculator = () => {
         </div>
       </div> */}
 
-     <div className="px-[1rem] sm:px-[2rem] py-4">
+     <div className="px-[1rem] sm:px-[2rem] pb-4">
      <ReadMore isFullScreen={true} subheader={"Read realty news guides and articles"}/>
      </div>
     </div>

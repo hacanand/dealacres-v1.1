@@ -21,16 +21,7 @@ const BlogPost = ({
 
     <div className='px-2 xs:px-4 flex flex-col font-light  '>
       <PostHeader heading={heading} align='left' size='large' />
-      <div className='flex flex-row md:hidden overflow-x-auto pb-2 gap-4'>
-        {topicsData.map((topic, index) => {
-
-          return (
-            <span className='text-sm whitespace-nowrap capitalize font-[500] ' key={index}>
-              {topic.toLowerCase()}
-            </span>
-          )
-        })}
-      </div>
+      
       <PublishedOn date={publishedOn} align='left' />
 
       <div className="text-justify text-sm md:text-base" dangerouslySetInnerHTML={{ __html: postIntro }}></div>

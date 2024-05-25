@@ -69,26 +69,23 @@ const FaqForm = () => {
                 icon={<BsPerson size={20} />}
             />
 
-            <div className='grid grid-cols-5 gap-4'>
-                <div className='col-span-2 bg-white z-10'>
-
-
-                    <CountrySelect
-                        id="location"
-                        errors={errors}
-                        required
-                        register={register}
-                        value={location}
-                        requireMessage={"Please Enter the contry code."}
-                        onChange={(value) => setCustomValue('location', value)}
-                    />
+            <div className='flex  '>
+                <div 
+                className='
+                text-zinc-400 
+                border border-slate-300 border-r-0 rounded-md rounded-r-none
+                px-2 md:px-4
+                py-1 md:py-2
+                
+                '>
+                    +91
 
                 </div>
 
-                <div className='col-span-3 h-full'>
+                <div className='col-span-3 h-full w-full'>
                     <Input
                         id="phone"
-
+                        isMobile
                         label="Mobile Number"
                         type='number'
                         disabled={isLoading}

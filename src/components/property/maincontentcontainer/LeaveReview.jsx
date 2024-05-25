@@ -1,6 +1,7 @@
 'use client'
 import styles from './leavereview.module.css'
 import {Rating, TextField} from '@mui/material'
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 const LeaveReview = () => {
@@ -11,6 +12,7 @@ const LeaveReview = () => {
         console.log(data);
         alert('Details registered, we will get to you soon!!!')
     }
+
 
     return (
       <div className={styles.leaveReviewContainer}>
@@ -45,7 +47,7 @@ const LeaveReview = () => {
 
               <div className='flex flex-col justify-center'>
               <label className="h-full">Rating</label>
-              <Rating size="small" sx={{
+              <Rating size="medium" sx={{
                 '&': {
                   marginTop: '8px',
                   marginBottom: '4px',

@@ -77,7 +77,7 @@ function MainContent2() {
             <h5>Explore nearby localities</h5>
             <Cities/>
         </div>
-        <div className='w-full md:w-[80%]'>
+        <div className='w-full md:w-[80%] mt-4'>
         <InsightReview/>
         </div>
         <div className='w-full md:w-[80%]'>
@@ -102,9 +102,9 @@ function MainContent2() {
             <GuidesSlider allGuides={allGuidesData} handleTabChange={(value) => value} isAllGuides={false}/>
            
         </div>
-        <div className='my-4'>
-  
-            <ReadMore isFullScreen/>
+        <div className='mt-4'>
+        <h5 className='!mb-0'>Interesting Readings</h5>
+            <ReadMore isFullScreen hasCustomHeader/>
         </div>
         <div>
             <h5>Frequently Asked Questions</h5>

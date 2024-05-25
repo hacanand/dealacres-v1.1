@@ -121,7 +121,7 @@ const ExploreBuilder = () => {
 
               <h3>{dt.builderName}</h3>
 
-              <p>{isTruncated ? (dt.description.slice(0, (deviceType === 'smallphone' ? 150 : 210))) : (dt.description)}
+              <p className="!leading-[normal]">{isTruncated ? (dt.description.slice(0, (deviceType === 'smallphone' ? 150 : 210))) : (dt.description)}
 
                 <span className={styles.SeeMore} onClick={toggleTruncate} >{isTruncated ? " Read More" : " Read Less"}</span>
               </p>

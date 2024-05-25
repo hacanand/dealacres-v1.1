@@ -59,7 +59,7 @@ const newsData = [
 ];
 
 const ReadMore = ({
-  isFullScreen, header, subheader
+  isFullScreen, header, subheader, hasCustomHeader
 }) => {
 
   const sliderRef = useRef();
@@ -67,11 +67,11 @@ const ReadMore = ({
   console.log(curSlide)
   return (
     <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 md:space-y-8 md:mt-10 py-2 md:py-5'} relative`}>
-      <h2 className="singleDevHeading py-4 flex justify-between gap-2 items-center">
+    {!hasCustomHeader   && <h2 className="singleDevHeading py-4 flex justify-between gap-2 items-center">
         {header ? header : 'Interesting Readings'}
 
         {subheader && <span className="text-[10px] leading-normal sm:text-sm text-blue-500 font-bold max-w-[40%]">{subheader}</span>}
-      </h2>
+      </h2>}
 
 
       <Swiper
@@ -83,7 +83,7 @@ const ReadMore = ({
         spaceBetween={46}
         slidesPerView={1}
         modules={[Pagination, Navigation]}
-
+   
         pagination={{ clickable: true, horizontalClass: 'rentSwiperDots' }}
         navigation={{
           prevEl: '.swiper-prevArrow',
@@ -125,7 +125,7 @@ const ReadMore = ({
        
       </Swiper>
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 hidden md:block">
          <div className={`swiper-nextArrow ${curSlide === newsData.length && 'swiper-disabledArrow'} bg-blue-500 text-white w-[36px] h-[36px]  hidden md:grid items-center justify-center rounded-[100%]  top-[50%] mb-8 -translate-x-1/2 absolute z-10 cursor-pointer hover:bg-blue-500/70 transition-all ${isFullScreen ? 'right-[-2rem]' : 'right-[2rem] lg:right-[6rem] '}`}
 
          >

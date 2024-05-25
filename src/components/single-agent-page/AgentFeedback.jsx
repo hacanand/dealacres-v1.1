@@ -36,7 +36,7 @@ const AgentFeedback = () => {
                 <label className='font-bold text-xs xs:text-sm sm:text-base' htmlFor="email">
                     Email
                 </label>
-                <input id='email' {...register('email', { required: "Email is required." })} className='border border-black outline-none py-1 text-sm sm:text-base px-4 rounded shadow' type="text" />
+                <input id='email' {...register('email', { required: "Email is required." })} className='border border-black outline-none py-1 text-xs xs:text-sm sm:text-base px-2 md:px-4 rounded shadow' type="text" />
             </div>
             <div className='flex flex-row  w-full py-1 xs:py-2 gap-2'>
                 <div className='w-1/2 flex flex-col'>
@@ -45,13 +45,13 @@ const AgentFeedback = () => {
                     </label>
                     <input type="text"
                         id='title'
-                        className='border border-black outline-none py-1 text-xs xs:text-sm sm:text-base px-4 rounded shadow' />
+                        className='border border-black outline-none py-1 text-xs xs:text-sm sm:text-base px-2 md:px-4 rounded shadow' />
                 </div>
                 <div className='w-1/2 flex flex-col  '>
                     <label className='font-bold text-xs xs:text-sm sm:text-base' htmlFor="title">
                         Rating
                     </label>
-                    <div className="flex gap-2  ">
+                    <div className="flex gap-1  ">
                         {
                             [1, 2, 3, 4, 5].map((value) => {
                                 return rating >= value ? (<svg
@@ -91,11 +91,11 @@ const AgentFeedback = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col w-full py-1 xs:py-2'>
+            <div className='flex flex-col w-full pb-1 xs:pb-2'>
                 <label className='font-bold text-xs xs:text-sm sm:text-base' htmlFor="email">
                     Review
                 </label>
-                <textarea className='border border-black outline-none py-1 text-xs xs:text-sm sm:text-base px-4 rounded shadow' />
+                <textarea className='border border-black outline-none py-1 text-xs xs:text-sm sm:text-base px-2 md:px-4 rounded shadow' />
             </div>
 
             <button className='w-full py-1 sm:py-2 text-white bg-blue-600 rounded shadow text-xs xs:text-sm sm:text-base md:text-xl font-bold'>

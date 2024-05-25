@@ -4,6 +4,7 @@ import PopularProjects from '@/components/locationOverview/content1/PopularProje
 import Category from './Category.jsx'
 import BuilderSpeak from './BuilderSpeak.jsx'
 import Topdev from '@/components/locationOverview/content2/Topdev'
+import MobileContactForm from '@/components/property/maincontentcontainer/MobileContactForm'
 
 function Maincontent() {
   return (
@@ -13,6 +14,12 @@ function Maincontent() {
             <h5 className='mb-5 heading'>Ongoing projects by M3M India Pvt. Ltd.</h5>
             <PopularProjects/>
         </div>
+
+        <div>
+            <MobileContactForm title="M3M India Pvt. Ltd"/>
+        </div>
+
+
         <div>
             <h5 className='mb-5 heading'>Delivered projects by M3M India Pvt. Ltd.</h5>
             <PopularProjects/>

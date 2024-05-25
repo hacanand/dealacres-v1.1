@@ -113,7 +113,7 @@ const page = () => {
             <span className='text-lg xs:text-2xl md:text-5xl text-yellow-400 font-bold'>REAL ESTATE JOURNEY</span></h1>
         </div>
         <div>
-          <button className='rounded-xl min-w-[90px] bg-white px-2 text-xs xs:text-sm sm:text-base sm:px-6 py-1 xs:py-2 text-blue-500 font-semibold'>Click Here</button>
+          <button className='rounded-xl xs:min-w-[90px] whitespace-nowrap bg-white px-2 text-[10px] xs:text-sm sm:text-base sm:px-6 py-1 xs:py-2 text-blue-500 font-semibold'>Click Here</button>
         </div>
       </div>
 

@@ -112,7 +112,7 @@ const DoughNut = ({
 
                 <Doughnut ref={chartRef} data={data} options={options} />
 
-                <div className="absolute top-[50%] -translate-y-1/2 left-1/2 -translate-x-1/2 text-xl font-bold text-center">
+                <div className="absolute top-[50%] -translate-y-1/2 left-1/2 -translate-x-1/2 text-sm leading-[normal] sm:text-xl font-bold text-center">
                     {!isNaN(Number(mortgage)) &&
                         `₹${Math.ceil(mortgage).toLocaleString('en-IN')} Per Month`
                     }

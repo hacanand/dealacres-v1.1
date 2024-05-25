@@ -134,10 +134,7 @@ const Page = () => {
             </div>
             <h1 className="font-medium md:font-bold md:text-2xl text-xl my-4">Add Amenties and Features</h1>
             <AmenitiesList />
-            <div className="flex flex-row items-center">
-              <p className="text-xl text-blue-600">More</p>
-              <MdKeyboardDoubleArrowDown size={20} color="blue" />
-            </div>
+            
 
             <div className=''>
               <h1 className="font-medium md:font-bold md:text-2xl text-xl my-4">

@@ -1,8 +1,8 @@
 @media screen and (max-width: 768px){
     
-    .swiper-pagination-bullets {
-        bottom: 0px !important;
-        position: relative;
+    .rentSwiperDots {
+        bottom: -4px !important;
+        position: absolute;
 
    
     }
@@ -11,6 +11,10 @@
         height: 5px !important;
 
    
+    }
+
+    .rentSwiperSlide {
+        margin-bottom: 0px !important;
     }
     
 }
