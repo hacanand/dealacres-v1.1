@@ -13,7 +13,8 @@ import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 import HelpDetails from '@/components/propertyListing/HelpDetails';
 
 const AddMedia = ({
-  to
+  to,
+  multistage
 }) => {
   const [droppedFiles, setDroppedFiles] = useState([]);
 

@@ -11,7 +11,7 @@ import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 import BannerLayout from '@/components/propertyListing/BannerLayout';
 import HelpDetails from '@/components/propertyListing/HelpDetails';
 
-const Page = () => {
+const PricingSection = () => {
 
 
   const [brokenCharge, setBrokenCharge] = useState('');
@@ -215,4 +215,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default PricingSection;

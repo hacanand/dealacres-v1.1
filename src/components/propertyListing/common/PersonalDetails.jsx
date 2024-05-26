@@ -9,9 +9,13 @@ import PageWrapper from '@/components/propertyListing/PageWrapper';
 import InnerWrapper from '@/components/propertyListing/InnerWrapper';
 import BannerLayout from '@/components/propertyListing/BannerLayout';
 import HelpDetails from '@/components/propertyListing/HelpDetails';
+import SubmissionComponent from './SubmissionComponent';
+import SubmitWrapper from './SubmitWrapper';
 
 
-const Page = () => {
+const PersonalDetails = ({
+    to, isLastStage
+}) => {
     const [companyName, setCompanyName] = useState('');
     const [companyAddress1, setCompanyAddress1] = useState('');
     const [city, setCity] = useState('');
@@ -27,7 +31,7 @@ const Page = () => {
   
         
                     <InnerWrapper>
-                    <h1 className="bannerHeading">
+                    <h1 className="text-xl md:text-2xl text-gray-500 font-bold">
                         Before listing your property<br /> buyer should know about you?
                     </h1>
                         <p className="text-md font-semibold text-gray-500 my-2">Are You RERA registered? </p>
@@ -87,23 +91,30 @@ const Page = () => {
                         <p className="text-md font-semibold text-gray-500 mb-2">Contact Details</p>
                         <ContactNumber onContactNumberChange={(newnumber) => setContactNumber(prev => [...prev, newnumber] )} />
 
-                        <Link href="location-details">
+                   
+                    
+                    </InnerWrapper>
+               
+
+
+
+                <BannerLayout bannerText={"This information helps buyer to connect with you easily"} imgSrc={"/propertyListing/assets/broker.webp"} showContact startWithPic />
+            </OuterWrapper>
+
+            <SubmitWrapper>
+                    {isLastStage ? <SubmissionComponent/> : <Link href={to ? to : "#"}>
                             <button
                                 className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''}`}
                                 disabled={isContinueButtonDisabled}
                             >
                                 Continue
                             </button>
-                        </Link>
-                    <HelpDetails showOnMobile/>
-                    </InnerWrapper>
+                        </Link>}
 
-
-
-                <BannerLayout bannerText={"This information helps buyer to connect with you easily"} imgSrc={"/propertyListing/assets/broker.webp"} showContact startWithPic />
-            </OuterWrapper>
+                        <HelpDetails showOnMobile/>
+                    </SubmitWrapper>
         </PageWrapper>
     );
 };
 
-export default Page;
+export default PersonalDetails;

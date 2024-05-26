@@ -30,6 +30,9 @@ const Page = () => {
     const [propertyDescription, setPropertyDescription] = useState('');
     const [carpetArea, setCarpetArea] = useState('');
     const [entranceWidth, setEntranceWidth] = useState('');
+
+    const [carpetUnit, setCarpetUnit] = useState('sqft')
+    const [widthUnit, setWidthUnit] = useState('sqft')
     const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 
     const months = [
@@ -62,7 +65,7 @@ const Page = () => {
         setIsUnderConstructionClicked(!isUnderConstructionClicked);
     };
     const checkContinueButtonState = () => {
-
+        console.log(propertyDescription, carpetArea, entranceWidth);
         setIsContinueDisabled(
             !propertyDescription ||
             !carpetArea ||
@@ -70,8 +73,23 @@ const Page = () => {
 
         );
     };
-    const handleInputChange = (setter, value) => {
-        setter(value);
+    const handleInputChange = (e) => {
+        const {name, value} = e.target;
+        switch (name) {
+            case "propertyDescription":
+                console.log("description..")
+                setPropertyDescription(value);
+                break;
+            case "carpetArea":
+                setCarpetArea(value);
+                break;
+            case "entranceWidth":
+                setEntranceWidth(value);
+                break;
+            default:
+                break;
+        }
+
         checkContinueButtonState();
     };
 
@@ -101,12 +119,13 @@ const Page = () => {
 
                     <textarea
                         id="myTextArea"
-                        name="myTextArea"
+          
                         rows={10}
                         cols={40}
                         className='mt-3 sm:mt-4 md:my-6 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4 rounded-md w-full max-md:max-h-[150px]'
                         value={propertyDescription}
-                        onChange={(e) => handleInputChange(setPropertyDescription, e.target.value)}
+                        name="propertyDescription"
+                        onChange={handleInputChange}
                     />
 
 <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
@@ -153,14 +172,20 @@ const Page = () => {
                         <h1 className='text-sm font-bold my-3'>Carpet Area</h1>
                         <p className='absolute text-[8px] leading-3 font-extralight top-[1.55rem]  right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
                         <div className="flex items-center space-x-2 mb-2 ">
-                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
+                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
+                            name={"carpetArea"}
+                            onChange={handleInputChange}
+                            />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white"
+                            value={carpetUnit}
+                            onChange={(e) => setCarpetUnit(e.target.value)}
+                            >
+                                <option value="sqft">Sqft</option>
+                                <option value="sqyrd">Sq-yrd</option>
+                                <option value="sqm">Sq-m</option>
+                                <option value="acre">Acre</option>
+                                <option value="hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
@@ -168,14 +193,20 @@ const Page = () => {
                         <h1 className='text-sm font-bold my-3'>Width of Entrance</h1>
 
                         <div className="flex items-center space-x-2 mb-2">
-                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
+                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
+                            name='entranceWidth'
+                            onChange={handleInputChange}
+                             />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white">
-                            <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white"
+                            value={widthUnit}
+                            onChange={(e) => setWidthUnit(e.target.value)}
+                            >
+                            <option value="sqft">Sqft</option>
+                                <option value="sqyrd">Sq-yrd</option>
+                                <option value="sqm">Sq-m</option>
+                                <option value="acre">Acre</option>
+                                <option value="hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
@@ -247,7 +278,7 @@ const Page = () => {
                     </Link>
                 </InnerWrapper>
 
-                <BannerLayout startWithPic showContact bannerText={' Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.'} imgSrc={'/propertyListing/assets/aboutPropertyBanner.webp'} showSmiley/>
+                <BannerLayout startWithPic showContact bannerText={' Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.'} imgSrc={'/propertyListing/assets/shop.webp'} showSmiley/>
 
                 <HelpDetails showOnMobile />
             </OuterWrapper>

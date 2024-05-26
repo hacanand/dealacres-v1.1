@@ -16,8 +16,13 @@ import PageWrapper from "@/components/propertyListing/PageWrapper";
 import OuterWrapper from "@/components/propertyListing/OuterWrapper";
 import InnerWrapper from "@/components/propertyListing/InnerWrapper";
 import BannerLayout from "@/components/propertyListing/BannerLayout";
+import SubmissionComponent from "./SubmissionComponent";
+import Link from "next/link";
 
-const Page = () => {
+const AmenitiesSection = ({
+    isLastStage = false,
+    to
+}) => {
 
     const [isGDPRChecked, setIsGDPRChecked] = useState(false);
     const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -106,29 +111,18 @@ const Page = () => {
                         "Add property proximity to transit Shopping, Market Areas, and more..."]} imgSrc={"/propertyListing/assets/amenities.webp"} showContact startWithPic />
                 </OuterWrapper>
                 <div className="w-[90%] xs:w-[80%]  md:w-full max-md:mx-auto px-5 pb-5 md:px-24">
-                    <h1 className=" font-heading mb-2">GDPR Agreement *</h1>
-                    <div className="flex flex-row justify-center my-2 gap-2 items-center">
-                        <input
-                            type='checkbox'
-                            className='input-checkbox'
-                            checked={isGDPRChecked}
-                            onChange={handleGDPRCheckboxChange}
-                        />
-                        <p className="text-sm sm:text-base md:text-xl">I agree to this website &quot;Deal Acres&quot; storing my submitted information; see more details below.</p>
-                    </div>
-                    <div className="bg-[#f3f3f3] p-2  mt-4 text-sm md:text-base rounded-lg md:mb-8">
-                        <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
-                    </div>
+                    {isLastStage ? <SubmissionComponent/> : <Link href={to ? to : "#"}>
                     <button
-                        onClick={openPostModal}
-                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed bg-gray-400' : ''
+     
+                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${(isLastStage ? !isGDPRChecked : false)|| uploadedFiles.length === 0 ? 'cursor-not-allowed bg-gray-400' : ''
                             }`}
-                        disabled={!isGDPRChecked || uploadedFiles.length === 0}
+                        disabled={(isLastStage ? !isGDPRChecked : false) || uploadedFiles.length === 0}
                     >
-                        Post Property
+                        Continue
                     </button>
-                    <PostModal isOpen={isPostModalOpen} onSubmit={handlePostSubmit} />
-                    <FeedbackModal isOpen={isFeedbackModalOpen} onClose={closeFeedbackModal} />
+                    </Link>}
+                    
+                 
 
                 </div>
 
@@ -139,6 +133,6 @@ const Page = () => {
 }
 
 
-export default Page
+export default AmenitiesSection;
 
 
