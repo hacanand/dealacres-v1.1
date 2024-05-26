@@ -107,7 +107,7 @@ const ExploreBuilder = () => {
   return (
     <div className={styles.ExploreBuilder}>
       {filteredData.map((dt, index) => (
-        <div className={`${index > 0 ? 'mt-8' : 'mt-0'} md:mt-12`} key={index}>
+        <div className={`${index > 0 ? 'mt-4' : 'mt-0'} md:mt-12`} key={index}>
           <div className={styles.TopBuilders}>
 
             <div className={styles.Logo}>
@@ -155,7 +155,7 @@ const ExploreBuilder = () => {
               ><strong>Commercial Projects</strong></span>
             </div>
             <hr />
-            <br />
+
             <div className={styles.projectLine}>
               {/* Featured start */}
               {dt[project].slice(0, projectLimit).map((property, index) => (
@@ -166,7 +166,7 @@ const ExploreBuilder = () => {
                       alt={property.ProjectName}
                     />
                   </div>
-                  <div>
+                  <div className='!leading-[normal]'>
                     <h4>{property.ProjectName}</h4>
                     <p>by {property.group} </p>
                     <p className='break-all'>{property.address}</p>

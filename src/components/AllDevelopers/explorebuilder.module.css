@@ -67,6 +67,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 12px;
+    padding: 8px 0px;
 
 }
 
@@ -298,6 +299,7 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
+        padding: 4px 0px;
         gap: 4px;
     }
 
