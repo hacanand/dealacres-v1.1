@@ -12,6 +12,8 @@ const MobileArticlesmanual = () => {
     const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
+    
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };

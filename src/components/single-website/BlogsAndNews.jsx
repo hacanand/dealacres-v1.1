@@ -15,21 +15,32 @@ const BlogsAndNews = () => {
         tags: 'Business, Luxury, Real Estate'
     }
     return (
-        <div className='py-8'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-4 items-center'>
+        <div className=''>
+            <div className='flex flex-nowrap md:grid  grid-cols-2 overflow-x-auto lg:grid-cols-3 gap-8 py-2 md:py-4 md:items-center'>
+           
+           
             {
                 [...Array(9)].map((_, index) => {
 
 
                    
                     if(index < 3 || showFull){
-                    return <div key={index} className='col-span-1 h-full max-h-full '> 
+                    return <div key={index} className='col-span-1 h-full max-h-full min-w-[300px] md:min-w-0 '> 
                             <SingleBlogCard img={index % 2 === 0 ? src2 : src1}
                         title={dummyBlogData.title}
                         tags={dummyBlogData.tags}
                         excrept={dummyBlogData.excrept}/>
                         </div>
                         
+                    }else {
+                        return (
+                            <div key={index} className='md:hidden col-span-1 h-full max-h-full min-w-[300px] md:min-w-0 '> 
+                            <SingleBlogCard img={index % 2 === 0 ? src2 : src1}
+                        title={dummyBlogData.title}
+                        tags={dummyBlogData.tags}
+                        excrept={dummyBlogData.excrept}/>
+                        </div>
+                        )
                     }
                   
                 })
@@ -38,7 +49,7 @@ const BlogsAndNews = () => {
             
 
         </div>
-        <div className='text-center'>
+        <div className='text-center hidden md:block'>
             <button className='bg-black p-4 text-white text-xl shadow rounded'
             onClick={() => setShowFull(prev => !prev)}
             >

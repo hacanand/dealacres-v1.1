@@ -13,13 +13,14 @@ const Input = ({
     icon: Icon,
     isEmail,
     requireMessage,
-    pattern
+    pattern,
+    isMobile
 }) => {
 
   
   
   return (
-    <div className="w-full relative">
+    <div className="w-full relative h-full">
            
             <input
                 id={id}
@@ -35,13 +36,14 @@ const Input = ({
                 className={`
         peer
         w-full
-        px-4
-        py-2
-     
+        px-2 md:px-4
+        py-1 md:py-2
+        placeholder:text-xs md:placeholder:text-sm
         font-light 
         bg-white 
-        border-2
+        border
         rounded-md
+        ${isMobile ? 'rounded-l-none' : ''}
         outline-none
         transition
         disabled:opacity-70
@@ -59,7 +61,8 @@ const Input = ({
         transform 
         top-1/2
         left-4
-        
+        text-xs xs:text-sm md:text-base
+        capitalize
         origin-[0] 
         pointer-events-none
         invisible

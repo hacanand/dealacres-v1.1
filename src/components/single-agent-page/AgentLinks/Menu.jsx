@@ -1,7 +1,7 @@
 export const hisar = [
-    { name: "PPLA Hisar ", link: "#" },
-    { name: "Azad Nagar Hisar", link: "#" },
-    { name: "Urban Estate Hisar", link: "#" },
+    { name: "Property Dealer In PPLA Hisar ", link: "#" },
+    { name: "Property Dealer In Azad Nagar Hisar", link: "#" },
+    { name: "Property Dealer In Urban Estate Hisar", link: "#" },
     { name: "Property Dealer In Model Town Hisar", link: "#" },
     { name: "Property Dealer In Camry Road Hisar", link: "#" },
     { name: "Property Dealer In Sector - 13 Hisar", link: "#" },
@@ -66,12 +66,7 @@ export const hisar = [
     { name: "Real Estate Agent in Fatehabad", link: "#" },
     { name: "Real Estate Agent in Panchkula", link: "#" },
     { name: "Real Estate Agent in Charkhi Dadri", link: "#" },
-    { name: "Real Estate Agent in Palwal", link: "#" },
-    { name: "Real Estate Agent in Karnal", link: "#" },
-    { name: "Real Estate Agent in Rohtak", link: "#" },
-    { name: "Real Estate Agent in Fatehabad", link: "#" },
-    { name: "Real Estate Agent in Panchkula", link: "#" },
-    { name: "Real Estate Agent in Charkhi Dadri", link: "#" },
+  
 
   ]
 

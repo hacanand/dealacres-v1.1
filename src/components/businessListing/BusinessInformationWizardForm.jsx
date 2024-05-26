@@ -12,6 +12,7 @@ const BusinessInformationWizardForm = () => {
   const [step, setStep] = useState(1);
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
     window.scrollTo(0, 0);
   }, [step]);
 

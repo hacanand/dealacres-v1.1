@@ -8,6 +8,7 @@ import ContactDetails from '../ContactUs/ContactDetails'
 import AgentContactForm from '../single-agent-page/AgentContactForm'
 import MeetAttendeForm from './new/MeetAttendeForm'
 import MeetTime2 from './new/MeetTime2'
+import NewMeetTime from './new/NewMeetTime'
 
 const MeetingScheduler = () => {
 
@@ -42,12 +43,12 @@ const MeetingScheduler = () => {
   }, [time])
 
   return (
-    <div className='grid md:grid-cols-12 max-w-screen-lg mx-auto py-4 gap-4 md:gap-0 border overflow-hidden bg-white transition-all duration-1000 border-gray-400 rounded-xl shadow'>
+    <div className='grid md:grid-cols-12 max-w-screen-lg mx-2 md:mx-auto py-4 gap-4 md:gap-0 border overflow-hidden bg-white transition-all duration-1000 border-gray-400 rounded-xl shadow'>
       <div className='md:col-span-3 px-4 transition-all col-span-1'>
-        <MeetAgentInfo selectedDetails={(selectedDate && time) && { date: selectedDate, time }} />
+        <MeetAgentInfo selectedDetails={(selectedDate && time) && { date: selectedDate, time: parseInt(time.split(":")[0]) % 12 + ":"  + time.split(":").slice(1).join("") }} />
       </div>
-      {showCal && <div className={`col-span-1 md:col-span-9 grid grid-cols-1 md:grid-cols-9 relative  `}>
-        {<div className={`md:col-span-6 px-4 flex justify-center transition-all col-span-1
+      {showCal && <div className={`col-span-1 md:col-span-9 grid grid-cols-9 relative  `}>
+        {<div className={`col-span-6 px-4 flex justify-center transition-all
         delay-300 
         duration-300
       
@@ -57,11 +58,11 @@ const MeetingScheduler = () => {
           <MeetCalendar triggerDateChange={triggerDateChange} />
         </div>}
 
-        {<div className={`relative md:col-span-3 col-span-1 transition-all `}>
-          <div className={` px-4 transition-all  origin-left  duration-300
+        {<div className={`relative col-span-3  transition-all `}>
+          <div className={` px-2 md:px-4 transition-all  origin-left  duration-300
           
-          ${time ? 'scale-x-0 invisible absolute left-0 ' : 'scale-x-100 visible static'}`} >
-            <MeetTime2 selectedDate={selectedDate && selectedDate.split(' ').slice(0, 4).join(' ')}
+          ${time ? 'scale-x-0 invisible absolute left-0 ' : 'scale-x-100 visible static'} max-h-[300px] md:max-h-[400px] overflow-y-auto`} >
+            <NewMeetTime selectedDate={selectedDate && selectedDate.split(' ').slice(0, 4).join(' ')}
               triggerTimeSelected={handleTimeChange}
             />
           </div>

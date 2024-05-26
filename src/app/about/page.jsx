@@ -13,7 +13,7 @@ import TeamSlider from '@/components/about/TeamSlider'
 const About = () => {
   return (
     <>
-      <div className='max-w-screen-xl mx-auto py-8'>
+      <div className='max-w-screen-xl mx-auto py-4 md:py-8'>
         <div className='px-4 sm:px-8 py-4'>
           <AboutIntro />
         </div>
@@ -38,7 +38,7 @@ const About = () => {
         <MemberCard img={member3}/>
       </div> */}
 
-      <div className='py-8'>
+      <div className='py-4 md:py-8'>
         <TeamSlider/>
       </div>
       <div className=''>

@@ -25,13 +25,13 @@ function SideContentContainer(props) {
   return (
     <div
       style={lato.style}
-      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4`}
+      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4 my-4 md:my-0 self-start container_box_shadow !border-none max-md:hidden bg-white`}
     >
       <form
-        className="my-8 md:my-0 flex flex-col gap-2"
+        className="my-4 sm:my-8 md:my-0 flex flex-col  sm:gap-2 "
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h4> Looking for a Property in {props.title}</h4>
+        <h4 className="max-xs:!text-base xs:max-md:!text-lg"> Looking for a Property in {props.title}</h4>
         <TextField
           fullWidth
           margin="dense"
@@ -39,6 +39,7 @@ function SideContentContainer(props) {
           helperText={errors.Name?.message}
           label="Name"
           size="small"
+      
           {...register("Name", {
             required: "Name is required",
             maxLength: {
@@ -46,6 +47,7 @@ function SideContentContainer(props) {
               message: "Max allowed length of Name is 30",
             },
           })}
+          className="!py-0"
         />
         <TextField
           fullWidth
@@ -89,7 +91,7 @@ function SideContentContainer(props) {
                 "You have to agree to terms and conditions before submitting",
             })}
           ></input>
-          <label>
+          <label className="max-sm:!text-sm">
             {" "}
             &nbsp;By submitting this form I agree to{" "}
             <a href="#termsofuse">Terms of use</a>
@@ -98,12 +100,12 @@ function SideContentContainer(props) {
         <p style={{ color: "red" }}>
           {errors.TermsConditions && errors.TermsConditions.message}
         </p>
-        <button>Send Message</button>
+        <button className="max-sm:!text-base ">Send Message</button>
       </form>
       {props.Addbox ? (
         ""
       ) : (
-        <div>
+        <div className="hidden">
           <Addbox />
         </div>
       )}

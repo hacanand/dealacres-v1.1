@@ -8,7 +8,7 @@
 }
 
 .MostSearched {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: inline-block;
   padding: 20px 10px;
   border-radius: 10px;
@@ -187,9 +187,21 @@
     margin-top: unset;
 
   }
+
+  .MostSearched {
+    margin-top: unset;
+  }
 }
-@media screen and (min-width: 768px){
+@media only screen and (max-width: 640px) {
+  .Explore {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {
+  .Explore {
+    font-size: 18px;
+  }
  
-
-
 }

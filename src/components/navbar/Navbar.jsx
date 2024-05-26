@@ -113,6 +113,8 @@ const Navbar = () => {
 
 
   const handleScroll = () => {
+    if(typeof window === 'undefined') return;
+    
     if (window.scrollY > 0) {
       setScrolled(true);
     } else {
@@ -121,6 +123,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

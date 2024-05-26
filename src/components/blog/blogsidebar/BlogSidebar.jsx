@@ -18,7 +18,9 @@ const BlogSideBar = ({
     <div>
      
       <Topics topicList = {topics} />
+      <div className='hidden md:block'>
       <BrandBanner hasCta img={banner1} url='banner1'/>
+      </div>
       <PostsFeed posts={allPosts}/>
       <BrandBanner img={banner2} url='banner2'/>
     </div>

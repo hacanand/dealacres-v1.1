@@ -15,7 +15,7 @@ const ExpertLayout = (props) => {
           <div className={styles.parentLayout}>
             <div className={styles.ExpertLayout}>
               <div className={styles.ExpertImg}>
-                <Image src={props.dt.src} alt="Experts" width={100} height={200} />
+                <Image src={props.dt.src} alt="Experts" width={500} height={500} />
               </div>
 
               <div className={styles.ExpertInfo}>
@@ -37,7 +37,7 @@ const ExpertLayout = (props) => {
                   </span>
                 </div>
                 </div>
-                <Rating value={props.dt.rating} />
+                <Rating value={props.dt.rating} size="small" />
                 <p className={styles.ExpertPosition}>{props.dt.location}</p>
                 <div className={styles.ExpertStatus}>
                   <span> {props.dt.tags.tag1} </span>

@@ -35,7 +35,7 @@
   @apply border-4 border-[#cde6f7]
 }
 .custom-border-hero{
-  @apply border-t-8 border-l-8 border-b-2 border-[#c7e3f6]
+  @apply md:border-t-8 md:border-l-8 md:border-b-2 md:border-[#c7e3f6]
 }
 .input-checkbox {
   height: 1.40rem; 
@@ -46,6 +46,14 @@
   width: 1.25rem; 
 }
 
+.singleDevHeading {
+  @apply !text-lg xs:!text-xl sm:!text-2xl lg:!text-3xl  !font-bold;
+  
+}
+
+.container_box_shadow {
+  @apply shadow-[0_0_5px_rgba(0,0,0,0.3)];
+}
 
 
 .rentSwiperDots {
@@ -56,10 +64,41 @@
   color: black !important;
 }
 
+.normal-paragraph {
+  @apply !text-sm md:!text-base;
+
+}
+
 @media screen and (min-width: 768px){
   .rentSwiperDots{
     display: none !important;
   }
 }
 
+/* free property listing */
+.bannerHeading {
+  @apply text-base xs:text-lg;
+}
 
+.fpSectionHeading {
+  @apply font-medium md:font-bold md:text-2xl text-xl;
+}
+
+.fpSectionLabel {
+  @apply font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4
+}
+
+
+.neighbourSwiperDots {
+  bottom: -4px !important;
+  position: relative !important;
+}
+
+.swiper-pagination-bullets.similarDotsClass{
+  bottom: 0px !important;
+  position: absolute !important;
+}
+.swiper-pagination-bullets.propertyBuilderDotsClass {
+  bottom: 0px !important;
+  position: absolute !important;
+}

@@ -16,9 +16,9 @@ function PopularProjectCard() {
         <div className={styles.popularCardContentContainer}>
             <h4>M3M 57th Suites</h4>
             <p>By M3M Pvt. Ltd <br/>Studio Studio Flat <br/>Sector 57th, Gurgaon</p>
-            <h3><BsCurrencyRupee style={{display:'inline'}}/>1.46Cr*</h3>
+            <h3 className='flex justify-between md:block'><BsCurrencyRupee style={{display:'inline'}}/>1.46Cr* <div className={`${styles.popularCardBtnContainer} md:!hidden`}><button> Explore </button> </div></h3>
         </div>
-        <div className={styles.popularCardBtnContainer}>
+        <div className={`${styles.popularCardBtnContainer} max-md:!hidden`}>
             <button>Explore</button>
         </div>
     </div>

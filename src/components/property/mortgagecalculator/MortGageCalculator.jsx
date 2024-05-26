@@ -4,13 +4,14 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
+import FormControl  from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Button, Checkbox, Grid, InputAdornment, OutlinedInput, Stack, TextField, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useSearchParams } from 'next/navigation';
 import DoughNut from './DoughNut';
 import { ClipLoader } from 'react-spinners';
+import { useDeviceType } from '@/hooks/useDeviceType';
 
 const MortgageCalculator = () => {
   const defaultValues = {
@@ -42,6 +43,15 @@ const MortgageCalculator = () => {
     const roi = watch('roi', defaultValues.roi);
     const tenure = watch('tenure', defaultValues.tenure);
     const pmi = watch('pmi', defaultValues.pmi);
+    const [isMobile, setIsMobile] = useState(false)
+
+    const {deviceType} = useDeviceType()
+
+    useEffect(() => {
+        if(deviceType === 'smallphone' || deviceType === 'phone'){
+            setIsMobile(true)
+        }
+    }, [])
 
     useEffect(() => {
         if (valuesFilled) {
@@ -56,7 +66,7 @@ const MortgageCalculator = () => {
     }, [amount, downpayment, insurance, pTax, roi, tenure, pmi]);
 
     return (
-        <div className='border border-black rounded-xl shadow p-4 relative'>
+        <div className=' rounded-xl shadow p-4 relative container_box_shadow'>
             {isLoading && (
                 <div className="absolute inset-0 bg-black/20 z-10 flex items-center justify-center">
                     <ClipLoader size={100} />
@@ -67,11 +77,11 @@ const MortgageCalculator = () => {
                 <DoughNut mortgage={mortgage} setIsLoading={setIsLoading} dProps={{ amount, downpayment, roi, tenure, pTax, insurance, pmi }} />
             </div>
 
-            <form className='py-4'>
+            <form className='pt-4'>
                 <Stack justifyContent={"center"} alignItems={"center"}>
                     <Grid container spacing={2}>
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <InputLabel htmlFor="amount">Total Amount</InputLabel>
                                 <OutlinedInput
                                     {...register('amount', { required: "Please fill this field." })}
@@ -87,7 +97,7 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <InputLabel htmlFor="downpayment">Down Payment</InputLabel>
                                 <OutlinedInput
                                     {...register('downpayment', { required: "Please fill this field." })}
@@ -103,7 +113,7 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <InputLabel htmlFor="roi">Interest Rate</InputLabel>
                                 <OutlinedInput
                                     {...register('roi', { required: "Please fill this field." })}
@@ -119,8 +129,9 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <TextField
+                                size={isMobile ? 'small' : 'medium'}
                                     {...register('tenure', { required: "Please fill this field." })}
                                     type="number"
                                     label="Loan Terms (Years)"
@@ -132,8 +143,9 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <TextField
+                                size={isMobile ? 'small' : 'medium'}
                                     {...register('pTax', { required: "Please fill this field." })}
                                     type="number"
                                     label="Property Tax"
@@ -145,8 +157,9 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <TextField
+                                size={isMobile ? 'small' : 'medium'}
                                     {...register('insurance', { required: "Please fill this field." })}
                                     type="number"
                                     label="Insurance"
@@ -158,8 +171,9 @@ const MortgageCalculator = () => {
                         </Grid>
 
                         <Grid item md={4} xs={12} sm={6}>
-                            <FormControl fullWidth>
+                            <FormControl size={isMobile ? 'small' : 'medium'} fullWidth>
                                 <TextField
+                                size={isMobile ? 'small' : 'medium'}
                                     {...register('pmi', { required: "Please fill this field." })}
                                     type="number"
                                     label="PMI"
@@ -172,7 +186,7 @@ const MortgageCalculator = () => {
                     </Grid>
 
                     <Button
-                        className="bg-blue-500 text-white text-lg py-2 px-8 inline-flex items-center justify-center rounded shadow disabled:bg-blue-300 self-start my-4"
+                        className="bg-blue-500 text-white text-sm md:text-lg py-2 px-8 inline-flex items-center justify-center rounded shadow disabled:bg-blue-300 self-start mt-4"
                         onClick={handleSubmit(onSubmit)}
                     >
                         Submit Details

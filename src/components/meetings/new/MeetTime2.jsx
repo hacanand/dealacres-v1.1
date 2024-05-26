@@ -12,7 +12,7 @@ const MeetTime2 = ({
     const [selectedTime, setSelectedTime] = useState(null);
 
     const handleTimeChange = (index) => {
-        const selectedTimeString = (index % 2 === 0 ? Math.floor(index / 2) + 1 : Math.floor(index / 2) - 12 + 1) +
+        const selectedTimeString = (index % 2 === 0 ? Math.floor(index / 2) + 1 : Math.floor(index / 2)  + 1) +
             (index % 2 === 0 ? ":00" : ":30") +
             (index % 24 < 12 ? ' AM' : ' PM');
 
@@ -28,7 +28,7 @@ const MeetTime2 = ({
             <div className='font-bold text-lg'>
                 {selectedDate}
             </div>
-            <div className='py-2 flex flex-col gap-4'>
+            <div className='py-2 flex flex-row max-md:flex-nowrap overflow-x-auto md:flex-col gap-4'>
                 {[...Array(24)].map((_, time) => {
                     if (count === 4 && !showFull) {
                         return null;

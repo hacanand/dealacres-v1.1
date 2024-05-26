@@ -10,7 +10,7 @@
     column-gap: 0.5rem;
 }
 
-.faqcardContainer h5{
+.faqcardContainer h4{
     font-size: 1rem !important;
     margin-bottom: unset !important;
     font-weight: 700;
@@ -26,14 +26,27 @@
     .faqcardContainer {
         padding: 14px;
     }
-    .faqcardContainer h5{
+    .faqcardContainer h4{
         font-size: 14px !important;
-
+        
     }
     
     .faqcardContainer h6{
 
         font-size: 12px !important;
+    }
+    
+}
+
+@media screen and (max-width: 420px) {
+    .faqcardContainer h4{
+        font-size: 12px !important;
+    
+    }
+    
+    .faqcardContainer h6{
+    
+        font-size: 10px !important;
     }
     
 }

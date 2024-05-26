@@ -73,7 +73,7 @@
     position: fixed;
     z-index: 20;
     top: 40px;
-    right: 5rem;
+    right: 1rem;
     cursor: pointer;
   }
 
@@ -149,4 +149,10 @@
   .viewImagesButton {
     top: 85%;
     right: 5%;
+  }
+
+  @media screen and (max-width: 420px){
+    .container {
+      height: 185px;
+    }
   }

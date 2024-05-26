@@ -18,7 +18,7 @@ const AgentPage = () => {
     const handleScroll = () => {
       setScrollCount(scrollCount + 1);
     };
-
+    if (typeof window === 'undefined') return;
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -35,19 +35,19 @@ const AgentPage = () => {
   const closePopup = () => {
     setShowPopup(false);
   };
- 
+
 
   return (
     <div>
       {/* <ImgSlider /> */}
-      <div style={{ position: 'relative', width: '100%', height: '35vh',marginBottom:"30px" }}>
-      <Image
-        src='/Agent/agent_banner_2.png'
-        alt='banner'
-        layout='fill'
-        objectFit='cover'
-      />
-    </div>
+      <div style={{ position: 'relative', width: '100%', height: '35vh', marginBottom: "30px" }} className="max-md:!h-[200px] after:content-[''] after:absolute after:inset-0  after:bg-white/10">
+        <Image
+          src='/Agent/agent_banner_2.png'
+          alt='banner'
+          layout='fill'
+          objectFit='cover'
+        />
+      </div>
       <TopBar />
       <BestAgent />
       {showPopup && <FeedbackPopup onClose={closePopup} />}

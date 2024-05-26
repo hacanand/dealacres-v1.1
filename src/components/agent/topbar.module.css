@@ -104,6 +104,19 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-
+@media only screen and (max-width: 640px) {
+  .title h1 {
+    font-size: 17px;
+  }
+  .title {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .title h1 {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 13px;
+  }
 }

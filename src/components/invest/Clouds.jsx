@@ -11,8 +11,8 @@ const Clouds = () => {
       <span className={`${styles.cloud}`}><Image src={cloud} alt="clouds png"/></span>
       <span className={`${styles.cloud}`}><Image src={cloud} alt="clouds png"/></span>
       <span className={`${styles.cloud}`}><Image src={cloud} alt="clouds png"/></span>
-      <span className={`${styles.cloud}`}><Image src={cloud} alt="clouds png"/></span>
-      <span className={`${styles.cloud}`}><Image src={cloud} alt="clouds png"/></span>
+      <span className={`${styles.cloud} hidden md:block`}><Image src={cloud} alt="clouds png"/></span>
+      <span className={`${styles.cloud} hidden md:block`}><Image src={cloud} alt="clouds png"/></span>
      
     </div>
     </div>

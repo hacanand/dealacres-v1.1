@@ -6,6 +6,11 @@ import SideContentContainer from '@/components/property/sidecontentcontainer/Sid
 import Topdev from '@/components/locationOverview/content2/Topdev'
 import IntrestingReading from '@/components/locationOverview/content2/IntrestingReads'
 import FAQ from '@/components/property/maincontentcontainer/FAQ'
+import NewHeader from '@/components/singleDeveloper/NewHeader'
+import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
+import './singledevpage.css'
+import Link from 'next/link'
+import { GoLinkExternal } from "react-icons/go";
 
 const lato = Lato({
     subsets: ['latin'],
@@ -37,21 +42,25 @@ const FaqData = [
 function page() {
     return(
         <>
-            <Header/>
+            {/* <Header/> */}
+            <NewHeader/>
             <div style={lato.style} className={styles.singleDevPageContainer}>
                 <div className={styles.singleDevPageContentContainer}>  
                     <Maincontent/>
                     <SideContentContainer title='M3M India Pvt. Ltd'/>
                 </div>
-                <div>
-                    <h5>Top Developers in Sector 37D</h5>
+                <div className="mt-4">
+                    <h5>Other Developers</h5>
                     <Topdev/>
+                    <Link className='inline-flex flex-row gap-1 items-center text-sm sm:text-base md:text-lg lg:text-xl text-blue-500 underline font-bold pt-4' href={'#'}>Top Builders in Gurgaon <GoLinkExternal size={20}/> </Link>
                 </div>
+
                 <div>
-                    <h5>Intresting Readings</h5>
-                    <IntrestingReading/>
+                    
+                    {/* <IntrestingReading/> */}
+                    <ReadMore isFullScreen={true}/>
                 </div>
-                <div>
+                <div className='my-4'>
                     <h5>Frequently Asked Questions</h5>
                     <FAQ  faqdata = {FaqData} />
                 </div>

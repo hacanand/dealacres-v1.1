@@ -145,3 +145,48 @@
     }
 
 } 
+
+@media only screen and (max-width: 640px){
+    .TitleInfo h2 {
+        margin: unset !important;
+        font-size: 24px;
+    }
+    .TitleInfo p {
+        font-size: 16px;
+        margin: unset !important;
+    }
+
+    .ContactForm form {
+        padding: 12px 24px;
+   
+    }
+
+    .ContactForm input {
+        padding: 4px;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .ContactForm label {
+    
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .ContactForm p {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .TitleInfo h2 {
+        margin: unset !important;
+        font-size: 22px;
+    }
+
+    .TitleInfo p {
+        font-size: 14px;
+        margin: unset !important;
+    }
+}
+
+
+  

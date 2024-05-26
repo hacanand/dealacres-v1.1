@@ -3,58 +3,59 @@ import {BiArea,BiBuildingHouse} from 'react-icons/bi'
 import {LuCalendarSearch} from 'react-icons/lu'
 import {PiSquaresFour} from 'react-icons/pi'
 import {MdPhotoSizeSelectActual} from 'react-icons/md'
-import {BsCurrencyRupee,BsFillHeartFill} from 'react-icons/bs'
+import {BsFillHeartFill} from 'react-icons/bs'
 import {GiBarrier} from 'react-icons/gi'
 import {IoIosShareAlt} from 'react-icons/io'
+import { FaRupeeSign } from "react-icons/fa";
 
 function Mainoverview(props) {
     return (
-      <div className={styles.mainOverviewContainer}>
+      <div className={`${styles.mainOverviewContainer} `}>
         <div className={styles.overviewContent}>   
             <div className={styles.overviewData}>
-                <BiArea size={25} style={{marginTop:'10px'}}/>
+                <BiArea size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Project Area</h5>
                     <h6>{props.overviewData.projectArea}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <MdPhotoSizeSelectActual size={25} style={{marginTop:'10px'}}/>
+                <MdPhotoSizeSelectActual size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Sizes</h5>
                     <h6>{props.overviewData.sizes}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <BiBuildingHouse size={25} style={{marginTop:'10px'}}/>
+                <BiBuildingHouse size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Project Size</h5>
                     <h6>{props.overviewData.projectSize}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <LuCalendarSearch size={25} style={{marginTop:'10px'}}/>
+                <LuCalendarSearch size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Launch Date</h5>
                     <h6>{props.overviewData.launchDate}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <BsCurrencyRupee size={25} style={{marginTop:'10px'}}/>
+                <FaRupeeSign size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Avg. Price</h5>
                     <h6>{props.overviewData.avgPrice}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <GiBarrier size={25} style={{marginTop:'10px'}}/>
+                <GiBarrier size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Possession Status</h5>
                     <h6>{props.overviewData.possessionStatus}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
-                <PiSquaresFour size={25} style={{marginTop:'10px'}}/>
+                <PiSquaresFour size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Configuration</h5>
                     <h6>{props.overviewData.configuration}</h6>

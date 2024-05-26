@@ -11,6 +11,7 @@ const ServiceExplore = () => {
   const [deviceType, setDeviceType] = useState("");
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
     const handleResize = () => {
       const width = window.innerWidth;
       let newDeviceType = "";

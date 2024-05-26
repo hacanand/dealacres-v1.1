@@ -23,3 +23,23 @@
     padding: 5px 15px 5px 15px;
     margin-top: 1rem;
 }
+
+@media only screen and (max-width: 768px){
+    .leaveReviewContainer {
+        margin-top: 1rem;
+    }
+
+    .leaveReviewFieldContainer {
+        margin-top: 6px;
+    }
+
+    .leaveReviewFieldContainer label {
+        font-size: 14px;
+    }
+
+    .leaveReviewContainer button {
+        font-size: 12px;
+        padding: 4px 8px;
+        margin-top: 6px;
+    }
+}

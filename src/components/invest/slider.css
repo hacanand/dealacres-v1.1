@@ -23,3 +23,7 @@
         scale: 1;
     }
 }
+
+.slick-prev {
+    z-index: 100 !important;
+}

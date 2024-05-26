@@ -19,7 +19,7 @@ const NavbarSingle = () => {
 
   return (
     <>
-    <div className="p-5 hidden md:flex justify-around items-center">
+    <div className="p-5 hidden md:flex justify-around items-center ">
   <div className="flex flex-row items-center gap-2">
     <MdEmail color="red" style={{ fontSize: '24px' }} /> 
     <p>Email us at: contact@dealacres.com  </p>
@@ -70,7 +70,28 @@ const NavbarSingle = () => {
         </div>
       </div>
       {toggleMenu && (
-        <div className="md:hidden bg-black bg-opacity-90 w-full fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+        <div className="md:hidden z-[100] bg-black bg-opacity-90 w-full fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center">
+          <div className="md:hidden self-end">
+          {toggleMenu ? (
+            <RiCloseLine
+              color="#fff"
+              size={45}
+              className="fixed top-4 right-4"
+              onClick={() => {
+                setToggleMenu(false);
+              }}
+            />
+          ) : (
+            <RiMenu3Line
+              color="black"
+              size={27}
+              onClick={() => {
+                setToggleMenu(true);
+              }}
+            />
+          )}
+        </div>
+          
           <div className="flex flex-col items-center space-y-6 text-white">
             <Menu />
           </div>

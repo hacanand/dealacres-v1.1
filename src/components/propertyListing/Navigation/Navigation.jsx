@@ -3,6 +3,7 @@ import React from 'react';
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import NavigationWrapper from './NavigationWrapper';
 
 const Navigation = () => {
   
@@ -35,7 +36,7 @@ const Navigation = () => {
 
   const getLinkStyle = (index) => ({
     color:
-       index <flag
+       index < flag
         ? '#40A2E3'
         : '#000000',
     fontWeight:
@@ -50,7 +51,7 @@ const Navigation = () => {
   });
 
   return (
-    <section className='container mx-auto mt-12'>
+    <NavigationWrapper>
       <div className="flex flex-col md:flex-row items-center justify-center px-4 py-2 w-full lg:w-4/5 mx-auto rounded-3xl bg-[#c6e8fd]">
 
         
@@ -74,7 +75,7 @@ const Navigation = () => {
           </React.Fragment>
         ))}
       </div>
-    </section>
+    </NavigationWrapper>
   );
 };
 

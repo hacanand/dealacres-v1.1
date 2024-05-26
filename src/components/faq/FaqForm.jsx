@@ -66,29 +66,26 @@ const FaqForm = () => {
                 errors={errors}
                 required
                 requireMessage={"Please Enter the name."}
-                icon={<BsPerson size={30} />}
+                icon={<BsPerson size={20} />}
             />
 
-            <div className='grid grid-cols-5 gap-4'>
-                <div className='col-span-2 bg-white z-10'>
-
-
-                    <CountrySelect
-                        id="location"
-                        errors={errors}
-                        required
-                        register={register}
-                        value={location}
-                        requireMessage={"Please Enter the contry code."}
-                        onChange={(value) => setCustomValue('location', value)}
-                    />
+            <div className='flex  '>
+                <div 
+                className='
+                text-zinc-400 
+                border border-slate-300 border-r-0 rounded-md rounded-r-none
+                px-2 md:px-4
+                py-1 md:py-2
+                
+                '>
+                    +91
 
                 </div>
 
-                <div className='col-span-3'>
+                <div className='col-span-3 h-full w-full'>
                     <Input
                         id="phone"
-
+                        isMobile
                         label="Mobile Number"
                         type='number'
                         disabled={isLoading}
@@ -96,7 +93,7 @@ const FaqForm = () => {
                         errors={errors}
                         required
                         requireMessage={"Please Enter Mobile Nubmer"}
-                        icon={<FiPhoneCall size={30} />}
+                        icon={<FiPhoneCall size={20} />}
                     />
 
                 </div>
@@ -113,7 +110,7 @@ const FaqForm = () => {
                 required
                 pattern={/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/}
                 requireMessage={'Enter valid email'}
-                icon={<AiOutlineMail size={30} />}
+                icon={<AiOutlineMail size={20} />}
             />
 
             <UserSelector

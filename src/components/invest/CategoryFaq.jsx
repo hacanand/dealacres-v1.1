@@ -35,7 +35,7 @@ const CategoryFaq2 = () => {
 
    
     return (
-        <div className='px-4'>
+        <div className=''>
             <div className='' >
                 
                 <Slider {...settings}>
@@ -43,7 +43,7 @@ const CategoryFaq2 = () => {
                 {
                     faqData.map((item, index) => {
                         return (
-                            <button onClick={(e) => setTab(Number(e.target.value))} value={index} className={` ${index == tab ? 'bg-blue-500 text-white' : 'bg-blue-100 text-black'} text-center flex items-center justify-center mx-4 py-4 shadow-md rounded min-w-[150px]`} key={index}  >
+                            <button onClick={(e) => setTab(Number(e.target.value))} value={index} className={` ${index == tab ? 'bg-blue-500 text-white' : 'bg-blue-100 text-black'} text-center flex items-center justify-center mx-4 py-2 sm:py-4 shadow-md rounded md:min-w-[150px] text-sm sm:text-base`} key={index}  >
                                 {item.category}
                             </button>
                         )
@@ -62,7 +62,7 @@ const CategoryFaq2 = () => {
 
                         console.log(item, index)
                         return index === tab ? (
-                            item.faq.map((q, i) => <FaqListItem key={i} question={q} />)
+                            item.faq.map((q, i) => <FaqListItem key={i} question={q} isLast={i === item.faq.length - 1 ? true : false} />)
                         ) : ""
                     })
                 }

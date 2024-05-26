@@ -7,11 +7,12 @@ import PropertyCard from './PropertyCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import './projectswiper.css'
 const SimilarProject = () => {
 
     return (
         <div>
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold pt-2 pb-5 ">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pb-5 ">
                 Similar Project
             </h2>
            
@@ -19,7 +20,8 @@ const SimilarProject = () => {
                 spaceBetween={46}
                 slidesPerView={1}
                 modules={[Pagination]}
-                pagination={{ clickable: true }}
+                pagination={{ clickable: true, horizontalClass: 'similarDotsClass' }}
+
                 breakpoints={{
                     300: {
                         slidesPerView: 1,
@@ -46,7 +48,7 @@ const SimilarProject = () => {
                 }}
             >
                 {similarProject.map((property) => (
-                    <SwiperSlide className="pb-12" key={property.id}>
+                    <SwiperSlide className="md:pb-12" key={property.id}>
                         <PropertyCard
                             title={property.title}
                             description={property.description}

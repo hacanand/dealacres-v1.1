@@ -35,3 +35,14 @@
         scale: 1;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .slick-list {
+        margin-right: 1rem;
+    }
+    
+    .slick-dots li, .slick-dots li button,.slick-dots li button:before, .slick-dots li.active {
+        width: 5px !important;
+        height: 5px !important;
+    }
+}

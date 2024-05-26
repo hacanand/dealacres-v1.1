@@ -1,12 +1,20 @@
 'use client'
-import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
+import NavigationCOwner from '@/components/propertyListing/Navigation/NavigationCOwner';
 import Image from 'next/image';
 
 import Link from 'next/link';
 import RoundedDiv from '@/components/propertyListing/RoundedDiv';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
+import BannerLayout from '@/components/propertyListing/BannerLayout';
+import HelpDetails from '@/components/propertyListing/HelpDetails';
+import Button from '@/components/propertyListing/Button/Button';
+import PageWrapper from '@/components/propertyListing/PageWrapper';
+import OuterWrapper from '@/components/propertyListing/OuterWrapper';
+import InnerWrapper from '@/components/propertyListing/InnerWrapper';
+import LocationInput from '../../agent/location-details/LocationInput';
+import { useDeviceType } from '@/hooks/useDeviceType';
 
 const Page = () => {
 
@@ -22,12 +30,19 @@ const Page = () => {
     const [propertyDescription, setPropertyDescription] = useState('');
     const [carpetArea, setCarpetArea] = useState('');
     const [entranceWidth, setEntranceWidth] = useState('');
+
+    const [carpetUnit, setCarpetUnit] = useState('sqft')
+    const [widthUnit, setWidthUnit] = useState('sqft')
     const [isContinueDisabled, setIsContinueDisabled] = useState(true);
 
     const months = [
         'January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'
     ];
+
+    const otherRooms = [
+        "Pooja Room", "Study Room", "Store Room", "Servant Room"
+    ]
 
     const years = Array.from({ length: 10 }, (_, index) => currentYear + index);
 
@@ -50,91 +65,137 @@ const Page = () => {
         setIsUnderConstructionClicked(!isUnderConstructionClicked);
     };
     const checkContinueButtonState = () => {
-
+        console.log(propertyDescription, carpetArea, entranceWidth);
         setIsContinueDisabled(
             !propertyDescription ||
             !carpetArea ||
-            !entranceWidth 
-    
+            !entranceWidth
+
         );
     };
-    const handleInputChange = (setter, value) => {
-        setter(value);
+    const handleInputChange = (e) => {
+        const {name, value} = e.target;
+        switch (name) {
+            case "propertyDescription":
+                console.log("description..")
+                setPropertyDescription(value);
+                break;
+            case "carpetArea":
+                setCarpetArea(value);
+                break;
+            case "entranceWidth":
+                setEntranceWidth(value);
+                break;
+            default:
+                break;
+        }
+
         checkContinueButtonState();
     };
 
+    
+    const [deviceType, setDeviceType] = useState("desktop")
+    const { deviceType: devType } = useDeviceType();
+
+    useEffect(() => {
+        setDeviceType(devType)
+    }, [devType])
+
 
     return (
-        <section className='mt-12 container mx-auto lg:w-4/5'>
-            <NavigationBroker />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+        <PageWrapper>
+            <div className='hidden md:block'>
+            <NavigationCOwner />
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
+            </div>
+            <OuterWrapper>
+
+                <InnerWrapper>
+                <h1 className="font-bold md:text-2xl text-lg xs:text-xl  mt-2">
                         Now, tell us about your property
                     </h1>
-                    <p className='font-medium md:text-lg text-md ' >Describe Your Property</p>
-                    <p className='w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
+                    <p className='font-medium md:text-lg text-base  ' >Describe Your Property</p>
+                    <p className='md:w-[85%] mt-2 md:text-lg text-base '>Write Several Thing which can describe your propety appropriately </p>
 
                     <textarea
                         id="myTextArea"
-                        name="myTextArea"
+          
                         rows={10}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
+                        className='mt-3 sm:mt-4 md:my-6 border-t-4 border-r-2 border-l-2 border-[#c7deee] border-b-4 rounded-md w-full max-md:max-h-[150px]'
                         value={propertyDescription}
-                        onChange={(e) => handleInputChange(setPropertyDescription, e.target.value)}
+                        name="propertyDescription"
+                        onChange={handleInputChange}
                     />
+
+<h1 className="font-medium md:font-bold text-lg xs:text-xl mt-3 sm:mt-4">
+                        Property Title
+                    </h1>
+                    <LocationInput
+                        key={"title"}
+                        inputName={"title"}
+                        onInputChange={handleInputChange}
+                    />
+
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Floor Number
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+
+                    <div className='flex flex-row  gap-1 sm:gap-2 mt-2 mb-1 overflow-x-auto'>
+                        <Button heading={"Lower Basement"} size={"extrasmall"} />
+                        <Button heading={"Upper Basement"} size={"extrasmall"} />
+                        <Button heading={"Ground"} size={"extrasmall"} />
+                        
+
+
+
+                    </div>
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Number of Floors
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
 
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                 
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Furnished
                     </h1>
-                    <div className='w-[70%] flex flex-wrap gap-2 my-2'>
-                        <div className='h-full custom-border py-1 px-3 rounded-xl'>
-                            Fully Furnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Unfurnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Semifurnished
-                        </div>
+                    <div className='w-full flex flex-row gap-2 mt-2 overflow-x-auto'>
+                        <Button heading={"Fully Furnished"} variant={"secondary"} size={"small"} />
+                        <Button heading={"Unfurnished"} variant={"secondary"} size={"small"} />
+
+
                     </div>
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} height={deviceType === "phone" ? 25 : deviceType === "smallphone" ? 20 : 35} size={8} />
 
                     <PropertyRadioButton />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                   
+
+                    
+                    <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
                         Area
                     </h1>
-
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Carpet Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[16%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
+                        <p className='absolute text-[8px] leading-3 font-extralight top-[1.55rem]  right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
                         <div className="flex items-center space-x-2 mb-2 ">
-                            <input
-                                type="text"
-                                className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
-                                value={carpetArea}
-                                onChange={(e) => handleInputChange(setCarpetArea, e.target.value)}
+                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
+                            name={"carpetArea"}
+                            onChange={handleInputChange}
                             />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white"
+                            value={carpetUnit}
+                            onChange={(e) => setCarpetUnit(e.target.value)}
+                            >
+                                <option value="sqft">Sqft</option>
+                                <option value="sqyrd">Sq-yrd</option>
+                                <option value="sqm">Sq-m</option>
+                                <option value="acre">Acre</option>
+                                <option value="hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
@@ -142,26 +203,28 @@ const Page = () => {
                         <h1 className='text-sm font-bold my-3'>Width of Entrance</h1>
 
                         <div className="flex items-center space-x-2 mb-2">
-                            <input
-                                type="text"
-                                className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
-                                value={entranceWidth}
-                                onChange={(e) => handleInputChange(setEntranceWidth, e.target.value)}
-                            />
+                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]"
+                            name='entranceWidth'
+                            onChange={handleInputChange}
+                             />
 
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                            <select className="custom-border-2 rounded-xl px-2 py-1 bg-white"
+                            value={widthUnit}
+                            onChange={(e) => setWidthUnit(e.target.value)}
+                            >
+                            <option value="sqft">Sqft</option>
+                                <option value="sqyrd">Sq-yrd</option>
+                                <option value="sqm">Sq-m</option>
+                                <option value="acre">Acre</option>
+                                <option value="hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
+                    
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
+                    <div className='w-full md:w-[80%] flex flex-row gap-2 my-2 whitespace-nowrap text-sm sm:text-base'>
                         <button className='h-full custom-border-2 py-1 px-2 rounded-xl hover:custom-border-2 hover:border-blue-600' onClick={() => handleReadyToMoveClick(false)}>
                             Ready To Move
                         </button>
@@ -171,42 +234,35 @@ const Page = () => {
                     </div>
                     {isReadyToMoveClicked && (
                         <>
-                            <p className="font-medium text-gray-500  text-md mt-3">
-                                Age of Property
-                            </p>
-                            <div className=' mt-2'>
-                                {[0, 1, 2].map((index) => (
-                                    <button key={index} className='custom-border h-full px-2 rounded-lg mr-2 mb-2'>
-                                        {index === 0 ? 'New Construction' : `${(index - 1) * 5}-${index * 5} years`}
-                                    </button>
-                                ))}
+                            <h1 className="font-medium md:font-bold text-lg xs:text-xl mt-1 sm:mt-2">
+                        Age of Property
+                    </h1>
+                    <div className='flex flex-row  gap-2 mt-2 overflow-x-auto'>
+                        <Button heading={"0-1 years"} size={"extrasmall"} />
+                        <Button heading={"1-5 years"} size={"extrasmall"} />
+                        <Button heading={"5-10 years"} size={"extrasmall"} />
+                        <Button heading={"10+ years"} size={"extrasmall"} />
 
-                                {isExpanded && [3, 4].map((index) => (
-                                    <button key={index} className='custom-border h-full px-2 rounded-lg mr-2'>
-                                        {`${(index - 1) * 5}-${index * 5} years`}
-                                    </button>
-                                ))}
-                                <button className=' h-full rounded-lg' onClick={toggleVisibility}>
-                                    {isExpanded ? '▲' : '▼'}
-                                </button>
-                            </div>
+
+
+                    </div>
                         </>
                     )}
                     {isUnderConstructionClicked && (
                         <>
                             <p className='font-medium text-gray-500  text-md mt-3'>Available Form</p>
                             <div className='mt-2 flex flex-row gap-5 '>
-                                <div className='flex flex-row gap-4 border-b-2'>
+                                <div className='flex flex-row gap-4 border-b-2 items-center'>
                                     <label htmlFor="month">Month:</label>
-                                    <select id="month" value={selectedMonth} onChange={handleMonthChange}>
+                                    <select className='bg-white py-1 md:py-2' id="month" value={selectedMonth} onChange={handleMonthChange}>
                                         {months.map((month, index) => (
                                             <option key={index} value={index + 1}>{month}</option>
                                         ))}
                                     </select>
                                 </div>
-                                <div className='flex flex-row gap-4 border-b-2'>
+                                <div className='flex flex-row gap-4 border-b-2 items-center'>
                                     <label htmlFor="year">Year:</label>
-                                    <select id="year" value={selectedYear} onChange={handleYearChange}>
+                                    <select className='bg-white py-1 md:py-2' id="year" value={selectedYear} onChange={handleYearChange}>
                                         {years.map((year) => (
                                             <option key={year} value={year}>{year}</option>
                                         ))}
@@ -223,30 +279,20 @@ const Page = () => {
                     <input type="text" className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2" placeholder="Price per Sq.Yd" />
 
                     <Link href={'photos'}>
-                    <button
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
-                    disabled={isContinueDisabled}
-                >
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                            disabled={isContinueDisabled}
+                        >
                             Continue
                         </button>
                     </Link>
-                </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#cee8f8] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center px-4 mt-20">
-                            Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />
-                        <h1 className='font-bold text-xl'>Need Help?</h1>
-                        <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
-                    </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </InnerWrapper>
+
+                <BannerLayout startWithPic showContact bannerText={' Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.'} imgSrc={'/propertyListing/assets/shop.webp'} showSmiley/>
+
+                <HelpDetails showOnMobile />
+            </OuterWrapper>
+        </PageWrapper>
     );
 };
 

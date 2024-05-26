@@ -17,6 +17,9 @@ const Header = () => {
                       }
 
   const handleCTAClick = () => {
+
+    if(typeof window === 'undefined') return;
+    
     const targetPosition = window.innerHeight - 60; 
     const scrollDuration = 1500; 
     const startTime = performance.now();

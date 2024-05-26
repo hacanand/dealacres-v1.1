@@ -8,7 +8,7 @@ const Faqcard = (props) => {
             <FaMagnifyingGlass size={15} color='rgb(132,143,161)'/>
         </div>
         <div>
-            <h5>{props.cardData.Q}</h5>
+            <h4>{props.cardData.Q}</h4>
             <h6>{props.cardData.A}</h6>
         </div>
     </div>

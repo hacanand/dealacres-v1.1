@@ -36,8 +36,23 @@
         height: 100px;
     }
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 640px){
+    .hotspotsContainer{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: start;
+        gap: 12px;
+        padding: 8px 0;
+
+    }
+
     .hotspotsItemContainer{
-        width: unset;
+        min-width: 120px;
+
+    }
+
+    .hotspotsItemContainer h6{
+        font-size: 12px;
+        white-space: nowrap;
     }
 }

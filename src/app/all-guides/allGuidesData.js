@@ -1,11 +1,11 @@
 export const allGuidesData = [
   {
-    "title": "Buyer's Guide",
+    "title": "Buyer's Manual",
     "img": "buyers-guide.png",
     "bgColor": "#FADDC6",
     "borderColor": "#F6C094",
     "textColor": "#F6A05A",
-    "content": "Are you looking to buy your first home? Our Buyer's Guide will help you make informed decisions. Whether you prefer a luxurious apartment or a cozy villa, this guide covers it all. Explore financing options, understand the home buying process, and gain valuable insights into property inspections and negotiations.",
+    "content": "Are you looking to buy your first home? Our Buyer's Manual will help you make informed decisions. Whether you prefer a luxurious apartment or a cozy villa, this guide covers it all. Explore financing options, understand the home buying process, and gain valuable insights into property inspections and negotiations.",
     "checklist": [
         "What to Buy?",
         "When to Buy?",
@@ -26,12 +26,12 @@ export const allGuidesData = [
     ]
   },
   {
-    "title": "Seller's Guide",
+    "title": "Seller's Manual",
     "img": "sellers-guide.png",
     "bgColor": "#FFF5D8",
     "borderColor": "#FFEBB0",
     "textColor": "#FDBD00",
-    "content": "Ready to sell your property? Our Seller's Guide provides valuable insights and tips to maximize your property's value. Get started with confidence. Learn about pricing strategies, home staging, and marketing techniques to attract potential buyers. Navigate the selling process with ease.",
+    "content": "Ready to sell your property? Our Seller's Manual provides valuable insights and tips to maximize your property's value. Get started with confidence. Learn about pricing strategies, home staging, and marketing techniques to attract potential buyers. Navigate the selling process with ease.",
     "checklist": [
         "Preparing Your Property",
         "Setting the Right Price",
@@ -43,12 +43,12 @@ export const allGuidesData = [
     ]
   },
   {
-    "title": "Rental Guide",
+    "title": "Rental Manual",
     "img": "rental-guide.png",
     "bgColor": "#F1F8D7",
     "borderColor": "#D3E1A0",
     "textColor": "#95BD00",
-    "content": "Looking for a rental property? Our Rental Guide simplifies the process, helping you find the perfect place. Explore your options with ease. Learn about rental agreements, tenant rights, and tips for a smooth move-in process. Make informed decisions when renting your next home.",
+    "content": "Looking for a rental property? Our Rental Manual simplifies the process, helping you find the perfect place. Explore your options with ease. Learn about rental agreements, tenant rights, and tips for a smooth move-in process. Make informed decisions when renting your next home.",
     "checklist": [
         "Rental Agreements",
         "Tenant Rights",
@@ -65,7 +65,7 @@ export const allGuidesData = [
     "bgColor": "#F6E6FA",
     "borderColor": "#CB6CE6",
     "textColor": "#CB6CE6",
-    "content": "Transform your home's interior with our Home Interior Guide. Discover trendy decor ideas and create a space you'll love. Explore the latest interior design trends, color schemes, and furniture selection tips. Turn your house into a stylish and comfortable haven.",
+    "content": "Transform your home's interior with our Home Interior Manual. Discover trendy decor ideas and create a space you'll love. Explore the latest interior design trends, color schemes, and furniture selection tips. Turn your house into a stylish and comfortable haven.",
     "checklist": [
         "Choosing a Style",
         "Color Palette",
@@ -83,7 +83,7 @@ export const allGuidesData = [
     "img": "home-vastu-guide.png",
     "bgColor": "#E4FAFA",
     "borderColor": "#38B6FF",
-    "content": "Enhance the harmony of your home with Vastu principles. Our Home Vastu Guide offers insights for a balanced and positive living environment. Learn about the significance of directions, Vastu dos and don'ts, and practical tips for a Vastu-compliant home.",
+    "content": "Enhance the harmony of your home with Vastu principles. Our Home Vastu Manual offers insights for a balanced and positive living environment. Learn about the significance of directions, Vastu dos and don'ts, and practical tips for a Vastu-compliant home.",
     "checklist": [
         "Directions and Elements",
         "Vastu Dos and Don'ts",
@@ -176,7 +176,7 @@ export const allGuidesData = [
     "textColor": "#255B8A",
     "bgColor": "#EAF1F6",
     "borderColor": "#4A7496",
-    "content": "Moving? Our Movers & Packers Guide streamlines the process. From choosing the right movers to packing efficiently, we've got you covered. Learn about packing tips, moving checklists, and how to ensure a hassle-free relocation. Make your move stress-free and organized.",
+    "content": "Moving? Our Movers & Packers Manual streamlines the process. From choosing the right movers to packing efficiently, we've got you covered. Learn about packing tips, moving checklists, and how to ensure a hassle-free relocation. Make your move stress-free and organized.",
     "checklist": [
         "Choosing Movers",
         "Packing Tips",

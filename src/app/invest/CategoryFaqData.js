@@ -1,6 +1,6 @@
 export const faqData = [
     {
-      category: " Free Listing:",
+      category: " Free Listing",
       faq: [
         "What is a free real estate listing, and how does it work?",
         "Are there any hidden fees or charges associated with free property listings?",
@@ -25,7 +25,7 @@ export const faqData = [
       ]
     },
     {
-      category: "Home Insurance:",
+      category: "Home Insurance",
       faq: [
         "What does home insurance typically cover?",
         "How do I determine the right amount of coverage for my home insurance policy?",
@@ -40,7 +40,7 @@ export const faqData = [
       ]
     },
     {
-      category: "Home Loans:",
+      category: "Home Loans",
       faq: [
         "What types of home loans are available, and how do they differ?",
         "How do I qualify for a home loan, and what documents do I need to provide?",
@@ -55,7 +55,7 @@ export const faqData = [
       ]
     },
     {
-      category: "Virtual Tours:",
+      category: "Virtual Tours",
       faq: [
         "How can I create a virtual tour of my property for potential buyers or renters?",
         "What equipment or software is needed to make a high-quality virtual tour?",
@@ -70,7 +70,7 @@ export const faqData = [
       ]
     },
     {
-      category: "Home Interior:",
+      category: "Home Interior",
       faq: [
         "What are some popular interior design trends for homes in recent years?",
         "How can I improve the interior of my home on a budget?",
@@ -85,7 +85,7 @@ export const faqData = [
       ]
     },
     {
-      category: "Vastu Shastra:",
+      category: "Vastu Shastra",
       faq: [
         "What is Vastu Shastra, and how does it relate to home design and architecture?",
         "What are the basic principles of Vastu Shastra that homeowners should be aware of?",

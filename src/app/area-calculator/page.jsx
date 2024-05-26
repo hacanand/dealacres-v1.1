@@ -5,18 +5,20 @@ import Image from "next/image";
 import Select from "react-select";
 
 import { FaExchangeAlt } from "react-icons/fa";
-
-import headerImage from "../../../public/areaCalculator/header.png";
+import calculatorImg from "../../../public/areaCalculator/bg.png";
 import girlQuestion from "../../../public/areaCalculator/girl_with_question.webp";
 
 import BlogCard from "@/components/areaCalculator/BlogCard";
 import FAQ from "@/components/areaCalculator/FAQ";
+import styles from './page.module.css'
 
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import ReadMore from "@/components/propertyListing/ReadMore/ReadMore";
+import { useDeviceType } from "@/hooks/useDeviceType";
 
 const indianStates = [
   { value: "Andhra Pradesh", label: "Andhra Pradesh" },
@@ -192,6 +194,12 @@ const AreaCalculator = () => {
   const [isLastInputDisabled, setIsLastInputDisabled] = useState(true);
   const [inputError, setInputError] = useState("");
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [dType, setDType] = useState('desktop')
+  const {deviceType } = useDeviceType()
+  useEffect(() => {
+    setDType(deviceType);
+  }, [])
+  console.log(dType)
 
   useEffect(() => {
     if (selectedState && totalUnits && fromValue && toValue) {
@@ -221,22 +229,85 @@ const AreaCalculator = () => {
     }
   };
 
+  const styles = {
+    control: (baseStyles, state) => ({
+      ...baseStyles,
+      minHeight: `${dType === 'smallphone' || dType === 'phone' ? 'unset' : '38px'}`,
+      alingItems: "start"
+    }),
+    valueContainer: (baseStyles, state) => ({
+      ...baseStyles,
+      paddingTop: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
+      paddingBottom: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
+      height: `${dType === 'smallphone' || dType === 'phone' ? '20px' : '100%'}`,
+
+    }),
+    dropdownIndicator: (baseStyles, state) => ({
+      ...baseStyles,
+      paddingTop: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
+      paddingBottom: `${dType === 'smallphone' || dType === 'phone' ? '0px' : '2px'}`,
+      alignSelf: `${dType === 'smallphone' || dType === 'phone' ? 'start' : 'centre'}`
+    }),
+    IndicatorContainer: (baseStyles, state) => ({
+      ...baseStyles,
+      alignSelf: 'start',
+    }),
+    singleValue: (baseStyles, state) => ({
+      ...baseStyles,
+      height: `${dType === 'smallphone' || dType === 'phone' ? '20px' : '100%'}`,
+      display: 'flex',
+      alignItems: "center",
+      position: "absolute",
+      top: "0px"
+    }),
+    placeholder: (baseStyles, state) => ({
+      ...baseStyles,
+      height: `${dType === 'smallphone' || dType === 'phone' ? '20px' : '100%'}`,
+      alignSelf: 'start',
+      display: "flex",
+      alignItems: "center",
+      color: "#a4aab5"
+    })
+  }
+
   return (
     <div>
-      <div className="relative p-5 mb-10 max-lg:hidden">
+      <div className={`relative md:p-5 rounded-xl mb-[130px]  min-h-[225px] md:mb-[70px] `}>
         <Image
-          src={headerImage}
-          className="h-full w-full"
+          src={calculatorImg}
+          className=" relative  w-full z-[9] h-[180px]  md:h-[300px] xl:h-[450px] "
           alt="area calculator"
+          width={800} height={800}
         />
 
-        <div className="p-4 absolute top-[8rem] left-20 w-1/3 bg-white border-4 rounded-lg border-blue-400 h-auto max-xl:top-[5rem] max-lg:top-1">
-          <h2 className="text-2xl font-bold">Area Converter</h2>
-          <div className="space-y-4 mt-5">
+        <div className="p-4  absolute 
+        top-[70%]
+        md:top-[20%] 
+        xl:top-[40%]
+        left-[10%] 
+      bg-white border-4 rounded-lg border-blue-400 
+        max-md:w-[80%] 
+        mx-auto 
+        max-md:left-[10%] 
+        max-md:border-none 
+        max-md:rounded-[2rem] 
+        max-md:shadow-[0px_0px_5px_rgba(13,99,141,0.5)] z-10">
+          <h2 className="text-base md:text-2xl font-bold">Area Converter</h2>
+          <div className="space-y-2 md:space-y-4 mt-2  md:mt-5">
             <Select
               options={indianStates}
               placeholder="State"
               onChange={(value) => setSelectedState(value.value)}
+              className="react-select-container"
+              classNamePrefix="react-select"
+              classNames={{
+                control: () => `
+                 border-2  text-xs md:text-lg `,
+                input: () => 'text-sm md:text-lg',
+                option: () => 'text-xs md:text-sm p-0'
+              }}
+
+              styles={styles}
             />
 
             <input
@@ -246,7 +317,7 @@ const AreaCalculator = () => {
               min="0"
               value={totalUnits}
               onChange={(e) => setTotalUnits(e.target.value)}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full pt-[2px] md:pt-2 pb-[2px] md:pb-2 border-2 md:border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-xs md:text-lg placeholder:text-xs text-gray-500"
             />
 
             {inputError && <p className="text-red-600">{inputError}</p>}
@@ -257,28 +328,42 @@ const AreaCalculator = () => {
                 options={options}
                 className="w-full focus:outline-blue-600 rounded-md text-gray-500"
                 onChange={(value) => setFromValue(value.value)}
+                classNames={{
+                  control: () => `
+                   border-2  text-xs md:text-lg`,
+                  input: () => 'text-sm md:text-lg',
+                  option: () => 'text-xs md:text-sm p-0'
+                }}
+                styles={styles}
               />
-              <FaExchangeAlt className="h-10 w-10" />
+              <FaExchangeAlt size={20} />
               <Select
                 placeholder="To"
                 options={options}
                 className="w-full focus:outline-blue-600 rounded-md text-gray-500"
                 onChange={(value) => setToValue(value.value)}
+                classNames={{
+                  control: () => `
+                   border-2  text-xs md:text-lg`,
+                  input: () => 'text-sm md:text-lg',
+                  option: () => 'text-xs md:text-sm p-0',
+                }}
+                styles={styles}
               />
             </div>
 
             <input
               disabled={isLastInputDisabled}
               value={result}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full pt-[2px] md:pt-2 pb-[2px] md:pb-2 border-2 md:border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500 text-xs md:text-lg placeholder:text-xs"
             />
           </div>
         </div>
       </div>
 
-      <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
-        <div className="p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
-          <h2 className="text-2xl font-bold">Area Converter</h2>
+      {/* <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
+        <div className="p-2 sm:p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
+          <h2 className="text-xl md:text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">
             <Select
               options={indianStates}
@@ -319,38 +404,38 @@ const AreaCalculator = () => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="px-[5rem] mb-3 max-sm:px-[2rem]">
+      <div className="px-[5rem] mb-3 max-md:px-[1rem]">
         <p className="text-lg font-semibold">Popular Area Conversions</p>
-        <div className="flex flex-wrap gap-4 mt-3">
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+        <div className="flex flex-wrap gap-2 md:gap-4 mt-3">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Hectare to Acre
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Acre to Hectare
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Square Feet to Cent
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Square Feet to Square Meter
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Square Feet to Square Yard
           </div>
-          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block">
+          <div className="bg-blue-200 text-black py-1 px-2 rounded-md inline-block text-xs  md:text-base">
             Square Feet to Gaj
           </div>
         </div>
       </div>
 
-      <div className="px-[5rem] mb-3 mt-10 max-sm:px-[2rem]">
-        <h2 className="text-3xl font-bold max-sm:text-xl;">
+      <div className="px-[5rem] mb-3 mt-4 md:mt-10 max-md:px-[1rem]">
+        <h2 className="text-2xl sm:text-3xl font-bold max-md:text-xl;">
           All About Land Measurment
         </h2>
 
-        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm max-sm:mt-5">
+        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-md:text-sm max-md:mt-5">
           <div className="space-y-3">
             <p>
               Land measurement in India has always been done using various local
@@ -374,7 +459,7 @@ const AreaCalculator = () => {
           <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473790/engineer_camera_ijgzj5.jpg')]"></div>
         </div>
 
-        <div className="max-md:flex max-md:flex-col grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm">
+        <div className="max-md:flex max-md:flex-col grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-md:text-base">
           <div className="max-md:h-[15rem] bg-center bg-no-repeat bg-cover bg-[url('https://res.cloudinary.com/dmkpqiqea/image/upload/v1696473980/man_on_land_ijehan.jpg')]"></div>
           <div>
             <h2 className="font-semibold">
@@ -398,7 +483,7 @@ const AreaCalculator = () => {
           </div>
         </div>
 
-        <div className="max-md:flex max-md:flex-col-reverse grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm">
+        <div className="max-md:flex max-md:flex-col-reverse grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-md:text-base">
           <div>
             <h2 className="font-semibold">
               Land area measurement units used in East India
@@ -424,10 +509,10 @@ const AreaCalculator = () => {
         </div>
       </div>
 
-      <div className="bg-[#EDE4FF] mt-10 mb-3 px-[5rem] py-[3rem] max-sm:px-[1rem] max-sm:py-[2rem]">
+      <div className="bg-[#EDE4FF] mt-10 mb-3 px-[5rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]">
   <div className="grid grid-cols-2 items-center max-lg:grid-cols-1">
     <div>
-      <h2 className="text-3xl font-bold max-sm:text-xl">
+      <h2 className="text-3xl font-bold max-md:text-xl">
         Frequently Asked Question
       </h2>
 
@@ -448,16 +533,16 @@ const AreaCalculator = () => {
     <div className="flex flex-col items-end justify-end max-lg:hidden">
       <p className="text-2xl font-bold text-[#40128B]">Any inquiry ?</p>
       <p className="text-2xl text-[#40128B]">we are here to help you</p>
-      <Image src={girlQuestion} alt="girl question" className="mt-5 w-80 h-180 max-sm:w-16 max-sm:h-16" />
+      <Image src={girlQuestion} alt="girl question" className="mt-5 w-80 h-180 max-md:w-16 max-md:h-16" />
     </div>
   </div>
 </div>
 
 
-      <div className="mt-10 px-[5rem] mb-10 max-sm:px-[1rem]">
+      {/* <div className="mt-10 px-[5rem] mb-10 max-md:px-[1rem]">
         <div className="flex flex-row items-center justify-between">
-          <p className="text-2xl font-bold max-sm:text-sm">Interesting Reads</p>
-          <p className="text-lg font-bold text-blue-500 max-sm:text-xs">
+          <p className="text-2xl font-bold max-md:text-base">Interesting Reads</p>
+          <p className="text-lg font-bold text-blue-500 max-md:text-xs">
             Read news, guides and article
           </p>
         </div>
@@ -500,7 +585,11 @@ const AreaCalculator = () => {
             </div>
           </Swiper>
         </div>
-      </div>
+      </div> */}
+
+     <div className="px-[1rem] sm:px-[2rem] pb-4">
+     <ReadMore isFullScreen={true} subheader={"Read realty news guides and articles"}/>
+     </div>
     </div>
   );
 };

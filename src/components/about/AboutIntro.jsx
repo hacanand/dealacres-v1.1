@@ -9,8 +9,8 @@ const AboutIntro = () => {
   return (
     <div className={`flex flex-col lg:flex-row gap-4 lg:gap-16 justify-between lg:items-center `}>
       <div>
-        <p className='font-medium text-lg sm:text-xl text-justify'>
-        <span className='text-2xl sm:text-4xl font-bold whitespace-pre'>
+        <p className='font-medium text-base sm:text-lg md:text-xl text-justify'>
+        <span className='text-xl sm:text-2xl md:text-4xl font-bold whitespace-pre'>
             Deal Acres{"  "}
         </span>
          was established with a vision to help people find the right investment opportunity in the Gurugram and Delhi NCR region. By combining deep market knowledge and the foresight that comes from experience, our integrated team of Consultants and property Experts assists you in making the best decisions possible. 
@@ -19,7 +19,7 @@ const AboutIntro = () => {
 
         <div className='w-3/4 h-0.5 bg-black my-4 '></div>
 
-        <p className='text-sm sm:text-lg'>
+        <p className='text-xs sm:text-sm md:text-lg'>
         Deal Acres is India’s most innovative real estate advertising platform for homeowners, landlords, developers, and real estate brokers. Each member of the team is dedicated to providing Residential property services to our clients that are tailored to their individual needs and goals, resulting in a unique experience for each of them.
 
         </p>

@@ -18,7 +18,7 @@ const MeetCalendar = ({
 
    
     return (
-        <div className='py-2 border-r border-r-gray-300 flex items-center justify-center w-full  '>
+        <div className='py-2 border-r border-r-gray-300 flex items-center justify-center w-full max-sm:max-w-[300px] max-sm:mx-auto  '>
 
             <div className='self-start'>
             <Calendar value={date} onChange={handleDateChange} />

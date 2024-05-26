@@ -30,52 +30,61 @@ const Cities = (props) => {
     dots: true,
     infinite: true,
     speed: 200,
-    centerPadding: "60px",
+  
     slidesToShow: 3,
-    className: "center",
+    className: 'mx-8',
     slidesToScroll: 3,
     arrows:true,
     autoplay:true,
     rows: 2,
+    
+  
     // arrows: false,
 
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           infinite: true,
           dots: true,
-          arrows:false
+          arrows:false,
+          autoplay: false,
+          className: 'mx-8'
         }
       },
       {
-        breakpoint: 640,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          rows:1,
-          arrows:false
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          arrows:false,
+          autoplay: false
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 420,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
-          arrows:false
+          infinite: false,
+          dots: true,
+          arrows:false,
+          autoplay: false
         }
-      }
+      },
     ],
   };
 
   return (
-    <div className="bg-white rounded-2xl ml-6 mr-6 sm:mr-0 sm:ml-0  mb-5 justify-center ">
+    <div className="bg-white rounded-2xl lg:ml-6 lg:mr-6   lg:mb-5 justify-center ">
         {props.title && <div className="my-4 py-4 mt"><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>}
       <Slider {...settings} className="" >
         {citiesData.map((city, index) => (
-          <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>
+          <Link href='#' key={index} className="lg:mb-4 lg:mx-8 max-w-full max-h-full "><Card  title={city.title} content={city.content} /></Link>
         ))}
       </Slider>
     </div>

@@ -15,6 +15,7 @@ const BrandBanner = ({
   let hostname = ''
 
   useEffect(() => {
+    if(typeof window === 'undefined') return;
     if(window){
       hostname = window.location.hostname;
     }

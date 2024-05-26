@@ -8,25 +8,25 @@ import Image from 'next/image';
 
 
 
-const  BlogPost = ({
-  postData
+const BlogPost = ({
+  postData, topicsData
 }) => {
 
-  const { heading, postIntro, publishedOn, img, sections,  } = postData;
+  const { heading, postIntro, publishedOn, img, sections, } = postData;
 
 
 
 
   return (
 
-    <div className='px-4 py-2 flex flex-col font-light  '>
+    <div className='px-2 xs:px-4 flex flex-col font-light  '>
       <PostHeader heading={heading} align='left' size='large' />
-
+      
       <PublishedOn date={publishedOn} align='left' />
 
-      <div className="text-justify text-md" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
+      <div className="text-justify text-sm md:text-base" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
 
-      <div className='py-4'>
+      <div className='py-2 md:py-4'>
         <Image src={`/blog/${img}`} alt='post cover' width={200} height={100} className='w-full max-w-full' />
       </div>
 

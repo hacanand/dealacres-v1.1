@@ -1,6 +1,7 @@
 'use client'
 import styles from './leavereview.module.css'
-import {TextField} from '@mui/material'
+import {Rating, TextField} from '@mui/material'
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 
 const LeaveReview = () => {
@@ -11,6 +12,7 @@ const LeaveReview = () => {
         console.log(data);
         alert('Details registered, we will get to you soon!!!')
     }
+
 
     return (
       <div className={styles.leaveReviewContainer}>
@@ -28,7 +30,8 @@ const LeaveReview = () => {
                 {...register('Email',{required:'Email is required',pattern:{value:/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,message:'Enter a valid email'}})}
               />
             </div>
-            <div className={styles.leaveReviewFieldContainer}>
+            <div className={`${styles.leaveReviewFieldContainer} flex gap-2`}>
+              <div>
               <label>Title</label>
               <TextField
                 fullWidth
@@ -37,8 +40,27 @@ const LeaveReview = () => {
                 helperText = {errors.Title?.message}
                 label = 'Title'
                 size='small'
+                
                 {...register('Title',{required:'Title is required'})}
               />
+              </div>
+
+              <div className='flex flex-col justify-center'>
+              <label className="h-full">Rating</label>
+              <Rating size="medium" sx={{
+                '&': {
+                  marginTop: '8px',
+                  marginBottom: '4px',
+                  height: '100%'
+                },
+                '& .MuiRating-icon': {
+                  color: '#c4c4c4'
+                },
+                '& .MuiRating-iconFilled, & .MuiRating-iconHover': {
+                  color: '#faaf00'
+                }
+              }} />
+              </div>
             </div>
             <div className={styles.leaveReviewFieldContainer}>
               <label>Review</label>

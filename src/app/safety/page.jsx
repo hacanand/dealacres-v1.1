@@ -6,6 +6,7 @@ import SafetyInro from '@/components/safety/SafetyIntro'
 import SafetySection from '@/components/safety/SafetySection'
 import ContactStrip from '@/components/safety/ContactStrip'
 import Guides from '@/components/blog/guides/Guides'
+import MobileSafetyBanner from '@/components/safety/MobileSafetyBanner'
 
 const guidesData = [
   {
@@ -57,11 +58,18 @@ const SafetyGuide = () => {
     <div className='overflow-x-hidden'>
 
 
-      
-     
+
+      <div className="md:hidden block">
+        <MobileSafetyBanner />
+      </div>
+
       <div className='max-w-screen-xl mx-auto px-4'>
-      <SafetyBanner img={bannerBg} heading="Safety Guide" />
-        <div className='py-8'>
+        <div className="hidden md:block">
+          <SafetyBanner img={bannerBg} heading="Safety Guide" />
+        </div>
+
+
+        <div className='py-4 md:py-8'>
 
           <SafetyInro title={safetyData.intro.title} content={safetyData.intro.content} />
         </div>
@@ -81,13 +89,25 @@ const SafetyGuide = () => {
           }
         </div>
 
+      <div className='flex flex-col gap-3 md:hidden font-bold  py-2'>
+        <h3 className=' font-bold text-lg xs:text-xl sm:text-2xl md:text-3xl'>Need to Get in Touch?</h3>
+        <div className="text-sm xs:text-base sm:text-lg md:text-xl ">
+          <p>CONTACT US</p>
+          <p>7015963201, 8307757571</p>
+        </div>
+        <div className="text-sm xs:text-base sm:text-lg md:text-xl ">
+          <p>WRITE TO US AT,</p>
+          <p>contactus@dealacres.com</p>
+        </div>
+      </div>
       </div>
 
-      <div className='my-4'>
+      <div className='hidden md:block my-4'>
         <ContactStrip />
       </div>
 
-      <div className='max-w-screen-xl mx-auto py-4'>
+
+      <div className='max-w-screen-xl mx-auto py-4  hidden md:block'>
         {/* <div className='px-4 md:pl-12 '>
         <p className='font-bold text-3xl'></p>
         <p className='font-light text-xl'></p>

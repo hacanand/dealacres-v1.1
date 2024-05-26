@@ -13,7 +13,8 @@ import { AiOutlineRight } from 'react-icons/ai';
 
 const GuidesSlider = ({
     allGuides,
-    handleTabChange
+    handleTabChange,
+    isAllGuides
 }) => {
 
 
@@ -34,7 +35,20 @@ const GuidesSlider = ({
                 rows:1,
                 arrows:false,
                 dots: true,
-                variableWidth: true,
+
+                infinite: true,
+
+              }
+            },
+            {
+              breakpoint: 350,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                rows:1,
+                arrows:false,
+                dots: true,
+
                 infinite: true,
 
               }
@@ -43,16 +57,21 @@ const GuidesSlider = ({
           ],
 
     };
+
+    function handleGuideClick(index) {
+        if(handleTabChange){
+            handleTabChange(index)
+        }
+    }
     return (
-        <div className=''>
-            <Slider {...settings}>
+        <div className={`${isAllGuides && 'mb-8 px-1 py-1'}`}>
+            <Slider {...settings} className='px-1'>
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='mr-[2.3rem] ' onClick={() => handleTabChange(index)}>
+                            <div key={index} className=' w-full h-full' onClick={() => handleTabChange(index)}>
 
-
-                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />
+                                <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} variableWidth={true} isAllGuide={true}  />
                             </div>
                         )
                     })

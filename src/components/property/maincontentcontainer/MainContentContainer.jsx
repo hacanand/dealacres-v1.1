@@ -47,22 +47,22 @@ function MainContentContainer(props) {
             <h1>Specification: {props.content.title}</h1>
             <Specification specificationData = {props.content.specification}/>
           </div>
-          <div>
+          <div id="ametities">
             <h1>Amenities</h1>
             <Amenities ameData={props.content.Amenities}/>
           </div>
-          <div>
+          <div id="mortgageCalculator">
             <h1>Mortgage Calculator</h1>
             <MortgageCalculator/>
           </div>
-          <div>
+          <div id="aboutDeveloper">
             <h1> About Developer</h1>
             <Developerinfo devData = {props.content.aboutDeveloper}/>
           </div>
           <div className = {styles.mainContainerLine}></div>
-          <div>
+          <div id="localityOverview">
             <h1 className=''>Locality Overview</h1>
-            <Locality localityData = {props.content.localityOverview} desc={true}/>
+            <Locality localityData = {props.content.localityOverview} desc={true} hasLocalityIntro={true}/>
           </div>
           
       </div>

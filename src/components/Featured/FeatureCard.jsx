@@ -6,8 +6,8 @@ const FeatureCard = ({
     text
 }) => {
   return (
-    <div className="border-1 shadow-lg transition-all overflow-hidden  hover:bg-neutral-200 cursor-pointer    h-full max-h-full flex flex-col">
-            <div className="flex-grow overflow-clip max-w-full    ">
+    <div className="border-1 shadow-lg transition-all overflow-hidden  hover:bg-neutral-200 cursor-pointer    h-full max-h-full flex flex-col max-md:min-w-[250px]">
+            <div className="flex-grow md:overflow-clip max-w-full    ">
               <Image
                 src={img}
                 alt="card"

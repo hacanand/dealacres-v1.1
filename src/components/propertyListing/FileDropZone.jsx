@@ -53,21 +53,21 @@ const FileDropzone = ({ onFilesDrop, description }) => {
 
   return (
     <div>
-      <div ref={drop} className='bg-[#e6f1f8] px-16 flex flex-col items-center justify-center'>
+      <div ref={drop} className='bg-[#f1f6fd] md:bg-[#e6f1f8] px-4 sm:px-8 md:px-16 flex flex-col items-center justify-center text-center max-md:rounded-[10px]'>
         <Image src={'/propertyListing/assets/upload.png'} alt='upload' width={60} height={60} className='mt-10' />
-        <p className='font-bold'>{isOver && canDrop ? 'Drop the images here' : 'Drag & drop Image here'}</p>
+        <p className='font-bold text-sm sm:text-base'>{isOver && canDrop ? 'Drop the images here' : 'Drag & drop Image here'}</p>
         <p className='text-xs'>{description}</p>
-        <button onClick={handleUploadButtonClick} className='bg-blue-600 rounded-md px-6 py-1 font-bold text-white mt-4 mb-8'>Upload</button>
+        <button onClick={handleUploadButtonClick} className='bg-blue-600 rounded-md px-6 py-1 font-bold text-white mt-4 mb-8 text-sm xs:text-base'>Upload Media</button>
         <input id="file-input" type="file" onChange={handleFileInputChange} style={{ display: 'none' }} />
       </div>
-      <div>
+     {selectedFiles.length > 0 && <div className='py-1 xs:py-2 '>
         {selectedFiles.map((file, index) => (
           <div key={index} style={{ marginBottom: '10px' }}>
-            <img src={URL.createObjectURL(file)} alt={`Image ${index}`} style={{ maxWidth: '100%', maxHeight: '100px' }} />
+            <img src={URL.createObjectURL(file)} alt={`Image ${index}`} style={{ maxWidth: '100%', maxHeight: '100px', width: "100%" }} />
             <button onClick={() => removeFile(index)}>Remove</button>
           </div>
         ))}
-      </div>
+      </div>}
     </div>
   );
 };

@@ -14,7 +14,7 @@
 
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1124px) {
     .bottom-margin{
         margin-bottom: 190px;
     }  
@@ -40,7 +40,8 @@
 }
 @media only screen and (max-width: 500px){
     .why-choose-us{
-        margin-top: -28% !important;
+        margin-top: -40% !important;
+        width: 90%;
     }
     .bottom-margin{
         margin-bottom: 150px;

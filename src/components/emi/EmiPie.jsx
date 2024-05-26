@@ -12,11 +12,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 export function EmiPie({
-    data
+  data
 }) {
 
+  
     const [pieData, setPieData] = useState({
         labels: ['Interest Amount', 'Principle Amount'],
+        
         
         datasets: [
           {
@@ -31,6 +33,32 @@ export function EmiPie({
         ],
       }
 )
+
+const [labelSize, setLabelsSize] = useState(12);
+
+useEffect(() => {
+  if(typeof window !== 'undefined') {
+    if(window.innerWidth <= 420) {
+      setLabelsSize(10)
+    }
+  }
+}, [])
+
+const options = {
+  plugins: {
+    legend: {
+      display: true,
+      position: 'bottom',
+      // align: typeof window !== 'undefined' ? (window.innerWidth <= 480 ? 'center' : 'start') : 'center',
+      align: 'start',
+      labels: {
+        font: {
+          size: labelSize
+        }
+      }
+    }
+  },
+};
 
       useEffect(() => {
         setPieData((prev) => ({
@@ -48,6 +76,5 @@ export function EmiPie({
     console.log(data, pieData.datasets[0].data)
 
 
-
-  return <Pie data={pieData}  />;
+  return <Pie data={pieData} options={options} />;
 }

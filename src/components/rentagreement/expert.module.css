@@ -58,9 +58,16 @@
 .ExpertStatus span {
   border: 1px solid black;
   font-size: 12px;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
   border-radius: 12px;
   margin-right: 5px;
+
+  display: inline;
+  white-space: nowrap;
+  min-width: unset;
+  padding-left: 4px;
+  padding-right: 4px;
+
 }
 
 .ExpertContact button {
@@ -117,7 +124,7 @@
 }
 
 .MostSearched {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: inline-block;
   padding: 20px 10px;
   border-radius: 24px;
@@ -176,6 +183,11 @@
 
   }
 
+  .MoreExperts {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
   .ExpertStatus {
     display: flex;
     flex-wrap: nowrap;
@@ -192,11 +204,11 @@
   }
 
   .ExpertStatus span {
-    min-width: clamp(142px, 150px, 60%);
+    min-width: unset;
 
 
     margin-right: unset;
-    padding: 4px;
+    /* padding: 4px; */
   }
 
   .ExpertContact button {
@@ -237,23 +249,23 @@
     display: block;
     /* width: fit-content; */
     height: auto;
-
+    white-space: nowrap;
     /* background-color: black; */
   }
 
   .MostSearched h2  {
-    font-size: 24px;
+    font-size: 16px;
     text-align: center;
   }
   .MostSearched  {
-
+    margin-top: 0px;
     padding: 12px 6px;
   }
 
   
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 640px){
   .ExpertLayout {
     display: grid;
     grid-template-columns: repeat(8,1fr);
@@ -284,9 +296,11 @@
 
   .ExpertPosition {
     font-size: 12px;
-
   }
 
+  .ExpertTime {
+    font-size: 14px;
+  }
   .ExpertStatus {
     display: flex;
     flex-wrap: nowrap;
@@ -295,12 +309,15 @@
     flex-grow: unset;
     flex-basis: unset;
     gap: 8px;
+    align-items: center;
+    padding-bottom: 3px;
   }
 
   .ExpertStatus span {
-    min-width: 150px;
+    min-width: unset;
     margin-right: unset;
-    padding: 4px;
+    /* padding: 0px 2px; */
+    font-size: 10px;
   }
 
   .ExpertContact button {
@@ -308,7 +325,7 @@
     padding: 1px 8px;
     border-radius: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
   }
   .ExpertContact {
     margin: unset;
@@ -321,7 +338,7 @@
     background-color: #07d62e;
     color: white;
     margin-right: 0;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     padding: 2px 5px;
     border-radius: 5px;
@@ -333,6 +350,7 @@
   
   .mfeatured span {
     cursor: pointer;
+    font-size: 13px;
   }
   
   .mfeatured {
@@ -344,17 +362,47 @@
     /* background-color: black; */
   }
 
+  .ExpertInfo h3 {
+    font-size: 16px;
+    align-self: center;
+  }
+ 
+
   
 
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .ExpertContact button {
     background-color: #0061fd;
-    padding: 1px 4px;
+    padding: 1px 8px;
     border-radius: 10px;
     color: white;
+    font-size: 10px;
+  }
+
+  .ExpertInfo h3 {
+    font-size: 14px;
+  }
+  .ExpertContact{
+    padding-top: 0px;
+  }
+
+  .ExpertStatus {
+    align-items: center;
+    padding-bottom: 2px;
+  }
+  .ExpertStatus span {
+    font-size: 8px;
+    /* padding: 0px 3px; */
+  }
+
+  .ExpertTime {
+    font-size: 12px;
+  }
+
+  .mfeatured {
     font-size: 12px;
   }
 }

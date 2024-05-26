@@ -9,15 +9,15 @@ const FAQ = ({ question, answer, isOpen, toggleFaq }) => {
         onClick={toggleFaq}
       >
         {isOpen ? (
-          <BiSolidDownArrow className="w-4 text-black" />
+          <BiSolidDownArrow size={14} className="min-w-[14px] min-h-[14px] " />
         ) : (
-          <BiSolidRightArrow className="w-4 text-black" />
+          <BiSolidRightArrow  size={14} className="min-w-[14px] min-h-[14px] " />
         )}
-        <p className="text-lg font-bold max-md:text-sm">{question}</p>
+        <p className="text-base xs:text-lg font-bold max-md:text-sm">{question}</p>
       </div>
       {isOpen && (
         <div className="p-3">
-          <p className="text-gray-600">{answer}</p>
+          <p className="text-sm xs:text-base text-gray-600">{answer}</p>
         </div>
       )}
     </div>

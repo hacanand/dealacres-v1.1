@@ -23,7 +23,7 @@ const LocationByCity = () => {
     const handleScroll = throttle(() => {
       setScrollCount((prevCount) => prevCount + 1);
     }, 200);
-
+    if(typeof window === 'undefined') return;
     window.addEventListener('scroll', handleScroll);
 
     return () => {

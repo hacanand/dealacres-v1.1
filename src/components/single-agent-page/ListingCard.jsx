@@ -12,11 +12,11 @@ const ListingCard = ({
         <div className='w-[30%]'>
             <Image src={`/single-agent/${img}`} className='rounded-xl' alt={title} width={300} height={100}/>
         </div>
-        <div className='w-[70%] px-4 text-gray-500'>
-            <h3 className='font-bold text-lg text-black'>
+        <div className='w-[70%] pl-4 text-gray-500 text-[9px] xs:text-xs sm:text-sm md:text-base'>
+            <h3 className='font-bold text-xs sm:text-base md:text-lg text-black'>
                 {title}
             </h3>
-            <p>
+            <p >
                 RS {price}
             </p>
             <p>

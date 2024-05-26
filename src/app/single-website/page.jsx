@@ -8,15 +8,14 @@ import FindYourPerfectHome from '@/components/single-website/FindHome'
 import FindHome from '@/components/single-website/FindHome'
 
 import { CiLocationOn } from 'react-icons/ci'
-import { IoIosHome } from 'react-icons/io'
+
 import { RiHomeSmile2Fill } from 'react-icons/ri'
-import houseSecure from '../../../public/single-website/house-secure.png'
-import { BsDiamondFill } from 'react-icons/bs'
 import Image from 'next/image'
-import { FaLocationDot, FaLocationPin } from 'react-icons/fa6'
 import BlogsAndNews from '@/components/single-website/BlogsAndNews'
 import ProjectListings from '@/components/single-website/ProjectListings'
 import SingleContactForm from '@/components/single-website/SingleContactForm'
+import MobileFindHome from '@/components/single-website/MobileFindHome'
+import FeaturesStrip from '@/components/single-website/FeaturesStrip'
 const SingleWebsite = () => {
   return (
     <div>
@@ -24,83 +23,38 @@ const SingleWebsite = () => {
         <HeroSection />
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 pt-12 pb-16'>
+      <div className='max-w-screen-lg mx-auto px-4 max-md:py-4 md:pt-12 md:pb-16'>
         <WelcomeSection />
       </div>
 
-      <FindHome img={src1} />
-      <div className='bg-[#1A4789]'>
-        <div className="max-w-screen-lg mx-auto text-white font-bold text-xl md:text-2xl flex justify-around py-10 ">
-
-          <div className='flex flex-col gap-4  items-center'>
-            <span className="rounded-full flex justify-center items-center p-4 border-2 border-white ">
-
-              <BsDiamondFill size={40} />
-            </span>
-            <span className='text-center'>
-              Luxury House
-            </span>
-
-
-          </div>
-          
-          <div className='flex flex-col gap-4 items-center'>
-            <span className="rounded-full flex justify-center items-center p-4 text-white border-2 border-white  ">
-
-              <FaLocationDot size={40} />
-            </span>
-            <span className='text-center'>
-              Best Location
-            </span>
-
-
-          </div>
-          <div className='flex flex-col gap-4 items-center'>
-            <span className="rounded-full flex justify-center items-center p-4 border-2 border-white ">
-
-              <IoIosHome size={40} />
-            </span>
-            <span className='text-center'>
-              Good Price
-            </span>
-
-
-          </div>
-          <div className='flex flex-col gap-4 items-center'>
-            <span className="rounded-full flex justify-center items-center p-4 border-2 border-white  ">
-
-              <Image src={houseSecure} className='w-[40px] h-[40px] object-cover' alt='House Caring '/>
-            </span>
-            <span className='text-center'>
-              Luxury House
-            </span>
-
-
-          </div>
-
-        </div>
-
+      <div className='hidden md:block'>
+        <FindHome img={src1} />
+        <FeaturesStrip/>
+      </div>
+      <div className='block md:hidden'>
+      <MobileFindHome img={src1}/>
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 py-4'>
-        <div className='text-center py-16'>
-          <h2 className='font-bold text-4xl md:text-6xl p-4'>
+      <div className='max-w-screen-lg mx-auto px-4 pt-4 pb-6 bg-[#f6f6f6]'>
+        <div className='text-center py-4 md:py-16'>
+          <h2 className='font-bold text-2xl xs:text-3xl  md:text-4xl px-4 py-2'>
             Recommended Project
           </h2>
-          <p className='text-lg'>
-          On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.
+          <p className='text-sm sm:text-base md:text-lg'>
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.
           </p>
         </div>
-        <ProjectListings/>
+        <ProjectListings />
       </div>
 
       <FindHome img={src2} />
 
-      <div className='max-w-screen-lg mx-auto px-4'>
-        <BlogsAndNews/>
+      <div className='max-w-screen-lg mx-auto px-4 my-4'>
+        <h3 className='text-lg xs:text-xl md:text-2xl font-bold py-2 '>Blog & News</h3>
+        <BlogsAndNews />
       </div>
-      
-      <SingleContactForm/>
+
+      <SingleContactForm />
     </div>
   )
 }

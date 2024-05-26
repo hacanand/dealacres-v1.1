@@ -5,7 +5,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import styles from "./topbar.module.css";
 
 const buttons = [
-  <Button variant="text" size="large" key="Buy" className="border-r">
+  <Button variant="text" size="large" key="Buy" className="border-r ">
     Buy
   </Button>,
   <Button variant="text" key="Sell">
@@ -31,7 +31,7 @@ const TopBar = () => {
           <input
             id="SearchAgent"
             type="search"
-            className="px-8"
+            className="px-8 placeholder:text-xs sm:placeholder:text-sm"
             placeholder="Enter Locality, Agent Name"
           />
           <label htmlFor="SearchAgent">
@@ -39,10 +39,10 @@ const TopBar = () => {
           </label>
         </div>
 
-        <div className="join min-[768px]:px-8 rounded-xl">
-          <button className="btn join-item px-4 min-[768px]:px-8">Buy</button>
-          <button className="btn join-item px-4 min-[768px]:px-8">Sell</button>
-          <button className="btn join-item px-4 min-[768px]:px-8">Rent</button>
+        <div className=" min-[768px]:px-8  flex gap-0">
+          <button className="border border-black rounded-l-xl  px-1 xs:px-2 sm:px-4 md:px-8 text-xs xs:text-sm sm:text-base">Buy</button>
+          <button className="border-y border-y-black   px-1 xs:px-2 sm:px-4 md:px-8 text-xs xs:text-sm sm:text-base">Sell</button>
+          <button className="border border-black  rounded-r-xl px-1 xs:px-2 sm:px-4 md:px-8 text-xs xs:text-sm sm:text-base">Rent</button>
         </div>
       </div>
     </div>

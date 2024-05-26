@@ -19,7 +19,7 @@ const EstateService = () => {
   return (
     <div>
       <div className={styles.EstateService}>
-        <h2>Explore Our Real Estate Service</h2>
+        <h2 className="max-md:!text-xl max-md:xs:!text-2xl max-md:!pb-4">Explore Our Real Estate Service</h2>
         <div className={styles.Services}>
         {filteredData.map((dt, index) => (
           <ServiceLayout
