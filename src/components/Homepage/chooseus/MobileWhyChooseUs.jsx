@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 const Card = ({ imageUrl, description ,heading}) => {
   return (
-    <div className="p-3 bg-white rounded-sm overflow-hidden flex flex-row items-center gap-3 shadow-sm  w-full mb-2">
+    <div className="p-3 bg-white rounded-sm overflow-hidden flex flex-row items-center gap-3 shadow-md w-full mb-2">
       <div className="relative overflow-hidden transition-transform duration-300 transform hover:scale-110 cursor-pointer">
         <Image
           src={imageUrl}
@@ -29,9 +29,9 @@ const MobileWhyChooseUs = () => {
   
 
   return (
-    <div className="flex justify-center mt-4 mb-6">
+    <div className="flex justify-center mt-5 mb-4">
       <div className="w-full px-4">
-        <h2 className="font-semibold text-xl md:text-2xl  text-[#0e4690e5]  sm:mb-3 md:mb-5">Why Choose Deal Acres for Property Search?</h2>
+        <h2 className="font-semibold text-[1.1rem] md:text-2xl  text-[#0e4690e5]  sm:mb-3 md:mb-5">Why Choose Deal Acres for Property Search?</h2>
         <p className="subheading">
           We provide top-notch services that make us stand out from the rest.
         </p>

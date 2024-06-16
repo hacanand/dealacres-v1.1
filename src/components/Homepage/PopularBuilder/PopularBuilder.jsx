@@ -11,7 +11,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
     };
 
     return (
-        <div className="w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem]">
+        <div className="w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem] hover:shadow-2xl">
             <div className="flex flex-row items-end">
                 <img src={imageUrl} alt="Card Image" className="w-2/6 h-20 object-cover border-2 border-black" />
                 <div className="ml-3 text-sm flex flex-row items-end gap-3">
@@ -43,7 +43,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
 
 const PopularBuilder = () => {
     return (
-        <div className='py-8 sm:py-10 mx-4 sm:mx-0'>
+        <div className='py-6  mx-4 sm:mx-0'>
             <h2 className='text-center text-xl md:text-3xl font-semibold mt-2'>Popular Builders in India</h2>
             <p className='text-center text-md md:text-xl mt-2'>Best Developers in India</p>
             <div className='flex justify-center mt-8 px-2'>

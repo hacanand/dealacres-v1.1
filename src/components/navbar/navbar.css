@@ -30,13 +30,15 @@
 
 .navbar.scrolled {
     background-color: #0061DF; 
-    opacity: 90%;
     max-height: 30px;
   }
   .navbar.scrolled .navbar-links{
     @apply hover:text-blue-950;
     border-bottom: none;
     padding: 8px 0px;
+  }
+  .navbar.scrolled .arrow{
+    color: white;
   }
 .navbar-links{
     flex: 2;
@@ -97,8 +99,8 @@
 .navbar-links__container p,
 .navbar-sign p,
 .navbar-menu_container p{
-    @apply font-[Poppins] hover:text-yellow-500  text-gray-100 font-bold hover:underline underline-offset-[10px] ;
-    transition: width 0.3s ease;
+    @apply font-[Poppins] hover:text-yellow-500  text-gray-100 font-bold  ;
+
     font-size: 15px;
     text-transform: capitalize;
     margin: 0 0.5rem;
@@ -141,7 +143,7 @@
 }
 
 .close{
-    z-index: 20;
+z-index: 1;
     width: 100%;
     position: fixed;
     top: 80%;
@@ -174,7 +176,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 
@@ -270,21 +272,45 @@
 
 @media screen and (max-width:550px) {
     .navbar{
-        padding: 2rem;
+        padding:  0.5rem;
+        min-height: 2.5rem;
     } 
+    .navbar.scrolled {
+        padding:  0.5rem;
+      }
     
     .navbarPage{
-        padding:2rem;
+        padding:  0.5rem;
+    }
+    .navbar-menu_container h5{
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+    }
+    .navbar-menu_container button{
+        font-size: 12px;
+    }
+    .close{
+        z-index: 1;
+        width: 100%;
+        position: fixed;
+        top: 85%;
+        left: 0;
     }
     
     .navbar-sign{
         display: none;
     }
-
-    .navbar-menu_container{
-        top: 20px;
-    }
     .navbar-menu_container-links-sign{
         display: block;
     }
+    .custom-select-container{
+        display: none;
+    }
+    .navbar-links__logo IMG{
+    display: none;
+   }
+   .navbar-links__logo{
+    margin-left: 2%;
+    align-items: flex-end;
+   }
 }

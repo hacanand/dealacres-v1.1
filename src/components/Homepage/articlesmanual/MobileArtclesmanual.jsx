@@ -63,7 +63,7 @@ const MobileArticlesmanual = () => {
                   </div>
               ))}
           </div>
-          <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link>
+          {/* <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link> */}
       </div>
     )
 }

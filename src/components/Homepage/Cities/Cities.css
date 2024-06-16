@@ -9,3 +9,10 @@
     height: 5px !important;
     padding: 0px;
 }
+
+
+.slick-track{
+    gap:2px !important;
+}
+
+

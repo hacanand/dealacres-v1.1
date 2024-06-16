@@ -23,6 +23,8 @@ import MobilePostercard from '@/components/Homepage/postercard/MobilePosterCard'
 import MobileArticlesmanual from '@/components/Homepage/articlesmanual/MobileArtclesmanual';
 import MobileToparticles from '@/components/Homepage/toparticles/MobileToparticles';
 import MobileOption from '@/components/Homepage/Option/MobileOption';
+import MobileHeader from '@/components/Homepage/header/MobileHeader';
+import MobileExplore from '@/components/Homepage/explore/MobileExplore';
 
 
 export default function Home() {
@@ -55,11 +57,11 @@ export default function Home() {
 
   return (
     <div className=" overflow-hidden">
-      <Header />
+      {isLargeScreen ?<Header />:<MobileHeader />}
       <ExploreServices />
 
       <div className="max-w-[1100px] mx-auto">
-      <Explore />
+      {isLargeScreen ?<Explore />:<MobileExplore />}
         {isLargeScreen ?
           <div style={{ position: "relative" }}>
             <Postercard
@@ -81,11 +83,11 @@ export default function Home() {
             sidecontent1="BUY A HOME"
             sidecontent4="Search, Buy & Own Your Dream Home"
             sidecontent3="Explore from apartments, land, builders, floor, villas and more"
-            buttontext="  Find a Home" />
+            buttontext="Find a Home" />
         <hr />
             <MobileToparticles />
           </>}
-        <div className="mt-10 lg:mt-[20rem] w-full">
+        <div className="mt-8 lg:mt-[18rem] w-full">
         {isLargeScreen ? <NewOption /> : <MobileOption />}
         </div>
       </div>
@@ -117,10 +119,10 @@ export default function Home() {
             title="Sell or Rent your property faster with DealAcres"
             src={src2}
             alt="src2"
-            sidecontent1="POST YOUR PROPERTY"
+            sidecontent1="POST PROPERTY"
             sidecontent4="Register to post your property for "
             s2spantext="FREE"
-            sidecontent3="Sell or rent your residential/commercial property"
+            sidecontent3="Sell or rent your residential /commercial property"
             buttontext="Post your property FREE" />
             <hr />
             <MobileArticlesmanual />
@@ -128,7 +130,7 @@ export default function Home() {
 
       </div>
 
-      <div className="mt-10 lg:mt-[20rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
+      <div className="mt-5 lg:mt-[17rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
       <div className="md:max-w-[1100px] sm:max-w-xs mx-auto">
         {isLargeScreen ? <PopularBuilder /> : <MobilePopularBuilder />}
         {isLargeScreen ? <WhyChooseUs /> : <MobileWhyChooseUs />}
