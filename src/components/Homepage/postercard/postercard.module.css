@@ -6,7 +6,7 @@
     width: 100%;
     margin: auto;
     column-gap: 2.5rem;
-    margin: 3rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
     @apply pl-4
     
 
@@ -104,13 +104,13 @@
 }
 .mobilebtn1{
     margin-top: 2px;
-    padding: 0.5rem ;
+    padding: 0.4rem ;
     color: #fff;
-    @apply  bg-blue-800
+    @apply  bg-[#0061DF]
     font-[Poppins];
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 10px;
+    line-height: 15px;
     cursor: pointer;
     outline: none;
     border: 0;
@@ -163,8 +163,8 @@
 @media screen and (max-width:800px){
 
     .imgContainer{
-        width: 450px;
-        height: 450px
+        width: 250px;
+        height: 300px
     }
 
     .img{
@@ -182,5 +182,6 @@
     .sideContent h4{
         font-size: 26px;
     }
+    
 }
 

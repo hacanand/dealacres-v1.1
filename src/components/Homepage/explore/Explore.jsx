@@ -27,7 +27,7 @@ const Explore = ({
   return (
     <div className={`${isFullScreen ? 'pl-0 pr-0 justify-center' : 'cards-wrapper'}`}>
       <div>
-        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
+        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-4">
           {" "}
           Explore! <span className="text-blue-500">Insights and tools</span>
         </h2>

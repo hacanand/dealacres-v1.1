@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,7 +8,7 @@ import "./Cities.css";
 import Card from './Card'
 import Link from 'next/link'
 
-const Cities = (props) => {
+const Cities = ({ title, slidesToShow = 4 }) => {
   
   const citiesData = [
     { title: "Mumbai", content: "This is the content of City 1" },
@@ -29,17 +30,14 @@ const Cities = (props) => {
    const settings = {
     dots: true,
     infinite: true,
-    speed: 200,
-  
-    slidesToShow: 3,
-    className: 'mx-8',
-    slidesToScroll: 3,
-    arrows:true,
-    autoplay:true,
+    speed: 150,
+    centerPadding: "60px",
+    slidesToShow: slidesToShow,
+    className: "center",
+    slidesToScroll: 2,
+    autoplay: true,
     rows: 2,
-    
-  
-    // arrows: false,
+    arrows: false,
 
     responsive: [
       {
@@ -49,9 +47,7 @@ const Cities = (props) => {
           slidesToScroll: 2,
           infinite: true,
           dots: true,
-          arrows:false,
-          autoplay: false,
-          className: 'mx-8'
+          arrows: false
         }
       },
       {
@@ -80,11 +76,19 @@ const Cities = (props) => {
   };
 
   return (
-    <div className="bg-white rounded-2xl lg:ml-6 lg:mr-6   lg:mb-5 justify-center ">
-        {props.title && <div className="my-4 py-4 mt"><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>}
-      <Slider {...settings} className="" >
+    <div className="bg-white rounded-2xl mb-10 lg:mb-5 ">
+      {title && (
+        <div className="my-4 py-4">
+          <h2 className="pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline">
+            Explore</span> Real Estate in Popular Indian Cities
+          </h2>
+        </div>
+      )}
+      <Slider {...settings}>
         {citiesData.map((city, index) => (
-          <Link href='#' key={index} className="lg:mb-4 lg:mx-8 max-w-full max-h-full "><Card  title={city.title} content={city.content} /></Link>
+          <Link href='#' key={index} className="lg:mb-4 max-w-full max-h-full">
+            <Card title={city.title} content={city.content} />
+          </Link>
         ))}
       </Slider>
     </div>
