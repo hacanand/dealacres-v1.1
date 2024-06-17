@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./explore.css";
 import BudgetCalculation from "@/components/budgetCalculation/BudgetCalculation";
 import { cardData, carddata } from "./data";
+import Link from "next/link";
 
 const Explore = ({
   isFullScreen
@@ -15,7 +16,7 @@ const Explore = ({
   };
 
   const handleCardClick = (cardId) => {
-    if (cardId === 5) {
+    if (cardId === 4) {
       setShowBudgetCalculation(true);
     }
   };
@@ -25,7 +26,11 @@ const Explore = ({
   };
 
   return (
-    <div className={`${isFullScreen ? 'pl-0 pr-0 justify-center' : 'cards-wrapper'}`}>
+    <div
+      className={`${
+        isFullScreen ? "pl-0 pr-0 justify-center" : "cards-wrapper"
+      }`}
+    >
       <div>
         <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-4">
           {" "}
@@ -33,43 +38,51 @@ const Explore = ({
         </h2>
       </div>
       {/* ; */}
-      <div className={`cards-container cursor-pointer overflow-x-auto compact ${!isFullScreen ? 'pl-2 ' : 'ol-0'  }`}>
+      <div
+        className={`cards-container cursor-pointer overflow-x-auto compact ${
+          !isFullScreen ? "pl-2 " : "ol-0"
+        }`}
+      >
         {cardData.map((card) => (
-          <div
-            key={card.id}
-            className={`card ${activeCard === card.id ? "active" : ""}`}
-            style={{
-              flex: activeCard === card.id ? "0 0 180px" : "0 0 170px",
-              minWidth: activeCard === card.id ? "100%" : "170px",
-              height: activeCard === card.id ? "100%" : "230px",
-              width: activeCard === card.id ? "80%" : "170px",
-              margin: activeCard === card.id ? "0px" : "0px",
-            }}
-            onMouseEnter={() => handleCardHover(card.id)}
-            onMouseLeave={() => setActiveCard(null)}
-            onClick={() => handleCardClick(card.id)}
-          >
+          <Link href={card.href} scroll={false}>
             <div
-              className="card-content"
+              key={card.id}
+              className={`card ${activeCard === card.id ? "active" : ""}`}
               style={{
-                backgroundImage: `linear-gradient(to right, ${card.color}, white)`,
+                flex: activeCard === card.id ? "0 0 180px" : "0 0 170px",
+                minWidth: activeCard === card.id ? "100%" : "170px",
+                height: activeCard === card.id ? "100%" : "230px",
+                width: activeCard === card.id ? "80%" : "170px",
+                margin: activeCard === card.id ? "0px" : "0px",
               }}
+              onMouseEnter={() => handleCardHover(card.id)}
+              onMouseLeave={() => setActiveCard(null)}
+              onClick={() => handleCardClick(card.id)}
             >
               <div
-                className="card-image"
-                style={{ backgroundImage: `url(${card.imageUrl})` }}
-              />
-              {activeCard === card.id && (
-                <div className="card-description">
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                </div>
-              )}
+                className="card-content"
+                style={{
+                  backgroundImage: `linear-gradient(to right, ${card.color}, white)`,
+                }}
+              >
+                <div
+                  className="card-image"
+                  style={{ backgroundImage: `url(${card.imageUrl})` }}
+                />
+                {activeCard === card.id && (
+                  <div className="card-description">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      {showBudgetCalculation && <BudgetCalculation onClose={handleBudgetCalculationClose} />}
+      {showBudgetCalculation && (
+        <BudgetCalculation onClose={handleBudgetCalculationClose} />
+      )}
     </div>
   );
 };

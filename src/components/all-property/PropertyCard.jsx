@@ -35,7 +35,7 @@ const PropertyCard = ({
           </div>
         </div>
         <div className="col-span-2 py-2 flex flex-col justify-between ">
-          <p className="text-blue-600 md:text-md font-semibold max-sm:leading-6">
+          <p className="text-blue-600 md:text-md font-semibold max-sm:leading-5">
             {price}
           </p>
           <p className="text-black md:text-lg text-[0.9rem] font-bold max-sm:leading-5">

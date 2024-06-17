@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./explore.css";
 import MobileBudgetCalculation from "@/components/budgetCalculation/MobileBudgetCalculation";
 import { cardData, carddata } from "./data";
+import Link from "next/link";
 
 const MobileExplore = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -13,7 +14,7 @@ const MobileExplore = () => {
   };
 
   const handleCardClick = (cardId) => {
-    if (cardId === 5) {
+    if (cardId === 4) {
       setShowBudgetCalculation(true);
     }
   };
@@ -32,41 +33,45 @@ const MobileExplore = () => {
       </div>
       <div className="cards-container cursor-pointer">
         {cardData.map((card) => (
-          <div
-            key={card.id}
-            className={`card ${activeCard === card.id ? "active" : ""}`}
-            style={{
-              flex: activeCard === card.id ? "0 0 100px" : "0 0 100px",
-              minWidth: activeCard === card.id ? "100%" : "100px",
-              height: activeCard === card.id ? "100%" : "140px",
-              width: activeCard === card.id ? "80%" : "170px",
-              margin: activeCard === card.id ? "0px" : "0px",
-            }}
-            onMouseEnter={() => handleCardHover(card.id)}
-            onMouseLeave={() => setActiveCard(null)}
-            onClick={() => handleCardClick(card.id)}
-          >
+          <Link href={card.href} scroll={false}>
             <div
-              className="card-content"
+              key={card.id}
+              className={`card ${activeCard === card.id ? "active" : ""}`}
               style={{
-                backgroundImage: `linear-gradient(to right, ${card.color}, white)`,
+                flex: activeCard === card.id ? "0 0 100px" : "0 0 100px",
+                minWidth: activeCard === card.id ? "100%" : "100px",
+                height: activeCard === card.id ? "100%" : "140px",
+                width: activeCard === card.id ? "80%" : "170px",
+                margin: activeCard === card.id ? "0px" : "0px",
               }}
+              onMouseEnter={() => handleCardHover(card.id)}
+              onMouseLeave={() => setActiveCard(null)}
+              onClick={() => handleCardClick(card.id)}
             >
               <div
-                className="card-image"
-                style={{ backgroundImage: `url(${card.imageUrl})` }}
-              />
-              {activeCard === card.id && (
-                <div className="card-description">
-                  <h3>{card.title}</h3>
-                  <p>{card.description}</p>
-                </div>
-              )}
+                className="card-content"
+                style={{
+                  backgroundImage: `linear-gradient(to right, ${card.color}, white)`,
+                }}
+              >
+                <div
+                  className="card-image"
+                  style={{ backgroundImage: `url(${card.imageUrl})` }}
+                />
+                {activeCard === card.id && (
+                  <div className="card-description">
+                    <h3>{card.title}</h3>
+                    <p>{card.description}</p>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      {showBudgetCalculation && <MobileBudgetCalculation onClose={handleBudgetCalculationClose} />}
+      {showBudgetCalculation && (
+        <MobileBudgetCalculation onClose={handleBudgetCalculationClose} />
+      )}
     </div>
   );
 };
