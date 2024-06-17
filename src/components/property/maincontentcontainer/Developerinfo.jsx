@@ -11,7 +11,7 @@ function Developerinfo(props) {
     <div className={styles.developerInfoContainer}>
       <div className={styles.developerInfoLogoContainer}>
         <Image
-          src={props.devData.logoSrc}
+          src={props.devData?.logoSrc}
           alt="Developer Logo"
           layout="fill"
           objectFit="contain"
@@ -19,12 +19,16 @@ function Developerinfo(props) {
       </div>
       <div className={styles.developerInfoContentContainer}>
         <p>
-          {showFull ? props.devData.developerInfo : `${props.devData.developerInfo.substring(0, 300)}`}
-          <span onClick={() => setShowFull(!showFull)}>{showFull ? ' ....less' : ' ....more'}</span>
+          {showFull
+            ? props.devData?.developerInfo
+            : `${props.devData?.developerInfo.substring(0, 300)}`}
+          <span onClick={() => setShowFull(!showFull)}>
+            {showFull ? " ....less" : " ....more"}
+          </span>
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 export default Developerinfo
