@@ -29,7 +29,14 @@ function Locality(props) {
                 ? props.localityData?.introduction
                 : `${props.localityData?.introduction?.substring(0, 200)}`}
             </p>
-            <h6 onClick={() => setShowFull(!showFull)}>
+            <h6
+              className={`${
+                props.localityData?.introduction?.length < 200
+                  ? "hidden"
+                  : "block"
+              }`}
+              onClick={() => setShowFull(!showFull)}
+            >
               {showFull ? "Read Less" : "Read More"}
             </h6>
           </div>

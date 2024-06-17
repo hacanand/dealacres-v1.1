@@ -1,11 +1,11 @@
-'use client'
-import { useState } from 'react'
-import styles from './developerinfo.module.css'
-import Image from 'next/image'
+"use client";
+import { useState } from "react";
+import styles from "./developerinfo.module.css";
+import Image from "next/image";
 
 function Developerinfo(props) {
-
-  const [showFull, setShowFull] = useState(false)
+  // console.log(props)
+  const [showFull, setShowFull] = useState(false);
 
   return (
     <div className={styles.developerInfoContainer}>
@@ -31,4 +31,4 @@ function Developerinfo(props) {
   );
 }
 
-export default Developerinfo
+export default Developerinfo;

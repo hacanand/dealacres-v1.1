@@ -31,6 +31,28 @@ const properties = [
     size: "730 - 1530",
     details: "3BHK, FLATS, RESIDENTIAL PROPERTIES",
   },
+  {
+    id: 2,
+    imageUrl:
+      "https://media.istockphoto.com/id/1194529868/photo/gurugram-cyber-hub.jpg?s=612x612&w=0&k=20&c=5wt2JdYpRVBhebHxd0EssmnaK8eLWwuKabUqlDwpvAA=",
+    price: "Rs 70.6 L to 2.36 Cr",
+    name: "Signature Global City 93",
+    location: "Sector 93 Gurgaon",
+    size: "730 - 1530",
+    details: "3BHK, FLATS, RESIDENTIAL PROPERTIES",
+  },
+  {
+    id: 2,
+    imageUrl:
+      "https://media.istockphoto.com/id/1194529868/photo/gurugram-cyber-hub.jpg?s=612x612&w=0&k=20&c=5wt2JdYpRVBhebHxd0EssmnaK8eLWwuKabUqlDwpvAA=",
+    price: "Rs 70.6 L to 2.36 Cr",
+    name: "Signature Global City 93",
+    location: "Sector 93 Gurgaon",
+    size: "730 - 1530",
+    details: "3BHK, FLATS, RESIDENTIAL PROPERTIES",
+  },
+   
+
 ];
 
 const PropertyFlatList = () => {
@@ -39,12 +61,12 @@ const PropertyFlatList = () => {
   return (
     <div className="w-[50%] px-[2rem] max-xl:w-full max-md:px-0">
       <div className="flex items-center justify-between space-x-4">
-        <h2 className="text-3xl font-bold max-md:text-xl">
+        <h2 className="text-2xl font-extrabold max-md:text-xl text-center whitespace-nowrap ">
           All Properties in Gurgaon
         </h2>
 
-        <div class="flex justify-end items-center space-x-3 xl:hidden">
-          <button class="flex items-center space-x-2 bg-blue-500 text-white p-2 rounded">
+        <div class="flex justify-end items-center space-x-3 xl:hidden max-sm:hidden">
+          <button class="flex items-center space-x-2 bg-blue-500  text-white p-2 rounded">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -62,7 +84,7 @@ const PropertyFlatList = () => {
             <p>Filter</p>
           </button>
 
-          <button class="relative flex items-center space-x-2 bg-blue-500 text-white p-2 rounded ml-2">
+          <button class="relative flex items-center  space-x-2 bg-blue-500 text-white p-2 rounded ml-2">
             Compare
             <span class="absolute right-0 -top-3 border-[1px] border-blue-500 bg-white text-blue-500 font-semibold text-xs w-6 h-6 rounded-full flex items-center justify-center">
               {compareProperties.length}

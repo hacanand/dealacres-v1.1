@@ -17,8 +17,8 @@ const lato = Lato({
 });
 
 function MainContentContainer(props) {
-  console.log(props);
-  console.log(props.content?.mainContent);
+  // console.log(props);
+  // console.log(props.content?.mainContent);
   const API_KEY = "AIzaSyCLnG8KQEzHCSMW62v1Kknt95xEGKMXW-0";
 
   const [showFull, setShowFull] = useState(false);
@@ -46,7 +46,11 @@ function MainContentContainer(props) {
             ? props.content?.mainContent?.about
             : `${props.content?.mainContent?.about?.substring(0, 600)}`}
         </p>
-        <h6 onClick={() => setShowFull(!showFull)}>
+        {/* show if text length greater than 600 */}
+        <h6
+          className={`${props.content?.mainContent?.about?.length < 600 ? "hidden" : "block" }`}
+          onClick={() => setShowFull(!showFull)}
+        >
           {showFull ? "Show Less" : "Show More"}
         </h6>
       </div>

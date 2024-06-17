@@ -4,6 +4,7 @@ import {AiOutlineLeft,AiOutlineRight} from 'react-icons/ai'
 import styles from './imagecarasouel.module.css';
 
 function ImageCarasouel({ data }) {
+  //console.log(data)
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -13,7 +14,7 @@ function ImageCarasouel({ data }) {
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
-
+  if (data == undefined || data.length < 0) return;
   return (
     <div className={styles.carouselContainer}>
       <div className={styles.imageContainer}>

@@ -9,6 +9,7 @@ import {IoIosShareAlt} from 'react-icons/io'
 import { FaRupeeSign } from "react-icons/fa";
 
 function Mainoverview(props) {
+   // console.log(props)
     return (
       <div className={`${styles.mainOverviewContainer} `}>
         <div className={styles.overviewContent}>   
@@ -16,49 +17,49 @@ function Mainoverview(props) {
                 <BiArea size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Project Area</h5>
-                    <h6>{props.overviewData.projectArea}</h6>
+                    <h6>{props.overviewData?.projectArea}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <MdPhotoSizeSelectActual size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Sizes</h5>
-                    <h6>{props.overviewData.sizes}</h6>
+                    <h6>{props.overviewData?.sizes}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <BiBuildingHouse size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Project Size</h5>
-                    <h6>{props.overviewData.projectSize}</h6>
+                    <h6>{props.overviewData?.projectSize}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <LuCalendarSearch size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Launch Date</h5>
-                    <h6>{props.overviewData.launchDate}</h6>
+                    <h6>{props.overviewData?.launchDate}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <FaRupeeSign size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Avg. Price</h5>
-                    <h6>{props.overviewData.avgPrice}</h6>
+                    <h6>{props.overviewData?.avgPrice}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <GiBarrier size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Possession Status</h5>
-                    <h6>{props.overviewData.possessionStatus}</h6>
+                    <h6>{props.overviewData?.possessionStatus}</h6>
                 </div>
             </div>
             <div className={styles.overviewData}>
                 <PiSquaresFour size={15} style={{marginTop: '10px', minWidth: '15px' , minHeight: '15px'}}/>
                 <div>
                     <h5>Configuration</h5>
-                    <h6>{props.overviewData.configuration}</h6>
+                    <h6>{props.overviewData?.configuration}</h6>
                 </div>
             </div>
         </div>
