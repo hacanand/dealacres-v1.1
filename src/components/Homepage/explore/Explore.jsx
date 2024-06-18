@@ -44,9 +44,8 @@ const Explore = ({
         }`}
       >
         {cardData.map((card) => (
-          <Link href={card.href} scroll={false}>
+          <Link href={card.href} scroll={false} key={card.id}>
             <div
-              key={card.id}
               className={`card ${activeCard === card.id ? "active" : ""}`}
               style={{
                 flex: activeCard === card.id ? "0 0 180px" : "0 0 170px",

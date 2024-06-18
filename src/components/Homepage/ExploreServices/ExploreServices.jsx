@@ -75,23 +75,19 @@ const ExploreServices = () => {
       <div className="flex justify-center">
         <div className="flex flex-row overflow-x-auto  gap-4 md:gap-5  xl:max-w-[1100px] xl:mx-auto ">
           {cardData.map((card, index) => (
-            <Link href={card.imageUrl} scroll={false}>
-              <Card
-                key={index}
-                imageUrl={card.imageUrl}
-                heading={card.heading}
-              />
+            <Link href={card.imageUrl} scroll={false} key={index}>
+              <Card imageUrl={card.imageUrl} heading={card.heading} />
             </Link>
           ))}
         </div>
       </div>
 
-          <div className="flex justify-center mt-3 md:mt-6">
-              <Link href={'/allservice'} scroll={false}>
-        <button className="px-2 py-0.5 md:px-4 md:py-2 bg-blue-500 text-white text-[0.73rem] md:text-base rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-          View All
-                  </button>
-                  </Link>
+      <div className="flex justify-center mt-3 md:mt-6">
+        <Link href={"/allservice"} scroll={false}>
+          <button className="px-2 py-0.5 md:px-4 md:py-2 bg-blue-500 text-white text-[0.73rem] md:text-base rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+            View All
+          </button>
+        </Link>
       </div>
     </div>
   );
