@@ -7,6 +7,7 @@ import RoleTag from "@/components/location-review/RoleTag";
 import './locationOverview.css'
 const roles = ["Owner", "Tenant", "Real Estate Agent", "Formal Residence"];
 
+
 const LocationReview = () => {
   const [serviceRatings, setServiceRatings] = useState([
     { facility: "Commuting", rating: 0 },
