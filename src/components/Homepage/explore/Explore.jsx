@@ -5,9 +5,7 @@ import BudgetCalculation from "@/components/budgetCalculation/BudgetCalculation"
 import { cardData, carddata } from "./data";
 import Link from "next/link";
 
-const Explore = ({
-  isFullScreen
-}) => {
+const Explore = ({ isFullScreen }) => {
   const [activeCard, setActiveCard] = useState(null);
   const [showBudgetCalculation, setShowBudgetCalculation] = useState(false);
 
@@ -45,8 +43,7 @@ const Explore = ({
       >
         {cardData.map((card) => (
           <Link href={card.href} scroll={false} key={card.id}>
-            <div
-              className={`card ${activeCard === card.id ? "active" : ""}`}
+            <div className={`card ${activeCard === card.id ? "active" : ""}`}
               style={{
                 flex: activeCard === card.id ? "0 0 180px" : "0 0 170px",
                 minWidth: activeCard === card.id ? "100%" : "170px",
