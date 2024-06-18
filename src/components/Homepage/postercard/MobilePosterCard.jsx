@@ -51,7 +51,7 @@ const MobilePostercard = (props) => {
           <div className='w-[200px]'>
           <div className='flex justify-end mx-auto'>
           {showModal && (
-                    <Modal onClose={closePopup} />
+              <Modal onClose={closePopup} />
                        
                 )}
             {/* {showInputField && (

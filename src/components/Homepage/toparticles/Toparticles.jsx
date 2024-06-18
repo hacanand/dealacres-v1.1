@@ -57,7 +57,9 @@ Discover various residential projects catering to diverse preferences and needs.
         <div className={styles.line}></div>
         <div className={styles.content}>
             {filteredData.map((dt,index)=>(
-                <div key={dt.id} className={styles.contentBlock}>
+                <Link href={`/properties/${index+1}`} scroll={false} key={dt.id}>
+                <div
+                  className={`${styles.contentBlock}  `}>
                     <div className={styles.imgContainer}>
                         <Image
                             src={dt.src}
@@ -71,7 +73,9 @@ Discover various residential projects catering to diverse preferences and needs.
                         <h2>{dt.price}</h2>
                     </div>
                 </div>
+                 </Link>
             ))}
+           
         </div>
         {/* <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link> */}
     </div>

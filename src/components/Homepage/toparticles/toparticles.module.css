@@ -85,6 +85,7 @@
 .texts{
     margin-left: 1rem;
     padding-bottom: 10px;
+    text-align: left;
 }
 
 .content h6 {
