@@ -128,7 +128,6 @@ export default function Home() {
       </div>
 
       <div className="mt-5 lg:mt-[17rem] ">
-        {" "}
         {isLargeScreen ? <TopProject /> : <MobileTopProject />}
       </div>
       <div className="md:max-w-[1100px] sm:max-w-xs mx-auto">

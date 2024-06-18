@@ -1,24 +1,28 @@
 'use client'
 
 import { useState } from 'react';
-
+import Link from "next/link";
 
 const Card = ({ index, selectedCity }) => {
   const imageUrl = '/office-image.jpg';
 
   return (
     <div key={index} className="relative">
-      <div
-        className="relative bg-cover bg-center w-full h-[8rem] rounded-lg"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      >
-        <div className="absolute inset-0 bg-black/60 opacity-50 rounded-lg" />
-        <div className="absolute bottom-0 left-0 p-4 text-left text-sm text-white">
-          <p className='font-bold'>DLF The Arbour</p>
-          <p className="text-xs">3/4 BHK Apartment, Sector 57, {selectedCity}</p>
-          <p className="font-bold">1.46 Cr *</p>
+      <Link href={`/properties/${index}`}>
+        <div
+          className="relative bg-cover bg-center w-full h-[8rem] rounded-lg"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        >
+          <div className="absolute inset-0 bg-black/60 opacity-50 rounded-lg" />
+          <div className="absolute bottom-0 left-0 p-4 text-left text-sm text-white">
+            <p className="font-bold">DLF The Arbour</p>
+            <p className="text-xs">
+              3/4 BHK Apartment, Sector 57, {selectedCity}
+            </p>
+            <p className="font-bold">1.46 Cr *</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

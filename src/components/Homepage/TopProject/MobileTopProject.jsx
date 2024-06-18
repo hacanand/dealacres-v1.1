@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 
@@ -8,17 +9,20 @@ const Card = ({ index, selectedCity }) => {
 
   return (
     <div key={index} className="relative">
-      <div
-        className="relative bg-cover bg-center w-full h-[6.8rem] rounded-lg hover:bg-blue-300"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      >
-        
-        <div className="absolute h-[5rem] bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full hover:inset-0 hover:h-full">
-          <p className='font-bold text-[0.7rem]'>DLF The Arbour</p>
-          <p className="text-[8px]">3/4 BHK Apartment, Sector 57,{selectedCity}</p>
-          <p className="font-bold">1.46 Cr *</p>
+      <Link href={`/properties/${index}`}>
+        <div
+          className="relative bg-cover bg-center w-full h-[6.8rem] rounded-lg hover:bg-blue-300"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        >
+          <div className="absolute h-[5rem] bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full hover:inset-0 hover:h-full">
+            <p className="font-bold text-[0.7rem]">DLF The Arbour</p>
+            <p className="text-[8px]">
+              3/4 BHK Apartment, Sector 57,{selectedCity}
+            </p>
+            <p className="font-bold">1.46 Cr *</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

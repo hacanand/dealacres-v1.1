@@ -1,6 +1,7 @@
 'use client'
 
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Card = ({ imageUrl, yearEstd, projects, description }) => {
@@ -11,7 +12,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
     };
 
     return (
-        <div className="w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem] hover:shadow-2xl">
+        <div className=" cursor-pointer w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem] hover:shadow-2xl">
             <div className="flex flex-row items-end">
                 <img src={imageUrl} alt="Card Image" className="w-2/6 h-20 object-cover border-2 border-black" />
                 <div className="ml-3 text-sm flex flex-row items-end gap-3">
@@ -49,14 +50,15 @@ const PopularBuilder = () => {
             <div className='flex justify-center mt-8 px-2'>
                 <div className='mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
                     {Array.from({ length: 4 }).map((_, index) => (
+                        <Link href={`/developer/${index+1}`} key={index}>
                         <Card
-                            key={index}
                             imageUrl="/homePage/dlf.webp"
                             yearEstd="1986"
                             projects="105"
                             description="Built on the roots of not only meeting customer expectations but also envisaging the future needs of consumers, M3M strives to create developments that exceed buyer expectations through research.
                             Built on the roots of not only meeting customer expectations"
-                        />
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>
