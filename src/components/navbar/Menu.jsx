@@ -3,7 +3,10 @@ export const buyerMenuContent = {
     sections: [
         {
             heading: "Popular Choice",
-            items: ["Under Construction", "Ready to Move", "Newly Launched"]
+            items: [
+                "Under Construction",
+                "Ready to Move",
+                "Newly Launched"]
         },
         {
             heading: "Property Type",

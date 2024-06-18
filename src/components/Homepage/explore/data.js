@@ -26,7 +26,7 @@ export const cardData = [
     description:
       "Delve into comprehensive guides curated by experts to explore new destinations, hobbies, or interests, enriching your experiences and broadening your horizons.",
     imageUrl: "/homePage/2.png",
-    href: "/adsf",
+    href: "/",
     color: "#f6ca94",
   },
   {
