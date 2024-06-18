@@ -26,7 +26,7 @@ export const cardData = [
     description:
       "Delve into comprehensive guides curated by experts to explore new destinations, hobbies, or interests, enriching your experiences and broadening your horizons.",
     imageUrl: "/homePage/2.png",
-    href: "/",
+    href: "/rentagreement",
     color: "#f6ca94",
   },
   {
@@ -35,7 +35,7 @@ export const cardData = [
     description:
       "Easily calculate and manage your finances with a budget calculator, helping you stay on track and achieve your financial goals with ease.",
     imageUrl: "/homePage/3.png",
-    href:  '/',
+    href: "/",
     color: "#fafabe",
   },
   {
