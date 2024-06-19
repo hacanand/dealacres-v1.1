@@ -45,7 +45,7 @@ const PropertyCard = ({
             {location}
           </p>
           <p className="text-gray-600 text-sm sm:mt-1">{size} Sq.ft</p>
-          <p className="text-gray-600 md:text-sm   max-sm:leading-[0.7rem] max-sm:text-[0.1rem] whitespace-nowrap text-ellipsis w-full overflow-hidden sm:mt-1">
+          <p className="text-gray-600 md:text-sm   max-sm:leading-[0.85rem] max-sm:text-[0.1rem] whitespace-nowrap text-ellipsis w-full overflow-hidden sm:mt-1">
             {details}
           </p>
 

@@ -163,7 +163,7 @@ const Navbar = () => {
           <select
             value={selectedLocation}
             onChange={handleLocationChange}
-            className="text-white bg-transparent font-bold hidden md:block nav-drop custom-select"
+            className="text-white bg-transparent font-bold hidd md:block nav-drop custom-select"
           >
             <option className="text-black bg-white" value="Gurugram">Gurugram</option>
             <option className="text-black bg-white" value="Delhi">Delhi</option>
