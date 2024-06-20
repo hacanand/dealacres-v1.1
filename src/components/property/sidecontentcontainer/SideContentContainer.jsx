@@ -4,6 +4,7 @@ import styles from "./sidecontent.module.css";
 import { Lato } from "next/font/google";
 import { MenuItem, Select, TextField } from "@mui/material";
 import Addbox from "./Addbox";
+import Link from "next/link";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -31,7 +32,10 @@ function SideContentContainer(props) {
         className="my-4 sm:my-8 md:my-0 flex flex-col  sm:gap-2 "
         onSubmit={handleSubmit(onSubmit)}
       >
-        <h4 className="max-xs:!text-base xs:max-md:!text-lg"> Looking for a Property in {props.title}</h4>
+        <h4 className="max-xs:!text-base xs:max-md:!text-lg">
+          {" "}
+          Looking for a Property in {props.title}
+        </h4>
         <TextField
           fullWidth
           margin="dense"
@@ -39,7 +43,6 @@ function SideContentContainer(props) {
           helperText={errors.Name?.message}
           label="Name"
           size="small"
-      
           {...register("Name", {
             required: "Name is required",
             maxLength: {
@@ -94,13 +97,15 @@ function SideContentContainer(props) {
           <label className="max-sm:!text-sm">
             {" "}
             &nbsp;By submitting this form I agree to{" "}
-            <a href="#termsofuse">Terms of use</a>
+            <Link href="/termsandconditions">Terms of use</Link>
           </label>
         </div>
         <p style={{ color: "red" }}>
           {errors.TermsConditions && errors.TermsConditions.message}
         </p>
-        <button className="max-sm:!text-base ">Send Message</button>
+        <Link href={"/propertylisting"}>
+          <button className="max-sm:!text-base ">Send Message</button>
+        </Link>
       </form>
       {props.Addbox ? (
         ""

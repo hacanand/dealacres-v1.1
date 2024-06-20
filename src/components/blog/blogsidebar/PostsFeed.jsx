@@ -1,5 +1,6 @@
 import React from 'react'
 import PostCard from '../PostCard'
+import Link from 'next/link'
 
 
 const PostsFeed = ({posts}) => {
@@ -11,12 +12,14 @@ const PostsFeed = ({posts}) => {
 
         {
             posts.map((post, index) => {
-                return (
+              return (
+                  <Link href={`/blog/${post.id}`} key={index}>
                     <PostCard
                     title={post.title}
                     img={post.img}
                     key={index}
-                    />
+                  />
+                  </Link>
                 )
             })
         }

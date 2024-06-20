@@ -129,11 +129,6 @@ const guidesData = [
   }
 ]
 export default function SingleBlogPage() {
-
-
-
-
-
   return (
     <div className="max-w-screen-xl mx-auto ">
       <div className='flex flex-col min-h-screen xmd:grid xmd:grid-cols-6'>

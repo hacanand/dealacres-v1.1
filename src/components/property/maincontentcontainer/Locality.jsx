@@ -5,21 +5,20 @@ import { PiThumbsUp, PiThumbsDown } from "react-icons/pi";
 import styles from "./locality.module.css";
 
 function Locality(props) {
-  //console.log(props)
-
+  //console.log(props);
   const [showFull, setShowFull] = useState(false);
 
   return (
     <div className={styles.localityOverviewContainer}>
-      {props.desc && (
+      {/* {props?.desc && ( */}
         <div className={styles.localityHead}>
           <div className={styles.localityHeadMain}>
-            <h2>{props.localityData?.title}</h2>
-            <h5>{props.localityData?.subtitle}</h5>
+            <p className="text-xl">{props?.localityData?.title}</p>
+            <h5>{props?.localityData?.subtitle}</h5>
           </div>
-          <button> View {props.localityData?.title} Overview</button>
+          <button> View {props?.localityData?.title} Overview</button>
         </div>
-      )}
+      {/* )} */}
       <div className={styles.localityContent}>
         {props.hasLocalityIntro && (
           <div className={styles.localityContentHead}>

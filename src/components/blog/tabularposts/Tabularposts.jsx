@@ -6,6 +6,7 @@ import PostCard from '../PostCard'
 import ArticleCard from './ArticleCard'
 import Heading from '../Heading'
 import styles from './tabular.module.css'
+import Link from 'next/link'
 
 const Tabularposts = ({
   posts,
@@ -33,8 +34,14 @@ const Tabularposts = ({
             {
               posts.map((post, index) => {
                 return (
-                  <PostCard key={index} title={post.title} img={post.img} isTabPosts />
-                )
+                  <Link href={`/blog/${post.id}`} key={index}>
+                    <PostCard
+                      title={post.title}
+                      img={post.img}
+                      isTabPosts
+                    />
+                  </Link>
+                );
               })
             }
           </div>
@@ -49,7 +56,9 @@ const Tabularposts = ({
             {
               posts.map((post, index) => {
                 return (
-                  <PostCard key={index} title={post.title} img={post.img} isTabPosts />
+                  <Link href={`/blog/${post.id}`} key={index}>
+                    <PostCard   title={post.title} img={post.img} isTabPosts />
+                  </Link>
                 )
               })
             }
@@ -68,7 +77,9 @@ const Tabularposts = ({
             {
               articles.map((article, index) => {
                 return (
-                  <ArticleCard key={index} title={article.title} img={article.img} />
+                  <Link href={`/blog/${article.id}`} key={index}>
+                    <ArticleCard   title={article.title} img={article.img} />
+                  </Link>
                 )
               })
             }

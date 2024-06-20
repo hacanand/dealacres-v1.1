@@ -199,7 +199,7 @@ const AreaCalculator = () => {
   useEffect(() => {
     setDType(deviceType);
   }, [])
-  console.log(dType)
+ // console.log(dType)
 
   useEffect(() => {
     if (selectedState && totalUnits && fromValue && toValue) {
