@@ -25,9 +25,9 @@ const BudgetRangeSelector = () => {
   const toggleBudgetVisibility = () => {
     setIsBudgetVisible(!isBudgetVisible);
   };
-  useEffect(() => {
-    router.push(`?budget-range=${value[1]}`, undefined, { shallow: true });
-  }, [value]);
+  // useEffect(() => {
+  //   router.push(`?budget-range=${value[1]}`, undefined, { shallow: true });
+  // }, [value]);
   
   return (
     <div>

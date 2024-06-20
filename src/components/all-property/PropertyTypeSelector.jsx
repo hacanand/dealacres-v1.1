@@ -1,6 +1,6 @@
 "use client";
 
-import { useUrl } from "@/hooks/useUrl";
+//import { useUrl } from "@/hooks/useUrl";
 import { usePathname, useRouter } from "next/navigation";
 
 import React, { useEffect, useState } from "react";
@@ -41,16 +41,16 @@ const PropertyTypeSelector = () => {
  // const url = useUrl();
   //const getQuery=url.split
   //console.log(url);
-const pathname = usePathname()
+// const pathname = usePathname()
   
-  useEffect(() => {
-    const propertyType = selectedTags.join(",");
+//   useEffect(() => {
+//     const propertyType = selectedTags.join(",");
      
 
-    router.push(`?property-type=${propertyType}`, undefined, { shallow: true });
+//     router.push(`?property-type=${propertyType}`, undefined, { shallow: true });
     
 
-  }, [selectedTags]);
+//   }, [selectedTags]);
   
    return (
     <div>

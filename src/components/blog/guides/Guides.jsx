@@ -31,8 +31,16 @@ const Guides = ({
                 {
                     guides.map((guide, index) => {
                         return (
-                            <GuideCard title={guide.title} img={guide.img} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} key={index} />
-                        )
+                        <Link href={`/all-guides?manual=${guide.title}`}  key={index}>
+                            <GuideCard
+                              title={guide.title}
+                              img={guide.img}
+                              bgColor={guide.bgColor}
+                              textColor={guide.textColor}
+                              borderColor={guide.borderColor}
+                            />
+                          </Link>
+                        );
                     })
                 }
 
