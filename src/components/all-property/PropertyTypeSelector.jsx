@@ -1,12 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import { useUrl } from "@/hooks/useUrl";
+import { usePathname, useRouter } from "next/navigation";
+
+import React, { useEffect, useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const PropertyTypeSelector = () => {
   const [isMainVisible, setIsMainVisible] = useState(true);
   const [showAllTags, setShowAllTags] = useState(false);
   const [selectedTags, setSelectedTags] = useState([]);
+  const router=useRouter()
   const tags = [
     "Resident",
     "Commercial",
@@ -34,8 +38,21 @@ const PropertyTypeSelector = () => {
   const toggleShowAllTags = () => {
     setShowAllTags(!showAllTags);
   };
+ // const url = useUrl();
+  //const getQuery=url.split
+  //console.log(url);
+const pathname = usePathname()
+  
+  useEffect(() => {
+    const propertyType = selectedTags.join(",");
+     
 
-  return (
+    router.push(`?property-type=${propertyType}`, undefined, { shallow: true });
+    
+
+  }, [selectedTags]);
+  
+   return (
     <div>
       <div
         className="flex items-center justify-between cursor-pointer mt-6"

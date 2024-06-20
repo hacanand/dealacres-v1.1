@@ -40,7 +40,7 @@ const Guides = ({
             <div className='flex flex-col py-4 justify-self-end'>
 
                 <span className='md:self-end text-blue-500 font-normal text-xl flex items-center justify-center gap-2'>
-                    <Link href='/guides' className=''>View More</Link>
+                    <Link href='/all-guides' className=''>View More</Link>
                     <FaExternalLinkAlt size={20} />
                 </span>
 

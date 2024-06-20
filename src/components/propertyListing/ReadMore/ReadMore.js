@@ -120,7 +120,9 @@ const ReadMore = ({ isFullScreen, header, subheader, hasCustomHeader }) => {
       >
         {newsData.map((newsItem) => (
           <SwiperSlide className="z-[5]" key={newsItem.id}>
-            <ArticleCard title={newsItem.title} date={newsItem.date} />
+            <Link href={`/blog/${newsItem.id}`} passHref>
+              <ArticleCard title={newsItem.title} date={newsItem.date} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

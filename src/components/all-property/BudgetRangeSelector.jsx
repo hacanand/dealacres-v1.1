@@ -1,15 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "@mui/material/Slider";
 import Select from "react-select";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 
 function valuetext(value) {
   return `${value} Cr`;
 }
 
 const BudgetRangeSelector = () => {
+  const pathname = usePathname()
+  const router = useRouter();
+ 
   const [isBudgetVisible, setIsBudgetVisible] = useState(true);
   const [value, setValue] = useState([1, 100]);
 
@@ -20,9 +25,10 @@ const BudgetRangeSelector = () => {
   const toggleBudgetVisibility = () => {
     setIsBudgetVisible(!isBudgetVisible);
   };
-
+  useEffect(() => {
+    router.push(`?budget-range=${value[1]}`, undefined, { shallow: true });
+  }, [value]);
   
-
   return (
     <div>
       <div

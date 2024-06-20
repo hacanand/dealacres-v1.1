@@ -5,7 +5,7 @@ import { IoHomeOutline } from "react-icons/io5";
 
 const Card = ({ imgsrc, service }) => {
 
-  console.log(imgsrc)
+  // console.log(imgsrc)
   return (
     <div className="text-center rounded-xl border-2 shadow-xl h-[150px] border-gray-200 flex flex-col justify-center items-center ">
       <div className=" rounded-xl overflow-hidden transition-transform duration-300 transform hover:scale-105 flex justify-center  w-[100px] h-[100px] ">
