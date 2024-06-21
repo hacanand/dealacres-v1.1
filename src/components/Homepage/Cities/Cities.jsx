@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Cities.css";
 import Card from './Card'
 import Link from 'next/link'
+import { gurugaon } from "@/components/blog/AgentLinks/Menu";
 
 const Cities = ({ title, slidesToShow = 4 }) => {
   
@@ -79,16 +80,17 @@ const Cities = ({ title, slidesToShow = 4 }) => {
     <div className="bg-white rounded-2xl mb-10 lg:mb-5 ">
       {title && (
         <div className="my-4 py-4">
-          <h2 className="pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline">
-            Explore</span> Real Estate in Popular Indian Cities
+          <h2 className="pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700">
+            <span className="text-blue-600 block sm:inline">Explore</span> Real
+            Estate in Popular Indian Cities
           </h2>
         </div>
       )}
       <Slider {...settings}>
         {citiesData.map((city, index) => (
-          <Link href='#' key={index} className="lg:mb-4 max-w-full max-h-full">
+          <Link href={`/location/gurugaon?city=${city}`} key={index}> 
             <Card title={city.title} content={city.content} />
-          </Link>
+         </Link>
         ))}
       </Slider>
     </div>

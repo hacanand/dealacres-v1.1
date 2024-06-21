@@ -1,5 +1,6 @@
 import styles from './popularProjectCard.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 import {BsCurrencyRupee} from 'react-icons/bs'
 
 function PopularProjectCard() {
@@ -18,7 +19,8 @@ function PopularProjectCard() {
             <p>By M3M Pvt. Ltd <br/>Studio Studio Flat <br/>Sector 57th, Gurgaon</p>
             <h3 className='flex justify-between md:block'><BsCurrencyRupee style={{display:'inline'}}/>1.46Cr* <div className={`${styles.popularCardBtnContainer} md:!hidden`}><button> Explore </button> </div></h3>
         </div>
-        <div className={`${styles.popularCardBtnContainer} max-md:!hidden`}>
+          <div className={`${styles.popularCardBtnContainer} max-md:!hidden`}>
+              {/* <Link href= */}
             <button>Explore</button>
         </div>
     </div>

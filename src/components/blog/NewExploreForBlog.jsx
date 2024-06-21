@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 const Card = ({ index, imageUrl, heading, bgColor }) => {
@@ -153,8 +154,10 @@ const NewExploreForBlog = () => {
         <p className='text-lg md:text-2xl font-bold text-blue-600 mt-4'>List Your Business</p>
     </div>
     <div className='hidden md:grid md:grid-cols-5 w-[55%] gap-2'>
-        {cardData.map((card, index) => (
-            <Card key={index} imageUrl={card.imageUrl} heading={card.heading} bgColor={card.bgColor} />
+              {cardData.map((card, index) => (
+            <Link href={`/#${card.heading}`} key={index}>
+                      <Card  imageUrl={card.imageUrl} heading={card.heading} bgColor={card.bgColor} />
+            </Link>
         ))}
     </div>
 </div>

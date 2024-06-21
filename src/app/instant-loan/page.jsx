@@ -15,7 +15,6 @@ const InstantLoan = () => {
   const [otpModal, setOtpModal] = useState(false)
 
   const handleVerify = () => {
-    
   }
 
   const handleModalClose = (modal, detailsData) => {
